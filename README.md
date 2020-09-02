@@ -1,5 +1,5 @@
 # Overview
-SinESC brings Sinusoidal Motor Control to the FPV community without compromising standard features or low cost.
+SinESC brings Sinusoidal Motor Control to the FPV community while retaining standard features and low cost.
 
 There are two versions of SinESC. Wing Edition and Multi Edition:
 
