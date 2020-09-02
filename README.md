@@ -1,4 +1,4 @@
-# SinESC
+# Overview
 Bringing Sinusoidal Motor Control to the FPV community without giving up standard features or low cost. Ultra efficient and silent.
 
 There are two versions of SinESC. Wing Edition and Multi Edition:
