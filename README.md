@@ -1,11 +1,11 @@
 # Overview
-SinESC brings Sinusoidal Motor Control to the FPV community while retaining standard features and low cost.
+SinESC brings Sinusoidal Motor Control to the RC Drone & Wing communities while retaining standard features and low cost.
 
 There are two versions of SinESC. Wing Edition and Multi Edition:
 
-Wing Edition supports CAN and standard PWM control signals. CAN is intended for Pixhawk users, and standard PWM is intended to connect straight to an RC receiver.
+Wing Edition supports CAN and standard PWM control signals. CAN is intended for Pixhawk users, and standard PWM is for direct connection to an RC receiver.
 
-Multi Edition supports SinWire, a custom 1-wire protocol that enables configuration, firmware updates, and speed control all through one wire.
+Multi Edition communicates with a flight controller though SinWire, a custom 1-wire protocol that enables configuration, firmware updates, and speed control all through one wire.
 SinWire support will be added to Betaflight soon. It aims to match or exceed the update rate of DSHOT600.
 # Benefits of Sinusoidal Control
 Brushless DC motors work best when their phase voltage waveforms are sinusoid-shaped. Try it yourself... connect a BLDC motor to an oscilloscope and spin the rotor with your fingers. You will see a sine wave. 
