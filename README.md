@@ -16,18 +16,32 @@ Sinusoidal control minimizes torque ripple, maximizing efficiency. The magnetic 
 
 
 
-SinESC is designed specifically for efficiency—circuit topologies have been selected with efficiency as the top priority:
+SinESC is designed specifically for efficiency:
 
-- Low-resistance current shunts... 1mΩ (discussed below)
+- Low-resistance current shunts... 1mΩ
 - Switching regulator provides a logic-level voltage supply for all control electronics
 - Extremely low on-resistance MOSFETs selected for the power stage... Rdson = 1.05mΩ
 - Fast switching slopes achieved with high gate-drive current, minimizing switching losses
+- Thermally optimized PCB layout
 
 # Hardware Achievements
 Not just any ESC can perform sinusoidal control, and not all sinusoidal ESCs are created equal. Sinusoidal control requires that the ESC know the exact position of the rotor in order to properly align the magnetic field. Perfect alignment means a perfect sine wave.
 
 There are a few ways to find the position of the rotor:
 
-The first, most obvious method is to put a sensor on the motor that uses the hall effect or something similar to determine exactly where the rotor is. This sensor simply feeds data to the ESC. However, this is impractical for drones and wings due to durability, size, and weight concerns.
+The first, most obvious method is to put a (hall effect or similar) sensor on the motor to determine exactly where the rotor is. This sensor simply feeds data to the ESC. However, this is impractical for drones and wings due to durability, size, and weight concerns.
 
-The second way is to calculate the position of the rotor based on the currents flowing through each phase
+The second way is to calculate the position of the rotor based on the currents flowing through each phase. Technically, measuring just the total motor current is sufficient, but this leads to poor rotor position estimation and thus reduced performance. Alternatively, each half-bridge can connect to ground through a series current shunt and the voltage drop across each shunt can be amplified and read by an ADC on a microcontroller. This allows for the current through each phase to be known, resulting in superior performance. Though more complicated, this is the current-sensing topology that SinESC employs.
+
+The PCB Layout of SinESC Multi Edition is the main accomplishment of this project:
+
+The 15x30mm PCB size of SinESC Multi Edition uses 0201-sized components when possible for reduced parasitic influences and, of course, reduced size. Component density is approximately 86 components/square inch. The microcontroller, gate driver, and current-sense amplifiers (all the control electronics) are implemented on the top layer, leaving the bottom layer for the power electronics. This provides room for wide traces. At an increased size of 17.5x35mm, SinESC Wing Edition adds CAN support with a robust transceiver.
+
+# Standard Features
+Both versions of SinESC include the following standard features:
+
+- Hardware over-current protection (takes advantage of the comparators embedded in the STM32F303CBT7)
+- Bus voltage monitoring for power monitoring and under-voltage protection
+- Reversible motor direction
+- 60kHz PWM frequency for smooth flight. Increased PWM frequencies show no benefit and only decrease efficiency.
+- Easy installation and configuration. No different than any standard BLHELI_32 ESC.
