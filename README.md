@@ -18,8 +18,8 @@ Sinusoidal control minimizes torque ripple, maximizing efficiency. The magnetic 
 
 SinESC is designed specifically for efficiency:
 
-- Low-resistance current shunts... 1mΩ
-- Switching regulator provides a logic-level voltage supply for all control electronics
+- Low-resistance current shunts... 1mΩ for minimal power loss
+- Switching regulator provides logic-level voltage supply for all control electronics
 - Extremely low on-resistance MOSFETs selected for the power stage... Rdson = 1.05mΩ
 - Fast switching slopes achieved with high gate-drive current, minimizing switching losses
 - Thermally optimized PCB layout
@@ -40,8 +40,19 @@ The 15x30mm PCB size of SinESC Multi Edition uses 0201-sized components when pos
 # Standard Features
 Both versions of SinESC include the following standard features:
 
-- Hardware over-current protection (takes advantage of the comparators embedded in the STM32F303CBT7)
+- Hardware over-current protection (takes advantage of the comparators embedded in the STM32F3 microcontroller)
 - Bus voltage monitoring for power monitoring and under-voltage protection
-- Reversible motor direction
+- Typical configuration options such as motor direction
 - 60kHz PWM frequency for smooth flight. Increased PWM frequencies show no benefit and only decrease efficiency.
 - Easy installation and configuration. No different than any standard BLHELI_32 ESC.
+- Broken-out and labeled debug pins for hackers
+- For those who wish to repair a broken ESC, information and support will always be provided.
+
+# Key Components
+- STM32F303CBT7 microcontroller
+- TMC6100-LA gate driver with SPI; gate drive current set to maximum of 1.5A
+- MAX4239 precision op-amps for current-sensing. Incredibly low input offset voltage... 0.1µV. Gain = 30V/V; offset to use the full ADC resolution.
+- BSC010N04LSI N-channel MOSFETs
+- High-quality passives
+  - TDK-branded ceramic capacitors
+  - Panasonic-branded metal film resistors; all 1% tolerance including shunts
