@@ -12,7 +12,7 @@ Brushless DC motors work best when their phase voltage waveforms are sinusoid-sh
 
 Regular BLHELI_32 ESCs employ a simple motor control method known as "trapezoidal drive," in which the phase voltage waveforms are trapezoid-shaped rather than sinusoid-shaped. This is non-ideal as the fields are not always perfectly aligned with the rotor, which means that torque is not constantly maximized at a given power. This causes the rotor to effectively "jerk in a circle" rather than spin continuously, resulting in lower efficiency and rougher flight. Furthermore, the sharp edges of the trapezoidal signal also introduce high-frequency noise which contributes to the above disadvantages as well. This also makes the motors run louder and hotter.
 
-Sinusoidal control minimizes torque ripple, maximizing efficiency. The magnetic fields are aligned precisely to exert the maximum torque force on the rotor at any given position. Minimized torque ripple leads to drastically smoother flight. Greater efficiency (SinESC achieves > 97% efficiency while most trapezoidal ESCs only achieve around 70%) allows for longer flight times and lower peak currents, which can increase battery longevity as well.
+Sinusoidal control minimizes torque ripple, maximizing efficiency. The magnetic fields are aligned precisely to exert the maximum torque force on the rotor at any given position. Minimized torque ripple leads to drastically smoother flight. Greater efficiency (SinESC achieves > 97% efficiency; trapezoidal ESCs typically achieve 70%) allows for longer flight times and lower peak currents, which can increase battery longevity as well.
 
 SinESC is designed specifically for efficiency—circuit topologies have been selected with efficiency as the top priority:
 
