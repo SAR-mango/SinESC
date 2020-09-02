@@ -16,9 +16,9 @@ Sinusoidal control minimizes torque ripple, maximizing efficiency. The magnetic 
 
 SinESC is designed specifically for efficiency—circuit topologies have been selected with efficiency as the top priority:
 
-- Low-resistance current shunts—1mΩ (discussed below)
+- Low-resistance current shunts... 1mΩ (discussed below)
 - Switching regulator provides a logic-level voltage supply for all control electronics
-- Extremely low on-resistance MOSFETs selected for the power stage—Rdson = 1.05mΩ
+- Extremely low on-resistance MOSFETs selected for the power stage... Rdson = 1.05mΩ
 - Fast switching slopes achieved with high gate-drive current, minimizing switching losses
 
 # Hardware Achievements
