@@ -14,6 +14,8 @@ Regular BLHELI_32 ESCs employ a simple motor control method known as "trapezoida
 
 Sinusoidal control minimizes torque ripple, maximizing efficiency. The magnetic fields are aligned precisely to exert the maximum torque force on the rotor at any given position. Minimized torque ripple leads to drastically smoother flight. Greater efficiency (SinESC achieves > 97% efficiency; trapezoidal ESCs typically achieve 70%) allows for longer flight times and lower peak currents, which can increase battery longevity as well.
 
+
+
 SinESC is designed specifically for efficiency—circuit topologies have been selected with efficiency as the top priority:
 
 - Low-resistance current shunts... 1mΩ (discussed below)
@@ -22,7 +24,7 @@ SinESC is designed specifically for efficiency—circuit topologies have been se
 - Fast switching slopes achieved with high gate-drive current, minimizing switching losses
 
 # Hardware Achievements
-Not just any ESC can perform sinusoidal control, and not all sinusoidal ESCs are created equal. Sinusoidal control requires the ESC to know the exact position of the rotor in order to properly align the magnetic field with the rotor. Perfect alignment means a perfect sine wave.
+Not just any ESC can perform sinusoidal control, and not all sinusoidal ESCs are created equal. Sinusoidal control requires that the ESC know the exact position of the rotor in order to properly align the magnetic field. Perfect alignment means a perfect sine wave.
 
 There are a few ways to find the position of the rotor:
 
