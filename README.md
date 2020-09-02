@@ -7,7 +7,7 @@ Wing Edition supports CAN and standard PWM control signals. CAN is intended for 
 
 Multi Edition communicates with a flight controller though SinWire, a custom 1-wire protocol that enables configuration, firmware updates, and speed control all through one wire.
 SinWire support will be added to Betaflight soon. It aims to match or exceed the update rate of DSHOT600.
-# Benefits of Sinusoidal Control—Efficiency, Efficiency, Efficiency
+# Benefits of Sinusoidal Control: Efficiency!
 Brushless DC motors work best when their phase voltage waveforms are sinusoid-shaped. Try it yourself—connect a BLDC motor to an oscilloscope and spin the rotor with your fingers. You will see a sine wave. 
 
 Regular BLHELI_32 ESCs employ a simple motor control method known as "trapezoidal drive," in which the phase voltage waveforms are trapezoid-shaped rather than sinusoid-shaped. This is non-ideal as the fields are not always perfectly aligned with the rotor, which means that torque is not constantly maximized at a given power. This causes the rotor to effectively "jerk in a circle" rather than spin continuously, resulting in lower efficiency and rougher flight. Furthermore, the sharp edges of the trapezoidal signal also introduce high-frequency noise which contributes to the above disadvantages as well. This also makes the motors run louder and hotter.
