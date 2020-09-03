@@ -1,16 +1,16 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <export version="D">
   <design>
-    <source>C:\Users\esamp\Documents\SinESC\Multi Edition\1.0A\SinESC-Multi-1.0A\SinESC-Multi-1.0A.sch</source>
-    <date>9/2/2020 10:22:45 PM</date>
+    <source>C:\Users\esamp\Documents\SinESC\Multi Edition\2.3B\SinESC-Multi-2.3B\SinESC-Multi-2.3B.sch</source>
+    <date>9/3/2020 1:12:21 AM</date>
     <tool>Eeschema (5.1.6)-1</tool>
     <sheet number="1" name="/" tstamps="/">
       <title_block>
         <title>SinESC Multi Edition</title>
         <company>© SinESC 2020</company>
-        <rev>1.0A</rev>
-        <date>2020-08-31</date>
-        <source>SinESC-Multi-1.0A.sch</source>
+        <rev>2.3B</rev>
+        <date>2020-09-03</date>
+        <source>SinESC-Multi-2.3B.sch</source>
         <comment number="1" value="Drawn by SAR_mango"/>
         <comment number="2" value="* All resistors are 1% 0201; current shunts are 1% 1206."/>
         <comment number="3" value="* Capacitor voltage ratings &amp; packages vary. See BOM."/>
@@ -1361,10 +1361,10 @@
       <uri>C:\Program Files\KiCad\share\kicad\library/MCU_ST_STM32F3.lib</uri>
     </library>
     <library logical="TMC6100-LA">
-      <uri>C:/Users/esamp/Documents/Additional KiCAD Libraries/TMC6100-LA/TMC6100-LA.lib</uri>
+      <uri>C:\Users\esamp\Documents\SinESC\Multi Edition\2.3B\SinESC-Multi-2.3B/libs/TMC6100-LA/TMC6100-LA.lib</uri>
     </library>
     <library logical="TPS560430X">
-      <uri>C:/Users/esamp/Documents/Additional KiCAD Libraries/TPS560430X/TPS560430X.lib</uri>
+      <uri>C:\Users\esamp\Documents\SinESC\Multi Edition\2.3B\SinESC-Multi-2.3B/libs/TPS560430X/TPS560430X.lib</uri>
     </library>
     <library logical="Transistor_FET">
       <uri>C:\Program Files\KiCad\share\kicad\library/Transistor_FET.lib</uri>
