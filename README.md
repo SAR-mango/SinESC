@@ -60,7 +60,7 @@ SinESC is designed specifically for efficiency and robustness:
   - Fast switching slopes achieved with high gate drive current (1.5A), decreasing switching losses
 - Infineon Technologies BSC010N04LSI N-channel MOSFETs
   - Extremely low on-resistance (Rdson = 1.05mΩ) for reduced power loss
-  - High drain-source voltage (40V) for immunity to voltage spikes even at 6S Li-po voltages
+  - High drain-source voltage (Vds = 40V) for immunity to voltage spikes even at 6S Li-po voltages
 - High-quality passive components
   - TDK ceramic capacitors
   - Panasonic metal film resistors (all 1% tolerance including shunts)
