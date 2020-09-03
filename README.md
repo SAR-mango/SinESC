@@ -23,17 +23,19 @@ SinESC is designed specifically for efficiency:
 - Thermally optimized PCB layout
 
 # Hardware Achievements
-Not just any ESC can perform sinusoidal control, and not all sinusoidal ESCs are created equal. Sinusoidal control requires that the ESC know the exact position of the rotor in order to properly align the magnetic field. Perfect alignment means a perfect sine wave.
+Not just any ESC can perform sinusoidal control, and not all sinusoidal ESCs are created equal. Sinusoidal control requires that the ESC know the exact position of the rotor in order to properly align the magnetic field. Perfect alignment results in a perfect sine wave.
 
 There are a few ways to find the position of the rotor:
 
 The first, most obvious method is to put a (hall effect or similar) sensor on the motor to determine exactly where the rotor is. This sensor simply feeds data to the ESC. However, this is impractical for drones and wings due to durability, size, and weight concerns.
 
-The second way is to calculate the position of the rotor based on the currents flowing through each phase. Technically, measuring just the total motor current is sufficient, but this leads to poor rotor position estimation and thus reduced performance. Alternatively, each half-bridge can connect to ground through a series current shunt and the voltage drop across each shunt can be amplified and read by an ADC on a microcontroller. This allows for the current through each phase to be known, resulting in superior performance. Though more complicated, this is the current-sensing topology that SinESC employs.
+The second way is to calculate the position of the rotor based on the currents flowing through each phase. Technically, measuring just the total motor current is sufficient, but this leads to poor position estimation and thus reduced performance. Alternatively, each half-bridge can connect to ground through a series current shunt and the voltage drop across each shunt can be amplified and read by an ADC in a microcontroller. This allows for the current through each phase to be known, resulting in superior performance. Though more complicated, this is the current-sensing topology that SinESC employs.
 
-The PCB Layout of SinESC Multi Edition is the main accomplishment of this project:
+Finally, inline current sensing is also possible. This technique involves placing shunts in series with only two of the three phases, since the third phase current can be calculated with Kirchoff's Current Law. However, this requires complicated, expensive amplifiers as high common-mode rejection ratio is critical. Some gate driver ICs integrate these amplifiers, but their gain cannot be tuned to take full advantage of the ADC resolution. Thus, the second method was selected.
 
-The 15x30mm PCB size of SinESC Multi Edition uses 0201-sized components when possible for reduced parasitic influences and, of course, reduced size. Component density is approximately 86 components/square inch. The microcontroller, gate driver, and current-sense amplifiers (all the control electronics) are implemented on the top layer, leaving the bottom layer for the power electronics. This provides room for wide traces.
+The four-layer PCB layout of SinESC Multi Edition is the main accomplishment of this project:
+
+The 15x30mm SinESC Multi Edition PCB uses 0201-sized components when possible for reduced parasitic influences and reduced size. Component density is approximately 86 components/square inch. The microcontroller, gate driver, and current-sense amplifiers (all the control electronics) are implemented on the top layer, leaving the bottom layer for the power electronics. This provides room for wide traces.
 
 At an increased size of 17.5x35mm, SinESC Wing Edition adds CAN support with a robust transceiver.
 
@@ -41,10 +43,13 @@ Multi Edition is designed in KiCAD. All additional libraries are within the proj
 
 Wing Edition was designed in EasyEDA, and will soon be ported to KiCAD (a major redesign is required).
 
+![Multi Edition Top Layer](https://github.com/SAR-mango/SinESC/blob/master/Multi%20Edition/1.0A/SinESC-Multi-1.0A/Exported%20Files/3D%20Render%20Front.jpg)
+![Multi Edition Bottom Layer](https://github.com/SAR-mango/SinESC/blob/master/Multi%20Edition/1.0A/SinESC-Multi-1.0A/Exported%20Files/3D%20Render%20Back.jpg)
+
 # Standard Features
 Both versions of SinESC include the following standard features:
 
-- Hardware over-current protection (takes advantage of the comparators embedded in the STM32F3 microcontroller)
+- Hardware over-current protection (takes advantage of comparators embedded in the microcontroller)
 - Bus voltage monitoring for power monitoring and under-voltage protection
 - Typical configuration options such as motor direction
 - 60kHz PWM frequency for smooth flight. Increased PWM frequencies show no benefit and only decrease efficiency.
