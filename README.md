@@ -19,7 +19,7 @@ SinESC is designed specifically for efficiency:
 - Low-resistance current shunts (1mΩ) for minimal power loss
 - Switching regulator provides logic-level voltage supply for all control electronics
 - Extremely low on-resistance MOSFETs selected for the power stage (Rdson = 1.05mΩ)
-- Fast switching slopes achieved with high gate-drive current, minimizing switching losses
+- Fast switching slopes achieved with high gate-drive current, decreasing switching losses
 - Thermally optimized PCB layout
 
 # Hardware Achievements
