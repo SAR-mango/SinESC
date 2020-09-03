@@ -9,7 +9,7 @@ Multi Edition communicates with a flight controller though SinWire, a custom 1-w
 
 SinWire support will be added to Betaflight soon. It aims to match or exceed the update rate of DSHOT600.
 
-For specs, see "Standard Features" further below.
+For specs, see "Standard Features" further below. Renders of Multi v2.3B are at the bottom of the page.
 # Benefits of Sinusoidal Control: Efficiency & More!
 Brushless DC motors work best when their phase voltage waveforms are sinusoid-shaped. Try it yourself—connect a BLDC motor to an oscilloscope and spin the rotor with your fingers. You will see a sine wave. 
 
