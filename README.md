@@ -49,10 +49,10 @@ Both versions of SinESC include the following standard features:
 - For those who wish to repair a broken ESC, information and support will always be provided.
 
 # Key Components
-- STM32F303CBT7 microcontroller
-- TMC6100-LA gate driver with SPI; gate drive current set to maximum of 1.5A
-- MAX4239 precision op-amps for current-sensing. Incredibly low input offset voltage... 0.1µV. Gain = 30V/V; offset to use the full ADC resolution.
-- BSC010N04LSI N-channel MOSFETs
+- ST Microelectronics STM32F303CBT7 microcontroller
+- Trinamic Motion Control TMC6100-LA gate driver with SPI; gate drive current set to maximum of 1.5A
+- Maxim Integrated MAX4239 precision op-amps for current-sensing. Incredibly low input offset voltage... 0.1µV. Gain = 30V/V; offset to use the full ADC resolution.
+- Infineon Technologies BSC010N04LSI N-channel MOSFETs
 - High-quality passives
   - TDK-branded ceramic capacitors
   - Panasonic-branded metal film resistors; all 1% tolerance including shunts
