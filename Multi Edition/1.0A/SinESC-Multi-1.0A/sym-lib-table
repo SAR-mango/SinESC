@@ -1,0 +1,4 @@
+(sym_lib_table
+  (lib (name TMC6100-LA)(type Legacy)(uri ${KIPRJMOD}/libs/TMC6100-LA/TMC6100-LA.lib)(options "")(descr ""))
+  (lib (name TPS560430X)(type Legacy)(uri ${KIPRJMOD}/libs/TPS560430X/TPS560430X.lib)(options "")(descr ""))
+)
