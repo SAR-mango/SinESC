@@ -1,6 +1,4 @@
 # Overview
-SinESC brings sinusoidal motor control to the RC drone & wing communities while retaining standard features and low cost.
-
 There are two versions of SinESC. Wing Edition and Multi Edition:
 
 Wing Edition supports CAN and standard PWM control signals. CAN is intended for Pixhawk users, and standard PWM is for direct connection to an RC receiver.
