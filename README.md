@@ -78,6 +78,6 @@ If a minor change requires a new stencil and/or an updated BOM, Y is incremented
 
 If a major change is made, X is incremented and Y and Z are reset.
 
-Ideally, few minor changes are made between stable, production releases.
+Ideally, few minor changes are made between major releases.
 
 Regular Semantic Versioning is used for all software components of the project.
