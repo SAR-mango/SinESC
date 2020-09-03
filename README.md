@@ -33,7 +33,7 @@ The second way is to calculate the position of the rotor based on the currents f
 
 Finally, inline current sensing is also possible. This technique involves placing shunts in series with only two of the three motor phases, since the third phase current can be calculated with Kirchoff's Current Law. However, this requires complicated, expensive amplifiers as high common-mode rejection ratio is critical. Some gate driver ICs integrate these amplifiers, but their gain cannot be tuned to take full advantage of the ADC resolution. Thus, the second method was selected.
 
-The four-layer PCB layout of SinESC Multi Edition is the main accomplishment of this project:
+The four-layer PCB layout of SinESC is the main accomplishment of this project:
 
 The 15x30mm SinESC Multi Edition PCB uses 0201-sized components when possible for reduced parasitic influences and reduced size. Component density is approximately 86 components/square inch. The microcontroller, gate driver, and current-sense amplifiers (all the control electronics) are implemented on the top layer, leaving the bottom layer for the power electronics. This provides room for wide traces.
 
