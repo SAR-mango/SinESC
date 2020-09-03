@@ -31,7 +31,7 @@ The first, most obvious method is to put a hall-effect (or similar) sensor on th
 
 The second way is to calculate the position of the rotor based on the currents flowing through each phase. Technically, measuring just the total motor current is sufficient, but this leads to poor position estimation and thus reduced performance. Alternatively, each half-bridge can connect to ground through a series current shunt and the voltage drop across each shunt can be amplified and read by an ADC in a microcontroller. This allows for the current through each phase to be known, resulting in far superior performance. Though more complicated, this is the current-sensing topology that SinESC employs.
 
-Finally, inline current sensing is also possible. This technique involves placing shunts in series with only two of the three phases, since the third phase current can be calculated with Kirchoff's Current Law. However, this requires complicated, expensive amplifiers as high common-mode rejection ratio is critical. Some gate driver ICs integrate these amplifiers, but their gain cannot be tuned to take full advantage of the ADC resolution. Thus, the second method was selected.
+Finally, inline current sensing is also possible. This technique involves placing shunts in series with only two of the three motor phases, since the third phase current can be calculated with Kirchoff's Current Law. However, this requires complicated, expensive amplifiers as high common-mode rejection ratio is critical. Some gate driver ICs integrate these amplifiers, but their gain cannot be tuned to take full advantage of the ADC resolution. Thus, the second method was selected.
 
 The four-layer PCB layout of SinESC Multi Edition is the main accomplishment of this project:
 
