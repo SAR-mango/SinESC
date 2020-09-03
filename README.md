@@ -35,7 +35,9 @@ The second way is to calculate the position of the rotor based on the currents f
 
 The PCB Layout of SinESC Multi Edition is the main accomplishment of this project:
 
-The 15x30mm PCB size of SinESC Multi Edition uses 0201-sized components when possible for reduced parasitic influences and, of course, reduced size. Component density is approximately 86 components/square inch. The microcontroller, gate driver, and current-sense amplifiers (all the control electronics) are implemented on the top layer, leaving the bottom layer for the power electronics. This provides room for wide traces. At an increased size of 17.5x35mm, SinESC Wing Edition adds CAN support with a robust transceiver.
+The 15x30mm PCB size of SinESC Multi Edition uses 0201-sized components when possible for reduced parasitic influences and, of course, reduced size. Component density is approximately 86 components/square inch. The microcontroller, gate driver, and current-sense amplifiers (all the control electronics) are implemented on the top layer, leaving the bottom layer for the power electronics. This provides room for wide traces.
+
+At an increased size of 17.5x35mm, SinESC Wing Edition adds CAN support with a robust transceiver.
 
 # Standard Features
 Both versions of SinESC include the following standard features:
