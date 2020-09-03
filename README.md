@@ -65,5 +65,5 @@ SinESC is designed specifically for efficiency and robustness:
   - TDK ceramic capacitors
   - Panasonic metal film resistors (all 1% tolerance including shunts)
 
-![Multi Edition Top Layer](https://github.com/SAR-mango/SinESC/blob/master/Multi%20Edition/1.0A/SinESC-Multi-1.0A/Exported%20Files/3D%20Render%20Front.jpg)
-![Multi Edition Bottom Layer](https://github.com/SAR-mango/SinESC/blob/master/Multi%20Edition/1.0A/SinESC-Multi-1.0A/Exported%20Files/3D%20Render%20Back.jpg)
+![Multi Edition Top Layer](https://raw.githubusercontent.com/SAR-mango/SinESC/master/Multi%20Edition/2.3B/SinESC-Multi-2.3B/Exported%20Files/3D%20Render%20Front.jpg)
+![Multi Edition Bottom Layer](https://raw.githubusercontent.com/SAR-mango/SinESC/master/Multi%20Edition/2.3B/SinESC-Multi-2.3B/Exported%20Files/3D%20Render%20Back.jpg)
