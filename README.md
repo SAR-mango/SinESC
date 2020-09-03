@@ -18,9 +18,9 @@ Sinusoidal control minimizes torque ripple, maximizing efficiency. The magnetic 
 
 SinESC is designed specifically for efficiency:
 
-- Low-resistance current shunts... 1mΩ for minimal power loss
+- Low-resistance current shunts (1mΩ) for minimal power loss
 - Switching regulator provides logic-level voltage supply for all control electronics
-- Extremely low on-resistance MOSFETs selected for the power stage... Rdson = 1.05mΩ
+- Extremely low on-resistance MOSFETs selected for the power stage (Rdson = 1.05mΩ)
 - Fast switching slopes achieved with high gate-drive current, minimizing switching losses
 - Thermally optimized PCB layout
 
@@ -51,8 +51,8 @@ Both versions of SinESC include the following standard features:
 # Key Components
 - ST Microelectronics STM32F303CBT7 microcontroller
 - Trinamic Motion Control TMC6100-LA gate driver with SPI; gate drive current set to maximum of 1.5A
-- Maxim Integrated MAX4239 precision op-amps for current-sensing. Incredibly low input offset voltage... 0.1µV. Gain = 30V/V; offset to use the full ADC resolution.
+- Maxim Integrated MAX4239 precision op-amps for current-sensing. Incredibly low input offset voltage (0.1µV). Gain = 30V/V; offset tuned to use the full ADC resolution.
 - Infineon Technologies BSC010N04LSI N-channel MOSFETs
 - High-quality passives
-  - TDK-branded ceramic capacitors
-  - Panasonic-branded metal film resistors; all 1% tolerance including shunts
+  - TDK ceramic capacitors
+  - Panasonic metal film resistors; all 1% tolerance including shunts
