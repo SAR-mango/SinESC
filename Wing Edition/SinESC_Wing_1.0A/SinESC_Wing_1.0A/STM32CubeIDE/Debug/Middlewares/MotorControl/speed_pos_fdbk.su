@@ -1,0 +1,10 @@
+speed_pos_fdbk.c:55:16:SPD_GetElAngle	16	static
+speed_pos_fdbk.c:70:16:SPD_GetMecAngle	16	static
+speed_pos_fdbk.c:80:16:SPD_GetAvrgMecSpeedUnit	16	static
+speed_pos_fdbk.c:93:16:SPD_GetElSpeedDpp	16	static
+speed_pos_fdbk.c:106:16:SPD_GetInstElSpeedDpp	16	static
+speed_pos_fdbk.c:121:13:SPD_Check	24	static
+speed_pos_fdbk.c:155:13:SPD_IsMecSpeedReliable	32	static
+speed_pos_fdbk.c:240:16:SPD_GetS16Speed	24	static
+speed_pos_fdbk.c:255:16:SPD_GetElToMecRatio	16	static
+speed_pos_fdbk.c:267:13:SPD_SetElToMecRatio	16	static

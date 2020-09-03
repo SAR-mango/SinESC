@@ -1,0 +1,15 @@
+"C:\Program Files (x86)\IAR Systems\Embedded Workbench 7.4\arm\bin\armproc.dll" 
+
+"C:\Program Files (x86)\IAR Systems\Embedded Workbench 7.4\arm\bin\armstlink2.dll" 
+
+"C:\Users\giuseppe scuderi-sl\Desktop\MOTOR CONTROL\ESC\STEVAL-ESC001V1\FIRMWARE\FW\v4.3.0\STM32 PMSM FOC LIB\Web\Project\EWARM\UserProject\P-NUCLEO-IHM001_SINGLEDRIVE\Exe\STM32303C-EVAL.out " 
+
+--plugin "C:\Program Files (x86)\IAR Systems\Embedded Workbench 7.4\arm\bin\armbat.dll" 
+
+--device_macro "C:\Program Files (x86)\IAR Systems\Embedded Workbench 7.4\arm\config\debugger\ST\STM32F3xx.dmac" 
+
+--flash_loader "C:\Program Files (x86)\IAR Systems\Embedded Workbench 7.4\arm\config\flashloader\ST\FlashSTM32F3xxx8.board" 
+
+
+
+

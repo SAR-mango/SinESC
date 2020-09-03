@@ -1,0 +1,9 @@
+ui_task.c:37:6:UI_TaskInit	40	static
+ui_task.c:50:13:UI_Scheduler	4	static
+ui_task.c:68:23:GetMCP	4	static
+ui_task.c:73:13:UI_IdleTimeHasElapsed	16	static
+ui_task.c:83:13:UI_SetIdleTime	16	static
+ui_task.c:88:13:UI_SerialCommunicationTimeOutHasElapsed	16	static
+ui_task.c:99:13:UI_SerialCommunicationATRTimeHasElapsed	16	static
+ui_task.c:110:13:UI_SerialCommunicationTimeOutStop	4	static
+ui_task.c:115:13:UI_SerialCommunicationTimeOutStart	4	static

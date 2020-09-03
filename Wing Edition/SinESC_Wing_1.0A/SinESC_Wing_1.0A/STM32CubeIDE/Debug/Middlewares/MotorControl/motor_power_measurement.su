@@ -1,0 +1,4 @@
+motor_power_measurement.c:51:13:MPM_Clear	24	static
+motor_power_measurement.c:71:16:MPM_CalcElMotorPower	24	static
+motor_power_measurement.c:101:16:MPM_GetElMotorPowerW	16	static
+motor_power_measurement.c:112:16:MPM_GetAvrgElMotorPowerW	16	static

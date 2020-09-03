@@ -1,0 +1,17 @@
+stm32f3xx_ll_adc.h:6527:22:LL_ADC_ClearFlag_JEOS	16	static
+stm32f3xx_ll_tim.h:3986:22:LL_TIM_ClearFlag_UPDATE	16	static
+stm32f3xx_ll_tim.h:4188:22:LL_TIM_ClearFlag_BRK	16	static
+stm32f3xx_ll_tim.h:4199:26:LL_TIM_IsActiveFlag_BRK	16	static
+stm32f3xx_ll_tim.h:4211:22:LL_TIM_ClearFlag_BRK2	16	static
+stm32f3xx_ll_tim.h:4222:26:LL_TIM_IsActiveFlag_BRK2	16	static
+stm32f3xx_ll_usart.h:2543:26:LL_USART_IsActiveFlag_ORE	16	static
+stm32f3xx_ll_usart.h:2565:26:LL_USART_IsActiveFlag_RXNE	16	static
+stm32f3xx_ll_usart.h:2587:26:LL_USART_IsActiveFlag_TXE	16	static
+stm32f3xx_ll_usart.h:2799:22:LL_USART_ClearFlag_ORE	16	static
+stm32f3xx_ll_usart.h:3489:25:LL_USART_ReceiveData8	16	static
+stm32f30x_mc_it.c:77:6:ADC1_2_IRQHandler	8	static
+stm32f30x_mc_it.c:102:6:TIM1_UP_TIM16_IRQHandler	8	static
+stm32f30x_mc_it.c:116:6:TIM1_BRK_TIM15_IRQHandler	8	static
+stm32f30x_mc_it.c:146:6:USART1_IRQHandler	16	static
+stm32f30x_mc_it.c:199:6:HardFault_Handler	16	static
+stm32f30x_mc_it.c:247:6:SysTick_Handler	8	static

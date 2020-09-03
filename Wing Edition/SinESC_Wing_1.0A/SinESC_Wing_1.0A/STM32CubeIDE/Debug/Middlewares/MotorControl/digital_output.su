@@ -1,0 +1,4 @@
+stm32f3xx_ll_gpio.h:879:22:LL_GPIO_SetOutputPin	16	static
+stm32f3xx_ll_gpio.h:908:22:LL_GPIO_ResetOutputPin	16	static
+digital_output.c:44:13:DOUT_SetOutputState	16	static
+digital_output.c:74:23:DOUT_GetOutputState	16	static

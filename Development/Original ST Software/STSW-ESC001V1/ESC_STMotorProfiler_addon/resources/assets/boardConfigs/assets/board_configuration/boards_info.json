@@ -1,0 +1,640 @@
+{
+  "boards" : [
+
+    {
+      "type":"Inverter",
+      "name": "STEVAL-ESC001V1",
+      "description": "STEVAL-ESC001V1",
+      "path":"images",
+      "image": "STEVAL-ESC001V1_PB.png",
+      "steps" : [
+		{
+          "name": "No Config required",
+          "position" : 0,
+          "image": "STEVAL-ESC001V1_CB.png",
+          "descriptions": ["This special board does not require any configuration as it has been specifically designed for Motor Control"],
+          "last":true
+        }
+      ]
+    },
+
+
+
+
+	{
+      "type":"Control",
+      "name": "Nucleo-F302R8",
+      "description": "Nucleo-F302R8 description",
+      "path":"images",
+      "image": "NUCLEOF302R82.png",
+      "steps" : [
+        {
+          "name": "Step",
+          "position" : 1,
+          "image": "NUCLEO-F302R81.png",
+          "descriptions": [
+				"Remove jumper JP1.",
+				"Plug-in jumper JP5 as shown for power supply from USB connector of ST-LINK/V2.",
+				"Check that LD3 is turned ON."
+				],
+          "last":false
+        },
+        {
+          "name": "Step",
+          "position" : 2,
+          "image": "NUCLEO-F302R82.png",
+          "descriptions": ["Plug-in the two jumpers on CN2, to program the STM32."],
+          "last":false
+        },
+		{
+          "name": "Recommendations",
+          "position" : 0,
+          "image": "NUCLEO-F302R8_Recommend.png",
+          "descriptions": ["Use the external Isolated ST LinkConnect using HIGH VOLTAGE Power Board."],
+          "last":true
+        }
+      ]
+    },
+    {
+      "type":"Control",
+      "name": "STM3241G-EVAL",
+      "description": "STM3241G-EVAL description",
+      "path":"images",
+      "image": "stm324xg-eval.png",
+      "steps" : [
+        {
+          "name": "Step",
+          "position" : 1,
+          "image": "stm324xg-eval_step1.png",
+          "descriptions": ["Plug-in jumper JP18 as shown for power supply from USB connector of ST-LINK/V2."],
+          "last":false
+        },
+        {
+          "name": "Step",
+          "position" : 2,
+          "image": "stm324xg-eval_step2.png",
+          "descriptions": ["Solder bridges SB11, SB12 and SB16."],
+          "last":true
+        },
+        {
+          "name": "Step",
+          "position" : 3,
+          "image": "stm324xg-eval_step3.png",
+          "descriptions": ["Remove the 0 Ohm resistor from R58 and solder it in R205 (Heat sink)"],
+          "last":true
+        },
+        {
+          "name": "Step",
+          "position" : 4,
+          "image": "stm324xg-eval_step4.png",
+          "descriptions": ["Remove the 0 Ohm resistor from R34 and solder it in R204 (Bus voltage)","Remove the 0 Ohm resistor from R51 and solder it in R66 (Current C)"],
+          "last":true
+        },
+        {
+          "name": "Step",
+          "position" : 5,
+          "image": "stm324xg-eval_step5.png",
+          "descriptions": ["Solder bridges SB10, SB14 and SB15."],
+          "last":true
+        },
+        {
+          "name": "Step",
+          "position" : 6,
+          "image": "stm324xg-eval_step6.png",
+          "descriptions": ["MicroSD Card must be removed from CN6 for Motor control application.","Camera module must be removed from CN15."],
+          "last":true
+        },
+        {
+          "name": "Recommendations",
+          "position" : 0,
+          "image": "stm324xg-eval_recommend.png",
+          "descriptions": ["Connect the power board with the CN5 motor control connector using 32pin flat cable.", "Connect an RS232 cable from the PC to the CN16 connector to establish the serial communication.", "Connect the ST-LINK/V2 to the CN21 to upgrade the firmware.","Use the external Isolated ST LinkConnect using HIGH VOLTAGE Power Board."],
+          "last":true
+        }
+      ]
+    },
+    {
+      "type":"Control",
+      "name": "STM3240G-EVAL",
+      "description": "STM3240G-EVAL description",
+      "path":"images",
+      "image": "stm324xg-eval.png",
+      "steps" : [
+        {
+          "name": "Step",
+          "position" : 1,
+          "image": "stm324xg-eval_step1.png",
+          "descriptions": ["Plug-in jumper JP18 as shown for power supply from USB connector of ST-LINK/V2."],
+          "last":false
+        },
+        {
+          "name": "Step",
+          "position" : 2,
+          "image": "stm324xg-eval_step2.png",
+          "descriptions": ["Solder bridges SB11, SB12 and SB16."],
+          "last":true
+        },
+        {
+          "name": "Step",
+          "position" : 3,
+          "image": "stm324xg-eval_step3.png",
+          "descriptions": ["Remove the 0 Ohm resistor from R58 and solder it in R205 (Heat sink)"],
+          "last":true
+        },
+        {
+          "name": "Step",
+          "position" : 4,
+          "image": "stm324xg-eval_step4.png",
+          "descriptions": ["Remove the 0 Ohm resistor from R34 and solder it in R204 (Bus voltage)","Remove the 0 Ohm resistor from R51 and solder it in R66 (Current C)"],
+          "last":true
+        },
+        {
+          "name": "Step",
+          "position" : 5,
+          "image": "stm324xg-eval_step5.png",
+          "descriptions": ["Solder bridges SB10, SB14 and SB15."],
+          "last":true
+        },
+        {
+          "name": "Step",
+          "position" : 6,
+          "image": "stm324xg-eval_step6.png",
+          "descriptions": ["MicroSD Card must be removed from CN6 for Motor control application.","Camera module must be removed from CN15."],
+          "last":true
+        },
+        {
+          "name": "Recommendations",
+          "position" : 0,
+          "image": "stm324xg-eval_recommend.png",
+          "descriptions": ["Connect the power board with the CN5 motor control connector using 32pin flat cable.", "Connect an RS232 cable from the PC to the CN16 connector to establish the serial communication.", "Connect the ST-LINK/V2 to the CN21 to upgrade the firmware.","Use the external Isolated ST LinkConnect using HIGH VOLTAGE Power Board."],
+          "last":true
+        }
+      ]
+    },
+    {
+      "type":"Control",
+      "name": "Nucleo-F303RE",
+      "description": "Nucleo-F303RE description",
+      "path":"images",
+      "image": "NUCLEOF302R82.png",
+      "steps" : [
+        {
+          "name": "Step",
+          "position" : 1,
+          "image": "NUCLEO-F302R81.png",
+          "descriptions": ["Remove jumper JP1.","Plug-in jumper JP5 as shown for power supply from USB connector of ST-LINK/V2.","Check that LD3 is turned ON."],
+          "last":false
+        },
+        {
+          "name": "Step",
+          "position" : 2,
+          "image": "NUCLEO-F302R82.png",
+          "descriptions": ["Plug-in the two jumpers on CN2, to program the STM32."],
+          "last":false
+        },
+		{
+          "name": "Recommendations",
+          "position" : 0,
+          "image": "NUCLEO-F302R8_Recommend.png",
+          "descriptions": ["Use the external Isolated ST LinkConnect using HIGH VOLTAGE Power Board."],
+          "last":true
+        }
+      ]
+    },
+    {
+      "type":"Control",
+      "name": "STM32303E-EVAL",
+      "description": "STM32303E-EVAL description",
+      "path":"images",
+      "image": "STM32303E-EVAL.png",
+      "steps" : [
+        {
+          "name": "Step",
+          "position" : 1,
+          "image": "stm32303e_img1b.png",
+          "descriptions": ["Plug-in jumper JP14 as shown for power supply from USB connector of ST-LINK/V2."],
+          "last":false
+        },
+        {
+          "name": "Step",
+          "position" : 2,
+          "image": "stm32303e_img2b.png",
+          "descriptions": ["Plug-in jumper between PE15 (pin17) and PE14 (pin18)."],
+          "last":false
+        },
+        {
+          "name": "Step",
+          "position" : 3,
+          "image": "stm32303e_img3b.png",
+          "descriptions": ["Plug-in jumper JP13 as shown for enabled RS232 communication."],
+          "last":false
+        },
+        {
+          "name": "Step",
+          "position" : 4,
+          "image": "stm32303e_img4b.png",
+          "descriptions": ["MicroSD Card must be removed from CN16 for Motor control application.","OAM1 and PGM1 switch must be positioned as shown in Figure."],
+          "last":false
+        },
+        {
+          "name": "Step",
+          "position" : 5,
+          "image": "stm32303e_img6b.png",
+          "descriptions": ["Remove even number resistors from R1 to R58 (R2, R4, R6... R56, R58 except R12 and R22) as shown in Figure."],
+          "last":false
+        },
+        {
+          "name": "Step",
+          "position" : 6,
+          "image": "stm32303e_img7b.png",
+          "descriptions": ["Mount odd number resistors from R1 to R57 (R1, R3... R55, R57) except R11 which is mounted by default with a 0-ohm resistor as shown in Figure."],
+          "last":false
+        },
+        {
+          "name": "Recommendations",
+          "position" : 0,
+          "image": "stm32303e_img8b.png",
+          "descriptions": ["Connect the power board with the CN2 connector using 32pin flat cable.", "Connect an RS232 cable from the PC to the CN8 connector to establish the serial communication.", "Connect the ST-LINK/V2 to the CN5 to upgrade the firmware.","Use the external Isolated ST LinkConnect using HIGH VOLTAGE Power Board."],
+          "last":true
+        }
+      ]
+    },
+    {
+      "type":"Power",
+      "name": "X-Nucleo-IHM07M1 3Sh",
+      "description": "X-Nucleo-IHM07M1 3Sh description",
+      "path":"images",
+      "image": "image_x-nucleo-ihm07m1a.png",
+      "steps" : [
+        {
+          "name": "Step",
+          "position" : 1,
+          "image": "image_x-nucleo-ihm07m2.png",
+          "descriptions": ["Plug-in jumpers J5 and J6 as shown for three shunt configuration."],
+          "last":false
+        },
+        {
+          "name": "Step",
+          "position" : 2,
+          "image": "image_x-nucleo-ihm07m3.png",
+          "descriptions": ["Remove jumper J9.", "Plug-in jumpers JP1 and JP2 as shown."],
+          "last":true
+        },
+        {
+          "name": "Connectors",
+          "position" : 0,
+          "image": "image_x-nucleo-ihm07m_connectors.png",
+          "descriptions": ["J1 Power supply connector.", "J2 Motor connector."],
+          "last":true
+        }
+      ]
+    },
+    {
+      "type":"Power",
+      "name": "X-Nucleo-IHM08M1 3Sh",
+      "description": "X-Nucleo-IHM08M1 3Sh description",
+      "path":"images",
+      "image": "en_x-nucleo-ihm08m1.png",
+      "steps" : [
+        {
+          "name": "Step",
+          "position" : 1,
+          "image": "image_x-nucleo-ihm08m1_1.png",
+          "descriptions": ["Plug-in jumpers J5 and J6 as shown for three shunt configuration."],
+          "last":false
+        },
+        {
+          "name": "Step",
+          "position" : 2,
+          "image": "image_x-nucleo-ihm08m1_2.png",
+          "descriptions": ["Remove resistor R181.","Remove jumper J9.", "Plug-in jumpers JP1 and JP2 as shown."],
+          "last":true
+        },
+        {
+          "name": "Connectors",
+          "position" : 0,
+          "image": "image_x-nucleo-ihm08m1_connectors.png",
+          "descriptions": ["J1 Power supply connector.", "J16 Motor connector."],
+          "last":true
+        }
+      ]
+    },
+	  {
+      "type":"Power",
+      "name": "STEVAL-IPM10B 3Sh",
+      "description": "STEVAL-IPM10B 3Sh description",
+      "path":"images",
+      "image": "STEVAL-IPM10B 3Sh.png",
+      "steps" : [
+        {
+          "name": "Step",
+          "position" : 1,
+          "image": "STEVAL-IPM10B 3Sh_step1.png",
+          "descriptions": ["Three-shunt resistor circuits can be adopted by setting the solder bridges SW7 and SW8."],
+          "last":false
+        },
+        {
+          "name": "Step",
+          "position" : 2,
+          "image": "STEVAL-IPM10B 3Sh_step2.png",
+          "descriptions": ["Add an appropriate bulk capacity (C1) to stabilize the bus supply voltage.","Plug-in jumpers SW1, SW2 and SW4 as shown."],
+          "last":false
+        },
+
+        {
+          "name": "Connectors",
+          "position" : 0,
+          "image": "STEVAL-IPM10B 3Sh_Recommendations.png",
+          "descriptions": ["J2 Motor control connector.", "J3 Motor connector.", "J4 VCC supply (20 VDC max).", "J7 Supply connector (DC – 125V to 400 V)."],
+          "last":true
+        }
+      ]
+    },
+    {
+      "type":"Power",
+      "name": "STEVAL-IPM15B 3Sh",
+      "description": "STEVAL-IPM15B 3Sh description",
+      "path":"images",
+      "image": "STEVAL-IPM10B 3Sh.png",
+      "steps" : [
+        {
+          "name": "Step",
+          "position" : 1,
+          "image": "STEVAL-IPM10B 3Sh_step1.png",
+          "descriptions": ["Three-shunt resistor circuits can be adopted by setting the solder bridges SW7 and SW8."],
+          "last":false
+        },
+        {
+          "name": "Step",
+          "position" : 2,
+          "image": "STEVAL-IPM10B 3Sh_step2.png",
+          "descriptions": ["Add an appropriate bulk capacity (C1) to stabilize the bus supply voltage.","Plug-in jumpers SW1, SW2 and SW4 as shown."],
+          "last":false
+        },
+
+        {
+          "name": "Connectors",
+          "position" : 0,
+          "image": "STEVAL-IPM10B 3Sh_Recommendations.png",
+          "descriptions": ["J2 Motor control connector.", "J3 Motor connector.", "J4 VCC supply (20 VDC max).", "J7 Supply connector (DC – 125V to 400 V)."],
+          "last":true
+        }
+      ]
+    },
+    {
+      "type":"Power",
+      "name": "STEVAL-IPM05F 3Sh",
+      "description": "STEVAL-IPM05F 3Sh description",
+      "path":"images",
+      "image": "STEVAL-IPM10B 3Sh.png",
+      "steps" : [
+        {
+          "name": "Step",
+          "position" : 1,
+          "image": "STEVAL-IPM10B 3Sh_step1.png",
+          "descriptions": ["Three-shunt resistor circuits can be adopted by setting the solder bridges SW7 and SW8."],
+          "last":false
+        },
+        {
+          "name": "Step",
+          "position" : 2,
+          "image": "STEVAL-IPM10B 3Sh_step2.png",
+          "descriptions": ["Add an appropriate bulk capacity (C1) to stabilize the bus supply voltage.","Plug-in jumpers SW1, SW2 and SW4 as shown."],
+          "last":false
+        },
+
+        {
+          "name": "Connectors",
+          "position" : 0,
+          "image": "STEVAL-IPM10B 3Sh_Recommendations.png",
+          "descriptions": ["J2 Motor control connector.", "J3 Motor connector.", "J4 VCC supply (20 VDC max).", "J7 Supply connector (DC – 125V to 400 V)."],
+          "last":true
+        }
+      ]
+    },
+    {
+      "type":"Power",
+      "name": "STEVAL-IHM023V3 3Sh HV",
+      "description": "STEVAL-IHM023V3 3Sh HV description",
+      "path":"images",
+      "image": "en_steval-ihm023v1.png",
+      "steps" : [
+        {
+          "name": "Step",
+          "position" : 1,
+          "image": "en_steval-ihm023v2.png",
+          "descriptions": ["Plug-in jumper W1 in 3.3v position.","Plug-in jumper W3 in HIGH VOLTAGE position."],
+          "last":false
+        },
+        {
+          "name": "Step",
+          "position" : 2,
+          "image": "en_steval-ihm023v4.png",
+          "descriptions": ["Plug-in jumper W5 in R_BRAKE position.", "Plug-in jumper W1 in Silk screen marked position." ],
+          "last":false
+        },
+        {
+          "name": "Step",
+          "position" : 3,
+          "image": "en_steval-ihm023v5.png",
+          "descriptions": ["Plug-in jumpers W13 and W9 as shown for three shunt configuration." ],
+          "last":false
+        },
+        {
+          "name": "Step",
+          "position" : 4,
+          "image": "en_steval-ihm023v6.png",
+          "descriptions": ["Plug-in jumper W10 and remove jumper W14 as shown." ],
+          "last":true
+        },
+        {
+          "name": "Connectors",
+          "position" : 0,
+          "image": "en_steval-ihm023vconnectors.png",
+          "descriptions": ["J1 Supply connector.","J2 Motor connector.","J3 15 V auxiliary supply connector.","J5 Motor control connector.","J6 Dissipative brake.","J8 Tachometer input connector for AC motor speed loop control." ],
+          "last":true
+        }
+
+      ]
+    },
+    {
+      "type":"Power",
+      "name": "STEVAL-IHM028V2 3Sh",
+      "description": "STEVAL-IHM028V2 3Sh description",
+      "path":"images",
+      "image": "steval-ihm028v2.png",
+      "steps" : [
+        {
+          "name": "Step",
+          "position" : 1,
+          "image": "steval-ihm028v2_step1.png",
+          "descriptions": ["Plug-in jumper W1 in A position for Vdd = 3.3V.","Plug-in jumper W2 in A position for software brake."],
+          "last":false
+        },
+        {
+          "name": "Step",
+          "position" : 2,
+          "image": "steval-ihm028v2_step2.png",
+          "descriptions": ["Three-shunt resistor circuits can be adopted by setting the solder bridges W9 and W10." ],
+          "last":false
+        },
+        {
+          "name": "Step",
+          "position" : 3,
+          "image": "steval-ihm028v2_step3.png",
+          "descriptions": ["Remove jumper W3.","Plug-in jumper W15 for voltage 110Vac, Remove jumper W15 for voltage 220Vac" ],
+          "last":false
+        },
+        {
+          "name": "Step",
+          "position" : 4,
+          "image": "steval-ihm028v2_step4.png",
+          "descriptions": ["Plug in W11, w12, w13 and w14." ],
+          "last":false
+        },
+        {
+          "name": "Connectors",
+          "position" : 0,
+          "image": "steval-ihm028v2_Recommendations.png",
+          "descriptions": ["J1 Supply connector.","J2 Motor control connector.","J4 Motor connector.","J5 Hall sensors / encoder input connector.","J6 Tachometer input connector for AC motor speed loop control.","J7 Dissipative brake." ],
+          "last":true
+        }
+      ]
+    },
+    {
+      "type":"Power",
+      "name": "STEVAL-IHM025V1 3Sh",
+      "description": "STEVAL-IHM025V1 3Sh description",
+      "path":"images",
+      "image": "steval-ihm025v_HOME.png",
+      "steps" : [
+        {
+          "name": "Step",
+          "position" : 1,
+          "image": "steval-ihm025v_step1.png",
+          "descriptions": ["Plug-in jumper W1 in A position for 3.3V supplied MCU.","Remove jumper W4.","Plug-in jumper W6 in A position."],
+          "last":false
+        },
+        {
+          "name": "Step",
+          "position" : 2,
+          "image": "steval-ihm025v_step2_Bottom.png",
+          "descriptions": ["Three-shunt resistor circuits can be adopted by setting the solder bridges W9 and W10." ],
+          "last":false
+        },
+
+        {
+          "name": "Connectors",
+          "position" : 0,
+          "image": "steval-ihm025v_Recommend.png",
+          "descriptions": ["J1 Supply connector.","J2 Motor connector.","J3 BEMF daughterboard connector.","J4 Motor control connector","J5 Hall sensors / encoder input connector.","J6 Dissipative brake.","J7 Tachometer input connector for AC motor speed loop control."],
+          "last":true
+        }
+      ]
+    },
+    {
+      "type":"Power",
+      "name": "STM3210B-MCKIT 3Sh LV",
+      "description": "STM3210B-MCKIT 3Sh LV description",
+      "path":"images",
+      "image": "stm3210b-mckit 3sh_Home.png",
+      "steps" : [
+        {
+          "name": "Step",
+          "position" : 1,
+          "image": "stm3210b-mckit 3sh_lv_step1.png",
+          "descriptions": ["Plug-in jumper W1 in '<35V Only' position."],
+          "last":false
+        },
+        {
+          "name": "Step",
+          "position" : 2,
+          "image": "stm3210b-mckit 3sh_step2.png",
+          "descriptions": ["Three-shunt resistor circuits can be adopted by plug-in jumper W4 and remove jumper W5." ],
+          "last":false
+        },
+        {
+          "name": "Step",
+          "position" : 3,
+          "image": "stm3210b-mckit 3sh_step3.png",
+          "descriptions": ["Plug-in jumper W6, W8, W9 and W11."],
+          "last":true
+        },
+        {
+          "name": "Step",
+          "position" : 4,
+          "image": "stm3210b-mckit 3sh_step4.png",
+          "descriptions": ["Plug-in jumper W7 and W10 as shown."],
+          "last":true
+        },
+        {
+          "name": "Step",
+          "position" : 5,
+          "image": "stm3210b-mckit 3sh_step5.png",
+          "descriptions": ["Remove jumper W13, W14, and W15."],
+          "last":true
+        },
+        {
+          "name": "Connectors",
+          "position" : 0,
+          "image": "stm3210b-mckit 3sh_connectors.png",
+          "descriptions": ["J1 Auxiliary supply input connector.","J3 Power supply input connector.","J5 Three-phase output to motor connector.","J6 Tachometer input for closed-loop controlled AC motors connector.","J7 Motor connector."],
+          "last":true
+        }
+      ]
+    },
+    {
+      "type":"Power",
+      "name": "STM3210B-MCKIT 3Sh HV",
+      "description": "STM3210B-MCKIT 3Sh HV description",
+      "path":"images",
+      "image": "stm3210b-mckit 3sh_Home.png",
+      "steps" : [
+        {
+          "name": "Step",
+          "position" : 1,
+          "image": "stm3210b-mckit 3sh_hv_step1.png",
+          "descriptions": ["Plug-in jumper W1 in 'HIGH VOLTAGE' position."],
+          "last":false
+        },
+        {
+          "name": "Step",
+          "position" : 2,
+          "image": "stm3210b-mckit 3sh_step2.png",
+          "descriptions": ["Three-shunt resistor circuits can be adopted by plug-in jumper W4 and remove jumper W5." ],
+          "last":false
+        },
+        {
+          "name": "Step",
+          "position" : 3,
+          "image": "stm3210b-mckit 3sh_step3.png",
+          "descriptions": ["Plug-in jumper W6, W8, W9 and W11."],
+          "last":true
+        },
+        {
+          "name": "Step",
+          "position" : 4,
+          "image": "stm3210b-mckit 3sh_step4.png",
+          "descriptions": ["Plug-in jumper W7 and W10 as shown."],
+          "last":true
+        },
+        {
+          "name": "Step",
+          "position" : 5,
+          "image": "stm3210b-mckit 3sh_step5.png",
+          "descriptions": ["Remove jumper W13, W14, and W15."],
+          "last":true
+        },
+        {
+          "name": "Connectors",
+          "position" : 0,
+          "image": "stm3210b-mckit 3sh_connectors.png",
+          "descriptions": ["J1 Auxiliary supply input connector.","J3 Power supply input connector.","J5 Three-phase output to motor connector.","J6 Tachometer input for closed-loop controlled AC motors connector.","J7 Motor connector."],
+          "last":true
+        }
+      ]
+    }
+
+
+  ]
+}
