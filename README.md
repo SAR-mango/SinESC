@@ -1,4 +1,6 @@
 # Overview
+SinESC is an electronic speed controller (ESC) for brushless DC motors that supports full sinusoidal control. RC drones and wings are the target application of SinESC.
+
 There are two versions of SinESC. Wing Edition and Multi Edition:
 
 Wing Edition supports CAN and standard PWM control signals. CAN is intended for Pixhawk users, and standard PWM is for direct connection to an RC receiver.
