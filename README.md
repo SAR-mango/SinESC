@@ -27,7 +27,7 @@ Not just any ESC can perform sinusoidal control, and not all sinusoidal ESCs are
 
 There are a few ways to find the position of the rotor:
 
-The first, most obvious method is to put a (hall effect or similar) sensor on the motor to determine exactly where the rotor is. This sensor simply feeds data to the ESC. However, this is impractical for drones and wings due to durability, size, and weight concerns.
+The first, most obvious method is to put a hall-effect (or similar) sensor on the motor to determine exactly where the rotor is. This sensor simply feeds data to the ESC. However, this is impractical for drones and wings due to durability, size, and weight concerns.
 
 The second way is to calculate the position of the rotor based on the currents flowing through each phase. Technically, measuring just the total motor current is sufficient, but this leads to poor position estimation and thus reduced performance. Alternatively, each half-bridge can connect to ground through a series current shunt and the voltage drop across each shunt can be amplified and read by an ADC in a microcontroller. This allows for the current through each phase to be known, resulting in superior performance. Though more complicated, this is the current-sensing topology that SinESC employs.
 
