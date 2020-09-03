@@ -37,6 +37,10 @@ The 15x30mm PCB size of SinESC Multi Edition uses 0201-sized components when pos
 
 At an increased size of 17.5x35mm, SinESC Wing Edition adds CAN support with a robust transceiver.
 
+Multi Edition is designed in KiCAD. All additional libraries are within the project files.
+
+Wing Edition was designed in EasyEDA, and will soon be ported to KiCAD (a major redesign is required).
+
 # Standard Features
 Both versions of SinESC include the following standard features:
 
