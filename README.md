@@ -7,13 +7,25 @@ Multi Edition communicates with a flight controller though SinWire, a custom 1-w
 
 SinWire support will be added to Betaflight soon. It aims to match or exceed the update rate of DSHOT600.
 
-For specs, see "Standard Features" at the bottom.
+For specs, see "Standard Features" below.
 # Benefits of Sinusoidal Control: Efficiency & More!
 Brushless DC motors work best when their phase voltage waveforms are sinusoid-shaped. Try it yourself—connect a BLDC motor to an oscilloscope and spin the rotor with your fingers. You will see a sine wave. 
 
 Regular BLHELI_32 ESCs employ a simple motor control method known as "trapezoidal drive," in which the phase voltage waveforms are trapezoid-shaped rather than sinusoid-shaped. This is not ideal as the fields are not always perfectly aligned with the rotor, which means that torque is not constantly maximized at a given power. This causes the rotor to effectively "jerk in a circle" rather than spin continuously, resulting in lower efficiency and rougher flight. Furthermore, the sharp edges of the trapezoidal signal also introduce high-frequency noise which contributes to the above disadvantages as well. This also makes the motors run louder and hotter.
 
 Sinusoidal control minimizes torque ripple, maximizing efficiency. The magnetic fields are aligned precisely to exert the maximum torque on the rotor at any given position. Minimized torque ripple leads to drastically smoother flight. Greater efficiency (SinESC achieves > 97% efficiency; trapezoidal ESCs typically achieve 70%) allows for longer flight times and lower peak currents, which can increase battery longevity as well.
+# Standard Features
+Both versions of SinESC include the following standard features:
+
+- Hardware over-current protection set to 55A (takes advantage of comparators embedded in the microcontroller)
+- Bus voltage monitoring for power measurement and under-voltage protection
+- Typical configuration options such as motor direction
+- 60kHz PWM frequency for smooth flight. Increased PWM frequencies show no benefit and only decrease efficiency.
+- Easy installation and configuration. No different than any standard BLHELI_32 ESC.
+- Broken-out and labeled debug pins for hackers
+- For those who wish to repair a broken ESC, information and support will always be provided.
+- Maximum 6S Li-po voltage
+- Maximum 40A continuous, 50A burst
 # Hardware Achievements
 Not just any ESC can perform sinusoidal control, and not all sinusoidal ESCs are created equal. Sinusoidal control requires that the ESC know the exact position of the rotor in order to properly align the magnetic field. Perfect alignment results in a perfect sine wave.
 
@@ -53,15 +65,3 @@ SinESC is designed specifically for efficiency and robustness:
 
 ![Multi Edition Top Layer](https://github.com/SAR-mango/SinESC/blob/master/Multi%20Edition/1.0A/SinESC-Multi-1.0A/Exported%20Files/3D%20Render%20Front.jpg)
 ![Multi Edition Bottom Layer](https://github.com/SAR-mango/SinESC/blob/master/Multi%20Edition/1.0A/SinESC-Multi-1.0A/Exported%20Files/3D%20Render%20Back.jpg)
-# Standard Features
-Both versions of SinESC include the following standard features:
-
-- Hardware over-current protection set to 55A (takes advantage of comparators embedded in the microcontroller)
-- Bus voltage monitoring for power measurement and under-voltage protection
-- Typical configuration options such as motor direction
-- 60kHz PWM frequency for smooth flight. Increased PWM frequencies show no benefit and only decrease efficiency.
-- Easy installation and configuration. No different than any standard BLHELI_32 ESC.
-- Broken-out and labeled debug pins for hackers
-- For those who wish to repair a broken ESC, information and support will always be provided.
-- Maximum 6S Li-po voltage
-- Maximum 40A continuous, 50A burst
