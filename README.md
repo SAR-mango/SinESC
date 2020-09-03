@@ -67,3 +67,17 @@ SinESC is designed specifically for efficiency and robustness:
 
 ![Multi Edition Top Layer](https://raw.githubusercontent.com/SAR-mango/SinESC/master/Multi%20Edition/2.3B/SinESC-Multi-2.3B/Exported%20Files/3D%20Render%20Front.jpg)
 ![Multi Edition Bottom Layer](https://raw.githubusercontent.com/SAR-mango/SinESC/master/Multi%20Edition/2.3B/SinESC-Multi-2.3B/Exported%20Files/3D%20Render%20Back.jpg)
+# Releases
+Semantic Versioning has been modified to better suit PCB designs. Versions only reflect the PCB design since schematic changes directly influence the PCB. They are written like so:
+
+vX.YZ where X and Y are numbers and Z is a letter.
+
+If a minor change is made that does NOT require a new stencil or updated BOM, Z is incremented.
+
+If a minor change requires a new stencil and/or an updated BOM, Y is incremented and Z is reset.
+
+If a major change is made, X is incremented and Y and Z are reset.
+
+Ideally, few minor changes are made between stable, production releases.
+
+Regular Semantic Versioning is used for all software components of the project.
