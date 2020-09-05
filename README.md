@@ -41,13 +41,11 @@ Finally, inline current-sensing is also possible. This technique involves placin
 # Hardware Achievements
 The four-layer PCB layout of SinESC is the main accomplishment of this project:
 
-The 15x30mm SinESC Multi Edition PCB uses 0201-sized components when possible for reduced parasitic influences and reduced size. Component density is approximately 86 components/square inch. The microcontroller, gate driver, and current-sense amplifiers (all the control electronics) are implemented on the top layer, leaving the bottom layer for the power electronics. This provides room for wide traces.
+The 15x30mm SinESC Multi Edition PCB uses 0201-sized components when possible for reduced parasitic influences and reduced size. Component density is approximately 86 components/square inch. The microcontroller, gate driver, and current-sense amplifiers (all the control electronics) are implemented on the top layer, leaving the bottom layer for the power electronics. This provides room for wide traces. At an increased size of 17.5x35mm, SinESC Wing Edition adds CAN support with a robust transceiver.
 
-At an increased size of 17.5x35mm, SinESC Wing Edition adds CAN support with a robust transceiver.
+Multi Edition is designed in KiCAD and adheres to OSHPark design rules. All additional libraries are within the project files. Wing Edition was designed in EasyEDA and will soon be ported to KiCAD (a major redesign is required). It currently adheres to the inferior JLCPCB design rules.
 
-Multi Edition is designed in KiCAD and adheres to OSHPark design rules. All additional libraries are within the project files.
-
-Wing Edition was designed in EasyEDA, and will soon be ported to KiCAD (a major redesign is required). It currently adheres to the inferior JLCPCB design rules.
+For eventual production, both versions may be redesigned to adhere to 6 mil trace/space design rules. 4 oz copper thickness and blind/buried vias would be supported.
 
 SinESC is designed specifically for efficiency and robustness:
 
