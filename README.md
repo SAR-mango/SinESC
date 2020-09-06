@@ -10,7 +10,7 @@ Multi Edition communicates with a flight controller though SinWire, a custom 1-w
 SinWire support will be added to Betaflight soon. It aims to match or exceed the update rate of DSHOT600.
 
 For specs, see "Standard Features" further below. Renders of Multi v2.3B are near the bottom of the page.
-# Benefits of Sinusoidal Control: Efficiency & More!
+# Benefits of Sinusoidal Control
 Brushless DC motors work best when their phase voltage waveforms are sinusoid-shaped. Try it yourself—connect a BLDC motor to an oscilloscope and spin the rotor with your fingers. You will see a sine wave. 
 
 Regular BLHELI_32 ESCs employ a simple motor control method known as "trapezoidal drive," in which the phase voltage waveforms are trapezoid-shaped rather than sinusoid-shaped. This is not ideal as the fields are not always perfectly aligned with the rotor, which means that torque is not constantly maximized at a given power. This causes the rotor to effectively "jerk in a circle" rather than spin continuously, resulting in lower efficiency and rougher flight. Furthermore, the sharp edges of the trapezoidal signal also introduce high-frequency noise which contributes to the above disadvantages as well. This also makes the motors run louder and hotter.
@@ -26,7 +26,7 @@ Both versions of SinESC include the following standard features:
 - Easy installation and configuration. No different than any standard BLHELI_32 ESC.
 - Broken-out and labeled debug pins for hackers
 - For those who wish to repair a broken ESC, information and support will always be provided.
-- **Maximum 6S Li-po battery voltage (25.2V)**
+- **Maximum 6S Li-po battery (25.2V)**
 - **Maximum 40A continuous, 50A burst current draw**
 # Current-Sense Topology
 Not just any ESC can perform sinusoidal control, and not all sinusoidal ESCs are created equal. Sinusoidal control requires that the ESC know the exact position of the rotor in order to properly align the magnetic field. Perfect alignment results in a perfect sine wave.
