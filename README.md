@@ -49,7 +49,7 @@ SinESC is designed specifically for efficiency and robustness:
 - ST Microelectronics STM32F303CBT7 microcontroller
 - Maxim Integrated MAX4239 precision op-amps for current-sensing. Incredibly low input offset voltage (*0.1µV*). Gain = 30V/V; offset tuned to use the full ADC resolution.
 - Low-resistance current shunts (*1mΩ*) for reduced power loss
-- Switching regulator provides logic-level voltage supply for control electronics (*> 80% efficient*)
+- Switching regulator provides logic-level voltage supply for control electronics (*efficiency > 80%*)
 - Thermally optimized PCB layout
 - Trinamic Motion Control TMC6100-LA gate driver
   - Fast switching slopes achieved with high gate drive current (1.5A), decreasing switching losses
