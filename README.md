@@ -26,7 +26,7 @@ Both versions of SinESC include the following standard features:
 - Broken-out and labeled debug pins for hackers
 - For those who wish to repair a broken ESC, information and support will always be provided.
 - **Maximum 6S Li-po battery (*25.2V*)**
-- **Maximum *40A continuous*, *50A burst* current draw (5s)**. *Over-current protection takes advantage of comparators embedded in the microcontroller and triggers immediately if current meets or exceeds 55A.*
+- **Maximum *40A continuous*, *50A burst* current draw (5s)**. *Over-current protection takes advantage of comparators embedded in the microcontroller and triggers immediately at 55A.*
 # Current-Sense Topology
 Not just any ESC can perform sinusoidal control, and not all sinusoidal ESCs are created equal. Sinusoidal control requires that the ESC know the exact position of the rotor in order to properly align the magnetic field. Perfect alignment results in a perfect sine wave.
 
