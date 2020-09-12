@@ -21,7 +21,7 @@ Sinusoidal control minimizes torque ripple, maximizing efficiency. The magnetic 
 - Broken-out and labeled debug pins for hackers
 - **Maximum 6S Li-po battery (25.2V)**
 - **Maximum 40A continuous, 50A burst current draw (5 seconds).**
-  - With the greatly-increased efficiency of SinESC, peak motor currents will be *significantly lower* than before at a given throttle/thrust level. *THIS DOES NOT MEAN YOUR MOTORS WILL RUN WEAKER. THEY ARE JUST MORE EFFICIENT!*
+  - With the greatly-increased efficiency of SinESC, peak motor currents will be *significantly lower* than before (at a given throttle/thrust level). *This does NOT mean your motors will run weaker. They are just more efficient!*
   - *Over-current protection takes advantage of comparators embedded in the microcontroller and triggers immediately at 55A.*
 # Current-Sense Topology
 Not just any ESC can perform sinusoidal control, and not all sinusoidal ESCs are created equal. Sinusoidal control requires that the ESC know the exact position of the rotor in order to properly align the magnetic field. Perfect alignment results in a perfect sine wave.
