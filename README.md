@@ -6,7 +6,7 @@ There are two versions of SinESC. Wing Edition and Multi Edition:
 - Wing Edition supports CAN and standard PWM control signals. CAN is intended for Pixhawk users, and standard PWM is for direct connection to an RC receiver.
 - Multi Edition communicates with a flight controller though *SinWire*, a custom 1-wire protocol that enables configuration, firmware updates, and speed control all through one wire. SinWire support will be added to Betaflight soon. It aims to match or exceed the update rate of DSHOT600.
 
-For specs, see *Standard Features* further below.
+For specs, look further below.
 ![Multi Edition v2.3B Top](https://raw.githubusercontent.com/SAR-mango/SinESC/master/Multi%20Edition/2.3B/SinESC-Multi-2.3B/Exported%20Files/3D%20Render%20Front.jpg)
 ![Multi Edition v2.3B Bottom](https://raw.githubusercontent.com/SAR-mango/SinESC/master/Multi%20Edition/2.3B/SinESC-Multi-2.3B/Exported%20Files/3D%20Render%20Back.jpg)
 # Benefits of Sinusoidal Control
@@ -15,16 +15,14 @@ Brushless DC motors work best when their phase voltage waveforms are sinusoid-sh
 Regular BLHELI_32 ESCs use a simple "six-point" motor control method in which the phases are energized to bring the rotor to one of six points on a circle. This method is easy to implement as the rotor position at each point will result in a zero-crossing in the back-EMF from the non-energized phase(s), which is easy to detect. This means that the phase voltage waveforms are trapezoid-shaped rather than sinusoid-shaped. This is not ideal as the fields are not *always* aligned with the rotor to maximize torque. This causes the rotor to effectively "jerk in a circle" rather than spin continuously, resulting in lower efficiency and rougher flight. Furthermore, the sharp edges of the trapezoidal signal also introduce high-frequency noise which contributes to the above disadvantages as well. This also makes the motors run louder and hotter.
 
 Sinusoidal control minimizes torque ripple, maximizing efficiency. The magnetic fields are aligned precisely to exert the maximum torque on the rotor at any given position and power. Minimized torque ripple leads to drastically **smoother flight**. Greater efficiency (*SinESC achieves **> 97% efficiency**; trapezoidal ESCs typically achieve 70%*) allows for **longer flight times** and lower peak currents, which can increase battery longevity as well.
-# Standard Features
-Both versions of SinESC include the following standard features:
+# Features & Specifications
 - Bus voltage monitoring for power measurement and under-voltage protection
-- Typical configuration options such as motor direction
-- 60kHz PWM frequency for smooth flight. Increased PWM frequencies show no benefit and only *decrease* efficiency.
-- Easy installation and configuration. No different than any standard BLHELI_32 ESC.
+- 60kHz PWM frequency—with sinusoidal control, PWM frequency hardly affects torque and smoothness. 30kHz and above feel the same. Consequently, 60kHz was selected as it offered maximum efficiency.
 - Broken-out and labeled debug pins for hackers
-- For those who wish to repair a broken ESC, information and support will always be provided.
-- **Maximum 6S Li-po battery (*25.2V*)**
-- **Maximum *40A continuous*, *50A burst* current draw (5s)**. *Over-current protection takes advantage of comparators embedded in the microcontroller and triggers immediately at 55A.*
+- **Maximum 6S Li-po battery (25.2V)**
+- **Maximum 40A continuous, 50A burst current draw (5 seconds).**
+  - With the greatly-increased efficiency of SinESC, peak motor currents will be *significantly lower* than before at a given throttle/thrust level. *THIS DOES NOT MEAN YOUR MOTORS WILL RUN WEAKER. THEY ARE JUST MORE EFFICIENT!*
+  - *Over-current protection takes advantage of comparators embedded in the microcontroller and triggers immediately at 55A.*
 # Current-Sense Topology
 Not just any ESC can perform sinusoidal control, and not all sinusoidal ESCs are created equal. Sinusoidal control requires that the ESC know the exact position of the rotor in order to properly align the magnetic field. Perfect alignment results in a perfect sine wave.
 
