@@ -9,13 +9,10 @@ There are two versions of SinESC. Wing Edition, for fixed-wing aircraft, and Mul
 *The real-life dimensions of the PCBs depicted below are 30x15mm.*
 ![Multi Edition v2.3B Top](https://raw.githubusercontent.com/SAR-mango/SinESC/master/Multi%20Edition/2.3B/SinESC-Multi-2.3B/Exported%20Files/3D%20Render%20Front.jpg)
 ![Multi Edition v2.3B Bottom](https://raw.githubusercontent.com/SAR-mango/SinESC/master/Multi%20Edition/2.3B/SinESC-Multi-2.3B/Exported%20Files/3D%20Render%20Back.jpg)
-# Benefits of Sinusoidal Control
-Brushless DC motors work best when their phase voltage waveforms are sinusoid-shaped. Try it yourself—connect a BLDC motor to an oscilloscope and spin the rotor with your fingers. You will see a sine wave. 
-
-Regular BLHELI_32 ESCs use a simple "six-point" motor control method in which the phases are energized to bring the rotor to one of six points on a circle. This method is easy to implement as the rotor position at each point will result in a zero-crossing in the back-EMF from the non-energized phase(s), which is easy to detect. This means that the phase voltage waveforms are trapezoid-shaped rather than sinusoid-shaped. This is not ideal as the fields are not *always* aligned with the rotor to maximize torque. This causes the rotor to effectively "jolt in a circle" rather than spin continuously, resulting in lower efficiency and rougher flight. Furthermore, the sharp edges of the trapezoidal signal also introduce high-frequency noise which contributes to the above disadvantages as well. This also makes the motors run louder and hotter.
-
-Sinusoidal control minimizes torque ripple, maximizing efficiency. The magnetic fields are aligned precisely to exert the maximum torque on the rotor at any given position and power. Minimized torque ripple leads to drastically **smoother flight**. Greater efficiency (*SinESC achieves **> 97% efficiency**; trapezoidal ESCs typically achieve 70%*) allows for **longer flight times** and lower peak currents, which can increase battery longevity as well.
 # Features & Specifications
+- **> 97% efficiency (up to 40% longer flight)**
+- **Smoother flight**
+- Quieter operation
 - Bus voltage monitoring for power measurement and under-voltage protection
 - 60kHz PWM frequency—with sinusoidal control, PWM frequency hardly affects torque and smoothness. 30kHz and above feel the same. Consequently, 60kHz was selected as it offered maximum efficiency.
 - Broken-out and labeled debug pins for hackers
@@ -23,6 +20,12 @@ Sinusoidal control minimizes torque ripple, maximizing efficiency. The magnetic 
 - **Maximum 40A continuous, 50A burst current draw (5 seconds).**
   - With the greatly-increased efficiency of SinESC, peak motor currents will be *significantly lower* than before (at a given throttle/thrust level). *This does NOT mean your motors run weaker. They are just more efficient!*
   - *Over-current protection takes advantage of comparators embedded in the microcontroller and triggers immediately at 55A.*
+# Sinusoidal Control—Benefits & a Brief Description
+Brushless DC motors work best when their phase voltage waveforms are sinusoid-shaped. Try it yourself—connect a BLDC motor to an oscilloscope and spin the rotor with your fingers. You will see a sine wave. 
+
+Regular BLHELI_32 ESCs use a simple "six-point" motor control method in which the phases are energized to bring the rotor to one of six points on a circle. This method is easy to implement as the rotor position at each point will result in a zero-crossing in the back-EMF from the non-energized phase(s), which is easy to detect. This means that the phase voltage waveforms are trapezoid-shaped rather than sinusoid-shaped. This is not ideal as the fields are not *always* aligned with the rotor to maximize torque. This causes the rotor to effectively "jolt in a circle" rather than spin continuously, resulting in lower efficiency and rougher flight. Furthermore, the sharp edges of the trapezoidal signal also introduce high-frequency noise which contributes to the above disadvantages as well. This also makes the motors run louder and hotter.
+
+Sinusoidal control minimizes torque ripple, maximizing efficiency. The magnetic fields are precisely aligned to exert maximum torque on the rotor at *any* given position and power. Minimized torque ripple leads to smoother flight. Greater efficiency (*SinESC achieves > 97% efficiency; trapezoidal ESCs typically achieve 70%*) allows for longer flight times and lower peak currents, which can increase battery longevity as well.
 # Current-Sense Topology
 Not just any ESC can perform sinusoidal control, and not all sinusoidal ESCs are created equal. Sinusoidal control requires that the ESC know the exact position of the rotor in order to properly align the magnetic field. Perfect alignment results in a perfect sine wave.
 
