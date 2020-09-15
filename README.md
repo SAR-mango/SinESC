@@ -1,8 +1,8 @@
 ![SinESC Logo](https://raw.githubusercontent.com/SAR-mango/SinESC/master/Logo/Logo.png)
 # Overview
-SinESC is an electronic speed controller (ESC) that supports full sinusoidal control of tri-phase brushless DC motors. Targeted towards RC drone and wing pilots.
+SinESC (pronounced "sign ESC," namesake being the sine wave) is an electronic speed controller (ESC) that supports full sinusoidal control of tri-phase brushless DC motors. Targeted towards RC drone and wing pilots.
 
-There are two versions of SinESC. Wing Edition (for fixed-wing aircraft) and Multi Edition (for multirotors):
+There are two versions of SinESC. Wing Edition, for fixed-wing aircraft, and Multi Edition, for multirotors:
 - Wing Edition supports CAN and standard PWM control signals. CAN is intended for Pixhawk users, and standard PWM is for direct connection to an RC receiver.
 - Multi Edition communicates with a flight controller though SinWire, a custom 1-wire protocol that enables configuration, firmware updates, and speed control all through one wire. SinWire support will be added to Betaflight soon. It aims to match or exceed the update rate of DSHOT600.
 
