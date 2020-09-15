@@ -19,7 +19,7 @@ There are two versions of SinESC. Wing Edition, for fixed-wing aircraft, and Mul
 - **Maximum 6S Li-po battery (25.2V)**
 - **Maximum 40A continuous, 50A burst current draw (5 seconds).**
   - With the greatly-increased efficiency of SinESC, peak motor currents will be *significantly lower* than before (at a given throttle/thrust level). *This does NOT mean your motors run weaker. They are just more efficient!*
-  - *Over-current protection takes advantage of comparators embedded in the microcontroller and triggers immediately at 55A.*
+  - Over-current protection takes advantage of comparators embedded in the microcontroller and triggers immediately at 55A.
 # Sinusoidal Control—Benefits & a Brief Description
 Brushless DC motors work best when their phase voltage waveforms are sinusoid-shaped. Try it yourself—connect a BLDC motor to an oscilloscope and spin the rotor with your fingers. You will see a sine wave. 
 
