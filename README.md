@@ -6,7 +6,7 @@ There are two versions of SinESC. Wing Edition, for fixed-wing aircraft, and Mul
 - Wing Edition supports CAN and standard PWM control signals. CAN is intended for Pixhawk users, and standard PWM is for direct connection to an RC receiver.
 - Multi Edition communicates with a flight controller though SinWire, a custom 1-wire protocol that enables configuration, firmware updates, and speed control all through one wire. SinWire support will be added to Betaflight soon. It aims to match or exceed the update rate of DSHOT600.
 
-*The real-life dimensions of the PCBs depicted below are 30x15mm*
+*The real-life dimensions of the PCBs depicted below are 30x15mm.*
 ![Multi Edition v2.3B Top](https://raw.githubusercontent.com/SAR-mango/SinESC/master/Multi%20Edition/2.3B/SinESC-Multi-2.3B/Exported%20Files/3D%20Render%20Front.jpg)
 ![Multi Edition v2.3B Bottom](https://raw.githubusercontent.com/SAR-mango/SinESC/master/Multi%20Edition/2.3B/SinESC-Multi-2.3B/Exported%20Files/3D%20Render%20Back.jpg)
 # Benefits of Sinusoidal Control
