@@ -60,6 +60,6 @@ SinESC is designed specifically for efficiency and robustness:
 Regular Semantic Versioning is used for all software components of the project. As for PCB designs, Semantic Versioning has been modified. Versions only reflect the PCB design since schematic changes directly influence the PCB. They are written like so:
 
 vX.YZ where X and Y are numbers and Z is a letter. "v" is sometimes omitted.
-- If a minor change is made that does *NOT* require a new stencil *OR* an updated BOM, Z is incremented.
-- If a minor change requires a new stencil *and/or* an updated BOM, Y is incremented and Z is reset. Ideally, few minor changes are made between major releases.
+- If a minor change is made that does NOT require a new stencil OR an updated BOM, Z is incremented.
+- If a minor change requires a new stencil and/or an updated BOM, Y is incremented and Z is reset. Ideally, few minor changes are made between major releases.
 - If a major change is made, X is incremented and Y and Z are reset.
