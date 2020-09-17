@@ -157,21 +157,21 @@
   (net 59 SPI_SDO)
   (net 60 SPI_SDI)
   (net 61 UART_TX)
-  (net 62 UART_RX_DSHOT)
-  (net 63 "Net-(U1-Pad45)")
-  (net 64 "Net-(U1-Pad46)")
-  (net 65 "Net-(U4-Pad2)")
-  (net 66 "Net-(U4-Pad9)")
-  (net 67 "Net-(C23-Pad1)")
-  (net 68 "Net-(C16-Pad1)")
-  (net 69 "Net-(C21-Pad2)")
-  (net 70 "Net-(C30-Pad2)")
-  (net 71 "Net-(C20-Pad2)")
-  (net 72 "Net-(C21-Pad1)")
-  (net 73 "Net-(C30-Pad1)")
-  (net 74 "Net-(C34-Pad2)")
-  (net 75 "Net-(R17-Pad2)")
-  (net 76 "Net-(R24-Pad1)")
+  (net 62 "Net-(U1-Pad45)")
+  (net 63 "Net-(U1-Pad46)")
+  (net 64 "Net-(U4-Pad2)")
+  (net 65 "Net-(U4-Pad9)")
+  (net 66 "Net-(C23-Pad1)")
+  (net 67 "Net-(C16-Pad1)")
+  (net 68 "Net-(C21-Pad2)")
+  (net 69 "Net-(C30-Pad2)")
+  (net 70 "Net-(C20-Pad2)")
+  (net 71 "Net-(C21-Pad1)")
+  (net 72 "Net-(C30-Pad1)")
+  (net 73 "Net-(C34-Pad2)")
+  (net 74 "Net-(R17-Pad2)")
+  (net 75 "Net-(R24-Pad1)")
+  (net 76 SINWIRE)
 
   (net_class Default "This is the default net class."
     (clearance 0.13)
@@ -227,13 +227,13 @@
     (add_net SHUNT_U)
     (add_net SHUNT_V)
     (add_net SHUNT_W)
+    (add_net SINWIRE)
     (add_net SPI_CSN)
     (add_net SPI_SCK)
     (add_net SPI_SDI)
     (add_net SPI_SDO)
     (add_net SWCLK)
     (add_net SWDIO)
-    (add_net UART_RX_DSHOT)
     (add_net UART_TX)
     (add_net VBUS_SENSE)
   )
@@ -294,6 +294,42 @@
     (add_net W)
   )
 
+  (module Resistor_SMD:R_0201_0603Metric (layer F.Cu) (tedit 5B301BBD) (tstamp 5F4E05A7)
+    (at 39.05 29.2 90)
+    (descr "Resistor SMD 0201 (0603 Metric), square (rectangular) end terminal, IPC_7351 nominal, (Body size source: https://www.vishay.com/docs/20052/crcw0201e3.pdf), generated with kicad-footprint-generator")
+    (tags resistor)
+    (path /5F654D6C)
+    (attr smd)
+    (fp_text reference R24 (at 0 -1.05 90) (layer F.SilkS) hide
+      (effects (font (size 1 1) (thickness 0.15)))
+    )
+    (fp_text value 52.3kΩ (at 0 1.05 90) (layer F.Fab) hide
+      (effects (font (size 1 1) (thickness 0.15)))
+    )
+    (fp_line (start 0.7 0.35) (end -0.7 0.35) (layer F.CrtYd) (width 0.05))
+    (fp_line (start 0.7 -0.35) (end 0.7 0.35) (layer F.CrtYd) (width 0.05))
+    (fp_line (start -0.7 -0.35) (end 0.7 -0.35) (layer F.CrtYd) (width 0.05))
+    (fp_line (start -0.7 0.35) (end -0.7 -0.35) (layer F.CrtYd) (width 0.05))
+    (fp_line (start 0.3 0.15) (end -0.3 0.15) (layer F.Fab) (width 0.1))
+    (fp_line (start 0.3 -0.15) (end 0.3 0.15) (layer F.Fab) (width 0.1))
+    (fp_line (start -0.3 -0.15) (end 0.3 -0.15) (layer F.Fab) (width 0.1))
+    (fp_line (start -0.3 0.15) (end -0.3 -0.15) (layer F.Fab) (width 0.1))
+    (fp_text user %R (at 0 -0.68 90) (layer F.Fab) hide
+      (effects (font (size 0.25 0.25) (thickness 0.04)))
+    )
+    (pad 2 smd roundrect (at 0.32 0 90) (size 0.46 0.4) (layers F.Cu F.Mask) (roundrect_rratio 0.25)
+      (net 1 Earth))
+    (pad 1 smd roundrect (at -0.32 0 90) (size 0.46 0.4) (layers F.Cu F.Mask) (roundrect_rratio 0.25)
+      (net 75 "Net-(R24-Pad1)"))
+    (pad "" smd roundrect (at 0.345 0 90) (size 0.318 0.36) (layers F.Paste) (roundrect_rratio 0.25))
+    (pad "" smd roundrect (at -0.345 0 90) (size 0.318 0.36) (layers F.Paste) (roundrect_rratio 0.25))
+    (model ${KISYS3DMOD}/Resistor_SMD.3dshapes/R_0201_0603Metric.wrl
+      (at (xyz 0 0 0))
+      (scale (xyz 1 1 1))
+      (rotate (xyz 0 0 0))
+    )
+  )
+
   (module Resistor_SMD:R_1206_3216Metric (layer B.Cu) (tedit 5B301BBD) (tstamp 5F3F351E)
     (at 40.15 26.05 270)
     (descr "Resistor SMD 1206 (3216 Metric), square (rectangular) end terminal, IPC_7351 nominal, (Body size source: http://www.tortai-tech.com/upload/download/2011102023233369053.pdf), generated with kicad-footprint-generator")
@@ -303,7 +339,7 @@
     (fp_text reference R12 (at 0 1.82 90) (layer B.SilkS) hide
       (effects (font (size 1 1) (thickness 0.15)) (justify mirror))
     )
-    (fp_text value 1mΩ (at 0 -1.82 90) (layer B.Fab)
+    (fp_text value 1mΩ (at 0 -1.82 90) (layer B.Fab) hide
       (effects (font (size 1 1) (thickness 0.15)) (justify mirror))
     )
     (fp_line (start 2.28 -1.12) (end -2.28 -1.12) (layer B.CrtYd) (width 0.05))
@@ -339,7 +375,7 @@
     (fp_text reference L1 (at 0 -2.28) (layer F.SilkS) hide
       (effects (font (size 1 1) (thickness 0.15)))
     )
-    (fp_text value 10µH (at 0 2.28) (layer F.Fab)
+    (fp_text value 10µH (at 0 2.28) (layer F.Fab) hide
       (effects (font (size 1 1) (thickness 0.15)))
     )
     (fp_line (start 2.28 1.58) (end -2.28 1.58) (layer F.CrtYd) (width 0.05))
@@ -356,9 +392,9 @@
       (effects (font (size 0.8 0.8) (thickness 0.12)))
     )
     (pad 2 smd roundrect (at 1.4 0 180) (size 1.25 2.65) (layers F.Cu F.Paste F.Mask) (roundrect_rratio 0.2)
-      (net 74 "Net-(C34-Pad2)"))
+      (net 73 "Net-(C34-Pad2)"))
     (pad 1 smd roundrect (at -1.4 0 180) (size 1.25 2.65) (layers F.Cu F.Paste F.Mask) (roundrect_rratio 0.2)
-      (net 73 "Net-(C30-Pad1)"))
+      (net 72 "Net-(C30-Pad1)"))
     (model ${KISYS3DMOD}/Inductor_SMD.3dshapes/L_1210_3225Metric.wrl
       (at (xyz 0 0 0))
       (scale (xyz 1 1 1))
@@ -375,7 +411,7 @@
     (fp_text reference U1 (at 0 -5.85) (layer F.SilkS) hide
       (effects (font (size 1 1) (thickness 0.15)))
     )
-    (fp_text value STM32F303CBT7 (at 0 5.85) (layer F.Fab)
+    (fp_text value STM32F303CBT7 (at 0 5.85) (layer F.Fab) hide
       (effects (font (size 1 1) (thickness 0.15)))
     )
     (fp_line (start 5.15 3.15) (end 5.15 0) (layer F.CrtYd) (width 0.05))
@@ -424,13 +460,13 @@
     (pad 47 smd roundrect (at -2.25 -4.1625 180) (size 0.3 1.475) (layers F.Cu F.Paste F.Mask) (roundrect_rratio 0.25)
       (net 1 Earth))
     (pad 46 smd roundrect (at -1.75 -4.1625 180) (size 0.3 1.475) (layers F.Cu F.Paste F.Mask) (roundrect_rratio 0.25)
-      (net 64 "Net-(U1-Pad46)"))
+      (net 63 "Net-(U1-Pad46)"))
     (pad 45 smd roundrect (at -1.25 -4.1625 180) (size 0.3 1.475) (layers F.Cu F.Paste F.Mask) (roundrect_rratio 0.25)
-      (net 63 "Net-(U1-Pad45)"))
+      (net 62 "Net-(U1-Pad45)"))
     (pad 44 smd roundrect (at -0.75 -4.1625 180) (size 0.3 1.475) (layers F.Cu F.Paste F.Mask) (roundrect_rratio 0.25)
       (net 1 Earth))
     (pad 43 smd roundrect (at -0.25 -4.1625 180) (size 0.3 1.475) (layers F.Cu F.Paste F.Mask) (roundrect_rratio 0.25)
-      (net 62 UART_RX_DSHOT))
+      (net 76 SINWIRE))
     (pad 42 smd roundrect (at 0.25 -4.1625 180) (size 0.3 1.475) (layers F.Cu F.Paste F.Mask) (roundrect_rratio 0.25)
       (net 61 UART_TX))
     (pad 41 smd roundrect (at 0.75 -4.1625 180) (size 0.3 1.475) (layers F.Cu F.Paste F.Mask) (roundrect_rratio 0.25)
@@ -531,7 +567,7 @@
     (fp_text reference R10 (at 0 -1.05) (layer F.SilkS) hide
       (effects (font (size 1 1) (thickness 0.15)))
     )
-    (fp_text value 86.6Ω (at 0 1.05) (layer F.Fab)
+    (fp_text value 86.6Ω (at 0 1.05) (layer F.Fab) hide
       (effects (font (size 1 1) (thickness 0.15)))
     )
     (fp_line (start 0.7 0.35) (end -0.7 0.35) (layer F.CrtYd) (width 0.05))
@@ -567,7 +603,7 @@
     (fp_text reference C6 (at 0 -1.05) (layer F.SilkS) hide
       (effects (font (size 1 1) (thickness 0.15)))
     )
-    (fp_text value 6.8nF (at 0 1.05) (layer F.Fab)
+    (fp_text value 6.8nF (at 0 1.05) (layer F.Fab) hide
       (effects (font (size 1 1) (thickness 0.15)))
     )
     (fp_line (start 0.7 0.35) (end -0.7 0.35) (layer F.CrtYd) (width 0.05))
@@ -603,7 +639,7 @@
     (fp_text reference C33 (at 0 1.17 270) (layer B.SilkS) hide
       (effects (font (size 1 1) (thickness 0.15)) (justify mirror))
     )
-    (fp_text value 1µF (at 0 -1.17 270) (layer B.Fab)
+    (fp_text value 1µF (at 0 -1.17 270) (layer B.Fab) hide
       (effects (font (size 1 1) (thickness 0.15)) (justify mirror))
     )
     (fp_line (start -0.5 -0.25) (end -0.5 0.25) (layer B.Fab) (width 0.1))
@@ -637,7 +673,7 @@
     (fp_text reference C31 (at 0 1.17 270) (layer B.SilkS) hide
       (effects (font (size 1 1) (thickness 0.15)) (justify mirror))
     )
-    (fp_text value 1µF (at 0 -1.17 270) (layer B.Fab)
+    (fp_text value 1µF (at 0 -1.17 270) (layer B.Fab) hide
       (effects (font (size 1 1) (thickness 0.15)) (justify mirror))
     )
     (fp_line (start -0.5 -0.25) (end -0.5 0.25) (layer B.Fab) (width 0.1))
@@ -671,7 +707,7 @@
     (fp_text reference C32 (at 0 1.17 270) (layer B.SilkS) hide
       (effects (font (size 1 1) (thickness 0.15)) (justify mirror))
     )
-    (fp_text value 1µF (at 0 -1.17 270) (layer B.Fab)
+    (fp_text value 1µF (at 0 -1.17 270) (layer B.Fab) hide
       (effects (font (size 1 1) (thickness 0.15)) (justify mirror))
     )
     (fp_line (start -0.5 -0.25) (end -0.5 0.25) (layer B.Fab) (width 0.1))
@@ -705,7 +741,7 @@
     (fp_text reference C21 (at 0 -1.43) (layer F.SilkS) hide
       (effects (font (size 1 1) (thickness 0.15)))
     )
-    (fp_text value 22nF (at 0 1.43) (layer F.Fab)
+    (fp_text value 22nF (at 0 1.43) (layer F.Fab) hide
       (effects (font (size 1 1) (thickness 0.15)))
     )
     (fp_line (start -0.8 0.4) (end -0.8 -0.4) (layer F.Fab) (width 0.1))
@@ -722,9 +758,9 @@
       (effects (font (size 0.4 0.4) (thickness 0.06)))
     )
     (pad 2 smd roundrect (at 0.7875 0 180) (size 0.875 0.95) (layers F.Cu F.Paste F.Mask) (roundrect_rratio 0.25)
-      (net 69 "Net-(C21-Pad2)"))
+      (net 68 "Net-(C21-Pad2)"))
     (pad 1 smd roundrect (at -0.7875 0 180) (size 0.875 0.95) (layers F.Cu F.Paste F.Mask) (roundrect_rratio 0.25)
-      (net 72 "Net-(C21-Pad1)"))
+      (net 71 "Net-(C21-Pad1)"))
     (model ${KISYS3DMOD}/Capacitor_SMD.3dshapes/C_0603_1608Metric.wrl
       (at (xyz 0 0 0))
       (scale (xyz 1 1 1))
@@ -741,7 +777,7 @@
     (fp_text reference C20 (at 0 -1.05) (layer F.SilkS) hide
       (effects (font (size 1 1) (thickness 0.15)))
     )
-    (fp_text value 100nF (at 0 1.05) (layer F.Fab)
+    (fp_text value 100nF (at 0 1.05) (layer F.Fab) hide
       (effects (font (size 1 1) (thickness 0.15)))
     )
     (fp_line (start -0.3 0.15) (end -0.3 -0.15) (layer F.Fab) (width 0.1))
@@ -756,7 +792,7 @@
       (effects (font (size 0.25 0.25) (thickness 0.04)))
     )
     (pad 2 smd roundrect (at 0.32 0 180) (size 0.46 0.4) (layers F.Cu F.Mask) (roundrect_rratio 0.25)
-      (net 71 "Net-(C20-Pad2)"))
+      (net 70 "Net-(C20-Pad2)"))
     (pad 1 smd roundrect (at -0.32 0 180) (size 0.46 0.4) (layers F.Cu F.Mask) (roundrect_rratio 0.25)
       (net 11 VBUS))
     (pad "" smd roundrect (at 0.345 0 180) (size 0.318 0.36) (layers F.Paste) (roundrect_rratio 0.25))
@@ -777,7 +813,7 @@
     (fp_text reference C22 (at 0 -1.43) (layer F.SilkS) hide
       (effects (font (size 1 1) (thickness 0.15)))
     )
-    (fp_text value 10µF (at 0 1.43) (layer F.Fab)
+    (fp_text value 10µF (at 0 1.43) (layer F.Fab) hide
       (effects (font (size 1 1) (thickness 0.15)))
     )
     (fp_line (start -0.8 0.4) (end -0.8 -0.4) (layer F.Fab) (width 0.1))
@@ -813,7 +849,7 @@
     (fp_text reference C19 (at 0 -1.17) (layer F.SilkS) hide
       (effects (font (size 1 1) (thickness 0.15)))
     )
-    (fp_text value 1µF (at 0 1.17) (layer F.Fab)
+    (fp_text value 1µF (at 0 1.17) (layer F.Fab) hide
       (effects (font (size 1 1) (thickness 0.15)))
     )
     (fp_line (start -0.5 0.25) (end -0.5 -0.25) (layer F.Fab) (width 0.1))
@@ -847,7 +883,7 @@
     (fp_text reference C17 (at 0 -1.05) (layer F.SilkS) hide
       (effects (font (size 1 1) (thickness 0.15)))
     )
-    (fp_text value 100nF (at 0 1.05) (layer F.Fab)
+    (fp_text value 100nF (at 0 1.05) (layer F.Fab) hide
       (effects (font (size 1 1) (thickness 0.15)))
     )
     (fp_line (start -0.3 0.15) (end -0.3 -0.15) (layer F.Fab) (width 0.1))
@@ -884,7 +920,7 @@
     (fp_text reference Q3 (at 0 3.5) (layer B.SilkS) hide
       (effects (font (size 1 1) (thickness 0.15)) (justify mirror))
     )
-    (fp_text value BSC010N04LSI (at 0 -3.5) (layer B.Fab)
+    (fp_text value BSC010N04LSI (at 0 -3.5) (layer B.Fab) hide
       (effects (font (size 1 1) (thickness 0.15)) (justify mirror))
     )
     (fp_line (start 3.06 2.385) (end 3.06 2.685) (layer B.SilkS) (width 0.12))
@@ -957,7 +993,7 @@
     (fp_text reference TP3 (at 0.5 -1.5) (layer F.SilkS) hide
       (effects (font (size 1 1) (thickness 0.15)))
     )
-    (fp_text value Pad_0.8mm_Square (at 0.5 1.5) (layer F.Fab)
+    (fp_text value Pad_0.8mm_Square (at 0.5 1.5) (layer F.Fab) hide
       (effects (font (size 1 1) (thickness 0.15)))
     )
     (fp_line (start -0.5 0.5) (end -0.5 -0.5) (layer F.CrtYd) (width 0.05))
@@ -975,7 +1011,7 @@
     (fp_text reference TP2 (at 0.5 -1.5) (layer F.SilkS) hide
       (effects (font (size 1 1) (thickness 0.15)))
     )
-    (fp_text value Pad_0.8mm_Square (at 0.5 1.5) (layer F.Fab)
+    (fp_text value Pad_0.8mm_Square (at 0.5 1.5) (layer F.Fab) hide
       (effects (font (size 1 1) (thickness 0.15)))
     )
     (fp_line (start -0.5 0.5) (end -0.5 -0.5) (layer F.CrtYd) (width 0.05))
@@ -993,7 +1029,7 @@
     (fp_text reference TP1 (at 0.5 -1.5) (layer F.SilkS) hide
       (effects (font (size 1 1) (thickness 0.15)))
     )
-    (fp_text value Pad_0.8mm_Square (at 0.5 1.5) (layer F.Fab)
+    (fp_text value Pad_0.8mm_Square (at 0.5 1.5) (layer F.Fab) hide
       (effects (font (size 1 1) (thickness 0.15)))
     )
     (fp_line (start -0.5 0.5) (end -0.5 -0.5) (layer F.CrtYd) (width 0.05))
@@ -1011,7 +1047,7 @@
     (fp_text reference J6 (at 1 -1.5) (layer F.SilkS) hide
       (effects (font (size 1 1) (thickness 0.15)))
     )
-    (fp_text value Pad_1.5mm_Square (at 0.5 2) (layer F.Fab)
+    (fp_text value Pad_1.5mm_Square (at 0.5 2) (layer F.Fab) hide
       (effects (font (size 1 1) (thickness 0.15)))
     )
     (fp_line (start -0.85 0.85) (end -0.85 -0.85) (layer F.CrtYd) (width 0.05))
@@ -1019,7 +1055,7 @@
     (fp_line (start 0.85 -0.85) (end 0.85 0.85) (layer F.CrtYd) (width 0.05))
     (fp_line (start -0.85 -0.85) (end 0.85 -0.85) (layer F.CrtYd) (width 0.05))
     (pad 1 smd rect (at 0 0) (size 1.5 1.5) (layers F.Cu F.Paste F.Mask)
-      (net 62 UART_RX_DSHOT))
+      (net 76 SINWIRE))
   )
 
   (module Pads:Pad_3x2mm (layer B.Cu) (tedit 5F3F1ECE) (tstamp 5F40788A)
@@ -1030,7 +1066,7 @@
     (fp_text reference J5 (at 0 2.5 90) (layer B.SilkS) hide
       (effects (font (size 1 1) (thickness 0.15)) (justify mirror))
     )
-    (fp_text value Pad_3x2mm (at 0 -2.5 90) (layer B.Fab)
+    (fp_text value Pad_3x2mm (at 0 -2.5 90) (layer B.Fab) hide
       (effects (font (size 1 1) (thickness 0.15)) (justify mirror))
     )
     (fp_line (start -1.6 -1.1) (end -1.6 1.1) (layer B.CrtYd) (width 0.05))
@@ -1049,7 +1085,7 @@
     (fp_text reference J4 (at 0 2.5 90) (layer B.SilkS) hide
       (effects (font (size 1 1) (thickness 0.15)) (justify mirror))
     )
-    (fp_text value Pad_3x2mm (at 0 -2.5 90) (layer B.Fab)
+    (fp_text value Pad_3x2mm (at 0 -2.5 90) (layer B.Fab) hide
       (effects (font (size 1 1) (thickness 0.15)) (justify mirror))
     )
     (fp_line (start -1.6 -1.1) (end -1.6 1.1) (layer B.CrtYd) (width 0.05))
@@ -1067,7 +1103,7 @@
     (fp_text reference J3 (at 0 2.5 90) (layer B.SilkS) hide
       (effects (font (size 1 1) (thickness 0.15)) (justify mirror))
     )
-    (fp_text value Pad_3x2mm (at 0 -2.5 90) (layer B.Fab)
+    (fp_text value Pad_3x2mm (at 0 -2.5 90) (layer B.Fab) hide
       (effects (font (size 1 1) (thickness 0.15)) (justify mirror))
     )
     (fp_line (start -1.6 -1.1) (end -1.6 1.1) (layer B.CrtYd) (width 0.05))
@@ -1085,7 +1121,7 @@
     (fp_text reference J2 (at 0 2.5 90) (layer B.SilkS) hide
       (effects (font (size 1 1) (thickness 0.15)) (justify mirror))
     )
-    (fp_text value Pad_3x2mm (at 0 -2.5 90) (layer B.Fab)
+    (fp_text value Pad_3x2mm (at 0 -2.5 90) (layer B.Fab) hide
       (effects (font (size 1 1) (thickness 0.15)) (justify mirror))
     )
     (fp_line (start -1.6 -1.1) (end -1.6 1.1) (layer B.CrtYd) (width 0.05))
@@ -1103,7 +1139,7 @@
     (fp_text reference J1 (at 0 2.5 270) (layer B.SilkS) hide
       (effects (font (size 1 1) (thickness 0.15)) (justify mirror))
     )
-    (fp_text value Pad_3x2mm (at 0 -2.5 270) (layer B.Fab)
+    (fp_text value Pad_3x2mm (at 0 -2.5 270) (layer B.Fab) hide
       (effects (font (size 1 1) (thickness 0.15)) (justify mirror))
     )
     (fp_line (start -1.6 -1.1) (end -1.6 1.1) (layer B.CrtYd) (width 0.05))
@@ -1123,7 +1159,7 @@
     (fp_text reference C1 (at 0 -1.05) (layer F.SilkS) hide
       (effects (font (size 1 1) (thickness 0.15)))
     )
-    (fp_text value 100nF (at 0 1.05) (layer F.Fab)
+    (fp_text value 100nF (at 0 1.05) (layer F.Fab) hide
       (effects (font (size 1 1) (thickness 0.15)))
     )
     (fp_line (start 0.7 0.35) (end -0.7 0.35) (layer F.CrtYd) (width 0.05))
@@ -1159,7 +1195,7 @@
     (fp_text reference C2 (at 0 -1.05) (layer F.SilkS) hide
       (effects (font (size 1 1) (thickness 0.15)))
     )
-    (fp_text value 100nF (at 0 1.05) (layer F.Fab)
+    (fp_text value 100nF (at 0 1.05) (layer F.Fab) hide
       (effects (font (size 1 1) (thickness 0.15)))
     )
     (fp_line (start -0.3 0.15) (end -0.3 -0.15) (layer F.Fab) (width 0.1))
@@ -1195,7 +1231,7 @@
     (fp_text reference C3 (at 0 -1.05) (layer F.SilkS) hide
       (effects (font (size 1 1) (thickness 0.15)))
     )
-    (fp_text value 6.8nF (at 0 1.05) (layer F.Fab)
+    (fp_text value 6.8nF (at 0 1.05) (layer F.Fab) hide
       (effects (font (size 1 1) (thickness 0.15)))
     )
     (fp_line (start 0.7 0.35) (end -0.7 0.35) (layer F.CrtYd) (width 0.05))
@@ -1231,7 +1267,7 @@
     (fp_text reference C4 (at 0 -1.05) (layer F.SilkS) hide
       (effects (font (size 1 1) (thickness 0.15)))
     )
-    (fp_text value 100nF (at 0 1.05) (layer F.Fab)
+    (fp_text value 100nF (at 0 1.05) (layer F.Fab) hide
       (effects (font (size 1 1) (thickness 0.15)))
     )
     (fp_line (start 0.7 0.35) (end -0.7 0.35) (layer F.CrtYd) (width 0.05))
@@ -1267,7 +1303,7 @@
     (fp_text reference C5 (at 0 -1.05) (layer F.SilkS) hide
       (effects (font (size 1 1) (thickness 0.15)))
     )
-    (fp_text value 6.8nF (at 0 1.05) (layer F.Fab)
+    (fp_text value 6.8nF (at 0 1.05) (layer F.Fab) hide
       (effects (font (size 1 1) (thickness 0.15)))
     )
     (fp_line (start 0.7 0.35) (end -0.7 0.35) (layer F.CrtYd) (width 0.05))
@@ -1303,7 +1339,7 @@
     (fp_text reference C7 (at 0 -1.05 90) (layer F.SilkS) hide
       (effects (font (size 1 1) (thickness 0.15)))
     )
-    (fp_text value 6.8nF (at 0 1.05 90) (layer F.Fab)
+    (fp_text value 6.8nF (at 0 1.05 90) (layer F.Fab) hide
       (effects (font (size 1 1) (thickness 0.15)))
     )
     (fp_line (start 0.7 0.35) (end -0.7 0.35) (layer F.CrtYd) (width 0.05))
@@ -1339,7 +1375,7 @@
     (fp_text reference C8 (at 0 -1.05) (layer F.SilkS) hide
       (effects (font (size 1 1) (thickness 0.15)))
     )
-    (fp_text value 100nF (at 0 1.05) (layer F.Fab)
+    (fp_text value 100nF (at 0 1.05) (layer F.Fab) hide
       (effects (font (size 1 1) (thickness 0.15)))
     )
     (fp_line (start 0.7 0.35) (end -0.7 0.35) (layer F.CrtYd) (width 0.05))
@@ -1375,7 +1411,7 @@
     (fp_text reference C9 (at 0 -1.05) (layer F.SilkS) hide
       (effects (font (size 1 1) (thickness 0.15)))
     )
-    (fp_text value 6.8nF (at 0 1.05) (layer F.Fab)
+    (fp_text value 6.8nF (at 0 1.05) (layer F.Fab) hide
       (effects (font (size 1 1) (thickness 0.15)))
     )
     (fp_line (start 0.7 0.35) (end -0.7 0.35) (layer F.CrtYd) (width 0.05))
@@ -1411,7 +1447,7 @@
     (fp_text reference C10 (at 0 -1.05) (layer F.SilkS) hide
       (effects (font (size 1 1) (thickness 0.15)))
     )
-    (fp_text value 6.8nF (at 0 1.05) (layer F.Fab)
+    (fp_text value 6.8nF (at 0 1.05) (layer F.Fab) hide
       (effects (font (size 1 1) (thickness 0.15)))
     )
     (fp_line (start 0.7 0.35) (end -0.7 0.35) (layer F.CrtYd) (width 0.05))
@@ -1447,7 +1483,7 @@
     (fp_text reference C11 (at 0 -1.17 90) (layer F.SilkS) hide
       (effects (font (size 1 1) (thickness 0.15)))
     )
-    (fp_text value 1µF (at 0 1.17 90) (layer F.Fab)
+    (fp_text value 1µF (at 0 1.17 90) (layer F.Fab) hide
       (effects (font (size 1 1) (thickness 0.15)))
     )
     (fp_line (start 0.93 0.47) (end -0.93 0.47) (layer F.CrtYd) (width 0.05))
@@ -1481,7 +1517,7 @@
     (fp_text reference C12 (at 0 -1.05) (layer F.SilkS) hide
       (effects (font (size 1 1) (thickness 0.15)))
     )
-    (fp_text value 6.8nF (at 0 1.05) (layer F.Fab)
+    (fp_text value 6.8nF (at 0 1.05) (layer F.Fab) hide
       (effects (font (size 1 1) (thickness 0.15)))
     )
     (fp_line (start 0.7 0.35) (end -0.7 0.35) (layer F.CrtYd) (width 0.05))
@@ -1517,7 +1553,7 @@
     (fp_text reference C13 (at 0 -1.43) (layer F.SilkS) hide
       (effects (font (size 1 1) (thickness 0.15)))
     )
-    (fp_text value 10µF (at 0 1.43) (layer F.Fab)
+    (fp_text value 10µF (at 0 1.43) (layer F.Fab) hide
       (effects (font (size 1 1) (thickness 0.15)))
     )
     (fp_line (start 1.48 0.73) (end -1.48 0.73) (layer F.CrtYd) (width 0.05))
@@ -1553,7 +1589,7 @@
     (fp_text reference C14 (at 0 -1.05) (layer F.SilkS) hide
       (effects (font (size 1 1) (thickness 0.15)))
     )
-    (fp_text value 6.8nF (at 0 1.05) (layer F.Fab)
+    (fp_text value 6.8nF (at 0 1.05) (layer F.Fab) hide
       (effects (font (size 1 1) (thickness 0.15)))
     )
     (fp_line (start 0.7 0.35) (end -0.7 0.35) (layer F.CrtYd) (width 0.05))
@@ -1589,7 +1625,7 @@
     (fp_text reference C15 (at 0 -1.05) (layer F.SilkS) hide
       (effects (font (size 1 1) (thickness 0.15)))
     )
-    (fp_text value 6.8nF (at 0 1.05) (layer F.Fab)
+    (fp_text value 6.8nF (at 0 1.05) (layer F.Fab) hide
       (effects (font (size 1 1) (thickness 0.15)))
     )
     (fp_line (start 0.7 0.35) (end -0.7 0.35) (layer F.CrtYd) (width 0.05))
@@ -1625,7 +1661,7 @@
     (fp_text reference C16 (at 0 -1.05 90) (layer F.SilkS) hide
       (effects (font (size 1 1) (thickness 0.15)))
     )
-    (fp_text value 6.8nF (at 0 1.05 90) (layer F.Fab)
+    (fp_text value 6.8nF (at 0 1.05 90) (layer F.Fab) hide
       (effects (font (size 1 1) (thickness 0.15)))
     )
     (fp_line (start 0.7 0.35) (end -0.7 0.35) (layer F.CrtYd) (width 0.05))
@@ -1642,7 +1678,7 @@
     (pad 2 smd roundrect (at 0.32 0 90) (size 0.46 0.4) (layers F.Cu F.Mask) (roundrect_rratio 0.25)
       (net 1 Earth))
     (pad 1 smd roundrect (at -0.32 0 90) (size 0.46 0.4) (layers F.Cu F.Mask) (roundrect_rratio 0.25)
-      (net 68 "Net-(C16-Pad1)"))
+      (net 67 "Net-(C16-Pad1)"))
     (pad "" smd roundrect (at 0.345 0 90) (size 0.318 0.36) (layers F.Paste) (roundrect_rratio 0.25))
     (pad "" smd roundrect (at -0.345 0 90) (size 0.318 0.36) (layers F.Paste) (roundrect_rratio 0.25))
     (model ${KISYS3DMOD}/Capacitor_SMD.3dshapes/C_0201_0603Metric.wrl
@@ -1661,7 +1697,7 @@
     (fp_text reference C18 (at 0 -1.17) (layer F.SilkS) hide
       (effects (font (size 1 1) (thickness 0.15)))
     )
-    (fp_text value 1µF (at 0 1.17) (layer F.Fab)
+    (fp_text value 1µF (at 0 1.17) (layer F.Fab) hide
       (effects (font (size 1 1) (thickness 0.15)))
     )
     (fp_line (start 0.93 0.47) (end -0.93 0.47) (layer F.CrtYd) (width 0.05))
@@ -1695,7 +1731,7 @@
     (fp_text reference C23 (at 0 -1.17 90) (layer F.SilkS) hide
       (effects (font (size 1 1) (thickness 0.15)))
     )
-    (fp_text value 1µF (at 0 1.17 90) (layer F.Fab)
+    (fp_text value 1µF (at 0 1.17 90) (layer F.Fab) hide
       (effects (font (size 1 1) (thickness 0.15)))
     )
     (fp_line (start 0.93 0.47) (end -0.93 0.47) (layer F.CrtYd) (width 0.05))
@@ -1712,7 +1748,7 @@
     (pad 2 smd roundrect (at 0.485 0 270) (size 0.59 0.64) (layers F.Cu F.Paste F.Mask) (roundrect_rratio 0.25)
       (net 12 CU))
     (pad 1 smd roundrect (at -0.485 0 270) (size 0.59 0.64) (layers F.Cu F.Paste F.Mask) (roundrect_rratio 0.25)
-      (net 67 "Net-(C23-Pad1)"))
+      (net 66 "Net-(C23-Pad1)"))
     (model ${KISYS3DMOD}/Capacitor_SMD.3dshapes/C_0402_1005Metric.wrl
       (at (xyz 0 0 0))
       (scale (xyz 1 1 1))
@@ -1729,7 +1765,7 @@
     (fp_text reference C24 (at 0 -1.17 90) (layer F.SilkS) hide
       (effects (font (size 1 1) (thickness 0.15)))
     )
-    (fp_text value 1µF (at 0 1.17 90) (layer F.Fab)
+    (fp_text value 1µF (at 0 1.17 90) (layer F.Fab) hide
       (effects (font (size 1 1) (thickness 0.15)))
     )
     (fp_line (start 0.93 0.47) (end -0.93 0.47) (layer F.CrtYd) (width 0.05))
@@ -1763,7 +1799,7 @@
     (fp_text reference C25 (at 0 -1.17 90) (layer F.SilkS) hide
       (effects (font (size 1 1) (thickness 0.15)))
     )
-    (fp_text value 1µF (at 0 1.17 90) (layer F.Fab)
+    (fp_text value 1µF (at 0 1.17 90) (layer F.Fab) hide
       (effects (font (size 1 1) (thickness 0.15)))
     )
     (fp_line (start 0.93 0.47) (end -0.93 0.47) (layer F.CrtYd) (width 0.05))
@@ -1797,7 +1833,7 @@
     (fp_text reference C26 (at 0 -1.17) (layer F.SilkS) hide
       (effects (font (size 1 1) (thickness 0.15)))
     )
-    (fp_text value 1µF (at 0 1.17) (layer F.Fab)
+    (fp_text value 1µF (at 0 1.17) (layer F.Fab) hide
       (effects (font (size 1 1) (thickness 0.15)))
     )
     (fp_line (start 0.93 0.47) (end -0.93 0.47) (layer F.CrtYd) (width 0.05))
@@ -1831,7 +1867,7 @@
     (fp_text reference C27 (at 0 -1.17) (layer F.SilkS) hide
       (effects (font (size 1 1) (thickness 0.15)))
     )
-    (fp_text value 100nF (at 0 1.17) (layer F.Fab)
+    (fp_text value 100nF (at 0 1.17) (layer F.Fab) hide
       (effects (font (size 1 1) (thickness 0.15)))
     )
     (fp_line (start 0.93 0.47) (end -0.93 0.47) (layer F.CrtYd) (width 0.05))
@@ -1865,7 +1901,7 @@
     (fp_text reference D1 (at 0 -1.3) (layer F.SilkS) hide
       (effects (font (size 1 1) (thickness 0.15)))
     )
-    (fp_text value BAT30KFILM (at 0 1.4) (layer F.Fab)
+    (fp_text value BAT30KFILM (at 0 1.4) (layer F.Fab) hide
       (effects (font (size 1 1) (thickness 0.15)))
     )
     (fp_line (start 0.7 0.6) (end -1.15 0.6) (layer F.SilkS) (width 0.12))
@@ -1908,7 +1944,7 @@
     (fp_text reference Q1 (at 0 3.5) (layer B.SilkS) hide
       (effects (font (size 1 1) (thickness 0.15)) (justify mirror))
     )
-    (fp_text value BSC010N04LSI (at 0 -3.5) (layer B.Fab)
+    (fp_text value BSC010N04LSI (at 0 -3.5) (layer B.Fab) hide
       (effects (font (size 1 1) (thickness 0.15)) (justify mirror))
     )
     (fp_line (start 3.06 2.385) (end 3.06 2.685) (layer B.SilkS) (width 0.12))
@@ -1975,7 +2011,7 @@
     (fp_text reference Q2 (at 0 3.5) (layer B.SilkS) hide
       (effects (font (size 1 1) (thickness 0.15)) (justify mirror))
     )
-    (fp_text value BSC010N04LSI (at 0 -3.5) (layer B.Fab)
+    (fp_text value BSC010N04LSI (at 0 -3.5) (layer B.Fab) hide
       (effects (font (size 1 1) (thickness 0.15)) (justify mirror))
     )
     (fp_line (start 3.06 2.385) (end 3.06 2.685) (layer B.SilkS) (width 0.12))
@@ -2042,7 +2078,7 @@
     (fp_text reference Q4 (at 0 3.5) (layer B.SilkS) hide
       (effects (font (size 1 1) (thickness 0.15)) (justify mirror))
     )
-    (fp_text value BSC010N04LSI (at 0 -3.5) (layer B.Fab)
+    (fp_text value BSC010N04LSI (at 0 -3.5) (layer B.Fab) hide
       (effects (font (size 1 1) (thickness 0.15)) (justify mirror))
     )
     (fp_line (start -1.95 2.575) (end 2.95 2.575) (layer B.Fab) (width 0.1))
@@ -2109,7 +2145,7 @@
     (fp_text reference Q5 (at 0 3.5) (layer B.SilkS) hide
       (effects (font (size 1 1) (thickness 0.15)) (justify mirror))
     )
-    (fp_text value BSC010N04LSI (at 0 -3.5) (layer B.Fab)
+    (fp_text value BSC010N04LSI (at 0 -3.5) (layer B.Fab) hide
       (effects (font (size 1 1) (thickness 0.15)) (justify mirror))
     )
     (fp_line (start 3.06 2.385) (end 3.06 2.685) (layer B.SilkS) (width 0.12))
@@ -2176,7 +2212,7 @@
     (fp_text reference Q6 (at 0 3.5) (layer B.SilkS) hide
       (effects (font (size 1 1) (thickness 0.15)) (justify mirror))
     )
-    (fp_text value BSC010N04LSI (at 0 -3.5) (layer B.Fab)
+    (fp_text value BSC010N04LSI (at 0 -3.5) (layer B.Fab) hide
       (effects (font (size 1 1) (thickness 0.15)) (justify mirror))
     )
     (fp_line (start 3.06 2.385) (end 3.06 2.685) (layer B.SilkS) (width 0.12))
@@ -2243,7 +2279,7 @@
     (fp_text reference R1 (at 0 -1.05) (layer F.SilkS) hide
       (effects (font (size 1 1) (thickness 0.15)))
     )
-    (fp_text value 86.6Ω (at 0 1.05) (layer F.Fab)
+    (fp_text value 86.6Ω (at 0 1.05) (layer F.Fab) hide
       (effects (font (size 1 1) (thickness 0.15)))
     )
     (fp_line (start -0.3 0.15) (end -0.3 -0.15) (layer F.Fab) (width 0.1))
@@ -2279,7 +2315,7 @@
     (fp_text reference R2 (at 0 -1.05) (layer F.SilkS) hide
       (effects (font (size 1 1) (thickness 0.15)))
     )
-    (fp_text value 1.5kΩ (at 0 1.05) (layer F.Fab)
+    (fp_text value 1.5kΩ (at 0 1.05) (layer F.Fab) hide
       (effects (font (size 1 1) (thickness 0.15)))
     )
     (fp_line (start 0.7 0.35) (end -0.7 0.35) (layer F.CrtYd) (width 0.05))
@@ -2315,7 +2351,7 @@
     (fp_text reference R3 (at 0 1.82 90) (layer B.SilkS) hide
       (effects (font (size 1 1) (thickness 0.15)) (justify mirror))
     )
-    (fp_text value 1mΩ (at 0 -1.82 90) (layer B.Fab)
+    (fp_text value 1mΩ (at 0 -1.82 90) (layer B.Fab) hide
       (effects (font (size 1 1) (thickness 0.15)) (justify mirror))
     )
     (fp_line (start 2.28 -1.12) (end -2.28 -1.12) (layer B.CrtYd) (width 0.05))
@@ -2351,7 +2387,7 @@
     (fp_text reference R4 (at 0 -1.05) (layer F.SilkS) hide
       (effects (font (size 1 1) (thickness 0.15)))
     )
-    (fp_text value 5.1kΩ (at 0 1.05) (layer F.Fab)
+    (fp_text value 5.1kΩ (at 0 1.05) (layer F.Fab) hide
       (effects (font (size 1 1) (thickness 0.15)))
     )
     (fp_line (start 0.7 0.35) (end -0.7 0.35) (layer F.CrtYd) (width 0.05))
@@ -2387,7 +2423,7 @@
     (fp_text reference R5 (at 0 -1.05 90) (layer F.SilkS) hide
       (effects (font (size 1 1) (thickness 0.15)))
     )
-    (fp_text value 976Ω (at 0 1.05 90) (layer F.Fab)
+    (fp_text value 976Ω (at 0 1.05 90) (layer F.Fab) hide
       (effects (font (size 1 1) (thickness 0.15)))
     )
     (fp_line (start 0.7 0.35) (end -0.7 0.35) (layer F.CrtYd) (width 0.05))
@@ -2423,7 +2459,7 @@
     (fp_text reference R6 (at 0 -1.05) (layer F.SilkS) hide
       (effects (font (size 1 1) (thickness 0.15)))
     )
-    (fp_text value 1.5kΩ (at 0 1.05) (layer F.Fab)
+    (fp_text value 1.5kΩ (at 0 1.05) (layer F.Fab) hide
       (effects (font (size 1 1) (thickness 0.15)))
     )
     (fp_line (start 0.7 0.35) (end -0.7 0.35) (layer F.CrtYd) (width 0.05))
@@ -2459,7 +2495,7 @@
     (fp_text reference R7 (at 0 1.82) (layer B.SilkS) hide
       (effects (font (size 1 1) (thickness 0.15)) (justify mirror))
     )
-    (fp_text value 1mΩ (at 0 -1.82) (layer B.Fab)
+    (fp_text value 1mΩ (at 0 -1.82) (layer B.Fab) hide
       (effects (font (size 1 1) (thickness 0.15)) (justify mirror))
     )
     (fp_line (start 2.28 -1.12) (end -2.28 -1.12) (layer B.CrtYd) (width 0.05))
@@ -2495,7 +2531,7 @@
     (fp_text reference R8 (at 0 -1.05) (layer F.SilkS) hide
       (effects (font (size 1 1) (thickness 0.15)))
     )
-    (fp_text value 15kΩ (at 0 1.05) (layer F.Fab)
+    (fp_text value 15kΩ (at 0 1.05) (layer F.Fab) hide
       (effects (font (size 1 1) (thickness 0.15)))
     )
     (fp_line (start 0.7 0.35) (end -0.7 0.35) (layer F.CrtYd) (width 0.05))
@@ -2531,7 +2567,7 @@
     (fp_text reference R9 (at 0 -1.05) (layer F.SilkS) hide
       (effects (font (size 1 1) (thickness 0.15)))
     )
-    (fp_text value 470Ω (at 0 1.05) (layer F.Fab)
+    (fp_text value 470Ω (at 0 1.05) (layer F.Fab) hide
       (effects (font (size 1 1) (thickness 0.15)))
     )
     (fp_line (start 0.7 0.35) (end -0.7 0.35) (layer F.CrtYd) (width 0.05))
@@ -2567,7 +2603,7 @@
     (fp_text reference R11 (at 0 -1.05) (layer F.SilkS) hide
       (effects (font (size 1 1) (thickness 0.15)))
     )
-    (fp_text value 1.5kΩ (at 0 1.05) (layer F.Fab)
+    (fp_text value 1.5kΩ (at 0 1.05) (layer F.Fab) hide
       (effects (font (size 1 1) (thickness 0.15)))
     )
     (fp_line (start 0.7 0.35) (end -0.7 0.35) (layer F.CrtYd) (width 0.05))
@@ -2603,7 +2639,7 @@
     (fp_text reference R13 (at 0 -1.05) (layer F.SilkS) hide
       (effects (font (size 1 1) (thickness 0.15)))
     )
-    (fp_text value 5.1kΩ (at 0 1.05) (layer F.Fab)
+    (fp_text value 5.1kΩ (at 0 1.05) (layer F.Fab) hide
       (effects (font (size 1 1) (thickness 0.15)))
     )
     (fp_line (start 0.7 0.35) (end -0.7 0.35) (layer F.CrtYd) (width 0.05))
@@ -2639,7 +2675,7 @@
     (fp_text reference R14 (at 0 -1.05) (layer F.SilkS) hide
       (effects (font (size 1 1) (thickness 0.15)))
     )
-    (fp_text value 976Ω (at 0 1.05) (layer F.Fab)
+    (fp_text value 976Ω (at 0 1.05) (layer F.Fab) hide
       (effects (font (size 1 1) (thickness 0.15)))
     )
     (fp_line (start 0.7 0.35) (end -0.7 0.35) (layer F.CrtYd) (width 0.05))
@@ -2675,7 +2711,7 @@
     (fp_text reference R17 (at 0 -1.05) (layer F.SilkS) hide
       (effects (font (size 1 1) (thickness 0.15)))
     )
-    (fp_text value 15kΩ (at 0 1.05) (layer F.Fab)
+    (fp_text value 15kΩ (at 0 1.05) (layer F.Fab) hide
       (effects (font (size 1 1) (thickness 0.15)))
     )
     (fp_line (start 0.7 0.35) (end -0.7 0.35) (layer F.CrtYd) (width 0.05))
@@ -2690,7 +2726,7 @@
       (effects (font (size 0.25 0.25) (thickness 0.04)))
     )
     (pad 2 smd roundrect (at 0.32 0) (size 0.46 0.4) (layers F.Cu F.Mask) (roundrect_rratio 0.25)
-      (net 75 "Net-(R17-Pad2)"))
+      (net 74 "Net-(R17-Pad2)"))
     (pad 1 smd roundrect (at -0.32 0) (size 0.46 0.4) (layers F.Cu F.Mask) (roundrect_rratio 0.25)
       (net 26 CUR_V))
     (pad "" smd roundrect (at 0.345 0) (size 0.318 0.36) (layers F.Paste) (roundrect_rratio 0.25))
@@ -2711,7 +2747,7 @@
     (fp_text reference R18 (at 0 -1.05) (layer F.SilkS) hide
       (effects (font (size 1 1) (thickness 0.15)))
     )
-    (fp_text value 470Ω (at 0 1.05) (layer F.Fab)
+    (fp_text value 470Ω (at 0 1.05) (layer F.Fab) hide
       (effects (font (size 1 1) (thickness 0.15)))
     )
     (fp_line (start 0.7 0.35) (end -0.7 0.35) (layer F.CrtYd) (width 0.05))
@@ -2728,7 +2764,7 @@
     (pad 2 smd roundrect (at 0.32 0) (size 0.46 0.4) (layers F.Cu F.Mask) (roundrect_rratio 0.25)
       (net 1 Earth))
     (pad 1 smd roundrect (at -0.32 0) (size 0.46 0.4) (layers F.Cu F.Mask) (roundrect_rratio 0.25)
-      (net 75 "Net-(R17-Pad2)"))
+      (net 74 "Net-(R17-Pad2)"))
     (pad "" smd roundrect (at 0.345 0) (size 0.318 0.36) (layers F.Paste) (roundrect_rratio 0.25))
     (pad "" smd roundrect (at -0.345 0) (size 0.318 0.36) (layers F.Paste) (roundrect_rratio 0.25))
     (model ${KISYS3DMOD}/Resistor_SMD.3dshapes/R_0201_0603Metric.wrl
@@ -2747,7 +2783,7 @@
     (fp_text reference R15 (at 0 -1.05) (layer F.SilkS) hide
       (effects (font (size 1 1) (thickness 0.15)))
     )
-    (fp_text value 120kΩ (at 0 1.05) (layer F.Fab)
+    (fp_text value 120kΩ (at 0 1.05) (layer F.Fab) hide
       (effects (font (size 1 1) (thickness 0.15)))
     )
     (fp_line (start 0.7 0.35) (end -0.7 0.35) (layer F.CrtYd) (width 0.05))
@@ -2783,7 +2819,7 @@
     (fp_text reference R16 (at 0 -1.05) (layer F.SilkS) hide
       (effects (font (size 1 1) (thickness 0.15)))
     )
-    (fp_text value 15kΩ (at 0 1.05) (layer F.Fab)
+    (fp_text value 15kΩ (at 0 1.05) (layer F.Fab) hide
       (effects (font (size 1 1) (thickness 0.15)))
     )
     (fp_line (start 0.7 0.35) (end -0.7 0.35) (layer F.CrtYd) (width 0.05))
@@ -2819,7 +2855,7 @@
     (fp_text reference R19 (at 0 -1.05) (layer F.SilkS) hide
       (effects (font (size 1 1) (thickness 0.15)))
     )
-    (fp_text value 86.6Ω (at 0 1.05) (layer F.Fab)
+    (fp_text value 86.6Ω (at 0 1.05) (layer F.Fab) hide
       (effects (font (size 1 1) (thickness 0.15)))
     )
     (fp_line (start 0.7 0.35) (end -0.7 0.35) (layer F.CrtYd) (width 0.05))
@@ -2836,7 +2872,7 @@
     (pad 2 smd roundrect (at 0.32 0 180) (size 0.46 0.4) (layers F.Cu F.Mask) (roundrect_rratio 0.25)
       (net 23 SHUNT_W))
     (pad 1 smd roundrect (at -0.32 0 180) (size 0.46 0.4) (layers F.Cu F.Mask) (roundrect_rratio 0.25)
-      (net 68 "Net-(C16-Pad1)"))
+      (net 67 "Net-(C16-Pad1)"))
     (pad "" smd roundrect (at 0.345 0 180) (size 0.318 0.36) (layers F.Paste) (roundrect_rratio 0.25))
     (pad "" smd roundrect (at -0.345 0 180) (size 0.318 0.36) (layers F.Paste) (roundrect_rratio 0.25))
     (model ${KISYS3DMOD}/Resistor_SMD.3dshapes/R_0201_0603Metric.wrl
@@ -2855,7 +2891,7 @@
     (fp_text reference R20 (at 0 -1.05) (layer F.SilkS) hide
       (effects (font (size 1 1) (thickness 0.15)))
     )
-    (fp_text value 5.1kΩ (at 0 1.05) (layer F.Fab)
+    (fp_text value 5.1kΩ (at 0 1.05) (layer F.Fab) hide
       (effects (font (size 1 1) (thickness 0.15)))
     )
     (fp_line (start 0.7 0.35) (end -0.7 0.35) (layer F.CrtYd) (width 0.05))
@@ -2870,7 +2906,7 @@
       (effects (font (size 0.25 0.25) (thickness 0.04)))
     )
     (pad 2 smd roundrect (at 0.32 0) (size 0.46 0.4) (layers F.Cu F.Mask) (roundrect_rratio 0.25)
-      (net 68 "Net-(C16-Pad1)"))
+      (net 67 "Net-(C16-Pad1)"))
     (pad 1 smd roundrect (at -0.32 0) (size 0.46 0.4) (layers F.Cu F.Mask) (roundrect_rratio 0.25)
       (net 2 +3V3))
     (pad "" smd roundrect (at 0.345 0) (size 0.318 0.36) (layers F.Paste) (roundrect_rratio 0.25))
@@ -2891,7 +2927,7 @@
     (fp_text reference R21 (at 0 -1.05 90) (layer F.SilkS) hide
       (effects (font (size 1 1) (thickness 0.15)))
     )
-    (fp_text value 976Ω (at 0 1.05 90) (layer F.Fab)
+    (fp_text value 976Ω (at 0 1.05 90) (layer F.Fab) hide
       (effects (font (size 1 1) (thickness 0.15)))
     )
     (fp_line (start 0.7 0.35) (end -0.7 0.35) (layer F.CrtYd) (width 0.05))
@@ -2908,7 +2944,7 @@
     (pad 2 smd roundrect (at 0.32 0 90) (size 0.46 0.4) (layers F.Cu F.Mask) (roundrect_rratio 0.25)
       (net 1 Earth))
     (pad 1 smd roundrect (at -0.32 0 90) (size 0.46 0.4) (layers F.Cu F.Mask) (roundrect_rratio 0.25)
-      (net 68 "Net-(C16-Pad1)"))
+      (net 67 "Net-(C16-Pad1)"))
     (pad "" smd roundrect (at 0.345 0 90) (size 0.318 0.36) (layers F.Paste) (roundrect_rratio 0.25))
     (pad "" smd roundrect (at -0.345 0 90) (size 0.318 0.36) (layers F.Paste) (roundrect_rratio 0.25))
     (model ${KISYS3DMOD}/Resistor_SMD.3dshapes/R_0201_0603Metric.wrl
@@ -2927,7 +2963,7 @@
     (fp_text reference R22 (at 0 -1.05) (layer F.SilkS) hide
       (effects (font (size 1 1) (thickness 0.15)))
     )
-    (fp_text value 15kΩ (at 0 1.05) (layer F.Fab)
+    (fp_text value 15kΩ (at 0 1.05) (layer F.Fab) hide
       (effects (font (size 1 1) (thickness 0.15)))
     )
     (fp_line (start 0.7 0.35) (end -0.7 0.35) (layer F.CrtYd) (width 0.05))
@@ -2963,7 +2999,7 @@
     (fp_text reference R23 (at 0 -1.05) (layer F.SilkS) hide
       (effects (font (size 1 1) (thickness 0.15)))
     )
-    (fp_text value 470Ω (at 0 1.05) (layer F.Fab)
+    (fp_text value 470Ω (at 0 1.05) (layer F.Fab) hide
       (effects (font (size 1 1) (thickness 0.15)))
     )
     (fp_line (start 0.7 0.35) (end -0.7 0.35) (layer F.CrtYd) (width 0.05))
@@ -2999,7 +3035,7 @@
     (fp_text reference U2 (at 0 -2.9 90) (layer F.SilkS) hide
       (effects (font (size 1 1) (thickness 0.15)))
     )
-    (fp_text value MAX4239AUT (at 0 2.9 90) (layer F.Fab)
+    (fp_text value MAX4239AUT (at 0 2.9 90) (layer F.Fab) hide
       (effects (font (size 1 1) (thickness 0.15)))
     )
     (fp_line (start 0.9 -1.55) (end 0.9 1.55) (layer F.Fab) (width 0.1))
@@ -3044,7 +3080,7 @@
     (fp_text reference U3 (at 0 -2.9 90) (layer F.SilkS) hide
       (effects (font (size 1 1) (thickness 0.15)))
     )
-    (fp_text value MAX4239AUT (at 0 2.9 90) (layer F.Fab)
+    (fp_text value MAX4239AUT (at 0 2.9 90) (layer F.Fab) hide
       (effects (font (size 1 1) (thickness 0.15)))
     )
     (fp_line (start -0.9 1.61) (end 0.9 1.61) (layer F.SilkS) (width 0.12))
@@ -3068,7 +3104,7 @@
     (pad 3 smd rect (at -1.1 0.95 90) (size 1.06 0.65) (layers F.Cu F.Paste F.Mask)
       (net 7 "Net-(C14-Pad1)"))
     (pad 4 smd rect (at 1.1 0.95 90) (size 1.06 0.65) (layers F.Cu F.Paste F.Mask)
-      (net 75 "Net-(R17-Pad2)"))
+      (net 74 "Net-(R17-Pad2)"))
     (pad 6 smd rect (at 1.1 -0.95 90) (size 1.06 0.65) (layers F.Cu F.Paste F.Mask)
       (net 2 +3V3))
     (pad 5 smd rect (at 1.1 0 90) (size 1.06 0.65) (layers F.Cu F.Paste F.Mask)
@@ -3396,7 +3432,7 @@
     (pad 37 smd rect (at -2.5 -3.4266 90) (size 0.254 0.762) (layers F.Cu F.Paste F.Mask)
       (net 29 HSU))
     (pad 36 smd rect (at -2.000001 -3.4266 90) (size 0.254 0.762) (layers F.Cu F.Paste F.Mask)
-      (net 67 "Net-(C23-Pad1)"))
+      (net 66 "Net-(C23-Pad1)"))
     (pad 35 smd rect (at -1.000001 -3.4266 90) (size 0.254 0.762) (layers F.Cu F.Paste F.Mask)
       (net 15 CV))
     (pad 34 smd rect (at -0.499999 -3.4266 90) (size 0.254 0.762) (layers F.Cu F.Paste F.Mask)
@@ -3410,13 +3446,13 @@
     (pad 30 smd rect (at 2.000001 -3.4266 90) (size 0.254 0.762) (layers F.Cu F.Paste F.Mask)
       (net 16 CW))
     (pad 29 smd rect (at 3.4266 -2.5 180) (size 0.254 0.762) (layers F.Cu F.Paste F.Mask)
-      (net 71 "Net-(C20-Pad2)"))
+      (net 70 "Net-(C20-Pad2)"))
     (pad 28 smd rect (at 3.4266 -2.000001 180) (size 0.254 0.762) (layers F.Cu F.Paste F.Mask)
       (net 11 VBUS))
     (pad 27 smd rect (at 3.4266 -1.5 180) (size 0.254 0.762) (layers F.Cu F.Paste F.Mask)
-      (net 69 "Net-(C21-Pad2)"))
+      (net 68 "Net-(C21-Pad2)"))
     (pad 26 smd rect (at 3.4266 -0.499999 180) (size 0.254 0.762) (layers F.Cu F.Paste F.Mask)
-      (net 72 "Net-(C21-Pad1)"))
+      (net 71 "Net-(C21-Pad1)"))
     (pad 25 smd rect (at 3.4266 0.499999 180) (size 0.254 0.762) (layers F.Cu F.Paste F.Mask)
       (net 11 VBUS))
     (pad 24 smd rect (at 3.4266 1.5 180) (size 0.254 0.762) (layers F.Cu F.Paste F.Mask)
@@ -3450,7 +3486,7 @@
     (pad 10 smd rect (at -3.4266 2.5 180) (size 0.254 0.762) (layers F.Cu F.Paste F.Mask)
       (net 57 SPI_CSN))
     (pad 9 smd rect (at -3.4266 2.000001 180) (size 0.254 0.762) (layers F.Cu F.Paste F.Mask)
-      (net 66 "Net-(U4-Pad9)"))
+      (net 65 "Net-(U4-Pad9)"))
     (pad 8 smd rect (at -3.4266 1.5 180) (size 0.254 0.762) (layers F.Cu F.Paste F.Mask)
       (net 1 Earth))
     (pad 7 smd rect (at -3.4266 1.000001 180) (size 0.254 0.762) (layers F.Cu F.Paste F.Mask)
@@ -3464,7 +3500,7 @@
     (pad 3 smd rect (at -3.4266 -1.000001 180) (size 0.254 0.762) (layers F.Cu F.Paste F.Mask)
       (net 34 LSW))
     (pad 2 smd rect (at -3.4266 -1.5 180) (size 0.254 0.762) (layers F.Cu F.Paste F.Mask)
-      (net 65 "Net-(U4-Pad2)"))
+      (net 64 "Net-(U4-Pad2)"))
     (pad 1 smd rect (at -3.4266 -2.5 180) (size 0.254 0.762) (layers F.Cu F.Paste F.Mask)
       (net 12 CU))
     (model ${KIPRJMOD}/libs/TMC6100-LA/QFN37_7X7_TRI.step
@@ -3483,7 +3519,7 @@
     (fp_text reference U5 (at 0 -2.9 90) (layer F.SilkS) hide
       (effects (font (size 1 1) (thickness 0.15)))
     )
-    (fp_text value MAX4239AUT (at 0 2.9 90) (layer F.Fab)
+    (fp_text value MAX4239AUT (at 0 2.9 90) (layer F.Fab) hide
       (effects (font (size 1 1) (thickness 0.15)))
     )
     (fp_line (start 0.9 -1.55) (end 0.9 1.55) (layer F.Fab) (width 0.1))
@@ -3507,7 +3543,7 @@
     (pad 4 smd rect (at 1.1 0.95 90) (size 1.06 0.65) (layers F.Cu F.Paste F.Mask)
       (net 28 "Net-(R22-Pad2)"))
     (pad 3 smd rect (at -1.1 0.95 90) (size 1.06 0.65) (layers F.Cu F.Paste F.Mask)
-      (net 68 "Net-(C16-Pad1)"))
+      (net 67 "Net-(C16-Pad1)"))
     (pad 2 smd rect (at -1.1 0 90) (size 1.06 0.65) (layers F.Cu F.Paste F.Mask)
       (net 1 Earth))
     (pad 1 smd rect (at -1.1 -0.95 90) (size 1.06 0.65) (layers F.Cu F.Paste F.Mask)
@@ -3528,7 +3564,7 @@
     (fp_text reference Y1 (at 0 -2 90) (layer F.SilkS) hide
       (effects (font (size 1 1) (thickness 0.15)))
     )
-    (fp_text value 8MHz (at 0 1.8 90) (layer F.Fab)
+    (fp_text value 8MHz (at 0 1.8 90) (layer F.Fab) hide
       (effects (font (size 0.2 0.2) (thickness 0.03)))
     )
     (fp_line (start -1.75 1.2) (end -1.75 -1.2) (layer F.CrtYd) (width 0.05))
@@ -3576,7 +3612,7 @@
     (fp_text reference C28 (at 0 -1.17 90) (layer F.SilkS) hide
       (effects (font (size 1 1) (thickness 0.15)))
     )
-    (fp_text value 1µF (at 0 1.17 90) (layer F.Fab)
+    (fp_text value 1µF (at 0 1.17 90) (layer F.Fab) hide
       (effects (font (size 1 1) (thickness 0.15)))
     )
     (fp_line (start -0.5 0.25) (end -0.5 -0.25) (layer F.Fab) (width 0.1))
@@ -3610,7 +3646,7 @@
     (fp_text reference C29 (at 0 -1.17) (layer F.SilkS) hide
       (effects (font (size 1 1) (thickness 0.15)))
     )
-    (fp_text value 1µF (at 0 1.17) (layer F.Fab)
+    (fp_text value 1µF (at 0 1.17) (layer F.Fab) hide
       (effects (font (size 1 1) (thickness 0.15)))
     )
     (fp_line (start 0.93 0.47) (end -0.93 0.47) (layer F.CrtYd) (width 0.05))
@@ -3644,7 +3680,7 @@
     (fp_text reference C30 (at 0 -1.05 90) (layer F.SilkS) hide
       (effects (font (size 1 1) (thickness 0.15)))
     )
-    (fp_text value 100nF (at 0 1.05 90) (layer F.Fab)
+    (fp_text value 100nF (at 0 1.05 90) (layer F.Fab) hide
       (effects (font (size 1 1) (thickness 0.15)))
     )
     (fp_line (start -0.3 0.15) (end -0.3 -0.15) (layer F.Fab) (width 0.1))
@@ -3659,9 +3695,9 @@
       (effects (font (size 0.25 0.25) (thickness 0.04)))
     )
     (pad 2 smd roundrect (at 0.32 0 270) (size 0.46 0.4) (layers F.Cu F.Mask) (roundrect_rratio 0.25)
-      (net 70 "Net-(C30-Pad2)"))
+      (net 69 "Net-(C30-Pad2)"))
     (pad 1 smd roundrect (at -0.32 0 270) (size 0.46 0.4) (layers F.Cu F.Mask) (roundrect_rratio 0.25)
-      (net 73 "Net-(C30-Pad1)"))
+      (net 72 "Net-(C30-Pad1)"))
     (pad "" smd roundrect (at 0.345 0 270) (size 0.318 0.36) (layers F.Paste) (roundrect_rratio 0.25))
     (pad "" smd roundrect (at -0.345 0 270) (size 0.318 0.36) (layers F.Paste) (roundrect_rratio 0.25))
     (model ${KISYS3DMOD}/Capacitor_SMD.3dshapes/C_0201_0603Metric.wrl
@@ -3680,7 +3716,7 @@
     (fp_text reference C34 (at 0 -1.43) (layer F.SilkS) hide
       (effects (font (size 1 1) (thickness 0.15)))
     )
-    (fp_text value 10µF (at 0 1.43) (layer F.Fab)
+    (fp_text value 10µF (at 0 1.43) (layer F.Fab) hide
       (effects (font (size 1 1) (thickness 0.15)))
     )
     (fp_line (start -0.8 0.4) (end -0.8 -0.4) (layer F.Fab) (width 0.1))
@@ -3697,7 +3733,7 @@
       (effects (font (size 0.4 0.4) (thickness 0.06)))
     )
     (pad 2 smd roundrect (at 0.7875 0) (size 0.875 0.95) (layers F.Cu F.Paste F.Mask) (roundrect_rratio 0.25)
-      (net 74 "Net-(C34-Pad2)"))
+      (net 73 "Net-(C34-Pad2)"))
     (pad 1 smd roundrect (at -0.7875 0) (size 0.875 0.95) (layers F.Cu F.Paste F.Mask) (roundrect_rratio 0.25)
       (net 1 Earth))
     (model ${KISYS3DMOD}/Capacitor_SMD.3dshapes/C_0603_1608Metric.wrl
@@ -3716,7 +3752,7 @@
     (fp_text reference C35 (at 0 -1.43) (layer F.SilkS) hide
       (effects (font (size 1 1) (thickness 0.15)))
     )
-    (fp_text value 10µF (at 0 1.43) (layer F.Fab)
+    (fp_text value 10µF (at 0 1.43) (layer F.Fab) hide
       (effects (font (size 1 1) (thickness 0.15)))
     )
     (fp_line (start 1.48 0.73) (end -1.48 0.73) (layer F.CrtYd) (width 0.05))
@@ -3735,44 +3771,8 @@
     (pad 1 smd roundrect (at -0.7875 0) (size 0.875 0.95) (layers F.Cu F.Paste F.Mask) (roundrect_rratio 0.25)
       (net 1 Earth))
     (pad 2 smd roundrect (at 0.7875 0) (size 0.875 0.95) (layers F.Cu F.Paste F.Mask) (roundrect_rratio 0.25)
-      (net 74 "Net-(C34-Pad2)"))
+      (net 73 "Net-(C34-Pad2)"))
     (model ${KISYS3DMOD}/Capacitor_SMD.3dshapes/C_0603_1608Metric.wrl
-      (at (xyz 0 0 0))
-      (scale (xyz 1 1 1))
-      (rotate (xyz 0 0 0))
-    )
-  )
-
-  (module Capacitor_SMD:C_0201_0603Metric (layer F.Cu) (tedit 5B301BBE) (tstamp 5F4E05A7)
-    (at 39.05 29.2 90)
-    (descr "Capacitor SMD 0201 (0603 Metric), square (rectangular) end terminal, IPC_7351 nominal, (Body size source: https://www.vishay.com/docs/20052/crcw0201e3.pdf), generated with kicad-footprint-generator")
-    (tags capacitor)
-    (path /5F654D6C)
-    (attr smd)
-    (fp_text reference R24 (at 0 -1.05 90) (layer F.SilkS) hide
-      (effects (font (size 1 1) (thickness 0.15)))
-    )
-    (fp_text value 52.3kΩ (at 0 1.05 90) (layer F.Fab)
-      (effects (font (size 1 1) (thickness 0.15)))
-    )
-    (fp_line (start 0.7 0.35) (end -0.7 0.35) (layer F.CrtYd) (width 0.05))
-    (fp_line (start 0.7 -0.35) (end 0.7 0.35) (layer F.CrtYd) (width 0.05))
-    (fp_line (start -0.7 -0.35) (end 0.7 -0.35) (layer F.CrtYd) (width 0.05))
-    (fp_line (start -0.7 0.35) (end -0.7 -0.35) (layer F.CrtYd) (width 0.05))
-    (fp_line (start 0.3 0.15) (end -0.3 0.15) (layer F.Fab) (width 0.1))
-    (fp_line (start 0.3 -0.15) (end 0.3 0.15) (layer F.Fab) (width 0.1))
-    (fp_line (start -0.3 -0.15) (end 0.3 -0.15) (layer F.Fab) (width 0.1))
-    (fp_line (start -0.3 0.15) (end -0.3 -0.15) (layer F.Fab) (width 0.1))
-    (fp_text user %R (at 0 -0.68 90) (layer F.Fab) hide
-      (effects (font (size 0.25 0.25) (thickness 0.04)))
-    )
-    (pad "" smd roundrect (at -0.345 0 90) (size 0.318 0.36) (layers F.Paste) (roundrect_rratio 0.25))
-    (pad "" smd roundrect (at 0.345 0 90) (size 0.318 0.36) (layers F.Paste) (roundrect_rratio 0.25))
-    (pad 1 smd roundrect (at -0.32 0 90) (size 0.46 0.4) (layers F.Cu F.Mask) (roundrect_rratio 0.25)
-      (net 76 "Net-(R24-Pad1)"))
-    (pad 2 smd roundrect (at 0.32 0 90) (size 0.46 0.4) (layers F.Cu F.Mask) (roundrect_rratio 0.25)
-      (net 1 Earth))
-    (model ${KISYS3DMOD}/Capacitor_SMD.3dshapes/C_0201_0603Metric.wrl
       (at (xyz 0 0 0))
       (scale (xyz 1 1 1))
       (rotate (xyz 0 0 0))
@@ -3788,7 +3788,7 @@
     (fp_text reference R25 (at 0 -1.05 90) (layer F.SilkS) hide
       (effects (font (size 1 1) (thickness 0.15)))
     )
-    (fp_text value 120kΩ (at 0 1.05 90) (layer F.Fab)
+    (fp_text value 120kΩ (at 0 1.05 90) (layer F.Fab) hide
       (effects (font (size 1 1) (thickness 0.15)))
     )
     (fp_line (start 0.7 0.35) (end -0.7 0.35) (layer F.CrtYd) (width 0.05))
@@ -3805,9 +3805,9 @@
     (pad "" smd roundrect (at -0.345 0 270) (size 0.318 0.36) (layers F.Paste) (roundrect_rratio 0.25))
     (pad "" smd roundrect (at 0.345 0 270) (size 0.318 0.36) (layers F.Paste) (roundrect_rratio 0.25))
     (pad 1 smd roundrect (at -0.32 0 270) (size 0.46 0.4) (layers F.Cu F.Mask) (roundrect_rratio 0.25)
-      (net 76 "Net-(R24-Pad1)"))
+      (net 75 "Net-(R24-Pad1)"))
     (pad 2 smd roundrect (at 0.32 0 270) (size 0.46 0.4) (layers F.Cu F.Mask) (roundrect_rratio 0.25)
-      (net 74 "Net-(C34-Pad2)"))
+      (net 73 "Net-(C34-Pad2)"))
     (model ${KISYS3DMOD}/Resistor_SMD.3dshapes/R_0201_0603Metric.wrl
       (at (xyz 0 0 0))
       (scale (xyz 1 1 1))
@@ -3824,7 +3824,7 @@
     (fp_text reference U6 (at 0 -2.9 90) (layer F.SilkS) hide
       (effects (font (size 1 1) (thickness 0.15)))
     )
-    (fp_text value TPS560430XDBVR (at 0 2.9 90) (layer F.Fab)
+    (fp_text value TPS560430XDBVR (at 0 2.9 90) (layer F.Fab) hide
       (effects (font (size 1 1) (thickness 0.15)))
     )
     (fp_line (start 0.9 -1.55) (end 0.9 1.55) (layer F.Fab) (width 0.1))
@@ -3842,15 +3842,15 @@
       (effects (font (size 0.5 0.5) (thickness 0.075)))
     )
     (pad 1 smd rect (at -1.1 -0.95 90) (size 1.06 0.65) (layers F.Cu F.Paste F.Mask)
-      (net 70 "Net-(C30-Pad2)"))
+      (net 69 "Net-(C30-Pad2)"))
     (pad 2 smd rect (at -1.1 0 90) (size 1.06 0.65) (layers F.Cu F.Paste F.Mask)
       (net 1 Earth))
     (pad 3 smd rect (at -1.1 0.95 90) (size 1.06 0.65) (layers F.Cu F.Paste F.Mask)
-      (net 76 "Net-(R24-Pad1)"))
+      (net 75 "Net-(R24-Pad1)"))
     (pad 4 smd rect (at 1.1 0.95 90) (size 1.06 0.65) (layers F.Cu F.Paste F.Mask)
       (net 11 VBUS))
     (pad 6 smd rect (at 1.1 -0.95 90) (size 1.06 0.65) (layers F.Cu F.Paste F.Mask)
-      (net 73 "Net-(C30-Pad1)"))
+      (net 72 "Net-(C30-Pad1)"))
     (pad 5 smd rect (at 1.1 0 90) (size 1.06 0.65) (layers F.Cu F.Paste F.Mask)
       (net 11 VBUS))
     (model ${KISYS3DMOD}/Package_TO_SOT_SMD.3dshapes/SOT-23-6.wrl
@@ -4513,69 +4513,69 @@
   (segment (start 30.95 26.2) (end 30.75 26.4) (width 0.13) (layer F.Cu) (net 61))
   (segment (start 25.95 27.9) (end 25.9 27.9) (width 0.13) (layer F.Cu) (net 61) (status 30))
   (segment (start 26.55 27.3) (end 25.95 27.9) (width 0.13) (layer F.Cu) (net 61) (status 20))
-  (via (at 44.6 24.525) (size 0.4) (drill 0.254) (layers F.Cu B.Cu) (net 62))
-  (segment (start 44.62001 24.50499) (end 44.6 24.525) (width 0.13) (layer F.Cu) (net 62))
-  (segment (start 44.62001 22.97001) (end 44.62001 24.50499) (width 0.13) (layer F.Cu) (net 62) (status 10))
-  (segment (start 44.15 22.5) (end 44.62001 22.97001) (width 0.13) (layer F.Cu) (net 62) (status 30))
-  (via (at 31.69497 23.9) (size 0.4) (drill 0.254) (layers F.Cu B.Cu) (net 62))
-  (segment (start 33.24497 25.45) (end 31.69497 23.9) (width 0.13) (layer In2.Cu) (net 62))
-  (segment (start 44.6 24.525) (end 41.225 24.525) (width 0.13) (layer In2.Cu) (net 62))
-  (segment (start 31.45 25.35) (end 31.45 24.14497) (width 0.13) (layer F.Cu) (net 62) (status 10))
-  (segment (start 31.45 24.14497) (end 31.69497 23.9) (width 0.13) (layer F.Cu) (net 62))
-  (segment (start 41.225 24.525) (end 40.3 25.45) (width 0.13) (layer In2.Cu) (net 62))
-  (segment (start 40.3 25.45) (end 33.24497 25.45) (width 0.13) (layer In2.Cu) (net 62))
-  (segment (start 16.814999 24.000001) (end 16.8 24.015) (width 0.3) (layer F.Cu) (net 67) (status 30))
-  (segment (start 18.0734 24.000001) (end 16.814999 24.000001) (width 0.3) (layer F.Cu) (net 67) (status 30))
-  (segment (start 40.745 28.75) (end 40.745 28.38) (width 0.13) (layer F.Cu) (net 68) (status 10))
-  (segment (start 40.85 28.275) (end 40.85 27.87) (width 0.13) (layer F.Cu) (net 68) (status 20))
-  (segment (start 40.745 28.38) (end 40.85 28.275) (width 0.13) (layer F.Cu) (net 68))
-  (segment (start 40.075 27.87) (end 40.85 27.87) (width 0.13) (layer F.Cu) (net 68) (status 30))
-  (segment (start 40.745 29.525) (end 40.745 28.75) (width 0.13) (layer F.Cu) (net 68) (status 30))
-  (segment (start 44.025 28.65) (end 44.025 29.31) (width 0.13) (layer F.Cu) (net 68) (status 10))
-  (segment (start 44.025 29.31) (end 43.699989 29.635011) (width 0.13) (layer F.Cu) (net 68))
-  (segment (start 40.855011 29.635011) (end 40.745 29.525) (width 0.13) (layer F.Cu) (net 68) (status 30))
-  (segment (start 43.699989 29.635011) (end 40.855011 29.635011) (width 0.13) (layer F.Cu) (net 68) (status 20))
-  (segment (start 20 17.1625) (end 20.1125 17.05) (width 0.25) (layer F.Cu) (net 69) (status 30))
-  (segment (start 20 18.5734) (end 20 17.1625) (width 0.25) (layer F.Cu) (net 69) (status 30))
-  (segment (start 35.85 28.8) (end 35.85 29) (width 0.25) (layer F.Cu) (net 70) (status 30))
-  (segment (start 34.55 27.47) (end 34.55 27.5) (width 0.25) (layer F.Cu) (net 70) (status 30))
-  (segment (start 34.55 27.5) (end 35.85 28.8) (width 0.25) (layer F.Cu) (net 70) (status 30))
-  (segment (start 18.8234 18.5734) (end 19 18.5734) (width 0.25) (layer F.Cu) (net 71) (status 20))
-  (segment (start 18.33 17.45) (end 18.33 18.08) (width 0.25) (layer F.Cu) (net 71) (status 10))
-  (segment (start 18.33 18.08) (end 18.8234 18.5734) (width 0.25) (layer F.Cu) (net 71))
-  (segment (start 21.000001 18.5734) (end 21 18.062399) (width 0.25) (layer F.Cu) (net 72) (status 10))
-  (segment (start 21 18.062399) (end 21.262399 17.8) (width 0.25) (layer F.Cu) (net 72))
-  (segment (start 21.262399 17.8) (end 21.55 17.8) (width 0.25) (layer F.Cu) (net 72))
-  (segment (start 21.6875 17.6625) (end 21.6875 17.05) (width 0.25) (layer F.Cu) (net 72) (status 20))
-  (segment (start 21.55 17.8) (end 21.6875 17.6625) (width 0.25) (layer F.Cu) (net 72))
-  (segment (start 34.55 26.83) (end 33.57 26.83) (width 0.25) (layer F.Cu) (net 73) (status 30))
-  (segment (start 33.25 27.15) (end 33.25 28) (width 0.25) (layer F.Cu) (net 73) (status 30))
-  (segment (start 33.57 26.83) (end 33.25 27.15) (width 0.25) (layer F.Cu) (net 73) (status 30))
-  (segment (start 35.82 26.83) (end 35.85 26.8) (width 0.25) (layer F.Cu) (net 73) (status 30))
-  (segment (start 34.55 26.83) (end 35.82 26.83) (width 0.25) (layer F.Cu) (net 73) (status 30))
-  (segment (start 34.55 29) (end 34.55 28.97) (width 0.13) (layer F.Cu) (net 74) (status 30))
-  (segment (start 31.4 29.6) (end 33.95 29.6) (width 0.13) (layer F.Cu) (net 74))
-  (segment (start 33.95 29.6) (end 34.55 29) (width 0.13) (layer F.Cu) (net 74) (status 20))
-  (segment (start 30.45 28) (end 30.45 28.65) (width 0.25) (layer F.Cu) (net 74) (status 30))
-  (segment (start 30.45 28.65) (end 31.4 29.6) (width 0.13) (layer F.Cu) (net 74) (status 10))
-  (segment (start 28.7875 29.2) (end 30.25 29.2) (width 0.25) (layer F.Cu) (net 74) (status 30))
-  (segment (start 30.45 29) (end 30.45 28) (width 0.25) (layer F.Cu) (net 74) (status 30))
-  (segment (start 30.25 29.2) (end 30.45 29) (width 0.25) (layer F.Cu) (net 74) (status 30))
-  (segment (start 30.1 27.65) (end 28.7875 27.65) (width 0.25) (layer F.Cu) (net 74) (status 30))
-  (segment (start 30.45 28) (end 30.1 27.65) (width 0.25) (layer F.Cu) (net 74) (status 30))
-  (segment (start 42.245 21.395) (end 42.25 21.4) (width 0.13) (layer F.Cu) (net 75) (status 30))
-  (segment (start 42.245 20.175) (end 42.245 21.395) (width 0.13) (layer F.Cu) (net 75) (status 30))
-  (segment (start 42.245 20.175) (end 43.08 20.175) (width 0.13) (layer F.Cu) (net 75) (status 30))
-  (segment (start 37.75 29.15) (end 37.75 29) (width 0.13) (layer F.Cu) (net 76) (status 30))
-  (segment (start 39.05 29.52) (end 38.12 29.52) (width 0.13) (layer F.Cu) (net 76) (status 10))
-  (segment (start 38.12 29.52) (end 37.75 29.15) (width 0.13) (layer F.Cu) (net 76) (status 20))
-  (segment (start 37.75 29.6) (end 37.75 29) (width 0.13) (layer F.Cu) (net 76) (status 20))
-  (segment (start 37.6 29.75) (end 37.75 29.6) (width 0.13) (layer F.Cu) (net 76))
-  (segment (start 34.83 28.33) (end 35.05 28.55) (width 0.13) (layer F.Cu) (net 76))
-  (segment (start 35.05 29.406002) (end 35.393998 29.75) (width 0.13) (layer F.Cu) (net 76))
-  (segment (start 34.55 28.33) (end 34.83 28.33) (width 0.13) (layer F.Cu) (net 76) (status 10))
-  (segment (start 35.05 28.55) (end 35.05 29.406002) (width 0.13) (layer F.Cu) (net 76))
-  (segment (start 35.393998 29.75) (end 37.6 29.75) (width 0.13) (layer F.Cu) (net 76))
+  (segment (start 16.814999 24.000001) (end 16.8 24.015) (width 0.3) (layer F.Cu) (net 66) (status 30))
+  (segment (start 18.0734 24.000001) (end 16.814999 24.000001) (width 0.3) (layer F.Cu) (net 66) (status 30))
+  (segment (start 40.745 28.75) (end 40.745 28.38) (width 0.13) (layer F.Cu) (net 67) (status 10))
+  (segment (start 40.85 28.275) (end 40.85 27.87) (width 0.13) (layer F.Cu) (net 67) (status 20))
+  (segment (start 40.745 28.38) (end 40.85 28.275) (width 0.13) (layer F.Cu) (net 67))
+  (segment (start 40.075 27.87) (end 40.85 27.87) (width 0.13) (layer F.Cu) (net 67) (status 30))
+  (segment (start 40.745 29.525) (end 40.745 28.75) (width 0.13) (layer F.Cu) (net 67) (status 30))
+  (segment (start 44.025 28.65) (end 44.025 29.31) (width 0.13) (layer F.Cu) (net 67) (status 10))
+  (segment (start 44.025 29.31) (end 43.699989 29.635011) (width 0.13) (layer F.Cu) (net 67))
+  (segment (start 40.855011 29.635011) (end 40.745 29.525) (width 0.13) (layer F.Cu) (net 67) (status 30))
+  (segment (start 43.699989 29.635011) (end 40.855011 29.635011) (width 0.13) (layer F.Cu) (net 67) (status 20))
+  (segment (start 20 17.1625) (end 20.1125 17.05) (width 0.25) (layer F.Cu) (net 68) (status 30))
+  (segment (start 20 18.5734) (end 20 17.1625) (width 0.25) (layer F.Cu) (net 68) (status 30))
+  (segment (start 35.85 28.8) (end 35.85 29) (width 0.25) (layer F.Cu) (net 69) (status 30))
+  (segment (start 34.55 27.47) (end 34.55 27.5) (width 0.25) (layer F.Cu) (net 69) (status 30))
+  (segment (start 34.55 27.5) (end 35.85 28.8) (width 0.25) (layer F.Cu) (net 69) (status 30))
+  (segment (start 18.8234 18.5734) (end 19 18.5734) (width 0.25) (layer F.Cu) (net 70) (status 20))
+  (segment (start 18.33 17.45) (end 18.33 18.08) (width 0.25) (layer F.Cu) (net 70) (status 10))
+  (segment (start 18.33 18.08) (end 18.8234 18.5734) (width 0.25) (layer F.Cu) (net 70))
+  (segment (start 21.000001 18.5734) (end 21 18.062399) (width 0.25) (layer F.Cu) (net 71) (status 10))
+  (segment (start 21 18.062399) (end 21.262399 17.8) (width 0.25) (layer F.Cu) (net 71))
+  (segment (start 21.262399 17.8) (end 21.55 17.8) (width 0.25) (layer F.Cu) (net 71))
+  (segment (start 21.6875 17.6625) (end 21.6875 17.05) (width 0.25) (layer F.Cu) (net 71) (status 20))
+  (segment (start 21.55 17.8) (end 21.6875 17.6625) (width 0.25) (layer F.Cu) (net 71))
+  (segment (start 34.55 26.83) (end 33.57 26.83) (width 0.25) (layer F.Cu) (net 72) (status 30))
+  (segment (start 33.25 27.15) (end 33.25 28) (width 0.25) (layer F.Cu) (net 72) (status 30))
+  (segment (start 33.57 26.83) (end 33.25 27.15) (width 0.25) (layer F.Cu) (net 72) (status 30))
+  (segment (start 35.82 26.83) (end 35.85 26.8) (width 0.25) (layer F.Cu) (net 72) (status 30))
+  (segment (start 34.55 26.83) (end 35.82 26.83) (width 0.25) (layer F.Cu) (net 72) (status 30))
+  (segment (start 34.55 29) (end 34.55 28.97) (width 0.13) (layer F.Cu) (net 73) (status 30))
+  (segment (start 31.4 29.6) (end 33.95 29.6) (width 0.13) (layer F.Cu) (net 73))
+  (segment (start 33.95 29.6) (end 34.55 29) (width 0.13) (layer F.Cu) (net 73) (status 20))
+  (segment (start 30.45 28) (end 30.45 28.65) (width 0.25) (layer F.Cu) (net 73) (status 30))
+  (segment (start 30.45 28.65) (end 31.4 29.6) (width 0.13) (layer F.Cu) (net 73) (status 10))
+  (segment (start 28.7875 29.2) (end 30.25 29.2) (width 0.25) (layer F.Cu) (net 73) (status 30))
+  (segment (start 30.45 29) (end 30.45 28) (width 0.25) (layer F.Cu) (net 73) (status 30))
+  (segment (start 30.25 29.2) (end 30.45 29) (width 0.25) (layer F.Cu) (net 73) (status 30))
+  (segment (start 30.1 27.65) (end 28.7875 27.65) (width 0.25) (layer F.Cu) (net 73) (status 30))
+  (segment (start 30.45 28) (end 30.1 27.65) (width 0.25) (layer F.Cu) (net 73) (status 30))
+  (segment (start 42.245 21.395) (end 42.25 21.4) (width 0.13) (layer F.Cu) (net 74) (status 30))
+  (segment (start 42.245 20.175) (end 42.245 21.395) (width 0.13) (layer F.Cu) (net 74) (status 30))
+  (segment (start 42.245 20.175) (end 43.08 20.175) (width 0.13) (layer F.Cu) (net 74) (status 30))
+  (segment (start 37.75 29.15) (end 37.75 29) (width 0.13) (layer F.Cu) (net 75) (status 30))
+  (segment (start 39.05 29.52) (end 38.12 29.52) (width 0.13) (layer F.Cu) (net 75) (status 10))
+  (segment (start 38.12 29.52) (end 37.75 29.15) (width 0.13) (layer F.Cu) (net 75) (status 20))
+  (segment (start 37.75 29.6) (end 37.75 29) (width 0.13) (layer F.Cu) (net 75) (status 20))
+  (segment (start 37.6 29.75) (end 37.75 29.6) (width 0.13) (layer F.Cu) (net 75))
+  (segment (start 34.83 28.33) (end 35.05 28.55) (width 0.13) (layer F.Cu) (net 75))
+  (segment (start 35.05 29.406002) (end 35.393998 29.75) (width 0.13) (layer F.Cu) (net 75))
+  (segment (start 34.55 28.33) (end 34.83 28.33) (width 0.13) (layer F.Cu) (net 75) (status 10))
+  (segment (start 35.05 28.55) (end 35.05 29.406002) (width 0.13) (layer F.Cu) (net 75))
+  (segment (start 35.393998 29.75) (end 37.6 29.75) (width 0.13) (layer F.Cu) (net 75))
+  (via (at 44.6 24.525) (size 0.4) (drill 0.254) (layers F.Cu B.Cu) (net 76))
+  (segment (start 44.62001 24.50499) (end 44.6 24.525) (width 0.13) (layer F.Cu) (net 76))
+  (segment (start 44.62001 22.97001) (end 44.62001 24.50499) (width 0.13) (layer F.Cu) (net 76) (status 10))
+  (segment (start 44.15 22.5) (end 44.62001 22.97001) (width 0.13) (layer F.Cu) (net 76) (status 30))
+  (via (at 31.69497 23.9) (size 0.4) (drill 0.254) (layers F.Cu B.Cu) (net 76))
+  (segment (start 33.24497 25.45) (end 31.69497 23.9) (width 0.13) (layer In2.Cu) (net 76))
+  (segment (start 44.6 24.525) (end 41.225 24.525) (width 0.13) (layer In2.Cu) (net 76))
+  (segment (start 31.45 25.35) (end 31.45 24.14497) (width 0.13) (layer F.Cu) (net 76) (status 10))
+  (segment (start 31.45 24.14497) (end 31.69497 23.9) (width 0.13) (layer F.Cu) (net 76))
+  (segment (start 41.225 24.525) (end 40.3 25.45) (width 0.13) (layer In2.Cu) (net 76))
+  (segment (start 40.3 25.45) (end 33.24497 25.45) (width 0.13) (layer In2.Cu) (net 76))
 
   (zone (net 1) (net_name Earth) (layer B.Cu) (tstamp 5F454130) (hatch edge 0.508)
     (priority 1)
