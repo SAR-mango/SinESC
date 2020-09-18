@@ -6,7 +6,7 @@ There are two versions of SinESC. Wing Edition, for fixed-wing aircraft, and Mul
 - Wing Edition supports CAN and standard PWM control signals. CAN is intended for Pixhawk users, and standard PWM is for direct connection to an RC receiver.
 - Multi Edition communicates with a flight controller though SinWire, a custom 1-wire protocol that enables configuration, firmware updates, and speed control all through one wire. SinWire support will be added to Betaflight soon. It aims to match or exceed the update rate of DSHOT600.
 
-*The real-life dimensions of the PCBs depicted below are 30x15mm.*
+*The real-life dimensions of the PCBs depicted below are 15x30mm.*
 ![Multi Edition v2.3B Top](https://raw.githubusercontent.com/SAR-mango/SinESC/master/Multi%20Edition/2.3B/SinESC-Multi-2.3B/Exported%20Files/3D%20Render%20Front.jpg)
 ![Multi Edition v2.3B Bottom](https://raw.githubusercontent.com/SAR-mango/SinESC/master/Multi%20Edition/2.3B/SinESC-Multi-2.3B/Exported%20Files/3D%20Render%20Back.jpg)
 # Features & Specifications
@@ -44,15 +44,15 @@ Multi Edition is designed in KiCAD and adheres to OSHPark design rules. All addi
 
 SinESC is designed specifically for efficiency and robustness:
 - ST Microelectronics STM32F303CBT7 microcontroller
-- Maxim Integrated MAX4239 precision op-amps for current-sensing. Incredibly low input offset voltage (*0.1µV*). Gain = 30V/V; offset tuned to use the full ADC resolution.
-- Low-resistance current shunts (*1mΩ*) for reduced power loss
-- Switching regulator provides logic-level voltage supply for control electronics (*efficiency > 80%*)
+- Maxim Integrated MAX4239 precision op-amps for current-sensing. Incredibly low input offset voltage of 0.1µV. Gain = 30V/V; offset tuned to use the full ADC resolution.
+- Low-resistance current shunts (1mΩ) for reduced power loss
+- Switching regulator provides logic-level voltage supply for control electronics (efficiency > 80%)
 - Thermally optimized PCB layout
 - Trinamic Motion Control TMC6100-LA gate driver
-  - Fast switching slopes achieved with high gate drive current (1.5A), decreasing switching losses
+  - Fast switching slopes achieved with high gate drive current of 1.5A, decreasing switching losses
 - Infineon Technologies BSC010N04LSI N-channel MOSFETs
-  - Extremely low on-resistance (*Rdson = 1.05mΩ*) for reduced power loss
-  - High drain-source voltage (*Vds = 40V*) for immunity to voltage spikes even at 6S Li-po voltages
+  - Extremely low on-resistance (Rdson = 1.05mΩ) for reduced power loss
+  - High drain-source voltage (Vds = 40V) for immunity to voltage spikes even at 6S Li-po voltages
 - High-quality passive components
   - TDK ceramic capacitors
   - Panasonic metal film resistors (all 1% tolerance including shunts)
