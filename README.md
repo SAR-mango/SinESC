@@ -20,7 +20,7 @@ There are two versions of SinESC. Wing Edition, for fixed-wing aircraft, and Mul
 - **Maximum 40A continuous, 50A burst current draw (5 seconds).**
   - With the greatly-increased efficiency of SinESC, peak motor currents will be *significantly lower* than before (at a given throttle/thrust level). *This does NOT mean your motors run weaker. They are just more efficient!*
   - Over-current protection takes advantage of comparators embedded in the microcontroller and triggers immediately at 55A.
-# Sinusoidal Control—Benefits & a Brief Description
+# Sinusoidal Control: Benefits & a Brief Description
 Brushless DC motors work best when their phase voltage waveforms are sinusoid-shaped. Try it yourself—connect a BLDC motor to an oscilloscope and spin the rotor with your fingers. You will see a sine wave. 
 
 Regular BLHELI_32 ESCs use a simple "six-point" motor control method in which the phases are energized to bring the rotor to one of six points on a circle. This method is easy to implement as the rotor position at each point will result in a zero-crossing in the back-EMF from the non-energized phase(s), which is easy to detect. This means that the phase voltage waveforms are trapezoid-shaped rather than sinusoid-shaped. This is not ideal as the fields are not *always* aligned with the rotor to maximize torque. This causes the rotor to effectively "jolt in a circle" rather than spin continuously, resulting in lower efficiency and rougher flight. Furthermore, the sharp edges of the trapezoidal signal also introduce high-frequency noise which contributes to the above disadvantages as well. This also makes the motors run louder and hotter.
