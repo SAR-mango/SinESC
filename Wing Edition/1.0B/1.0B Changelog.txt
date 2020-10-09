@@ -1,0 +1,10 @@
+---------------------------
+   SinESC Wing Edition   
+v1.0A --> v1.0B CHANGELOG
+---------------------------
+
+* Updated component placement
+* Updated silkscreen
+* Changed LED from red 0201 to blue 0402
+* Changed LED resistor from 220Ω to 120Ω for BOM consolidation
+* Changed bus voltage monitor clamping diode from BAT30F4 0201 to BAT30KFILM SOD-523

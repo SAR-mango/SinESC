@@ -1,0 +1,6 @@
+r_divider_bus_voltage_sensor.c:50:13:RVBS_Init	16	static
+r_divider_bus_voltage_sensor.c:65:13:RVBS_Clear	24	static
+r_divider_bus_voltage_sensor.c:80:17:RVBS_ConvertVbusFiltrered	32	static
+r_divider_bus_voltage_sensor.c:126:17:RVBS_CalcAvVbusFilt	24	static
+r_divider_bus_voltage_sensor.c:167:17:RVBS_CalcAvVbus	24	static
+r_divider_bus_voltage_sensor.c:208:17:RVBS_CheckFaultState	24	static
