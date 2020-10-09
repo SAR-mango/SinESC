@@ -7,7 +7,7 @@
       "Application": "Pcbnew",
       "Version":     "(5.1.6)-1"
     },
-    "CreationDate":  "2020-09-03T16:30:16-07:00"
+    "CreationDate":  "2020-10-08T19:10:47-07:00"
   },
   "GeneralSpecs":
   {
@@ -15,7 +15,7 @@
     {
       "Name": "SinESC-Multi-2.3B",
       "GUID": "53696e45-5343-42d4-9d75-6c74692d322e",
-      "Revision": "1.0A"
+      "Revision": "2.3B"
     },
     "Size":
     {
