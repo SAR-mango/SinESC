@@ -1,5 +1,0 @@
-esc.c:57:6:esc_boot	0	static
-esc.c:73:6:esc_pwm_stop	8	static
-esc.c:81:13:esc_pwm_run	24	static
-esc.c:238:6:esc_pwm_control	16	static
-esc.c:589:6:TIM2_IRQHandler	12	static
