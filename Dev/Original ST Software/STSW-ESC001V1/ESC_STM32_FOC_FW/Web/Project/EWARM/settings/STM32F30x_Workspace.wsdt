@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+
+<Workspace>
+  <ConfigDictionary>
+    
+    
+    
+  <CurrentConfigs><Project>STM32F30x_MC Library/STM32F303_SINGLE_DRIVE</Project><Project>STM32F30x_UserProject/STM32303C-EVAL_SINGLEDRIVE</Project></CurrentConfigs><CurrentProj>STM32F30x_UserProject</CurrentProj><OverviewSelected>1</OverviewSelected></ConfigDictionary>
+  <Desktop>
+    <Static>
+      <Workspace>
+        <ColumnWidths>
+          
+          
+          
+          
+        <Column0>336</Column0><Column1>27</Column1><Column2>27</Column2><Column3>27</Column3></ColumnWidths>
+      </Workspace>
+      <Build>
+        
+        
+        
+        
+      <PreferedWindows><Position>4</Position><ScreenPosX>-1038</ScreenPosX><ScreenPosY>151</ScreenPosY><Windows><Window><Factory>Debug-Log</Factory></Window><Window><Factory>Find-in-Files</Factory></Window><Window><Factory>StaticWatch</Factory></Window><Window><Factory>Locals</Factory></Window><Window><Factory>Register</Factory></Window></Windows></PreferedWindows><ColumnWidth0>20</ColumnWidth0><ColumnWidth1>1155</ColumnWidth1><ColumnWidth2>308</ColumnWidth2><ColumnWidth3>77</ColumnWidth3></Build>
+    <Find-in-Files><PreferedWindows><Position>4</Position><ScreenPosX>-1148</ScreenPosX><ScreenPosY>25</ScreenPosY><Windows><Window><Factory>Register</Factory></Window><Window><Factory>Debug-Log</Factory></Window><Window><Factory>StaticWatch</Factory></Window></Windows></PreferedWindows><ColumnWidth0>664</ColumnWidth0><ColumnWidth1>94</ColumnWidth1><ColumnWidth2>1138</ColumnWidth2><ColumnWidth3>315</ColumnWidth3></Find-in-Files><TerminalIO/><Debug-Log><PreferedWindows><Position>4</Position><ScreenPosX>-1148</ScreenPosX><ScreenPosY>25</ScreenPosY><Windows><Window><Factory>Register</Factory></Window><Window><Factory>StaticWatch</Factory></Window><Window><Factory>Find-in-Files</Factory></Window></Windows></PreferedWindows><ColumnWidth0>24</ColumnWidth0><ColumnWidth1>1537</ColumnWidth1></Debug-Log><Register><PreferedWindows><Position>4</Position><ScreenPosX>-1073</ScreenPosX><ScreenPosY>139</ScreenPosY><Windows/></PreferedWindows></Register><StaticWatch><PreferedWindows><Position>4</Position><ScreenPosX>-1181</ScreenPosX><ScreenPosY>25</ScreenPosY><Windows/></PreferedWindows></StaticWatch><Locals><PreferedWindows><Position>4</Position><ScreenPosX>-1038</ScreenPosX><ScreenPosY>151</ScreenPosY><Windows><Window><Factory>Debug-Log</Factory></Window><Window><Factory>Build</Factory></Window><Window><Factory>Find-in-Files</Factory></Window><Window><Factory>StaticWatch</Factory></Window><Window><Factory>Register</Factory></Window></Windows></PreferedWindows></Locals></Static>
+    <Windows>
+      
+      
+    <Wnd1>
+        <Tabs>
+          <Tab>
+            <Identity>TabID-20549-24486</Identity>
+            <TabName>Workspace</TabName>
+            <Factory>Workspace</Factory>
+            <Session>
+              
+            <NodeDict><ExpandedNode>&lt;ws&gt;</ExpandedNode><ExpandedNode>&lt;ws&gt;/STM32F30x_PFC_Project</ExpandedNode><ExpandedNode>&lt;ws&gt;/STM32F30x_UserProject</ExpandedNode><ExpandedNode>&lt;ws&gt;/STM32F30x_UserProject/Motor Control</ExpandedNode><ExpandedNode>&lt;ws&gt;/STM32F30x_UserProject/Motor Control/System &amp; Drive Params</ExpandedNode><ExpandedNode>&lt;ws&gt;/STM32F30x_UserProject/Motor Control/System &amp; Drive Params/Motor1</ExpandedNode><ExpandedNode>&lt;ws&gt;/STM32F30x_UserProject/STEVAL-ESC001V1</ExpandedNode><ExpandedNode>&lt;ws&gt;/STM32F30x_UserProject/Std project template</ExpandedNode><ExpandedNode>STM32F30x_MC Library</ExpandedNode><ExpandedNode>STM32F30x_MC Library/MC Library</ExpandedNode><ExpandedNode>STM32F30x_MC Library/MC Library/src</ExpandedNode><ExpandedNode>STM32F30x_UserProject</ExpandedNode><ExpandedNode>STM32F30x_UserProject/Motor Control</ExpandedNode><ExpandedNode>STM32F30x_UserProject/Motor Control/System &amp; Drive Params</ExpandedNode><ExpandedNode>STM32F30x_UserProject/Motor Control/System &amp; Drive Params/Motor1</ExpandedNode><ExpandedNode>STM32F30x_UserProject/STEVAL-ESC001V1</ExpandedNode></NodeDict></Session>
+          </Tab>
+        </Tabs>
+        
+      <SelectedTab>0</SelectedTab></Wnd1><Wnd2>
+        <Tabs>
+          <Tab>
+            <Identity>TabID-24501-24617</Identity>
+            <TabName>Build</TabName>
+            <Factory>Build</Factory>
+            <Session/>
+          </Tab>
+        <Tab><Identity>TabID-22809-6678</Identity><TabName>Find in Files</TabName><Factory>Find-in-Files</Factory><Session/></Tab><Tab><Identity>TabID-17243-20707</Identity><TabName>Debug Log</TabName><Factory>Debug-Log</Factory><Session/></Tab></Tabs>
+        
+      <SelectedTab>0</SelectedTab></Wnd2></Windows>
+    <Editor>
+      
+      
+      
+      
+    <Pane><Tab><Factory>TextEditor</Factory><Filename>$WS_DIR$\..\main.c</Filename><XPos>0</XPos><YPos>0</YPos><SelStart>0</SelStart><SelEnd>0</SelEnd><XPos2>0</XPos2><YPos2>122</YPos2><SelStart2>3715</SelStart2><SelEnd2>3715</SelEnd2></Tab><ActiveTab>0</ActiveTab></Pane><ActivePane>0</ActivePane><Sizes><Pane><X>1000000</X><Y>1000000</Y></Pane></Sizes><SplitMode>1</SplitMode></Editor>
+    <Positions>
+      
+      
+      
+      
+      
+    <Top><Row0><Sizes><Toolbar-02841C30><key>iaridepm.enu1</key></Toolbar-02841C30></Sizes></Row0></Top><Left><Row0><Sizes><Wnd1><Rect><Top>-2</Top><Left>-2</Left><Bottom>406</Bottom><Right>427</Right><x>-2</x><y>-2</y><xscreen>134</xscreen><yscreen>196</yscreen><sizeHorzCX>140021</sizeHorzCX><sizeHorzCY>295181</sizeHorzCY><sizeVertCX>448276</sizeVertCX><sizeVertCY>614458</sizeVertCY></Rect></Wnd1></Sizes></Row0></Left><Right><Row0><Sizes/></Row0></Right><Bottom><Row0><Sizes><Wnd2><Rect><Top>-2</Top><Left>-2</Left><Bottom>213</Bottom><Right>959</Right><x>-2</x><y>-2</y><xscreen>961</xscreen><yscreen>215</yscreen><sizeHorzCX>1004180</sizeHorzCX><sizeHorzCY>323795</sizeHorzCY><sizeVertCX>140021</sizeVertCX><sizeVertCY>295181</sizeVertCY></Rect></Wnd2></Sizes></Row0></Bottom><Float><Sizes/></Float></Positions>
+  </Desktop>
+</Workspace>
+
+

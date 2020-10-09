@@ -1,0 +1,13 @@
+"C:\Program Files (x86)\IAR Systems\Embedded Workbench 7.4\arm\bin\armproc.dll" 
+
+"C:\Program Files (x86)\IAR Systems\Embedded Workbench 7.4\arm\bin\armsim2.dll" 
+
+"C:\Users\giuseppe scuderi-sl\Desktop\STSW-ESC001V1\STM32 PMSM FOC LIB\Web\Project\EWARM\MC Library Compiled\Exe\MC_Library_STM32F303_single_drive.a" 
+
+--plugin "C:\Program Files (x86)\IAR Systems\Embedded Workbench 7.4\arm\bin\armbat.dll" 
+
+--device_macro "C:\Program Files (x86)\IAR Systems\Embedded Workbench 7.4\arm\config\debugger\ST\STM32F3xx.dmac" 
+
+
+
+
