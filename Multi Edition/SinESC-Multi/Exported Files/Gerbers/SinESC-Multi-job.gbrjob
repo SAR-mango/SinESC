@@ -7,15 +7,15 @@
       "Application": "Pcbnew",
       "Version":     "(5.1.6)-1"
     },
-    "CreationDate":  "2020-10-08T19:10:47-07:00"
+    "CreationDate":  "2020-12-28T02:25:49-08:00"
   },
   "GeneralSpecs":
   {
     "ProjectId":
     {
-      "Name": "SinESC-Multi-2.3B",
-      "GUID": "53696e45-5343-42d4-9d75-6c74692d322e",
-      "Revision": "2.3B"
+      "Name": "SinESC-Multi",
+      "GUID": "53696e45-5343-42d4-9d75-6c74692e6b69",
+      "Revision": "2.3C"
     },
     "Size":
     {
@@ -49,57 +49,57 @@
   "FilesAttributes":
   [
     {
-      "Path":  "SinESC-Multi-2.3B-F_Cu.gbr",
+      "Path":  "SinESC-Multi-F_Cu.gbr",
       "FileFunction":  "Copper,L1,Top",
       "FilePolarity":  "Positive"
     },
     {
-      "Path":  "SinESC-Multi-2.3B-In1_Cu.gbr",
+      "Path":  "SinESC-Multi-In1_Cu.gbr",
       "FileFunction":  "Copper,L2,Inr",
       "FilePolarity":  "Positive"
     },
     {
-      "Path":  "SinESC-Multi-2.3B-In2_Cu.gbr",
+      "Path":  "SinESC-Multi-In2_Cu.gbr",
       "FileFunction":  "Copper,L3,Inr",
       "FilePolarity":  "Positive"
     },
     {
-      "Path":  "SinESC-Multi-2.3B-B_Cu.gbr",
+      "Path":  "SinESC-Multi-B_Cu.gbr",
       "FileFunction":  "Copper,L4,Bot",
       "FilePolarity":  "Positive"
     },
     {
-      "Path":  "SinESC-Multi-2.3B-F_Paste.gbr",
+      "Path":  "SinESC-Multi-F_Paste.gbr",
       "FileFunction":  "SolderPaste,Top",
       "FilePolarity":  "Positive"
     },
     {
-      "Path":  "SinESC-Multi-2.3B-B_Paste.gbr",
+      "Path":  "SinESC-Multi-B_Paste.gbr",
       "FileFunction":  "SolderPaste,Bot",
       "FilePolarity":  "Positive"
     },
     {
-      "Path":  "SinESC-Multi-2.3B-F_SilkS.gbr",
+      "Path":  "SinESC-Multi-F_SilkS.gbr",
       "FileFunction":  "Legend,Top",
       "FilePolarity":  "Positive"
     },
     {
-      "Path":  "SinESC-Multi-2.3B-B_SilkS.gbr",
+      "Path":  "SinESC-Multi-B_SilkS.gbr",
       "FileFunction":  "Legend,Bot",
       "FilePolarity":  "Positive"
     },
     {
-      "Path":  "SinESC-Multi-2.3B-F_Mask.gbr",
+      "Path":  "SinESC-Multi-F_Mask.gbr",
       "FileFunction":  "SolderMask,Top",
       "FilePolarity":  "Negative"
     },
     {
-      "Path":  "SinESC-Multi-2.3B-B_Mask.gbr",
+      "Path":  "SinESC-Multi-B_Mask.gbr",
       "FileFunction":  "SolderMask,Bot",
       "FilePolarity":  "Negative"
     },
     {
-      "Path":  "SinESC-Multi-2.3B-Edge_Cuts.gbr",
+      "Path":  "SinESC-Multi-Edge_Cuts.gbr",
       "FileFunction":  "Profile",
       "FilePolarity":  "Positive"
     }
