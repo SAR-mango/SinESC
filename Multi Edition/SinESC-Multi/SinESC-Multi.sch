@@ -5,12 +5,12 @@ $Descr A4 11693 8268
 encoding utf-8
 Sheet 1 1
 Title "SinESC Multi Edition"
-Date "2020-09-03"
-Rev "2.3B"
-Comp "Drawn by SAR_mango, © SinESC 2020"
-Comment1 "* All resistors are 1% 0201; current shunts are 1% 1206."
-Comment2 "* Capacitor voltage ratings & packages vary. See BOM."
-Comment3 "* Despite BOM consolidation, E192 values are required."
+Date "2020-12-28"
+Rev "2.3C"
+Comp "Drawn by Erk S., © 2020 SinESC"
+Comment1 "*All resistors are 1% 0201; current shunts are 1% 1206."
+Comment2 "*Capacitor voltage ratings & packages vary. See BOM."
+Comment3 "*Despite BOM consolidation, E192 values are required."
 Comment4 ""
 $EndDescr
 $Comp
@@ -6083,4 +6083,17 @@ DF BF 7B AC 77 6D D5 5B 17 79 2E 00 00 3B D7 FF 0F 7C E9 F3 76 52 1A 6B 18 00 00
 44 AE 42 60 82 
 EndData
 $EndBitmap
+$Comp
+L power:+3.3V #PWR?
+U 1 1 5FEB2144
+P 10050 850
+F 0 "#PWR?" H 10050 700 50  0001 C CNN
+F 1 "+3.3V" H 10050 1000 50  0000 C CNN
+F 2 "" H 10050 850 50  0001 C CNN
+F 3 "" H 10050 850 50  0001 C CNN
+	1    10050 850 
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	10050 850  10050 1000
 $EndSCHEMATC
