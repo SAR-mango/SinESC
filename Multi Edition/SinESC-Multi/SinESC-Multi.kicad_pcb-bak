@@ -15,7 +15,7 @@
     (date 2020-12-28)
     (rev 2.3C)
     (company "Drawn by Erk S., © 2020 SinESC")
-    (comment 1 "*Adheres to OSH Park design rules")
+    (comment 1 "*Adheres to OSH Park and PCBWay design rules")
   )
 
   (layers
