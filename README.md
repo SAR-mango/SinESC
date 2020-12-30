@@ -7,8 +7,8 @@ There are two versions of SinESC. Wing Edition, for fixed-wing aircraft, and Mul
 - Multi Edition communicates with a flight controller though SinWire, a custom 1-wire protocol that enables configuration, firmware updates, and speed control all through one wire. SinWire support will be added to Betaflight soon. It aims to match or exceed the update rate of DSHOT600.
 
 The real-life dimensions of the PCBs pictured below are 15x30mm.
-![Multi Edition v2.3C Top](https://raw.githubusercontent.com/SAR-mango/SinESC/master/Multi%20Edition/2.3C/SinESC-Multi/Exported%20Files/3D%20Render%20Front.jpg)
-![Multi Edition v2.3C Bottom](https://raw.githubusercontent.com/SAR-mango/SinESC/master/Multi%20Edition/2.3C/SinESC-Multi/Exported%20Files/3D%20Render%20Back.jpg)
+![Multi Edition v2.3C Top](https://raw.githubusercontent.com/SAR-mango/SinESC/master/Multi%20Edition/SinESC-Multi/Exported%20Files/3D%20Render%20Front.jpg)
+![Multi Edition v2.3C Bottom](https://raw.githubusercontent.com/SAR-mango/SinESC/master/Multi%20Edition/SinESC-Multi/Exported%20Files/3D%20Render%20Back.jpg)
 # Features & Specifications
 - **> 97% efficiency (up to 40% longer flight)**
 - **Smoother flight**
