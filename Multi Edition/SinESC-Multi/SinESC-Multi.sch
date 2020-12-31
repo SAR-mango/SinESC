@@ -5,7 +5,7 @@ $Descr A4 11693 8268
 encoding utf-8
 Sheet 1 1
 Title "SinESC Multi Edition"
-Date "2020-12-28"
+Date "2020-12-30"
 Rev "2.3C"
 Comp "Drawn by Erk S., © 2020 SinESC"
 Comment1 "*All resistors are 1% 0201; current shunts are 1% 1206."
@@ -400,10 +400,10 @@ F 5 "-" H 4900 6700 50  0001 C CNN "Voltage Rating"
 	0    1    1    0   
 $EndComp
 $Comp
-L Device:C C16
+L Device:C C19
 U 1 1 5F7BA4B1
 P 5400 7350
-F 0 "C16" H 5400 7450 50  0000 L CNN
+F 0 "C19" H 5400 7450 50  0000 L CNN
 F 1 "6.8nF" H 5400 7250 50  0000 L CNN
 F 2 "Capacitor_SMD:C_0201_0603Metric" H 5438 7200 50  0001 C CNN
 F 3 "" H 5400 7350 50  0001 C CNN
@@ -648,10 +648,10 @@ F 5 "C1005X7R1H104K050BB" H 7100 3700 50  0001 C CNN "Manufacturer Part #"
 	1    0    0    -1  
 $EndComp
 $Comp
-L Device:C C22
+L Device:C C25
 U 1 1 5F4CAC58
 P 6600 3700
-F 0 "C22" H 6600 3800 50  0000 L CNN
+F 0 "C25" H 6600 3800 50  0000 L CNN
 F 1 "10µF" H 6600 3600 50  0000 L CNN
 F 2 "Capacitor_SMD:C_0603_1608Metric" H 6638 3550 50  0001 C CNN
 F 3 "" H 6600 3700 50  0001 C CNN
@@ -661,10 +661,10 @@ F 5 "C1608X5R1E106M080AC" H 6600 3700 50  0001 C CNN "Manufacturer Part #"
 	1    0    0    -1  
 $EndComp
 $Comp
-L Device:C C19
+L Device:C C22
 U 1 1 5F4CAA4D
 P 6300 3700
-F 0 "C19" H 6300 3800 50  0000 L CNN
+F 0 "C22" H 6300 3800 50  0000 L CNN
 F 1 "1µF" H 6300 3600 50  0000 L CNN
 F 2 "Capacitor_SMD:C_0402_1005Metric" H 6338 3550 50  0001 C CNN
 F 3 "" H 6300 3700 50  0001 C CNN
@@ -674,10 +674,10 @@ F 5 "UMK105CBJ105MV-F" H 6300 3700 50  0001 C CNN "Manufacturer Part #"
 	1    0    0    -1  
 $EndComp
 $Comp
-L Device:C C18
+L Device:C C21
 U 1 1 5F4CA4EA
 P 6100 3700
-F 0 "C18" H 6100 3800 50  0000 L CNN
+F 0 "C21" H 6100 3800 50  0000 L CNN
 F 1 "1µF" H 6100 3600 50  0000 L CNN
 F 2 "Capacitor_SMD:C_0402_1005Metric" H 6138 3550 50  0001 C CNN
 F 3 "" H 6100 3700 50  0001 C CNN
@@ -687,10 +687,10 @@ F 5 "UMK105CBJ105MV-F" H 6100 3700 50  0001 C CNN "Manufacturer Part #"
 	1    0    0    -1  
 $EndComp
 $Comp
-L Device:C C17
+L Device:C C20
 U 1 1 5F4C9EF6
 P 5800 3700
-F 0 "C17" H 5800 3800 50  0000 L CNN
+F 0 "C20" H 5800 3800 50  0000 L CNN
 F 1 "100nF" H 5800 3600 50  0000 L CNN
 F 2 "Capacitor_SMD:C_0201_0603Metric" H 5838 3550 50  0001 C CNN
 F 3 "" H 5800 3700 50  0001 C CNN
@@ -741,10 +741,10 @@ Wire Wire Line
 Wire Wire Line
 	6450 2100 6400 2100
 $Comp
-L Device:C C21
+L Device:C C24
 U 1 1 5F488471
 P 6600 2100
-F 0 "C21" V 6550 2250 50  0000 C CNN
+F 0 "C24" V 6550 2250 50  0000 C CNN
 F 1 "22nF" V 6650 2250 50  0000 C CNN
 F 2 "Capacitor_SMD:C_0603_1608Metric" H 6638 1950 50  0001 C CNN
 F 3 "" H 6600 2100 50  0001 C CNN
@@ -767,10 +767,10 @@ $EndComp
 Wire Wire Line
 	6450 1900 6400 1900
 $Comp
-L Device:C C20
+L Device:C C23
 U 1 1 5F47F307
 P 6600 1900
-F 0 "C20" V 6550 2050 50  0000 C CNN
+F 0 "C23" V 6550 2050 50  0000 C CNN
 F 1 "100nF" V 6650 2100 50  0000 C CNN
 F 2 "Capacitor_SMD:C_0201_0603Metric" H 6638 1750 50  0001 C CNN
 F 3 "" H 6600 1900 50  0001 C CNN
@@ -857,12 +857,6 @@ F 3 "" H 3900 1450 50  0001 C CNN
 $EndComp
 Text GLabel 4200 1900 0    50   Input ~ 0
 SPI_CSN
-Wire Wire Line
-	6650 1650 6600 1650
-Wire Wire Line
-	6650 1450 6600 1450
-Wire Wire Line
-	6650 1200 6400 1200
 NoConn ~ 4200 1100
 $Comp
 L TMC6100-LA:TMC6100-LA U4
@@ -895,14 +889,6 @@ Text GLabel 4200 1300 0    50   Output ~ 0
 LSV
 Text GLabel 4200 1200 0    50   Output ~ 0
 LSW
-Wire Wire Line
-	6600 1600 6400 1600
-Wire Wire Line
-	6600 1650 6600 1600
-Wire Wire Line
-	6600 1500 6600 1450
-Wire Wire Line
-	6400 1500 6600 1500
 Text GLabel 6400 1100 2    50   Output ~ 0
 HSU
 Text GLabel 6400 1700 2    50   Output ~ 0
@@ -910,49 +896,36 @@ HSW
 Text GLabel 6400 1400 2    50   Output ~ 0
 HSV
 $Comp
-L Device:C C24
+L Device:C C17
 U 1 1 5F40C21D
-P 6800 1450
-F 0 "C24" V 6850 1500 50  0000 L CNN
-F 1 "1µF" V 6750 1500 50  0000 L CNN
-F 2 "Capacitor_SMD:C_0402_1005Metric" H 6838 1300 50  0001 C CNN
-F 3 "" H 6800 1450 50  0001 C CNN
-F 4 "50V" H 6800 1450 50  0001 C CNN "Voltage Rating"
-F 5 "UMK105CBJ105MV-F" H 6800 1450 50  0001 C CNN "Manufacturer Part #"
-	1    6800 1450
-	0    -1   -1   0   
+P 5100 3700
+F 0 "C17" H 5100 3800 50  0000 L CNN
+F 1 "1µF" H 5100 3600 50  0000 L CNN
+F 2 "Capacitor_SMD:C_0402_1005Metric" H 5138 3550 50  0001 C CNN
+F 3 "" H 5100 3700 50  0001 C CNN
+F 4 "50V" H 5100 3700 50  0001 C CNN "Voltage Rating"
+F 5 "UMK105CBJ105MV-F" H 5100 3700 50  0001 C CNN "Manufacturer Part #"
+	1    5100 3700
+	1    0    0    -1  
 $EndComp
-Text GLabel 6950 1450 2    50   UnSpc ~ 0
+Text GLabel 5100 3850 3    50   UnSpc ~ 0
 CV
 $Comp
-L Device:C C25
-U 1 1 5F40BEFD
-P 6800 1650
-F 0 "C25" V 6850 1700 50  0000 L CNN
-F 1 "1µF" V 6750 1700 50  0000 L CNN
-F 2 "Capacitor_SMD:C_0402_1005Metric" H 6838 1500 50  0001 C CNN
-F 3 "" H 6800 1650 50  0001 C CNN
-F 4 "50V" H 6800 1650 50  0001 C CNN "Voltage Rating"
-F 5 "UMK105CBJ105MV-F" H 6800 1650 50  0001 C CNN "Manufacturer Part #"
-	1    6800 1650
-	0    -1   -1   0   
-$EndComp
-$Comp
-L Device:C C23
+L Device:C C16
 U 1 1 5F40A651
-P 6800 1200
-F 0 "C23" V 6850 1250 50  0000 L CNN
-F 1 "1µF" V 6750 1250 50  0000 L CNN
-F 2 "Capacitor_SMD:C_0402_1005Metric" H 6838 1050 50  0001 C CNN
-F 3 "" H 6800 1200 50  0001 C CNN
-F 4 "50V" H 6800 1200 50  0001 C CNN "Voltage Rating"
-F 5 "UMK105CBJ105MV-F" H 6800 1200 50  0001 C CNN "Manufacturer Part #"
-	1    6800 1200
-	0    -1   -1   0   
+P 4900 3700
+F 0 "C16" H 4900 3800 50  0000 L CNN
+F 1 "1µF" H 4900 3600 50  0000 L CNN
+F 2 "Capacitor_SMD:C_0402_1005Metric" H 4938 3550 50  0001 C CNN
+F 3 "" H 4900 3700 50  0001 C CNN
+F 4 "50V" H 4900 3700 50  0001 C CNN "Voltage Rating"
+F 5 "UMK105CBJ105MV-F" H 4900 3700 50  0001 C CNN "Manufacturer Part #"
+	1    4900 3700
+	1    0    0    -1  
 $EndComp
-Text GLabel 6950 1650 2    50   UnSpc ~ 0
+Text GLabel 5300 3850 3    50   UnSpc ~ 0
 CW
-Text GLabel 6950 1200 2    50   UnSpc ~ 0
+Text GLabel 4900 3850 3    50   UnSpc ~ 0
 CU
 Text GLabel 6400 1800 2    50   UnSpc ~ 0
 CW
@@ -1038,7 +1011,7 @@ U 1 1 5F3D0509
 P 1900 2300
 F 0 "U1" H 1350 3900 50  0000 C CNN
 F 1 "STM32F303CBT7" H 1350 3800 50  0000 C CNN
-F 2 "Package_QFP:LQFP-48_7x7mm_P0.5mm" H 1300 900 50  0001 R CNN
+F 2 "LQFP-48_7x7mm_P0.5mm_narrow_pads:LQFP-48_7x7mm_P0.5mm_narrow_pads" H 1300 900 50  0001 R CNN
 F 3 "" H 1900 2300 50  0001 C CNN
 F 4 "STM32F303CBT7" H 1900 2300 50  0001 C CNN "Manufacturer Part #"
 F 5 "-" H 1900 2300 50  0001 C CNN "Voltage Rating"
@@ -1482,7 +1455,7 @@ Text GLabel 8800 3000 0    50   Input ~ 0
 LSU
 Wire Wire Line
 	8800 3000 8850 3000
-Text GLabel 9450 2750 2    50   Output ~ 0
+Text GLabel 9450 2750 2    50   UnSpc ~ 0
 U
 Connection ~ 9150 2750
 Wire Wire Line
@@ -1542,7 +1515,7 @@ Text GLabel 8800 4300 0    50   Input ~ 0
 LSV
 Wire Wire Line
 	8800 4300 8850 4300
-Text GLabel 9450 4050 2    50   Output ~ 0
+Text GLabel 9450 4050 2    50   UnSpc ~ 0
 V
 Connection ~ 9150 4050
 Wire Wire Line
@@ -1602,7 +1575,7 @@ Text GLabel 8800 5600 0    50   Input ~ 0
 LSW
 Wire Wire Line
 	8800 5600 8850 5600
-Text GLabel 9450 5350 2    50   Output ~ 0
+Text GLabel 9450 5350 2    50   UnSpc ~ 0
 W
 Connection ~ 9150 5350
 Wire Wire Line
@@ -6084,10 +6057,10 @@ DF BF 7B AC 77 6D D5 5B 17 79 2E 00 00 3B D7 FF 0F 7C E9 F3 76 52 1A 6B 18 00 00
 EndData
 $EndBitmap
 $Comp
-L power:+3.3V #PWR?
+L power:+3.3V #PWR039
 U 1 1 5FEB2144
 P 10050 850
-F 0 "#PWR?" H 10050 700 50  0001 C CNN
+F 0 "#PWR039" H 10050 700 50  0001 C CNN
 F 1 "+3.3V" H 10050 1000 50  0000 C CNN
 F 2 "" H 10050 850 50  0001 C CNN
 F 3 "" H 10050 850 50  0001 C CNN
@@ -6096,4 +6069,41 @@ F 3 "" H 10050 850 50  0001 C CNN
 $EndComp
 Wire Wire Line
 	10050 850  10050 1000
+$Comp
+L Device:C C18
+U 1 1 5F40BEFD
+P 5300 3700
+F 0 "C18" H 5300 3800 50  0000 L CNN
+F 1 "1µF" H 5300 3600 50  0000 L CNN
+F 2 "Capacitor_SMD:C_0402_1005Metric" H 5338 3550 50  0001 C CNN
+F 3 "" H 5300 3700 50  0001 C CNN
+F 4 "50V" H 5300 3700 50  0001 C CNN "Voltage Rating"
+F 5 "UMK105CBJ105MV-F" H 5300 3700 50  0001 C CNN "Manufacturer Part #"
+	1    5300 3700
+	1    0    0    -1  
+$EndComp
+Text GLabel 6400 1200 2    50   UnSpc ~ 0
+U
+Text GLabel 6400 1500 2    50   UnSpc ~ 0
+V
+Text GLabel 6400 1600 2    50   UnSpc ~ 0
+W
+Text GLabel 5300 3550 1    50   UnSpc ~ 0
+W
+Text GLabel 5100 3550 1    50   UnSpc ~ 0
+V
+Text GLabel 4900 3550 1    50   UnSpc ~ 0
+U
+Text Notes 4750 3250 0    50   ~ 0
+BOOTSTRAP
+Text Notes 4750 3350 0    50   ~ 0
+CAPACITORS
+Wire Notes Line
+	4700 3150 5550 3150
+Wire Notes Line
+	5550 3150 5550 4050
+Wire Notes Line
+	5550 4050 4700 4050
+Wire Notes Line
+	4700 4050 4700 3150
 $EndSCHEMATC

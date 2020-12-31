@@ -1,4 +1,4 @@
-18355154744642254
+18356764123452438
 Battery
 BatteryHolder_Bulgin_BX0036_1xC
 Bulgin Battery Holder, BX0036, Battery Type C (https://www.bulgin.com/products/pub/media/bulgin/data/Battery_holders.pdf)
@@ -56006,6 +56006,13 @@ Yellow 5381 Series LED
 0
 2
 2
+LQFP-48_7x7mm_P0.5mm_narrow_pads
+LQFP-48_7x7mm_P0.5mm_narrow_pads
+LQFP, 48 Pin (https://www.analog.com/media/en/technical-documentation/data-sheets/ltc2358-16.pdf), generated with kicad-footprint-generator ipc_gullwing_generator.py
+LQFP QFP
+0
+48
+48
 Module
 A20_OLINUXINO_LIME2
 A20 Olinuxino LIME2, 1.2GHz, 512-1024MB RAM, Micro-SD, NAND or eMMC, 1000Mbit Ethernet

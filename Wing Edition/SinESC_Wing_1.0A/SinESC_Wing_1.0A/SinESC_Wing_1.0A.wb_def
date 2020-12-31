@@ -31,8 +31,8 @@
 		<define key="DISSIPATIVE_BRAKE_POLARITY" value="DOUT_ACTIVE_HIGH" />
 		<define key="VBUS_PARTITIONING_FACTOR" value="0.1071" />
 		<define key="NOMINAL_BUS_VOLTAGE_V" value="16" />
-		<define key="THREE_SHUNT" value="TRUE" />
-		<define key="CURRENT_READING_TOPOLOGY" value="THREE_SHUNT" />
+		<define key="THREE_SHUNT_INDEPENDENT_RESOURCES" value="TRUE" />
+		<define key="CURRENT_READING_TOPOLOGY" value="THREE_SHUNT_INDEPENDENT_RESOURCES" />
 		<define key="RSHUNT" value="0.00100" />
 		<define key="AMPLIFICATION_GAIN" value="29.77" />
 		<define key="TNOISE_NS" value="1000" />
@@ -229,8 +229,8 @@
 		<define key="OPEN_LOOP_VF" value="FALSE" />
 		<define key="OPEN_LOOP_K" value="44" />
 		<define key="OPEN_LOOP_OFF" value="4400" />
-		<define key="STM32F303xB" value="TRUE" />
-		<define key="MCU_TYPE" value="STM32F303xB" />
+		<define key="STM32F303xC" value="TRUE" />
+		<define key="MCU_TYPE" value="STM32F303xC" />
 		<define key="ADC_REFERENCE_VOLTAGE" value="3.30" />
 		<define key="CLOCK_SOURCE" value="EXTERNAL" />
 		<define key="EXT_CLK_8_MHZ" value="TRUE" />
@@ -289,14 +289,14 @@
 		<define key="PHASE_U_CURR_CHANNEL" value="ADC_Channel_1" />
 		<define key="PHASE_U_GPIO_PORT" value="GPIOA" />
 		<define key="PHASE_U_GPIO_PIN" value="GPIO_Pin_0" />
-		<define key="PHASE_V_CURR_ADC" value="ADC1" />
-		<define key="PHASE_V_CURR_CHANNEL" value="ADC_Channel_2" />
-		<define key="PHASE_V_GPIO_PORT" value="GPIOA" />
-		<define key="PHASE_V_GPIO_PIN" value="GPIO_Pin_1" />
-		<define key="PHASE_W_CURR_ADC" value="ADC1" />
+		<define key="PHASE_V_CURR_ADC" value="ADC1_2" />
+		<define key="PHASE_V_CURR_CHANNEL" value="ADC_Channel_9" />
+		<define key="PHASE_V_GPIO_PORT" value="GPIOC" />
+		<define key="PHASE_V_GPIO_PIN" value="GPIO_Pin_3" />
+		<define key="PHASE_W_CURR_ADC" value="ADC2" />
 		<define key="PHASE_W_CURR_CHANNEL" value="ADC_Channel_3" />
 		<define key="PHASE_W_GPIO_PORT" value="GPIOA" />
-		<define key="PHASE_W_GPIO_PIN" value="GPIO_Pin_2" />
+		<define key="PHASE_W_GPIO_PIN" value="GPIO_Pin_6" />
 		<define key="PHASE_CURRENTS_ADC" value="ADC1_2" />
 		<define key="PHASE_CURRENTS_CHANNEL" value="ADC_Channel_9" />
 		<define key="PHASE_CURRENTS_GPIO_PORT" value="GPIOC" />
@@ -480,7 +480,7 @@
 		<define key="CTRBDID" value="10013" />
 		<define key="SHARED_SIGNAL_ENABLE" value="FALSE" />
 		<define key="DAC_EMULATED" value="FALSE" />
-		<define key="MCU" value="STM32F303CB" />
+		<define key="MCU" value="STM32F303CC" />
 		<define key="BOARD" value="CUSTOM" />
 		<define key="MC_WORKBENCH_VERSION" value="5.4.4.20160" />
 	</defines>

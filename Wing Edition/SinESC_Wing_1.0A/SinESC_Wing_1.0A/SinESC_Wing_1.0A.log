@@ -1,676 +1,433 @@
-2020-08-27 21:28:03,930 DEBUG [Main.lambda$run$0] Arguments: [-ioc, C:\Users\esamp\Documents\SinESC\Wing Edition\SinESC_Wing_1.0A\SinESC_Wing_1.0A\SinESC_Wing_1.0A.ioc, -xdm, C:\Users\esamp\Documents\SinESC\Wing Edition\SinESC_Wing_1.0A\SinESC_Wing_1.0A\SinESC_Wing_1.0A.wb_def]
-2020-08-27 21:28:03,934 DEBUG [ArgsValue.readPropertiesFile] [AppConfig] pack.source = "C:\Program Files (x86)\STMicroelectronics\MC_SDK_5.4.4\Middlewares\ST\MotorControl" 
-2020-08-27 21:28:03,934 DEBUG [ArgsValue.readPropertiesFile] [UserConfig] do not exist in "C:\Users\esamp\.st_motor_control\wb2mx.properties" 
-2020-08-27 21:28:03,934 DEBUG [ArgsValue.getConfigProperties] pack.source = "../../../../Middlewares/ST/MotorControl"
-2020-08-27 21:28:03,942 DEBUG [ArgsValue.lambda$retrieve$2] CLI_ARG[xdm]: C:\Users\esamp\Documents\SinESC\Wing Edition\SinESC_Wing_1.0A\SinESC_Wing_1.0A\SinESC_Wing_1.0A.wb_def
-2020-08-27 21:28:03,942 DEBUG [ArgsValue.lambda$retrieve$2] CLI_ARG[ioc]: C:\Users\esamp\Documents\SinESC\Wing Edition\SinESC_Wing_1.0A\SinESC_Wing_1.0A\SinESC_Wing_1.0A.ioc
-2020-08-27 21:28:03,944 DEBUG [ArgsValue.retrieve] {xdm=C:\Users\esamp\Documents\SinESC\Wing Edition\SinESC_Wing_1.0A\SinESC_Wing_1.0A\SinESC_Wing_1.0A.wb_def, updftl=templates/wb_ioc_mc-middleware.ftl, mx_timeout=-1, exp=templates/wb-defines_where_and_what.txt, ioc=C:\Users\esamp\Documents\SinESC\Wing Edition\SinESC_Wing_1.0A\SinESC_Wing_1.0A\SinESC_Wing_1.0A.ioc, pack=../../../../Middlewares/ST/MotorControl, ftl=templates/wb_ioc_template.ftl}
-2020-08-27 21:28:03,999 DEBUG [Main.run] Targeted MCU family = F3
-2020-08-27 21:28:04,030 DEBUG [Main.run] Minimum associated CubeMx to the `F3` targeted MCU family is `4.25.0-a0`
-2020-08-27 21:28:04,045 DEBUG [WindowsCubeMxFinder.lambda$findThem$2] Found 64-bit subkey HKEY_LOCAL_MACHINE\~~~\Uninstall\STM32CubeMX
-2020-08-27 21:28:04,051 DEBUG [CubeMxCtx.EXE_version] Loaded path: 'C:\Program Files\STMicroelectronics\STM32Cube\STM32CubeMX\STM32CubeMX.exe'
-2020-08-27 21:28:04,052 DEBUG [CubeMxCtx.EXE_version] Loaded updater jar: 'C:\Program Files\STMicroelectronics\STM32Cube\STM32CubeMX\plugins\updater.jar'
-2020-08-27 21:28:04,067 DEBUG [CubeMxCtx.EXE_version] Loaded path: 'C:\Program Files\STMicroelectronics\STM32Cube\STM32CubeMX\STM32CubeMX.exe'
-2020-08-27 21:28:04,067 DEBUG [CubeMxCtx.EXE_version] Loaded updater jar: 'C:\Program Files\STMicroelectronics\STM32Cube\STM32CubeMX\plugins\updater.jar'
-2020-08-27 21:28:04,082 DEBUG [CubeMxCtx.EXE_version] Loaded path: 'C:\Program Files\STMicroelectronics\STM32Cube\STM32CubeMX\STM32CubeMX.exe'
-2020-08-27 21:28:04,082 DEBUG [CubeMxCtx.EXE_version] Loaded updater jar: 'C:\Program Files\STMicroelectronics\STM32Cube\STM32CubeMX\plugins\updater.jar'
-2020-08-27 21:28:06,017 DEBUG [CubeMxCtx.EXE_version] Loaded path: 'C:\Program Files\STMicroelectronics\STM32Cube\STM32CubeMX\STM32CubeMX.exe'
-2020-08-27 21:28:06,017 DEBUG [CubeMxCtx.EXE_version] Loaded updater jar: 'C:\Program Files\STMicroelectronics\STM32Cube\STM32CubeMX\plugins\updater.jar'
-2020-08-27 21:28:06,081 DEBUG [EnvironmentChecker.checkPack] STM32CubeMX.Version: 5.6.1-RC1
-2020-08-27 21:28:06,099 DEBUG [MxUpdaterFactory.lambda$create$2] failed first attempt to instantiate MxUpdater (v_27)
-2020-08-27 21:28:06,264 DEBUG [MxUpdaterFactory.lambda$create$3] Updater instantiated
-2020-08-27 21:28:06,266 DEBUG [MxUpdater.lambda$whait_while_busy$12] MxUpdater still busy - await for 50 milliseconds before to retry
-2020-08-27 21:28:06,317 DEBUG [MxUpdater.lambda$whait_while_busy$12] MxUpdater no more busy
-2020-08-27 21:28:06,317 DEBUG [MxUpdaterFactory.lambda$create$4] Updater initialization complete
-2020-08-27 21:28:06,318 DEBUG [MxUpdaterValidator.lambda$getVerifiedRepositoryFolder$e68017fb$1] Repository Folder Exist: C:\Users\esamp\STM32Cube\Repository
-2020-08-27 21:28:06,320 DEBUG [RetrieveFirmwareVersion.from_PackConfig_xfile] Looking for version from MotorControl_Configs.xml: C:\Program Files (x86)\STMicroelectronics\MC_SDK_5.4.4\Middlewares\ST\MotorControl\MotorControl_Configs.xml
-2020-08-27 21:28:06,326 DEBUG [RetrieveFirmwareVersion.minimum_supporte_version] minimum_supporte_version MotorControlFirmware.Version: 5.4.3
-2020-08-27 21:28:06,327 DEBUG [PackInfoFactory.deploy_MCPack_to_MxRepo] Deployment strategy class: VersionedFolderStyle_MCPackDeployer
-2020-08-27 21:28:06,327 DEBUG [PackInfoFactory.deploy_MCPack_to_MxRepo] Expected MC Pack 5.4.4 already deployed
-2020-08-27 21:28:06,335 DEBUG [DataSetUpdater.update] Updating data set
-2020-08-27 21:28:06,335 DEBUG [DataSetUpdater.update] Update done
-2020-08-27 21:28:06,336 INFO  [IocGenerator.logModulesVersionInfo] Version info: 
-2020-08-27 21:28:06,338 INFO  [IocGenerator.logModulesVersionInfo]   MC Workbench       : 5.4.4.20160
-2020-08-27 21:28:06,338 INFO  [IocGenerator.logModulesVersionInfo]   WB_to_Mx           : 1.1.0.template-20-04-17
-2020-08-27 21:28:06,338 INFO  [IocGenerator.logModulesVersionInfo]   STM32CubeMX        : 5.6.1
-2020-08-27 21:28:06,339 INFO  [IocGenerator.logModulesVersionInfo]   MC Firmware Library: 5.4.4
-2020-08-27 21:28:06,339 INFO  [IocGenerator.logModulesVersionInfo] Generation options: 
-2020-08-27 21:28:06,339 INFO  [IocGenerator.logModulesVersionInfo]   Target Toolchain   : ST STM32CubeIDE
-2020-08-27 21:28:06,339 INFO  [IocGenerator.logModulesVersionInfo]   Target Driver      : HAL - Hardware Abstraction Layer
-2020-08-27 21:28:06,339 INFO  [IocGenerator.logModulesVersionInfo]   Target STM32 FW    : 1.11.0
-
-2020-08-27 21:28:06,340 DEBUG [IocGenerator.process] Updating ioc file: C:\Users\esamp\Documents\SinESC\Wing Edition\SinESC_Wing_1.0A\SinESC_Wing_1.0A\SinESC_Wing_1.0A.ioc
-2020-08-27 21:28:06,350 DEBUG [IocGenerator.createOutput] Generating file from template templates\wb_ioc_mc-middleware.ftl
-2020-08-27 21:28:06,614 DEBUG [IocGenerator.process] Updated ioc file C:\Users\esamp\Documents\SinESC\Wing Edition\SinESC_Wing_1.0A\SinESC_Wing_1.0A\SinESC_Wing_1.0A.ioc
-2020-08-27 21:28:06,615 INFO  [LineInfo_to_exitCode.log_LineInfo] Updated ioc: C:\Users\esamp\Documents\SinESC\Wing Edition\SinESC_Wing_1.0A\SinESC_Wing_1.0A\SinESC_Wing_1.0A.ioc
-2020-08-27 21:28:06,624 INFO  [Wb2MxProcess.lambda$create_extSettings_file_in$82c805cd$1] Generated C:\Users\esamp\Documents\SinESC\Wing Edition\SinESC_Wing_1.0A\SinESC_Wing_1.0A\.extSettings
-2020-08-27 21:28:06,757 DEBUG [CubeMxRunner.create_code_generation_script_for] Generated CubeMx script file: C:\Users\esamp\AppData\Local\Temp\WB_to_Mx-sinescwinga-829679553225508351.script
-2020-08-27 21:28:06,759 DEBUG [SignalCatcher.listenTo] Listen to signal INT
-2020-08-27 21:28:06,759 DEBUG [SignalCatcher.listenTo] Listen to signal TERM
-2020-08-27 21:28:06,759 INFO  [CubeMxRunner.run$] Code generation started
-2020-08-27 21:28:06,866 DEBUG [LineInfo_to_exitCode.log_LineInfo] 2020-08-27 21:28:06,864 [INFO] MicroXplorer:570 - Detected Java Version = 1.8.0_251
-2020-08-27 21:28:06,868 DEBUG [LineInfo_to_exitCode.log_LineInfo] 2020-08-27 21:28:06,867 [INFO] ApplicationProperties:181 - Using Application install path: C:\Program Files\STMicroelectronics\STM32Cube\STM32CubeMX
-2020-08-27 21:28:06,878 DEBUG [LineInfo_to_exitCode.log_LineInfo] 2020-08-27 21:28:06,877 [INFO] DbMcusXml:72 - Set database path to: C:\Program Files\STMicroelectronics\STM32Cube\STM32CubeMX\\db\/mcu/
-2020-08-27 21:28:06,880 DEBUG [LineInfo_to_exitCode.log_LineInfo] 2020-08-27 21:28:06,880 [INFO] DbBoardsPdsc:54 - Set plugin database path to: C:\Program Files\STMicroelectronics\STM32Cube\STM32CubeMX\\db\/plugins/boardmanager/
-2020-08-27 21:28:06,880 DEBUG [LineInfo_to_exitCode.log_LineInfo] 2020-08-27 21:28:06,880 [INFO] DbMcus:235 - Set plugin images path to: C:\Program Files\STMicroelectronics\STM32Cube\STM32CubeMX\\db\/plugins/mcufinder/images/
-2020-08-27 21:28:06,881 DEBUG [LineInfo_to_exitCode.log_LineInfo] 2020-08-27 21:28:06,880 [INFO] DbBoards:232 - Set plugin images path to: C:\Program Files\STMicroelectronics\STM32Cube\STM32CubeMX\\db\/plugins/mcufinder/images/
-2020-08-27 21:28:06,884 DEBUG [LineInfo_to_exitCode.log_LineInfo] 2020-08-27 21:28:06,883 [INFO] DbMcusAds:85 - Set database path to: C:\Users\esamp\.stmcufinder\plugins\mcufinder//mcu/
-2020-08-27 21:28:06,884 DEBUG [LineInfo_to_exitCode.log_LineInfo] 2020-08-27 21:28:06,884 [INFO] DbMcusDocs:108 - Set database path to: C:\Users\esamp\.stmcufinder\plugins\mcufinder//mcu/
-2020-08-27 21:28:06,885 DEBUG [LineInfo_to_exitCode.log_LineInfo] 2020-08-27 21:28:06,885 [INFO] DbMcusJson:61 - Set database path to: C:\Users\esamp\.stmcufinder\plugins\mcufinder//mcu/
-2020-08-27 21:28:06,885 DEBUG [LineInfo_to_exitCode.log_LineInfo] 2020-08-27 21:28:06,885 [INFO] DbBoardsDocs:97 - Set database path to: C:\Users\esamp\.stmcufinder\plugins\mcufinder//mcu/
-2020-08-27 21:28:06,886 DEBUG [LineInfo_to_exitCode.log_LineInfo] 2020-08-27 21:28:06,886 [INFO] DbBoardsJson:51 - Set database path to: C:\Users\esamp\.stmcufinder\plugins\mcufinder//mcu/
-2020-08-27 21:28:07,074 DEBUG [LineInfo_to_exitCode.log_LineInfo] 2020-08-27 21:28:07,073 [INFO] CrossReferenceDbSqlite:197 - Set database path to: C:\Users\esamp\.stmcufinder\plugins\mcufinder//mcu/cs/
-2020-08-27 21:28:07,190 DEBUG [LineInfo_to_exitCode.log_LineInfo] 2020-08-27 21:28:07,189 [INFO] RulesReader:52 - Compatibility file has been processed (208 Rules)
-2020-08-27 21:28:07,203 DEBUG [LineInfo_to_exitCode.log_LineInfo] 2020-08-27 21:28:07,203 [INFO] STM32CubeMX:31 - Starting STM32CubeMX
-2020-08-27 21:28:07,515 DEBUG [LineInfo_to_exitCode.log_LineInfo] 2020-08-27 21:28:07,515 [INFO] MainPanel:181 - HeapMemory: 257425408
-2020-08-27 21:28:07,580 DEBUG [LineInfo_to_exitCode.log_LineInfo] 2020-08-27 21:28:07,579 [INFO] DbMcusXml:72 - Set database path to: C:\Program Files\STMicroelectronics\STM32Cube\STM32CubeMX\\db\/mcu/
-2020-08-27 21:28:07,580 DEBUG [LineInfo_to_exitCode.log_LineInfo] 2020-08-27 21:28:07,580 [INFO] DbBoardsPdsc:54 - Set plugin database path to: C:\Program Files\STMicroelectronics\STM32Cube\STM32CubeMX\\db\/plugins/boardmanager/
-2020-08-27 21:28:07,580 DEBUG [LineInfo_to_exitCode.log_LineInfo] 2020-08-27 21:28:07,580 [INFO] DbMcus:235 - Set plugin images path to: C:\Program Files\STMicroelectronics\STM32Cube\STM32CubeMX\\db\/plugins/mcufinder/images/
-2020-08-27 21:28:07,580 DEBUG [LineInfo_to_exitCode.log_LineInfo] 2020-08-27 21:28:07,580 [INFO] DbBoards:232 - Set plugin images path to: C:\Program Files\STMicroelectronics\STM32Cube\STM32CubeMX\\db\/plugins/mcufinder/images/
-2020-08-27 21:28:07,580 DEBUG [LineInfo_to_exitCode.log_LineInfo] 2020-08-27 21:28:07,580 [INFO] DbMcusAds:85 - Set database path to: C:\Users\esamp\.stmcufinder\plugins\mcufinder//mcu/
-2020-08-27 21:28:07,581 DEBUG [LineInfo_to_exitCode.log_LineInfo] 2020-08-27 21:28:07,581 [INFO] DbMcusDocs:108 - Set database path to: C:\Users\esamp\.stmcufinder\plugins\mcufinder//mcu/
-2020-08-27 21:28:07,581 DEBUG [LineInfo_to_exitCode.log_LineInfo] 2020-08-27 21:28:07,581 [INFO] DbMcusJson:61 - Set database path to: C:\Users\esamp\.stmcufinder\plugins\mcufinder//mcu/
-2020-08-27 21:28:07,581 DEBUG [LineInfo_to_exitCode.log_LineInfo] 2020-08-27 21:28:07,581 [INFO] DbBoardsDocs:97 - Set database path to: C:\Users\esamp\.stmcufinder\plugins\mcufinder//mcu/
-2020-08-27 21:28:07,581 DEBUG [LineInfo_to_exitCode.log_LineInfo] 2020-08-27 21:28:07,581 [INFO] DbBoardsJson:51 - Set database path to: C:\Users\esamp\.stmcufinder\plugins\mcufinder//mcu/
-2020-08-27 21:28:07,581 DEBUG [LineInfo_to_exitCode.log_LineInfo] 2020-08-27 21:28:07,581 [INFO] CrossReferenceDbSqlite:197 - Set database path to: C:\Users\esamp\.stmcufinder\plugins\mcufinder//mcu/cs/
-2020-08-27 21:28:07,591 DEBUG [LineInfo_to_exitCode.log_LineInfo] 2020-08-27 21:28:07,591 [INFO] ApplicationProperties:181 - Using Application install path: C:\Program Files\STMicroelectronics\STM32Cube\STM32CubeMX
-2020-08-27 21:28:07,592 DEBUG [LineInfo_to_exitCode.log_LineInfo] 2020-08-27 21:28:07,592 [INFO] PluginManage:178 - Search for loadable plugins [exclusion list=, tutovideos]
-2020-08-27 21:28:07,593 DEBUG [LineInfo_to_exitCode.log_LineInfo] 2020-08-27 21:28:07,593 [INFO] PluginManage:292 - Check plugin analytics
-2020-08-27 21:28:12,220 DEBUG [LineInfo_to_exitCode.log_LineInfo] 2020-08-27 21:28:12,219 [INFO] AnalyticsPlugin:172 - Accepted Software Licenses: 
-2020-08-27 21:28:12,220 DEBUG [LineInfo_to_exitCode.log_LineInfo] 2020-08-27 21:28:12,220 [INFO] AnalyticsPlugin:174 - Accepted CMSIS Pack Licenses: 
-2020-08-27 21:28:12,220 DEBUG [LineInfo_to_exitCode.log_LineInfo] 2020-08-27 21:28:12,220 [INFO] AnalyticsPlugin:176 - Accepted Firmware Licenses: 
-2020-08-27 21:28:12,220 DEBUG [LineInfo_to_exitCode.log_LineInfo] 2020-08-27 21:28:12,220 [INFO] PluginManage:342 - Loaded plugin analytics (category:tool,tabindex:-1)
-2020-08-27 21:28:12,220 DEBUG [LineInfo_to_exitCode.log_LineInfo] 2020-08-27 21:28:12,220 [INFO] PluginManage:292 - Check plugin clock
-2020-08-27 21:28:12,225 DEBUG [LineInfo_to_exitCode.log_LineInfo] 2020-08-27 21:28:12,225 [INFO] PluginManage:342 - Loaded plugin clock (category:base,tabindex:2)
-2020-08-27 21:28:12,225 DEBUG [LineInfo_to_exitCode.log_LineInfo] 2020-08-27 21:28:12,225 [INFO] PluginManage:292 - Check plugin ddr
-2020-08-27 21:28:12,227 DEBUG [LineInfo_to_exitCode.log_LineInfo] 2020-08-27 21:28:12,227 [INFO] PluginManage:342 - Loaded plugin ddr (category:tool,tabindex:6)
-2020-08-27 21:28:12,227 DEBUG [LineInfo_to_exitCode.log_LineInfo] 2020-08-27 21:28:12,227 [INFO] PluginManage:292 - Check plugin filemanager
-2020-08-27 21:28:12,301 DEBUG [LineInfo_to_exitCode.log_LineInfo] 2020-08-27 21:28:12,301 [INFO] PluginManage:342 - Loaded plugin filemanager (category:base,tabindex:10)
-2020-08-27 21:28:12,301 DEBUG [LineInfo_to_exitCode.log_LineInfo] 2020-08-27 21:28:12,301 [INFO] PluginManage:292 - Check plugin ipmanager
-2020-08-27 21:28:12,308 DEBUG [LineInfo_to_exitCode.log_LineInfo] 2020-08-27 21:28:12,308 [INFO] PluginManage:342 - Loaded plugin ipmanager (category:base,tabindex:5)
-2020-08-27 21:28:12,308 DEBUG [LineInfo_to_exitCode.log_LineInfo] 2020-08-27 21:28:12,308 [INFO] PluginManage:292 - Check plugin pinoutandconfiguration
-2020-08-27 21:28:12,312 DEBUG [LineInfo_to_exitCode.log_LineInfo] 2020-08-27 21:28:12,312 [INFO] PluginManage:342 - Loaded plugin pinoutandconfiguration (category:base,tabindex:1)
-2020-08-27 21:28:12,312 DEBUG [LineInfo_to_exitCode.log_LineInfo] 2020-08-27 21:28:12,312 [INFO] PluginManage:292 - Check plugin pinoutconfig
-2020-08-27 21:28:12,335 DEBUG [LineInfo_to_exitCode.log_LineInfo] 2020-08-27 21:28:12,335 [INFO] PluginManage:342 - Loaded plugin pinoutconfig (category:base,tabindex:0)
-2020-08-27 21:28:12,335 DEBUG [LineInfo_to_exitCode.log_LineInfo] 2020-08-27 21:28:12,335 [INFO] PluginManage:292 - Check plugin power
-2020-08-27 21:28:12,340 DEBUG [LineInfo_to_exitCode.log_LineInfo] 2020-08-27 21:28:12,340 [INFO] PluginManage:342 - Loaded plugin power (category:power,tabindex:4)
-2020-08-27 21:28:12,340 DEBUG [LineInfo_to_exitCode.log_LineInfo] 2020-08-27 21:28:12,340 [INFO] PluginManage:292 - Check plugin projectmanager
-2020-08-27 21:28:12,371 DEBUG [LineInfo_to_exitCode.log_LineInfo] 2020-08-27 21:28:12,370 [INFO] PluginManage:342 - Loaded plugin projectmanager (category:projectmanager,tabindex:3)
-2020-08-27 21:28:12,371 DEBUG [LineInfo_to_exitCode.log_LineInfo] 2020-08-27 21:28:12,370 [INFO] PluginManage:292 - Check plugin thirdparty
-2020-08-27 21:28:12,385 DEBUG [LineInfo_to_exitCode.log_LineInfo] 2020-08-27 21:28:12,384 [INFO] ThirdPartyDb:295 - Open Third Party DataBase File (C:/Users/esamp/.stm32cubemx/plugins/thirdparty/db/thirdparties_db.xml) : 4 ms. number of Sw pack : 13
-2020-08-27 21:28:12,393 DEBUG [LineInfo_to_exitCode.log_LineInfo] 2020-08-27 21:28:12,393 [INFO] PluginManage:342 - Loaded plugin thirdparty (category:base,tabindex:-1)
-2020-08-27 21:28:12,393 DEBUG [LineInfo_to_exitCode.log_LineInfo] 2020-08-27 21:28:12,393 [INFO] PluginManage:292 - Check plugin tools
-2020-08-27 21:28:12,394 DEBUG [LineInfo_to_exitCode.log_LineInfo] 2020-08-27 21:28:12,394 [INFO] PluginManage:342 - Loaded plugin tools (category:base,tabindex:7)
-2020-08-27 21:28:12,394 DEBUG [LineInfo_to_exitCode.log_LineInfo] 2020-08-27 21:28:12,394 [INFO] PluginManage:292 - Check plugin tutovideos
-2020-08-27 21:28:12,395 DEBUG [LineInfo_to_exitCode.log_LineInfo] 2020-08-27 21:28:12,394 [INFO] PluginManage:347 - Ignore plugin tutovideos (category:base)
-2020-08-27 21:28:12,395 DEBUG [LineInfo_to_exitCode.log_LineInfo] 2020-08-27 21:28:12,395 [INFO] PluginManage:292 - Check plugin updater
-2020-08-27 21:28:12,402 DEBUG [LineInfo_to_exitCode.log_LineInfo] 2020-08-27 21:28:12,402 [INFO] PluginManage:342 - Loaded plugin updater (category:base,tabindex:12)
-2020-08-27 21:28:12,402 DEBUG [LineInfo_to_exitCode.log_LineInfo] 2020-08-27 21:28:12,402 [INFO] PluginManage:265 - PluginManage : Loaded plugins [12]
-2020-08-27 21:28:12,488 DEBUG [LineInfo_to_exitCode.log_LineInfo] 2020-08-27 21:28:12,488 [INFO] PinOutPanel:1420 - setPackage(No Configuration,No Configuration)
-2020-08-27 21:28:12,527 DEBUG [LineInfo_to_exitCode.log_LineInfo] 2020-08-27 21:28:12,527 [INFO] IPUIPlugin:65 - create IPUIPlugin
-2020-08-27 21:28:12,528 DEBUG [LineInfo_to_exitCode.log_LineInfo] 2020-08-27 21:28:12,527 [INFO] PluginManager:200 - loadIPPluginJar : add adc
-2020-08-27 21:28:12,529 DEBUG [LineInfo_to_exitCode.log_LineInfo] 2020-08-27 21:28:12,529 [INFO] IPUIPlugin:65 - create IPUIPlugin
-2020-08-27 21:28:12,529 DEBUG [LineInfo_to_exitCode.log_LineInfo] 2020-08-27 21:28:12,529 [INFO] PluginManager:200 - loadIPPluginJar : add aes
-2020-08-27 21:28:12,530 DEBUG [LineInfo_to_exitCode.log_LineInfo] 2020-08-27 21:28:12,530 [INFO] IPUIPlugin:65 - create IPUIPlugin
-2020-08-27 21:28:12,530 DEBUG [LineInfo_to_exitCode.log_LineInfo] 2020-08-27 21:28:12,530 [INFO] PluginManager:200 - loadIPPluginJar : add can
-2020-08-27 21:28:12,531 DEBUG [LineInfo_to_exitCode.log_LineInfo] 2020-08-27 21:28:12,531 [INFO] IPUIPlugin:65 - create IPUIPlugin
-2020-08-27 21:28:12,531 DEBUG [LineInfo_to_exitCode.log_LineInfo] 2020-08-27 21:28:12,531 [INFO] PluginManager:200 - loadIPPluginJar : add comp
-2020-08-27 21:28:12,532 DEBUG [LineInfo_to_exitCode.log_LineInfo] 2020-08-27 21:28:12,532 [INFO] IPUIPlugin:65 - create IPUIPlugin
-2020-08-27 21:28:12,532 DEBUG [LineInfo_to_exitCode.log_LineInfo] 2020-08-27 21:28:12,532 [INFO] PluginManager:200 - loadIPPluginJar : add cryp
-2020-08-27 21:28:12,533 DEBUG [LineInfo_to_exitCode.log_LineInfo] 2020-08-27 21:28:12,533 [INFO] IPUIPlugin:65 - create IPUIPlugin
-2020-08-27 21:28:12,533 DEBUG [LineInfo_to_exitCode.log_LineInfo] 2020-08-27 21:28:12,533 [INFO] PluginManager:200 - loadIPPluginJar : add dfsdm
-2020-08-27 21:28:12,536 DEBUG [LineInfo_to_exitCode.log_LineInfo] 2020-08-27 21:28:12,536 [INFO] IPUIPlugin:65 - create IPUIPlugin
-2020-08-27 21:28:12,536 DEBUG [LineInfo_to_exitCode.log_LineInfo] 2020-08-27 21:28:12,536 [INFO] PluginManager:200 - loadIPPluginJar : add dma
-2020-08-27 21:28:12,537 DEBUG [LineInfo_to_exitCode.log_LineInfo] 2020-08-27 21:28:12,537 [INFO] IPUIPlugin:65 - create IPUIPlugin
-2020-08-27 21:28:12,537 DEBUG [LineInfo_to_exitCode.log_LineInfo] 2020-08-27 21:28:12,537 [INFO] PluginManager:200 - loadIPPluginJar : add fatfs
-2020-08-27 21:28:12,539 DEBUG [LineInfo_to_exitCode.log_LineInfo] 2020-08-27 21:28:12,539 [INFO] IPUIPlugin:65 - create IPUIPlugin
-2020-08-27 21:28:12,539 DEBUG [LineInfo_to_exitCode.log_LineInfo] 2020-08-27 21:28:12,539 [INFO] PluginManager:200 - loadIPPluginJar : add fmc
-2020-08-27 21:28:12,542 DEBUG [LineInfo_to_exitCode.log_LineInfo] 2020-08-27 21:28:12,542 [INFO] IPUIPlugin:65 - create IPUIPlugin
-2020-08-27 21:28:12,542 DEBUG [LineInfo_to_exitCode.log_LineInfo] 2020-08-27 21:28:12,542 [INFO] PluginManager:200 - loadIPPluginJar : add freertos
-2020-08-27 21:28:12,543 DEBUG [LineInfo_to_exitCode.log_LineInfo] 2020-08-27 21:28:12,543 [INFO] IPUIPlugin:65 - create IPUIPlugin
-2020-08-27 21:28:12,543 DEBUG [LineInfo_to_exitCode.log_LineInfo] 2020-08-27 21:28:12,543 [INFO] PluginManager:200 - loadIPPluginJar : add genericplugin
-2020-08-27 21:28:12,544 DEBUG [LineInfo_to_exitCode.log_LineInfo] 2020-08-27 21:28:12,544 [INFO] IPUIPlugin:65 - create IPUIPlugin
-2020-08-27 21:28:12,544 DEBUG [LineInfo_to_exitCode.log_LineInfo] 2020-08-27 21:28:12,544 [INFO] PluginManager:200 - loadIPPluginJar : add gfxmmu
-2020-08-27 21:28:12,546 DEBUG [LineInfo_to_exitCode.log_LineInfo] 2020-08-27 21:28:12,546 [INFO] IPUIPlugin:65 - create IPUIPlugin
-2020-08-27 21:28:12,546 DEBUG [LineInfo_to_exitCode.log_LineInfo] 2020-08-27 21:28:12,546 [INFO] PluginManager:200 - loadIPPluginJar : add gic
-2020-08-27 21:28:12,548 DEBUG [LineInfo_to_exitCode.log_LineInfo] 2020-08-27 21:28:12,548 [INFO] IPUIPlugin:65 - create IPUIPlugin
-2020-08-27 21:28:12,548 DEBUG [LineInfo_to_exitCode.log_LineInfo] 2020-08-27 21:28:12,548 [INFO] PluginManager:200 - loadIPPluginJar : add gpio
-2020-08-27 21:28:12,549 DEBUG [LineInfo_to_exitCode.log_LineInfo] 2020-08-27 21:28:12,549 [INFO] IPUIPlugin:65 - create IPUIPlugin
-2020-08-27 21:28:12,549 DEBUG [LineInfo_to_exitCode.log_LineInfo] 2020-08-27 21:28:12,549 [INFO] PluginManager:200 - loadIPPluginJar : add gtzc
-2020-08-27 21:28:12,550 DEBUG [LineInfo_to_exitCode.log_LineInfo] 2020-08-27 21:28:12,550 [INFO] IPUIPlugin:65 - create IPUIPlugin
-2020-08-27 21:28:12,550 DEBUG [LineInfo_to_exitCode.log_LineInfo] 2020-08-27 21:28:12,550 [INFO] PluginManager:200 - loadIPPluginJar : add hash
-2020-08-27 21:28:12,551 DEBUG [LineInfo_to_exitCode.log_LineInfo] 2020-08-27 21:28:12,551 [INFO] IPUIPlugin:65 - create IPUIPlugin
-2020-08-27 21:28:12,551 DEBUG [LineInfo_to_exitCode.log_LineInfo] 2020-08-27 21:28:12,551 [INFO] PluginManager:200 - loadIPPluginJar : add i2c
-2020-08-27 21:28:12,552 DEBUG [LineInfo_to_exitCode.log_LineInfo] 2020-08-27 21:28:12,552 [INFO] IPUIPlugin:65 - create IPUIPlugin
-2020-08-27 21:28:12,553 DEBUG [LineInfo_to_exitCode.log_LineInfo] 2020-08-27 21:28:12,552 [INFO] PluginManager:200 - loadIPPluginJar : add i2s
-2020-08-27 21:28:12,554 DEBUG [LineInfo_to_exitCode.log_LineInfo] 2020-08-27 21:28:12,554 [INFO] IPUIPlugin:65 - create IPUIPlugin
-2020-08-27 21:28:12,555 DEBUG [LineInfo_to_exitCode.log_LineInfo] 2020-08-27 21:28:12,554 [INFO] PluginManager:200 - loadIPPluginJar : add ipddr
-2020-08-27 21:28:12,555 DEBUG [LineInfo_to_exitCode.log_LineInfo] 2020-08-27 21:28:12,555 [INFO] IPUIPlugin:65 - create IPUIPlugin
-2020-08-27 21:28:12,556 DEBUG [LineInfo_to_exitCode.log_LineInfo] 2020-08-27 21:28:12,555 [INFO] PluginManager:200 - loadIPPluginJar : add ltdc
-2020-08-27 21:28:12,557 DEBUG [LineInfo_to_exitCode.log_LineInfo] 2020-08-27 21:28:12,557 [INFO] IPUIPlugin:65 - create IPUIPlugin
-2020-08-27 21:28:12,557 DEBUG [LineInfo_to_exitCode.log_LineInfo] 2020-08-27 21:28:12,557 [INFO] PluginManager:200 - loadIPPluginJar : add mdma
-2020-08-27 21:28:12,559 DEBUG [LineInfo_to_exitCode.log_LineInfo] 2020-08-27 21:28:12,559 [INFO] IPUIPlugin:65 - create IPUIPlugin
-2020-08-27 21:28:12,559 DEBUG [LineInfo_to_exitCode.log_LineInfo] 2020-08-27 21:28:12,559 [INFO] PluginManager:200 - loadIPPluginJar : add nvic
-2020-08-27 21:28:12,560 DEBUG [LineInfo_to_exitCode.log_LineInfo] 2020-08-27 21:28:12,560 [INFO] IPUIPlugin:65 - create IPUIPlugin
-2020-08-27 21:28:12,560 DEBUG [LineInfo_to_exitCode.log_LineInfo] 2020-08-27 21:28:12,560 [INFO] PluginManager:200 - loadIPPluginJar : add opamp
-2020-08-27 21:28:12,561 DEBUG [LineInfo_to_exitCode.log_LineInfo] 2020-08-27 21:28:12,561 [INFO] IPUIPlugin:65 - create IPUIPlugin
-2020-08-27 21:28:12,561 DEBUG [LineInfo_to_exitCode.log_LineInfo] 2020-08-27 21:28:12,561 [INFO] PluginManager:200 - loadIPPluginJar : add pdm2pcm
-2020-08-27 21:28:12,564 DEBUG [LineInfo_to_exitCode.log_LineInfo] 2020-08-27 21:28:12,563 [INFO] IPUIPlugin:65 - create IPUIPlugin
-2020-08-27 21:28:12,565 DEBUG [LineInfo_to_exitCode.log_LineInfo] 2020-08-27 21:28:12,565 [INFO] PluginManager:200 - loadIPPluginJar : add plateformsettings
-2020-08-27 21:28:12,568 DEBUG [LineInfo_to_exitCode.log_LineInfo] 2020-08-27 21:28:12,567 [INFO] IPUIPlugin:65 - create IPUIPlugin
-2020-08-27 21:28:12,568 DEBUG [LineInfo_to_exitCode.log_LineInfo] 2020-08-27 21:28:12,568 [INFO] PluginManager:200 - loadIPPluginJar : add quadspi
-2020-08-27 21:28:12,569 DEBUG [LineInfo_to_exitCode.log_LineInfo] 2020-08-27 21:28:12,569 [INFO] IPUIPlugin:65 - create IPUIPlugin
-2020-08-27 21:28:12,569 DEBUG [LineInfo_to_exitCode.log_LineInfo] 2020-08-27 21:28:12,569 [INFO] PluginManager:200 - loadIPPluginJar : add resmgrutility
-2020-08-27 21:28:12,570 DEBUG [LineInfo_to_exitCode.log_LineInfo] 2020-08-27 21:28:12,570 [INFO] IPUIPlugin:65 - create IPUIPlugin
-2020-08-27 21:28:12,570 DEBUG [LineInfo_to_exitCode.log_LineInfo] 2020-08-27 21:28:12,570 [INFO] PluginManager:200 - loadIPPluginJar : add sai
-2020-08-27 21:28:12,571 DEBUG [LineInfo_to_exitCode.log_LineInfo] 2020-08-27 21:28:12,571 [INFO] IPUIPlugin:65 - create IPUIPlugin
-2020-08-27 21:28:12,572 DEBUG [LineInfo_to_exitCode.log_LineInfo] 2020-08-27 21:28:12,571 [INFO] PluginManager:200 - loadIPPluginJar : add spi
-2020-08-27 21:28:12,573 DEBUG [LineInfo_to_exitCode.log_LineInfo] 2020-08-27 21:28:12,573 [INFO] IPUIPlugin:65 - create IPUIPlugin
-2020-08-27 21:28:12,573 DEBUG [LineInfo_to_exitCode.log_LineInfo] 2020-08-27 21:28:12,573 [INFO] PluginManager:200 - loadIPPluginJar : add stm32_wpan
-2020-08-27 21:28:12,574 DEBUG [LineInfo_to_exitCode.log_LineInfo] 2020-08-27 21:28:12,574 [INFO] IPUIPlugin:65 - create IPUIPlugin
-2020-08-27 21:28:12,574 DEBUG [LineInfo_to_exitCode.log_LineInfo] 2020-08-27 21:28:12,574 [INFO] PluginManager:200 - loadIPPluginJar : add tim
-2020-08-27 21:28:12,576 DEBUG [LineInfo_to_exitCode.log_LineInfo] 2020-08-27 21:28:12,575 [INFO] IPUIPlugin:65 - create IPUIPlugin
-2020-08-27 21:28:12,576 DEBUG [LineInfo_to_exitCode.log_LineInfo] 2020-08-27 21:28:12,576 [INFO] PluginManager:200 - loadIPPluginJar : add touchsensing
-2020-08-27 21:28:12,577 DEBUG [LineInfo_to_exitCode.log_LineInfo] 2020-08-27 21:28:12,576 [INFO] IPUIPlugin:65 - create IPUIPlugin
-2020-08-27 21:28:12,577 DEBUG [LineInfo_to_exitCode.log_LineInfo] 2020-08-27 21:28:12,577 [INFO] PluginManager:200 - loadIPPluginJar : add tracer_emb
-2020-08-27 21:28:12,578 DEBUG [LineInfo_to_exitCode.log_LineInfo] 2020-08-27 21:28:12,578 [INFO] IPUIPlugin:65 - create IPUIPlugin
-2020-08-27 21:28:12,578 DEBUG [LineInfo_to_exitCode.log_LineInfo] 2020-08-27 21:28:12,578 [INFO] PluginManager:200 - loadIPPluginJar : add ts
-2020-08-27 21:28:12,578 DEBUG [LineInfo_to_exitCode.log_LineInfo] 2020-08-27 21:28:12,578 [INFO] IPUIPlugin:65 - create IPUIPlugin
-2020-08-27 21:28:12,579 DEBUG [LineInfo_to_exitCode.log_LineInfo] 2020-08-27 21:28:12,578 [INFO] PluginManager:200 - loadIPPluginJar : add tsc
-2020-08-27 21:28:12,579 DEBUG [LineInfo_to_exitCode.log_LineInfo] 2020-08-27 21:28:12,579 [INFO] IPUIPlugin:65 - create IPUIPlugin
-2020-08-27 21:28:12,580 DEBUG [LineInfo_to_exitCode.log_LineInfo] 2020-08-27 21:28:12,579 [INFO] PluginManager:200 - loadIPPluginJar : add ucpd
-2020-08-27 21:28:12,581 DEBUG [LineInfo_to_exitCode.log_LineInfo] 2020-08-27 21:28:12,580 [INFO] IPUIPlugin:65 - create IPUIPlugin
-2020-08-27 21:28:12,581 DEBUG [LineInfo_to_exitCode.log_LineInfo] 2020-08-27 21:28:12,581 [INFO] PluginManager:200 - loadIPPluginJar : add usart
-2020-08-27 21:28:12,786 DEBUG [LineInfo_to_exitCode.log_LineInfo] 2020-08-27 21:28:12,786 [INFO] Updater:886 - Updater Version found : 5.6.1
-2020-08-27 21:28:12,795 DEBUG [LineInfo_to_exitCode.log_LineInfo] 2020-08-27 21:28:12,795 [INFO] ApplicationProperties:181 - Using Application install path: C:\Program Files\STMicroelectronics\STM32Cube\STM32CubeMX
-2020-08-27 21:28:12,847 DEBUG [LineInfo_to_exitCode.log_LineInfo] 2020-08-27 21:28:12,847 [INFO] MainUpdater:2230 - connection check result : 10
-2020-08-27 21:28:12,847 DEBUG [LineInfo_to_exitCode.log_LineInfo] 2020-08-27 21:28:12,847 [INFO] MainUpdater:236 - Updater Check For Update Now.
-2020-08-27 21:28:12,847 DEBUG [LineInfo_to_exitCode.log_LineInfo] 2020-08-27 21:28:12,847 [INFO] MicroXplorer:420 - Change Database Version : DB.5.0.60
-2020-08-27 21:28:12,872 DEBUG [LineInfo_to_exitCode.log_LineInfo] 2020-08-27 21:28:12,871 [INFO] CheckServerUpdateThread:92 - End of CheckServer Thread
-2020-08-27 21:28:13,042 DEBUG [LineInfo_to_exitCode.log_LineInfo] 2020-08-27 21:28:13,042 [INFO] DbMcusAds:143 - JSON generation date=Thu Apr 30 06:50:56 PDT 2020 (1588254656)
-2020-08-27 21:28:13,047 DEBUG [LineInfo_to_exitCode.log_LineInfo] 2020-08-27 21:28:13,047 [INFO] LoadUrlFilesThread:161 - End of LoadServerUrlFiles without Thread
-2020-08-27 21:28:13,055 DEBUG [LineInfo_to_exitCode.log_LineInfo] 2020-08-27 21:28:13,055 [INFO] McuDetailPanel:181 - Set advertising image to C:/Users/esamp/STM32Cube/Repository/\PR_STM32Cube_GitHub_0320_V1.png
-2020-08-27 21:28:13,056 DEBUG [LineInfo_to_exitCode.log_LineInfo] 2020-08-27 21:28:13,056 [INFO] LoadUrlFilesThread:161 - End of LoadServerUrlFiles without Thread
-2020-08-27 21:28:13,056 DEBUG [LineInfo_to_exitCode.log_LineInfo] 2020-08-27 21:28:13,056 [INFO] McuDetailPanel:181 - Set advertising image to C:/Users/esamp/STM32Cube/Repository/\PR_STM32Cube_GitHub_0320_V1.png
-2020-08-27 21:28:13,067 DEBUG [LineInfo_to_exitCode.log_LineInfo] 2020-08-27 21:28:13,067 [INFO] MicroXplorer:390 - Change Database Path : 
-2020-08-27 21:28:13,067 DEBUG [LineInfo_to_exitCode.log_LineInfo] 2020-08-27 21:28:13,067 [INFO] MicroXplorer:420 - Change Database Version : DB.5.0.60
-2020-08-27 21:28:13,068 DEBUG [LineInfo_to_exitCode.log_LineInfo] 2020-08-27 21:28:13,068 [INFO] PinOutPanel:1420 - setPackage(No Configuration,No Configuration)
-2020-08-27 21:28:13,088 DEBUG [LineInfo_to_exitCode.log_LineInfo] 2020-08-27 21:28:13,088 [INFO] New_gui_TipPanel:187 - scale :1.1076066790352506
-2020-08-27 21:28:13,159 DEBUG [LineInfo_to_exitCode.log_LineInfo] 2020-08-27 21:28:13,158 [INFO] MicroXplorer:390 - Change Database Path : 
-2020-08-27 21:28:13,159 DEBUG [LineInfo_to_exitCode.log_LineInfo] 2020-08-27 21:28:13,159 [INFO] MicroXplorer:420 - Change Database Version : DB.5.0.60
-2020-08-27 21:28:13,160 DEBUG [LineInfo_to_exitCode.log_LineInfo] 2020-08-27 21:28:13,159 [INFO] PinOutPanel:1420 - setPackage(No Configuration,No Configuration)
-2020-08-27 21:28:13,163 DEBUG [LineInfo_to_exitCode.log_LineInfo] 2020-08-27 21:28:13,163 [INFO] UtilMem:74 - Begin LoadConfig() Used Memory: 33995992 Bytes (217055232)
-2020-08-27 21:28:13,168 DEBUG [LineInfo_to_exitCode.log_LineInfo] 2020-08-27 21:28:13,168 [INFO] MicroXplorer:390 - Change Database Path : 
-2020-08-27 21:28:13,168 DEBUG [LineInfo_to_exitCode.log_LineInfo] 2020-08-27 21:28:13,168 [INFO] MicroXplorer:420 - Change Database Version : DB.5.0.60
-2020-08-27 21:28:13,168 DEBUG [LineInfo_to_exitCode.log_LineInfo] 2020-08-27 21:28:13,168 [INFO] OpenFileManager:274 - Change cursor
-2020-08-27 21:28:15,261 DEBUG [LineInfo_to_exitCode.log_LineInfo] 2020-08-27 21:28:15,260 [INFO] ImportTextPane:162 - (OptionalMessage_ERROR) IP (ADC1) : Parameter (InjectedRank) has Id (1#ChannelInjectedConversion) currently not set
-2020-08-27 21:28:15,261 DEBUG [LineInfo_to_exitCode.log_LineInfo] 2020-08-27 21:28:15,261 [INFO] ImportTextPane:162 - (OptionalMessage_ERROR) IP (ADC1) : Parameter (InjectedChannel) has Id (1#ChannelInjectedConversion) currently not set
-2020-08-27 21:28:15,261 DEBUG [LineInfo_to_exitCode.log_LineInfo] 2020-08-27 21:28:15,261 [INFO] ImportTextPane:162 - (OptionalMessage_ERROR) IP (ADC1) : Parameter (InjectedSamplingTime) has Id (1#ChannelInjectedConversion) currently not set
-2020-08-27 21:28:15,261 DEBUG [LineInfo_to_exitCode.log_LineInfo] 2020-08-27 21:28:15,261 [INFO] ImportTextPane:162 - (OptionalMessage_ERROR) IP (ADC1) : Parameter (InjectedOffsetNumber) has Id (1#ChannelInjectedConversion) currently not set
-2020-08-27 21:28:15,261 DEBUG [LineInfo_to_exitCode.log_LineInfo] 2020-08-27 21:28:15,261 [INFO] ImportTextPane:162 - (OptionalMessage_ERROR) IP (ADC1) : Parameter (InjectedOffset) has Id (1#ChannelInjectedConversion) currently not set
-2020-08-27 21:28:15,261 DEBUG [LineInfo_to_exitCode.log_LineInfo] 2020-08-27 21:28:15,261 [INFO] ImportTextPane:162 - (OptionalMessage_ERROR) IP (ADC1) : Parameter (InjectedRank) has Id (2#ChannelInjectedConversion) currently not set
-2020-08-27 21:28:15,261 DEBUG [LineInfo_to_exitCode.log_LineInfo] 2020-08-27 21:28:15,261 [INFO] ImportTextPane:162 - (OptionalMessage_ERROR) IP (ADC1) : Parameter (InjectedChannel) has Id (2#ChannelInjectedConversion) currently not set
-2020-08-27 21:28:15,261 DEBUG [LineInfo_to_exitCode.log_LineInfo] 2020-08-27 21:28:15,261 [INFO] ImportTextPane:162 - (OptionalMessage_ERROR) IP (ADC1) : Parameter (InjectedSamplingTime) has Id (2#ChannelInjectedConversion) currently not set
-2020-08-27 21:28:15,262 DEBUG [LineInfo_to_exitCode.log_LineInfo] 2020-08-27 21:28:15,261 [INFO] ImportTextPane:162 - (OptionalMessage_ERROR) IP (ADC1) : Parameter (InjectedOffsetNumber) has Id (2#ChannelInjectedConversion) currently not set
-2020-08-27 21:28:15,262 DEBUG [LineInfo_to_exitCode.log_LineInfo] 2020-08-27 21:28:15,261 [INFO] ImportTextPane:162 - (OptionalMessage_ERROR) IP (ADC1) : Parameter (InjectedOffset) has Id (2#ChannelInjectedConversion) currently not set
-2020-08-27 21:28:15,262 DEBUG [LineInfo_to_exitCode.log_LineInfo] 2020-08-27 21:28:15,261 [INFO] ImportTextPane:162 - (OptionalMessage_ERROR) IP (ADC1) : Parameter (InjectedRank) has Id (3#ChannelInjectedConversion) currently not set
-2020-08-27 21:28:15,262 DEBUG [LineInfo_to_exitCode.log_LineInfo] 2020-08-27 21:28:15,262 [INFO] ImportTextPane:162 - (OptionalMessage_ERROR) IP (ADC1) : Parameter (InjectedChannel) has Id (3#ChannelInjectedConversion) currently not set
-2020-08-27 21:28:15,262 DEBUG [LineInfo_to_exitCode.log_LineInfo] 2020-08-27 21:28:15,262 [INFO] ImportTextPane:162 - (OptionalMessage_ERROR) IP (ADC1) : Parameter (InjectedSamplingTime) has Id (3#ChannelInjectedConversion) currently not set
-2020-08-27 21:28:15,262 DEBUG [LineInfo_to_exitCode.log_LineInfo] 2020-08-27 21:28:15,262 [INFO] ImportTextPane:162 - (OptionalMessage_ERROR) IP (ADC1) : Parameter (InjectedOffsetNumber) has Id (3#ChannelInjectedConversion) currently not set
-2020-08-27 21:28:15,262 DEBUG [LineInfo_to_exitCode.log_LineInfo] 2020-08-27 21:28:15,262 [INFO] ImportTextPane:162 - (OptionalMessage_ERROR) IP (ADC1) : Parameter (InjectedOffset) has Id (3#ChannelInjectedConversion) currently not set
-2020-08-27 21:28:15,262 DEBUG [LineInfo_to_exitCode.log_LineInfo] 2020-08-27 21:28:15,262 [INFO] ImportTextPane:162 - (OptionalMessage_ERROR) IP (ADC1) : Parameter (Rank) has Id (1#ChannelRegularConversion) currently not set
-2020-08-27 21:28:15,262 DEBUG [LineInfo_to_exitCode.log_LineInfo] 2020-08-27 21:28:15,262 [INFO] ImportTextPane:162 - (OptionalMessage_ERROR) IP (ADC1) : Parameter (Channel) has Id (1#ChannelRegularConversion) currently not set
-2020-08-27 21:28:15,263 DEBUG [LineInfo_to_exitCode.log_LineInfo] 2020-08-27 21:28:15,262 [INFO] ImportTextPane:162 - (OptionalMessage_ERROR) IP (ADC1) : Parameter (SamplingTime) has Id (1#ChannelRegularConversion) currently not set
-2020-08-27 21:28:15,263 DEBUG [LineInfo_to_exitCode.log_LineInfo] 2020-08-27 21:28:15,262 [INFO] ImportTextPane:162 - (OptionalMessage_ERROR) IP (ADC1) : Parameter (OffsetNumber) has Id (1#ChannelRegularConversion) currently not set
-2020-08-27 21:28:15,263 DEBUG [LineInfo_to_exitCode.log_LineInfo] 2020-08-27 21:28:15,262 [INFO] ImportTextPane:162 - (OptionalMessage_ERROR) IP (ADC1) : Parameter (Offset) has Id (1#ChannelRegularConversion) currently not set
-2020-08-27 21:28:15,263 DEBUG [LineInfo_to_exitCode.log_LineInfo] 2020-08-27 21:28:15,263 [INFO] ImportTextPane:162 - (OptionalMessage_ERROR) IP (ADC3) : Parameter (Rank) has Id (1#ChannelRegularConversion) currently not set
-2020-08-27 21:28:15,264 DEBUG [LineInfo_to_exitCode.log_LineInfo] 2020-08-27 21:28:15,263 [INFO] ImportTextPane:162 - (OptionalMessage_ERROR) IP (ADC3) : Parameter (Channel) has Id (1#ChannelRegularConversion) currently not set
-2020-08-27 21:28:15,264 DEBUG [LineInfo_to_exitCode.log_LineInfo] 2020-08-27 21:28:15,263 [INFO] ImportTextPane:162 - (OptionalMessage_ERROR) IP (ADC3) : Parameter (SamplingTime) has Id (1#ChannelRegularConversion) currently not set
-2020-08-27 21:28:15,264 DEBUG [LineInfo_to_exitCode.log_LineInfo] 2020-08-27 21:28:15,264 [INFO] ImportTextPane:162 - (OptionalMessage_ERROR) IP (ADC3) : Parameter (OffsetNumber) has Id (1#ChannelRegularConversion) currently not set
-2020-08-27 21:28:15,264 DEBUG [LineInfo_to_exitCode.log_LineInfo] 2020-08-27 21:28:15,264 [INFO] ImportTextPane:162 - (OptionalMessage_ERROR) IP (ADC3) : Parameter (Offset) has Id (1#ChannelRegularConversion) currently not set
-2020-08-27 21:28:15,298 DEBUG [LineInfo_to_exitCode.log_LineInfo] 2020-08-27 21:28:15,298 [INFO] ImportTextPane:162 - (OptionalMessage_ERROR) IP (MotorControl) : Invalid parameter (ADC_AHBPERIPH)
-2020-08-27 21:28:15,298 DEBUG [LineInfo_to_exitCode.log_LineInfo] 2020-08-27 21:28:15,298 [INFO] ImportTextPane:162 - (OptionalMessage_ERROR) IP (MotorControl) : Invalid parameter (ADC_CLOCK_WB_FREQ)
-2020-08-27 21:28:15,299 DEBUG [LineInfo_to_exitCode.log_LineInfo] 2020-08-27 21:28:15,298 [INFO] ImportTextPane:162 - (OptionalMessage_ERROR) IP (MotorControl) : Invalid parameter (BKIN1_FILTER)
-2020-08-27 21:28:15,299 DEBUG [LineInfo_to_exitCode.log_LineInfo] 2020-08-27 21:28:15,298 [INFO] ImportTextPane:162 - (OptionalMessage_ERROR) IP (MotorControl) : Invalid parameter (BKIN2_FILTER)
-2020-08-27 21:28:15,299 DEBUG [LineInfo_to_exitCode.log_LineInfo] 2020-08-27 21:28:15,299 [INFO] ImportTextPane:162 - (OptionalMessage_ERROR) IP (MotorControl) : Invalid parameter (BRKIN_GPIO_AF)
-2020-08-27 21:28:15,299 DEBUG [LineInfo_to_exitCode.log_LineInfo] 2020-08-27 21:28:15,299 [INFO] ImportTextPane:162 - (OptionalMessage_ERROR) IP (MotorControl) : Invalid parameter (BRKIN2_GPIO_AF)
-2020-08-27 21:28:15,299 DEBUG [LineInfo_to_exitCode.log_LineInfo] 2020-08-27 21:28:15,299 [INFO] ImportTextPane:162 - (OptionalMessage_ERROR) IP (MotorControl) : Invalid parameter (CCMRAM_ENABLED)
-2020-08-27 21:28:15,299 DEBUG [LineInfo_to_exitCode.log_LineInfo] 2020-08-27 21:28:15,299 [INFO] ImportTextPane:162 - (OptionalMessage_ERROR) IP (MotorControl) : Invalid parameter (CLOCK_FREQUENCY)
-2020-08-27 21:28:15,299 DEBUG [LineInfo_to_exitCode.log_LineInfo] 2020-08-27 21:28:15,299 [INFO] ImportTextPane:162 - (OptionalMessage_ERROR) IP (MotorControl) : Invalid parameter (CLOCK_SOURCE)
-2020-08-27 21:28:15,299 DEBUG [LineInfo_to_exitCode.log_LineInfo] 2020-08-27 21:28:15,299 [INFO] ImportTextPane:162 - (OptionalMessage_ERROR) IP (MotorControl) : Invalid parameter (CPU_CLK_72_MHZ)
-2020-08-27 21:28:15,299 DEBUG [LineInfo_to_exitCode.log_LineInfo] 2020-08-27 21:28:15,299 [INFO] ImportTextPane:162 - (OptionalMessage_ERROR) IP (MotorControl) : Invalid parameter (DC_CURRENT_RS_MEAS)
-2020-08-27 21:28:15,299 DEBUG [LineInfo_to_exitCode.log_LineInfo] 2020-08-27 21:28:15,299 [INFO] ImportTextPane:162 - (OptionalMessage_ERROR) IP (MotorControl) : Invalid parameter (DEFAULT_DAC_MOTOR)
-2020-08-27 21:28:15,300 DEBUG [LineInfo_to_exitCode.log_LineInfo] 2020-08-27 21:28:15,299 [INFO] ImportTextPane:162 - (OptionalMessage_ERROR) IP (MotorControl) : Invalid parameter (DRIVES_NUMBER_SELECTION)
-2020-08-27 21:28:15,300 DEBUG [LineInfo_to_exitCode.log_LineInfo] 2020-08-27 21:28:15,300 [INFO] ImportTextPane:162 - (OptionalMessage_ERROR) IP (MotorControl) : Invalid parameter (EMERGENCY_STOP_GPIO_PIN)
-2020-08-27 21:28:15,300 DEBUG [LineInfo_to_exitCode.log_LineInfo] 2020-08-27 21:28:15,300 [INFO] ImportTextPane:162 - (OptionalMessage_ERROR) IP (MotorControl) : Invalid parameter (EMERGENCY_STOP_GPIO_PORT)
-2020-08-27 21:28:15,300 DEBUG [LineInfo_to_exitCode.log_LineInfo] 2020-08-27 21:28:15,300 [INFO] ImportTextPane:162 - (OptionalMessage_ERROR) IP (MotorControl) : Invalid parameter (EMERGENCY2_STOP_GPIO_PIN)
-2020-08-27 21:28:15,300 DEBUG [LineInfo_to_exitCode.log_LineInfo] 2020-08-27 21:28:15,300 [INFO] ImportTextPane:162 - (OptionalMessage_ERROR) IP (MotorControl) : Invalid parameter (EMERGENCY2_STOP_GPIO_PORT)
-2020-08-27 21:28:15,300 DEBUG [LineInfo_to_exitCode.log_LineInfo] 2020-08-27 21:28:15,300 [INFO] ImportTextPane:162 - (OptionalMessage_ERROR) IP (MotorControl) : Invalid parameter (ENC_A_GPIO_PIN)
-2020-08-27 21:28:15,300 DEBUG [LineInfo_to_exitCode.log_LineInfo] 2020-08-27 21:28:15,300 [INFO] ImportTextPane:162 - (OptionalMessage_ERROR) IP (MotorControl) : Invalid parameter (ENC_A_GPIO_PORT)
-2020-08-27 21:28:15,300 DEBUG [LineInfo_to_exitCode.log_LineInfo] 2020-08-27 21:28:15,300 [INFO] ImportTextPane:162 - (OptionalMessage_ERROR) IP (MotorControl) : Invalid parameter (ENC_B_GPIO_PIN)
-2020-08-27 21:28:15,300 DEBUG [LineInfo_to_exitCode.log_LineInfo] 2020-08-27 21:28:15,300 [INFO] ImportTextPane:162 - (OptionalMessage_ERROR) IP (MotorControl) : Invalid parameter (ENC_B_GPIO_PORT)
-2020-08-27 21:28:15,300 DEBUG [LineInfo_to_exitCode.log_LineInfo] 2020-08-27 21:28:15,300 [INFO] ImportTextPane:162 - (OptionalMessage_ERROR) IP (MotorControl) : Invalid parameter (ENC_INVERT_SPEED)
-2020-08-27 21:28:15,301 DEBUG [LineInfo_to_exitCode.log_LineInfo] 2020-08-27 21:28:15,300 [INFO] ImportTextPane:162 - (OptionalMessage_ERROR) IP (MotorControl) : Invalid parameter (ENC_TIMER_REMAPPING)
-2020-08-27 21:28:15,301 DEBUG [LineInfo_to_exitCode.log_LineInfo] 2020-08-27 21:28:15,301 [INFO] ImportTextPane:162 - (OptionalMessage_ERROR) IP (MotorControl) : Invalid parameter (ENCODER_AVAILABLE)
-2020-08-27 21:28:15,301 DEBUG [LineInfo_to_exitCode.log_LineInfo] 2020-08-27 21:28:15,301 [INFO] ImportTextPane:162 - (OptionalMessage_ERROR) IP (MotorControl) : Invalid parameter (EXT_CLK_8_MHZ)
-2020-08-27 21:28:15,301 DEBUG [LineInfo_to_exitCode.log_LineInfo] 2020-08-27 21:28:15,301 [INFO] ImportTextPane:162 - (OptionalMessage_ERROR) IP (MotorControl) : Invalid parameter (EXT_CLOCK_FREQUENCY)
-2020-08-27 21:28:15,301 DEBUG [LineInfo_to_exitCode.log_LineInfo] 2020-08-27 21:28:15,301 [INFO] ImportTextPane:162 - (OptionalMessage_ERROR) IP (MotorControl) : Invalid parameter (FEEDBACK_NET_FILTERING)
-2020-08-27 21:28:15,301 DEBUG [LineInfo_to_exitCode.log_LineInfo] 2020-08-27 21:28:15,301 [INFO] ImportTextPane:162 - (OptionalMessage_ERROR) IP (MotorControl) : Invalid parameter (H1_GPIO_PIN)
-2020-08-27 21:28:15,302 DEBUG [LineInfo_to_exitCode.log_LineInfo] 2020-08-27 21:28:15,301 [INFO] ImportTextPane:162 - (OptionalMessage_ERROR) IP (MotorControl) : Invalid parameter (H1_GPIO_PORT)
-2020-08-27 21:28:15,302 DEBUG [LineInfo_to_exitCode.log_LineInfo] 2020-08-27 21:28:15,301 [INFO] ImportTextPane:162 - (OptionalMessage_ERROR) IP (MotorControl) : Invalid parameter (H2_GPIO_PIN)
-2020-08-27 21:28:15,302 DEBUG [LineInfo_to_exitCode.log_LineInfo] 2020-08-27 21:28:15,302 [INFO] ImportTextPane:162 - (OptionalMessage_ERROR) IP (MotorControl) : Invalid parameter (H2_GPIO_PORT)
-2020-08-27 21:28:15,302 DEBUG [LineInfo_to_exitCode.log_LineInfo] 2020-08-27 21:28:15,302 [INFO] ImportTextPane:162 - (OptionalMessage_ERROR) IP (MotorControl) : Invalid parameter (H3_GPIO_PIN)
-2020-08-27 21:28:15,302 DEBUG [LineInfo_to_exitCode.log_LineInfo] 2020-08-27 21:28:15,302 [INFO] ImportTextPane:162 - (OptionalMessage_ERROR) IP (MotorControl) : Invalid parameter (H3_GPIO_PORT)
-2020-08-27 21:28:15,302 DEBUG [LineInfo_to_exitCode.log_LineInfo] 2020-08-27 21:28:15,302 [INFO] ImportTextPane:162 - (OptionalMessage_ERROR) IP (MotorControl) : Invalid parameter (HALL_SENSORS_AVAILABLE)
-2020-08-27 21:28:15,302 DEBUG [LineInfo_to_exitCode.log_LineInfo] 2020-08-27 21:28:15,302 [INFO] ImportTextPane:162 - (OptionalMessage_ERROR) IP (MotorControl) : Invalid parameter (HALL_TIMER_REMAPPING)
-2020-08-27 21:28:15,302 DEBUG [LineInfo_to_exitCode.log_LineInfo] 2020-08-27 21:28:15,302 [INFO] ImportTextPane:162 - (OptionalMessage_ERROR) IP (MotorControl) : Invalid parameter (HFI_DEBUG_MODE)
-2020-08-27 21:28:15,302 DEBUG [LineInfo_to_exitCode.log_LineInfo] 2020-08-27 21:28:15,302 [INFO] ImportTextPane:162 - (OptionalMessage_ERROR) IP (MotorControl) : Invalid parameter (HFI_IDH_DELAY)
-2020-08-27 21:28:15,302 DEBUG [LineInfo_to_exitCode.log_LineInfo] 2020-08-27 21:28:15,302 [INFO] ImportTextPane:162 - (OptionalMessage_ERROR) IP (MotorControl) : Invalid parameter (HFI_MAXANGLEDIFF)
-2020-08-27 21:28:15,303 DEBUG [LineInfo_to_exitCode.log_LineInfo] 2020-08-27 21:28:15,302 [INFO] ImportTextPane:162 - (OptionalMessage_ERROR) IP (MotorControl) : Invalid parameter (HFI_RESTART_RPM_TH)
-2020-08-27 21:28:15,303 DEBUG [LineInfo_to_exitCode.log_LineInfo] 2020-08-27 21:28:15,303 [INFO] ImportTextPane:162 - (OptionalMessage_ERROR) IP (MotorControl) : Invalid parameter (HFI_RESTARTTIMESEC)
-2020-08-27 21:28:15,303 DEBUG [LineInfo_to_exitCode.log_LineInfo] 2020-08-27 21:28:15,303 [INFO] ImportTextPane:162 - (OptionalMessage_ERROR) IP (MotorControl) : Invalid parameter (HFI_REVERT_DIRECTION)
-2020-08-27 21:28:15,303 DEBUG [LineInfo_to_exitCode.log_LineInfo] 2020-08-27 21:28:15,303 [INFO] ImportTextPane:162 - (OptionalMessage_ERROR) IP (MotorControl) : Invalid parameter (HFI_STEPANGLE)
-2020-08-27 21:28:15,303 DEBUG [LineInfo_to_exitCode.log_LineInfo] 2020-08-27 21:28:15,303 [INFO] ImportTextPane:162 - (OptionalMessage_ERROR) IP (MotorControl) : Invalid parameter (HFI_WAITSYNCH)
-2020-08-27 21:28:15,303 DEBUG [LineInfo_to_exitCode.log_LineInfo] 2020-08-27 21:28:15,303 [INFO] ImportTextPane:162 - (OptionalMessage_ERROR) IP (MotorControl) : Invalid parameter (HFI_WAITTRACK)
-2020-08-27 21:28:15,303 DEBUG [LineInfo_to_exitCode.log_LineInfo] 2020-08-27 21:28:15,303 [INFO] ImportTextPane:162 - (OptionalMessage_ERROR) IP (MotorControl) : Invalid parameter (HIGH_SIDE_BRAKE_STATE)
-2020-08-27 21:28:15,303 DEBUG [LineInfo_to_exitCode.log_LineInfo] 2020-08-27 21:28:15,303 [INFO] ImportTextPane:162 - (OptionalMessage_ERROR) IP (MotorControl) : Invalid parameter (HW_COMPLEMENTED_LOW_SIDE)
-2020-08-27 21:28:15,303 DEBUG [LineInfo_to_exitCode.log_LineInfo] 2020-08-27 21:28:15,303 [INFO] ImportTextPane:162 - (OptionalMessage_ERROR) IP (MotorControl) : Parameter (INRUSH_CURRLIMIT_AT_POWER_ON) has invalid value (false)
-2020-08-27 21:28:15,304 DEBUG [LineInfo_to_exitCode.log_LineInfo] 2020-08-27 21:28:15,303 [INFO] ImportTextPane:162 - (OptionalMessage_ERROR) IP (MotorControl) : Invalid parameter (INRUSH_CURRLIMIT_GPIO_PIN)
-2020-08-27 21:28:15,304 DEBUG [LineInfo_to_exitCode.log_LineInfo] 2020-08-27 21:28:15,304 [INFO] ImportTextPane:162 - (OptionalMessage_ERROR) IP (MotorControl) : Invalid parameter (INRUSH_CURRLIMIT_GPIO_PORT)
-2020-08-27 21:28:15,304 DEBUG [LineInfo_to_exitCode.log_LineInfo] 2020-08-27 21:28:15,304 [INFO] ImportTextPane:162 - (OptionalMessage_ERROR) IP (MotorControl) : Invalid parameter (LCD_JOYSTICK_FUNCTIONALITY)
-2020-08-27 21:28:15,304 DEBUG [LineInfo_to_exitCode.log_LineInfo] 2020-08-27 21:28:15,304 [INFO] ImportTextPane:162 - (OptionalMessage_ERROR) IP (MotorControl) : Invalid parameter (LCD_MODE)
-2020-08-27 21:28:15,304 DEBUG [LineInfo_to_exitCode.log_LineInfo] 2020-08-27 21:28:15,304 [INFO] ImportTextPane:162 - (OptionalMessage_ERROR) IP (MotorControl) : Invalid parameter (LDLQ_RATIO)
-2020-08-27 21:28:15,304 DEBUG [LineInfo_to_exitCode.log_LineInfo] 2020-08-27 21:28:15,304 [INFO] ImportTextPane:162 - (OptionalMessage_ERROR) IP (MotorControl) : Invalid parameter (LOW_SIDE_BRAKE_STATE)
-2020-08-27 21:28:15,304 DEBUG [LineInfo_to_exitCode.log_LineInfo] 2020-08-27 21:28:15,304 [INFO] ImportTextPane:162 - (OptionalMessage_ERROR) IP (MotorControl) : Invalid parameter (MAX_MODULATION_81_PER_CENT)
-2020-08-27 21:28:15,305 DEBUG [LineInfo_to_exitCode.log_LineInfo] 2020-08-27 21:28:15,304 [INFO] ImportTextPane:162 - (OptionalMessage_ERROR) IP (MotorControl) : Invalid parameter (MC_WORKBENCH_VERSION)
-2020-08-27 21:28:15,305 DEBUG [LineInfo_to_exitCode.log_LineInfo] 2020-08-27 21:28:15,304 [INFO] ImportTextPane:162 - (OptionalMessage_ERROR) IP (MotorControl) : Invalid parameter (MCU)
-2020-08-27 21:28:15,305 DEBUG [LineInfo_to_exitCode.log_LineInfo] 2020-08-27 21:28:15,305 [INFO] ImportTextPane:162 - (OptionalMessage_ERROR) IP (MotorControl) : Invalid parameter (MCU_TYPE)
-2020-08-27 21:28:15,305 DEBUG [LineInfo_to_exitCode.log_LineInfo] 2020-08-27 21:28:15,305 [INFO] ImportTextPane:162 - (OptionalMessage_ERROR) IP (MotorControl) : Invalid parameter (MOTOR_TYPE)
-2020-08-27 21:28:15,305 DEBUG [LineInfo_to_exitCode.log_LineInfo] 2020-08-27 21:28:15,305 [INFO] ImportTextPane:162 - (OptionalMessage_ERROR) IP (MotorControl) : Invalid parameter (OCP_COMP_THRESHOLD)
-2020-08-27 21:28:15,305 DEBUG [LineInfo_to_exitCode.log_LineInfo] 2020-08-27 21:28:15,305 [INFO] ImportTextPane:162 - (OptionalMessage_ERROR) IP (MotorControl) : Invalid parameter (OCP_FILTER)
-2020-08-27 21:28:15,305 DEBUG [LineInfo_to_exitCode.log_LineInfo] 2020-08-27 21:28:15,305 [INFO] ImportTextPane:162 - (OptionalMessage_ERROR) IP (MotorControl) : Invalid parameter (OCP_INVERTINGINPUT)
-2020-08-27 21:28:15,305 DEBUG [LineInfo_to_exitCode.log_LineInfo] 2020-08-27 21:28:15,305 [INFO] ImportTextPane:162 - (OptionalMessage_ERROR) IP (MotorControl) : Invalid parameter (OCP_INVERTINGINPUT_GPIO_PIN)
-2020-08-27 21:28:15,305 DEBUG [LineInfo_to_exitCode.log_LineInfo] 2020-08-27 21:28:15,305 [INFO] ImportTextPane:162 - (OptionalMessage_ERROR) IP (MotorControl) : Invalid parameter (OCP_INVERTINGINPUT_GPIO_PORT)
-2020-08-27 21:28:15,306 DEBUG [LineInfo_to_exitCode.log_LineInfo] 2020-08-27 21:28:15,305 [INFO] ImportTextPane:162 - (OptionalMessage_ERROR) IP (MotorControl) : Invalid parameter (OCP_NONINVERTINGINPUT)
-2020-08-27 21:28:15,306 DEBUG [LineInfo_to_exitCode.log_LineInfo] 2020-08-27 21:28:15,305 [INFO] ImportTextPane:162 - (OptionalMessage_ERROR) IP (MotorControl) : Invalid parameter (OCP_NONINVERTINGINPUT_GPIO_PIN)
-2020-08-27 21:28:15,306 DEBUG [LineInfo_to_exitCode.log_LineInfo] 2020-08-27 21:28:15,306 [INFO] ImportTextPane:162 - (OptionalMessage_ERROR) IP (MotorControl) : Invalid parameter (OCP_NONINVERTINGINPUT_GPIO_PORT)
-2020-08-27 21:28:15,306 DEBUG [LineInfo_to_exitCode.log_LineInfo] 2020-08-27 21:28:15,306 [INFO] ImportTextPane:162 - (OptionalMessage_ERROR) IP (MotorControl) : Invalid parameter (OCP_OUTPUT)
-2020-08-27 21:28:15,306 DEBUG [LineInfo_to_exitCode.log_LineInfo] 2020-08-27 21:28:15,306 [INFO] ImportTextPane:162 - (OptionalMessage_ERROR) IP (MotorControl) : Invalid parameter (OCP_OUTPUT_GPIO_AF)
-2020-08-27 21:28:15,306 DEBUG [LineInfo_to_exitCode.log_LineInfo] 2020-08-27 21:28:15,306 [INFO] ImportTextPane:162 - (OptionalMessage_ERROR) IP (MotorControl) : Invalid parameter (OCP_OUTPUT_GPIO_PIN)
-2020-08-27 21:28:15,306 DEBUG [LineInfo_to_exitCode.log_LineInfo] 2020-08-27 21:28:15,306 [INFO] ImportTextPane:162 - (OptionalMessage_ERROR) IP (MotorControl) : Invalid parameter (OCP_OUTPUT_GPIO_PORT)
-2020-08-27 21:28:15,306 DEBUG [LineInfo_to_exitCode.log_LineInfo] 2020-08-27 21:28:15,306 [INFO] ImportTextPane:162 - (OptionalMessage_ERROR) IP (MotorControl) : Invalid parameter (OCP_OUTPUT_MODE)
-2020-08-27 21:28:15,307 DEBUG [LineInfo_to_exitCode.log_LineInfo] 2020-08-27 21:28:15,306 [INFO] ImportTextPane:162 - (OptionalMessage_ERROR) IP (MotorControl) : Invalid parameter (OCP_OUTPUTPOL)
-2020-08-27 21:28:15,307 DEBUG [LineInfo_to_exitCode.log_LineInfo] 2020-08-27 21:28:15,306 [INFO] ImportTextPane:162 - (OptionalMessage_ERROR) IP (MotorControl) : Invalid parameter (OCPA_INVERTINGINPUT)
-2020-08-27 21:28:15,307 DEBUG [LineInfo_to_exitCode.log_LineInfo] 2020-08-27 21:28:15,306 [INFO] ImportTextPane:162 - (OptionalMessage_ERROR) IP (MotorControl) : Invalid parameter (OCPA_INVERTINGINPUT_GPIO_PIN)
-2020-08-27 21:28:15,307 DEBUG [LineInfo_to_exitCode.log_LineInfo] 2020-08-27 21:28:15,306 [INFO] ImportTextPane:162 - (OptionalMessage_ERROR) IP (MotorControl) : Invalid parameter (OCPA_INVERTINGINPUT_GPIO_PORT)
-2020-08-27 21:28:15,307 DEBUG [LineInfo_to_exitCode.log_LineInfo] 2020-08-27 21:28:15,306 [INFO] ImportTextPane:162 - (OptionalMessage_ERROR) IP (MotorControl) : Invalid parameter (OCPA_NONINVERTINGINPUT)
-2020-08-27 21:28:15,307 DEBUG [LineInfo_to_exitCode.log_LineInfo] 2020-08-27 21:28:15,306 [INFO] ImportTextPane:162 - (OptionalMessage_ERROR) IP (MotorControl) : Invalid parameter (OCPA_NONINVERTINGINPUT_GPIO_PIN)
-2020-08-27 21:28:15,307 DEBUG [LineInfo_to_exitCode.log_LineInfo] 2020-08-27 21:28:15,306 [INFO] ImportTextPane:162 - (OptionalMessage_ERROR) IP (MotorControl) : Invalid parameter (OCPA_NONINVERTINGINPUT_GPIO_PORT)
-2020-08-27 21:28:15,307 DEBUG [LineInfo_to_exitCode.log_LineInfo] 2020-08-27 21:28:15,307 [INFO] ImportTextPane:162 - (OptionalMessage_ERROR) IP (MotorControl) : Invalid parameter (OCPA_OUTPUT)
-2020-08-27 21:28:15,307 DEBUG [LineInfo_to_exitCode.log_LineInfo] 2020-08-27 21:28:15,307 [INFO] ImportTextPane:162 - (OptionalMessage_ERROR) IP (MotorControl) : Invalid parameter (OCPA_OUTPUT_GPIO_AF)
-2020-08-27 21:28:15,307 DEBUG [LineInfo_to_exitCode.log_LineInfo] 2020-08-27 21:28:15,307 [INFO] ImportTextPane:162 - (OptionalMessage_ERROR) IP (MotorControl) : Invalid parameter (OCPA_OUTPUT_GPIO_PIN)
-2020-08-27 21:28:15,308 DEBUG [LineInfo_to_exitCode.log_LineInfo] 2020-08-27 21:28:15,307 [INFO] ImportTextPane:162 - (OptionalMessage_ERROR) IP (MotorControl) : Invalid parameter (OCPA_OUTPUT_GPIO_PORT)
-2020-08-27 21:28:15,308 DEBUG [LineInfo_to_exitCode.log_LineInfo] 2020-08-27 21:28:15,307 [INFO] ImportTextPane:162 - (OptionalMessage_ERROR) IP (MotorControl) : Invalid parameter (OCPA_OUTPUT_MODE)
-2020-08-27 21:28:15,308 DEBUG [LineInfo_to_exitCode.log_LineInfo] 2020-08-27 21:28:15,307 [INFO] ImportTextPane:162 - (OptionalMessage_ERROR) IP (MotorControl) : Invalid parameter (OCPA_OUTPUTPOL)
-2020-08-27 21:28:15,308 DEBUG [LineInfo_to_exitCode.log_LineInfo] 2020-08-27 21:28:15,307 [INFO] ImportTextPane:162 - (OptionalMessage_ERROR) IP (MotorControl) : Invalid parameter (OCPB_INVERTINGINPUT)
-2020-08-27 21:28:15,308 DEBUG [LineInfo_to_exitCode.log_LineInfo] 2020-08-27 21:28:15,307 [INFO] ImportTextPane:162 - (OptionalMessage_ERROR) IP (MotorControl) : Invalid parameter (OCPB_INVERTINGINPUT_GPIO_PIN)
-2020-08-27 21:28:15,308 DEBUG [LineInfo_to_exitCode.log_LineInfo] 2020-08-27 21:28:15,307 [INFO] ImportTextPane:162 - (OptionalMessage_ERROR) IP (MotorControl) : Invalid parameter (OCPB_INVERTINGINPUT_GPIO_PORT)
-2020-08-27 21:28:15,308 DEBUG [LineInfo_to_exitCode.log_LineInfo] 2020-08-27 21:28:15,307 [INFO] ImportTextPane:162 - (OptionalMessage_ERROR) IP (MotorControl) : Invalid parameter (OCPB_NONINVERTINGINPUT)
-2020-08-27 21:28:15,308 DEBUG [LineInfo_to_exitCode.log_LineInfo] 2020-08-27 21:28:15,307 [INFO] ImportTextPane:162 - (OptionalMessage_ERROR) IP (MotorControl) : Invalid parameter (OCPB_NONINVERTINGINPUT_GPIO_PIN)
-2020-08-27 21:28:15,308 DEBUG [LineInfo_to_exitCode.log_LineInfo] 2020-08-27 21:28:15,307 [INFO] ImportTextPane:162 - (OptionalMessage_ERROR) IP (MotorControl) : Invalid parameter (OCPB_NONINVERTINGINPUT_GPIO_PORT)
-2020-08-27 21:28:15,309 DEBUG [LineInfo_to_exitCode.log_LineInfo] 2020-08-27 21:28:15,307 [INFO] ImportTextPane:162 - (OptionalMessage_ERROR) IP (MotorControl) : Invalid parameter (OCPB_OUTPUT)
-2020-08-27 21:28:15,309 DEBUG [LineInfo_to_exitCode.log_LineInfo] 2020-08-27 21:28:15,307 [INFO] ImportTextPane:162 - (OptionalMessage_ERROR) IP (MotorControl) : Invalid parameter (OCPB_OUTPUT_GPIO_AF)
-2020-08-27 21:28:15,309 DEBUG [LineInfo_to_exitCode.log_LineInfo] 2020-08-27 21:28:15,307 [INFO] ImportTextPane:162 - (OptionalMessage_ERROR) IP (MotorControl) : Invalid parameter (OCPB_OUTPUT_GPIO_PIN)
-2020-08-27 21:28:15,309 DEBUG [LineInfo_to_exitCode.log_LineInfo] 2020-08-27 21:28:15,308 [INFO] ImportTextPane:162 - (OptionalMessage_ERROR) IP (MotorControl) : Invalid parameter (OCPB_OUTPUT_GPIO_PORT)
-2020-08-27 21:28:15,309 DEBUG [LineInfo_to_exitCode.log_LineInfo] 2020-08-27 21:28:15,308 [INFO] ImportTextPane:162 - (OptionalMessage_ERROR) IP (MotorControl) : Invalid parameter (OCPB_OUTPUT_MODE)
-2020-08-27 21:28:15,309 DEBUG [LineInfo_to_exitCode.log_LineInfo] 2020-08-27 21:28:15,308 [INFO] ImportTextPane:162 - (OptionalMessage_ERROR) IP (MotorControl) : Invalid parameter (OCPB_OUTPUTPOL)
-2020-08-27 21:28:15,309 DEBUG [LineInfo_to_exitCode.log_LineInfo] 2020-08-27 21:28:15,308 [INFO] ImportTextPane:162 - (OptionalMessage_ERROR) IP (MotorControl) : Invalid parameter (OCPC_INVERTINGINPUT)
-2020-08-27 21:28:15,309 DEBUG [LineInfo_to_exitCode.log_LineInfo] 2020-08-27 21:28:15,308 [INFO] ImportTextPane:162 - (OptionalMessage_ERROR) IP (MotorControl) : Invalid parameter (OCPC_INVERTINGINPUT_GPIO_PIN)
-2020-08-27 21:28:15,309 DEBUG [LineInfo_to_exitCode.log_LineInfo] 2020-08-27 21:28:15,308 [INFO] ImportTextPane:162 - (OptionalMessage_ERROR) IP (MotorControl) : Invalid parameter (OCPC_INVERTINGINPUT_GPIO_PORT)
-2020-08-27 21:28:15,309 DEBUG [LineInfo_to_exitCode.log_LineInfo] 2020-08-27 21:28:15,308 [INFO] ImportTextPane:162 - (OptionalMessage_ERROR) IP (MotorControl) : Invalid parameter (OCPC_NONINVERTINGINPUT)
-2020-08-27 21:28:15,310 DEBUG [LineInfo_to_exitCode.log_LineInfo] 2020-08-27 21:28:15,308 [INFO] ImportTextPane:162 - (OptionalMessage_ERROR) IP (MotorControl) : Invalid parameter (OCPC_NONINVERTINGINPUT_GPIO_PIN)
-2020-08-27 21:28:15,310 DEBUG [LineInfo_to_exitCode.log_LineInfo] 2020-08-27 21:28:15,308 [INFO] ImportTextPane:162 - (OptionalMessage_ERROR) IP (MotorControl) : Invalid parameter (OCPC_NONINVERTINGINPUT_GPIO_PORT)
-2020-08-27 21:28:15,310 DEBUG [LineInfo_to_exitCode.log_LineInfo] 2020-08-27 21:28:15,308 [INFO] ImportTextPane:162 - (OptionalMessage_ERROR) IP (MotorControl) : Invalid parameter (OCPC_OUTPUT)
-2020-08-27 21:28:15,310 DEBUG [LineInfo_to_exitCode.log_LineInfo] 2020-08-27 21:28:15,308 [INFO] ImportTextPane:162 - (OptionalMessage_ERROR) IP (MotorControl) : Invalid parameter (OCPC_OUTPUT_GPIO_AF)
-2020-08-27 21:28:15,310 DEBUG [LineInfo_to_exitCode.log_LineInfo] 2020-08-27 21:28:15,308 [INFO] ImportTextPane:162 - (OptionalMessage_ERROR) IP (MotorControl) : Invalid parameter (OCPC_OUTPUT_GPIO_PIN)
-2020-08-27 21:28:15,310 DEBUG [LineInfo_to_exitCode.log_LineInfo] 2020-08-27 21:28:15,308 [INFO] ImportTextPane:162 - (OptionalMessage_ERROR) IP (MotorControl) : Invalid parameter (OCPC_OUTPUT_GPIO_PORT)
-2020-08-27 21:28:15,310 DEBUG [LineInfo_to_exitCode.log_LineInfo] 2020-08-27 21:28:15,308 [INFO] ImportTextPane:162 - (OptionalMessage_ERROR) IP (MotorControl) : Invalid parameter (OCPC_OUTPUT_MODE)
-2020-08-27 21:28:15,310 DEBUG [LineInfo_to_exitCode.log_LineInfo] 2020-08-27 21:28:15,309 [INFO] ImportTextPane:162 - (OptionalMessage_ERROR) IP (MotorControl) : Invalid parameter (OCPC_OUTPUTPOL)
-2020-08-27 21:28:15,310 DEBUG [LineInfo_to_exitCode.log_LineInfo] 2020-08-27 21:28:15,309 [INFO] ImportTextPane:162 - (OptionalMessage_ERROR) IP (MotorControl) : Invalid parameter (OPAMP_INVERTINGINPUT)
-2020-08-27 21:28:15,310 DEBUG [LineInfo_to_exitCode.log_LineInfo] 2020-08-27 21:28:15,309 [INFO] ImportTextPane:162 - (OptionalMessage_ERROR) IP (MotorControl) : Invalid parameter (OPAMP_INVERTINGINPUT_GPIO_PIN)
-2020-08-27 21:28:15,311 DEBUG [LineInfo_to_exitCode.log_LineInfo] 2020-08-27 21:28:15,309 [INFO] ImportTextPane:162 - (OptionalMessage_ERROR) IP (MotorControl) : Invalid parameter (OPAMP_INVERTINGINPUT_GPIO_PORT)
-2020-08-27 21:28:15,311 DEBUG [LineInfo_to_exitCode.log_LineInfo] 2020-08-27 21:28:15,309 [INFO] ImportTextPane:162 - (OptionalMessage_ERROR) IP (MotorControl) : Invalid parameter (OPAMP_INVERTINGINPUT_MODE)
-2020-08-27 21:28:15,311 DEBUG [LineInfo_to_exitCode.log_LineInfo] 2020-08-27 21:28:15,309 [INFO] ImportTextPane:162 - (OptionalMessage_ERROR) IP (MotorControl) : Invalid parameter (OPAMP_NONINVERTINGINPUT)
-2020-08-27 21:28:15,311 DEBUG [LineInfo_to_exitCode.log_LineInfo] 2020-08-27 21:28:15,309 [INFO] ImportTextPane:162 - (OptionalMessage_ERROR) IP (MotorControl) : Invalid parameter (OPAMP_NONINVERTINGINPUT_GPIO_PIN)
-2020-08-27 21:28:15,311 DEBUG [LineInfo_to_exitCode.log_LineInfo] 2020-08-27 21:28:15,309 [INFO] ImportTextPane:162 - (OptionalMessage_ERROR) IP (MotorControl) : Invalid parameter (OPAMP_NONINVERTINGINPUT_GPIO_PORT)
-2020-08-27 21:28:15,311 DEBUG [LineInfo_to_exitCode.log_LineInfo] 2020-08-27 21:28:15,309 [INFO] ImportTextPane:162 - (OptionalMessage_ERROR) IP (MotorControl) : Invalid parameter (OPAMP_OUT_GPIO_PIN)
-2020-08-27 21:28:15,311 DEBUG [LineInfo_to_exitCode.log_LineInfo] 2020-08-27 21:28:15,309 [INFO] ImportTextPane:162 - (OptionalMessage_ERROR) IP (MotorControl) : Invalid parameter (OPAMP_OUT_GPIO_PORT)
-2020-08-27 21:28:15,311 DEBUG [LineInfo_to_exitCode.log_LineInfo] 2020-08-27 21:28:15,309 [INFO] ImportTextPane:162 - (OptionalMessage_ERROR) IP (MotorControl) : Invalid parameter (OPAMP_PGACONNECT)
-2020-08-27 21:28:15,311 DEBUG [LineInfo_to_exitCode.log_LineInfo] 2020-08-27 21:28:15,309 [INFO] ImportTextPane:162 - (OptionalMessage_ERROR) IP (MotorControl) : Invalid parameter (OPAMP_PGAGAIN)
-2020-08-27 21:28:15,311 DEBUG [LineInfo_to_exitCode.log_LineInfo] 2020-08-27 21:28:15,309 [INFO] ImportTextPane:162 - (OptionalMessage_ERROR) IP (MotorControl) : Invalid parameter (OPAMP_TYPE_GAIN)
-2020-08-27 21:28:15,312 DEBUG [LineInfo_to_exitCode.log_LineInfo] 2020-08-27 21:28:15,309 [INFO] ImportTextPane:162 - (OptionalMessage_ERROR) IP (MotorControl) : Invalid parameter (OPAMP1_INVERTINGINPUT_GPIO_PIN)
-2020-08-27 21:28:15,312 DEBUG [LineInfo_to_exitCode.log_LineInfo] 2020-08-27 21:28:15,310 [INFO] ImportTextPane:162 - (OptionalMessage_ERROR) IP (MotorControl) : Invalid parameter (OPAMP1_INVERTINGINPUT_GPIO_PORT)
-2020-08-27 21:28:15,312 DEBUG [LineInfo_to_exitCode.log_LineInfo] 2020-08-27 21:28:15,310 [INFO] ImportTextPane:162 - (OptionalMessage_ERROR) IP (MotorControl) : Invalid parameter (OPAMP1_INVERTINGINPUT_MODE)
-2020-08-27 21:28:15,312 DEBUG [LineInfo_to_exitCode.log_LineInfo] 2020-08-27 21:28:15,310 [INFO] ImportTextPane:162 - (OptionalMessage_ERROR) IP (MotorControl) : Invalid parameter (OPAMP1_NONINVERTINGINPUT_PHA_GPIO_PIN)
-2020-08-27 21:28:15,312 DEBUG [LineInfo_to_exitCode.log_LineInfo] 2020-08-27 21:28:15,310 [INFO] ImportTextPane:162 - (OptionalMessage_ERROR) IP (MotorControl) : Invalid parameter (OPAMP1_NONINVERTINGINPUT_PHA_GPIO_PORT)
-2020-08-27 21:28:15,312 DEBUG [LineInfo_to_exitCode.log_LineInfo] 2020-08-27 21:28:15,310 [INFO] ImportTextPane:162 - (OptionalMessage_ERROR) IP (MotorControl) : Invalid parameter (OPAMP1_NONINVERTINGINPUT_PHB_GPIO_PIN)
-2020-08-27 21:28:15,312 DEBUG [LineInfo_to_exitCode.log_LineInfo] 2020-08-27 21:28:15,310 [INFO] ImportTextPane:162 - (OptionalMessage_ERROR) IP (MotorControl) : Invalid parameter (OPAMP1_NONINVERTINGINPUT_PHB_GPIO_PORT)
-2020-08-27 21:28:15,312 DEBUG [LineInfo_to_exitCode.log_LineInfo] 2020-08-27 21:28:15,310 [INFO] ImportTextPane:162 - (OptionalMessage_ERROR) IP (MotorControl) : Invalid parameter (OPAMP1_OUT_GPIO_PIN)
-2020-08-27 21:28:15,312 DEBUG [LineInfo_to_exitCode.log_LineInfo] 2020-08-27 21:28:15,310 [INFO] ImportTextPane:162 - (OptionalMessage_ERROR) IP (MotorControl) : Invalid parameter (OPAMP1_OUT_GPIO_PORT)
-2020-08-27 21:28:15,313 DEBUG [LineInfo_to_exitCode.log_LineInfo] 2020-08-27 21:28:15,310 [INFO] ImportTextPane:162 - (OptionalMessage_ERROR) IP (MotorControl) : Invalid parameter (OPAMP2_INVERTINGINPUT_GPIO_PIN)
-2020-08-27 21:28:15,313 DEBUG [LineInfo_to_exitCode.log_LineInfo] 2020-08-27 21:28:15,310 [INFO] ImportTextPane:162 - (OptionalMessage_ERROR) IP (MotorControl) : Invalid parameter (OPAMP2_INVERTINGINPUT_GPIO_PORT)
-2020-08-27 21:28:15,313 DEBUG [LineInfo_to_exitCode.log_LineInfo] 2020-08-27 21:28:15,310 [INFO] ImportTextPane:162 - (OptionalMessage_ERROR) IP (MotorControl) : Invalid parameter (OPAMP2_INVERTINGINPUT_MODE)
-2020-08-27 21:28:15,313 DEBUG [LineInfo_to_exitCode.log_LineInfo] 2020-08-27 21:28:15,310 [INFO] ImportTextPane:162 - (OptionalMessage_ERROR) IP (MotorControl) : Invalid parameter (OPAMP2_NONINVERTINGINPUT_PHA_GPIO_PIN)
-2020-08-27 21:28:15,313 DEBUG [LineInfo_to_exitCode.log_LineInfo] 2020-08-27 21:28:15,310 [INFO] ImportTextPane:162 - (OptionalMessage_ERROR) IP (MotorControl) : Invalid parameter (OPAMP2_NONINVERTINGINPUT_PHA_GPIO_PORT)
-2020-08-27 21:28:15,313 DEBUG [LineInfo_to_exitCode.log_LineInfo] 2020-08-27 21:28:15,310 [INFO] ImportTextPane:162 - (OptionalMessage_ERROR) IP (MotorControl) : Invalid parameter (OPAMP2_NONINVERTINGINPUT_PHB_GPIO_PIN)
-2020-08-27 21:28:15,313 DEBUG [LineInfo_to_exitCode.log_LineInfo] 2020-08-27 21:28:15,311 [INFO] ImportTextPane:162 - (OptionalMessage_ERROR) IP (MotorControl) : Invalid parameter (OPAMP2_NONINVERTINGINPUT_PHB_GPIO_PORT)
-2020-08-27 21:28:15,313 DEBUG [LineInfo_to_exitCode.log_LineInfo] 2020-08-27 21:28:15,311 [INFO] ImportTextPane:162 - (OptionalMessage_ERROR) IP (MotorControl) : Invalid parameter (OPAMP2_NONINVERTINGINPUT_PHC_GPIO_PIN)
-2020-08-27 21:28:15,313 DEBUG [LineInfo_to_exitCode.log_LineInfo] 2020-08-27 21:28:15,311 [INFO] ImportTextPane:162 - (OptionalMessage_ERROR) IP (MotorControl) : Invalid parameter (OPAMP2_NONINVERTINGINPUT_PHC_GPIO_PORT)
-2020-08-27 21:28:15,313 DEBUG [LineInfo_to_exitCode.log_LineInfo] 2020-08-27 21:28:15,311 [INFO] ImportTextPane:162 - (OptionalMessage_ERROR) IP (MotorControl) : Invalid parameter (OPAMP2_OUT_GPIO_PIN)
-2020-08-27 21:28:15,314 DEBUG [LineInfo_to_exitCode.log_LineInfo] 2020-08-27 21:28:15,311 [INFO] ImportTextPane:162 - (OptionalMessage_ERROR) IP (MotorControl) : Invalid parameter (OPAMP2_OUT_GPIO_PORT)
-2020-08-27 21:28:15,314 DEBUG [LineInfo_to_exitCode.log_LineInfo] 2020-08-27 21:28:15,311 [INFO] ImportTextPane:162 - (OptionalMessage_ERROR) IP (MotorControl) : Invalid parameter (OPAMP3_INVERTINGINPUT)
-2020-08-27 21:28:15,314 DEBUG [LineInfo_to_exitCode.log_LineInfo] 2020-08-27 21:28:15,311 [INFO] ImportTextPane:162 - (OptionalMessage_ERROR) IP (MotorControl) : Invalid parameter (OPAMP3_INVERTINGINPUT_GPIO_PIN)
-2020-08-27 21:28:15,314 DEBUG [LineInfo_to_exitCode.log_LineInfo] 2020-08-27 21:28:15,311 [INFO] ImportTextPane:162 - (OptionalMessage_ERROR) IP (MotorControl) : Invalid parameter (OPAMP3_INVERTINGINPUT_GPIO_PORT)
-2020-08-27 21:28:15,314 DEBUG [LineInfo_to_exitCode.log_LineInfo] 2020-08-27 21:28:15,311 [INFO] ImportTextPane:162 - (OptionalMessage_ERROR) IP (MotorControl) : Invalid parameter (OPAMP3_INVERTINGINPUT_MODE)
-2020-08-27 21:28:15,314 DEBUG [LineInfo_to_exitCode.log_LineInfo] 2020-08-27 21:28:15,311 [INFO] ImportTextPane:162 - (OptionalMessage_ERROR) IP (MotorControl) : Invalid parameter (OPAMP3_SELECTION)
-2020-08-27 21:28:15,314 DEBUG [LineInfo_to_exitCode.log_LineInfo] 2020-08-27 21:28:15,311 [INFO] ImportTextPane:162 - (OptionalMessage_ERROR) IP (MotorControl) : Invalid parameter (OPEN_LOOP_K)
-2020-08-27 21:28:15,314 DEBUG [LineInfo_to_exitCode.log_LineInfo] 2020-08-27 21:28:15,311 [INFO] ImportTextPane:162 - (OptionalMessage_ERROR) IP (MotorControl) : Invalid parameter (OPEN_LOOP_OFF)
-2020-08-27 21:28:15,314 DEBUG [LineInfo_to_exitCode.log_LineInfo] 2020-08-27 21:28:15,311 [INFO] ImportTextPane:162 - (OptionalMessage_ERROR) IP (MotorControl) : Invalid parameter (OPEN_LOOP_SPEED_RAMP_DURATION_MS)
-2020-08-27 21:28:15,315 DEBUG [LineInfo_to_exitCode.log_LineInfo] 2020-08-27 21:28:15,312 [INFO] ImportTextPane:162 - (OptionalMessage_ERROR) IP (MotorControl) : Invalid parameter (OPEN_LOOP_SPEED_RPM)
-2020-08-27 21:28:15,315 DEBUG [LineInfo_to_exitCode.log_LineInfo] 2020-08-27 21:28:15,312 [INFO] ImportTextPane:162 - (OptionalMessage_ERROR) IP (MotorControl) : Invalid parameter (OPEN_LOOP_VF)
-2020-08-27 21:28:15,315 DEBUG [LineInfo_to_exitCode.log_LineInfo] 2020-08-27 21:28:15,312 [INFO] ImportTextPane:162 - (OptionalMessage_ERROR) IP (MotorControl) : Invalid parameter (OPEN_LOOP_VOLTAGE_d)
-2020-08-27 21:28:15,315 DEBUG [LineInfo_to_exitCode.log_LineInfo] 2020-08-27 21:28:15,312 [INFO] ImportTextPane:162 - (OptionalMessage_ERROR) IP (MotorControl) : Invalid parameter (OV_CURR_BYPASS_GPIO_PIN)
-2020-08-27 21:28:15,315 DEBUG [LineInfo_to_exitCode.log_LineInfo] 2020-08-27 21:28:15,312 [INFO] ImportTextPane:162 - (OptionalMessage_ERROR) IP (MotorControl) : Invalid parameter (OV_CURR_BYPASS_GPIO_PORT)
-2020-08-27 21:28:15,315 DEBUG [LineInfo_to_exitCode.log_LineInfo] 2020-08-27 21:28:15,312 [INFO] ImportTextPane:162 - (OptionalMessage_ERROR) IP (MotorControl) : Invalid parameter (OVERCURR_FEEDBACK_POLARITY)
-2020-08-27 21:28:15,315 DEBUG [LineInfo_to_exitCode.log_LineInfo] 2020-08-27 21:28:15,312 [INFO] ImportTextPane:162 - (OptionalMessage_ERROR) IP (MotorControl) : Invalid parameter (OVP_FILTER)
-2020-08-27 21:28:15,315 DEBUG [LineInfo_to_exitCode.log_LineInfo] 2020-08-27 21:28:15,312 [INFO] ImportTextPane:162 - (OptionalMessage_ERROR) IP (MotorControl) : Invalid parameter (OVP_INVERTINGINPUT)
-2020-08-27 21:28:15,315 DEBUG [LineInfo_to_exitCode.log_LineInfo] 2020-08-27 21:28:15,312 [INFO] ImportTextPane:162 - (OptionalMessage_ERROR) IP (MotorControl) : Invalid parameter (OVP_INVERTINGINPUT_GPIO_PIN)
-2020-08-27 21:28:15,316 DEBUG [LineInfo_to_exitCode.log_LineInfo] 2020-08-27 21:28:15,312 [INFO] ImportTextPane:162 - (OptionalMessage_ERROR) IP (MotorControl) : Invalid parameter (OVP_INVERTINGINPUT_GPIO_PORT)
-2020-08-27 21:28:15,316 DEBUG [LineInfo_to_exitCode.log_LineInfo] 2020-08-27 21:28:15,313 [INFO] ImportTextPane:162 - (OptionalMessage_ERROR) IP (MotorControl) : Invalid parameter (OVP_INVERTINGINPUT_MODE)
-2020-08-27 21:28:15,316 DEBUG [LineInfo_to_exitCode.log_LineInfo] 2020-08-27 21:28:15,313 [INFO] ImportTextPane:162 - (OptionalMessage_ERROR) IP (MotorControl) : Invalid parameter (OVP_NONINVERTINGINPUT)
-2020-08-27 21:28:15,316 DEBUG [LineInfo_to_exitCode.log_LineInfo] 2020-08-27 21:28:15,313 [INFO] ImportTextPane:162 - (OptionalMessage_ERROR) IP (MotorControl) : Invalid parameter (OVP_NONINVERTINGINPUT_GPIO_PIN)
-2020-08-27 21:28:15,316 DEBUG [LineInfo_to_exitCode.log_LineInfo] 2020-08-27 21:28:15,313 [INFO] ImportTextPane:162 - (OptionalMessage_ERROR) IP (MotorControl) : Invalid parameter (OVP_NONINVERTINGINPUT_GPIO_PORT)
-2020-08-27 21:28:15,316 DEBUG [LineInfo_to_exitCode.log_LineInfo] 2020-08-27 21:28:15,313 [INFO] ImportTextPane:162 - (OptionalMessage_ERROR) IP (MotorControl) : Invalid parameter (OVP_OUTPUT)
-2020-08-27 21:28:15,316 DEBUG [LineInfo_to_exitCode.log_LineInfo] 2020-08-27 21:28:15,313 [INFO] ImportTextPane:162 - (OptionalMessage_ERROR) IP (MotorControl) : Invalid parameter (OVP_OUTPUT_GPIO_AF)
-2020-08-27 21:28:15,316 DEBUG [LineInfo_to_exitCode.log_LineInfo] 2020-08-27 21:28:15,313 [INFO] ImportTextPane:162 - (OptionalMessage_ERROR) IP (MotorControl) : Invalid parameter (OVP_OUTPUT_GPIO_PIN)
-2020-08-27 21:28:15,316 DEBUG [LineInfo_to_exitCode.log_LineInfo] 2020-08-27 21:28:15,313 [INFO] ImportTextPane:162 - (OptionalMessage_ERROR) IP (MotorControl) : Invalid parameter (OVP_OUTPUT_GPIO_PORT)
-2020-08-27 21:28:15,316 DEBUG [LineInfo_to_exitCode.log_LineInfo] 2020-08-27 21:28:15,313 [INFO] ImportTextPane:162 - (OptionalMessage_ERROR) IP (MotorControl) : Invalid parameter (OVP_OUTPUT_MODE)
-2020-08-27 21:28:15,317 DEBUG [LineInfo_to_exitCode.log_LineInfo] 2020-08-27 21:28:15,313 [INFO] ImportTextPane:162 - (OptionalMessage_ERROR) IP (MotorControl) : Invalid parameter (OVP_OUTPUTPOL)
-2020-08-27 21:28:15,317 DEBUG [LineInfo_to_exitCode.log_LineInfo] 2020-08-27 21:28:15,313 [INFO] ImportTextPane:162 - (OptionalMessage_ERROR) IP (MotorControl) : Invalid parameter (OVP_SELECTION)
-2020-08-27 21:28:15,317 DEBUG [LineInfo_to_exitCode.log_LineInfo] 2020-08-27 21:28:15,313 [INFO] ImportTextPane:162 - (OptionalMessage_ERROR) IP (MotorControl) : Invalid parameter (PHASE_CURRENTS_GPIO_PIN)
-2020-08-27 21:28:15,317 DEBUG [LineInfo_to_exitCode.log_LineInfo] 2020-08-27 21:28:15,313 [INFO] ImportTextPane:162 - (OptionalMessage_ERROR) IP (MotorControl) : Invalid parameter (PHASE_CURRENTS_GPIO_PORT)
-2020-08-27 21:28:15,317 DEBUG [LineInfo_to_exitCode.log_LineInfo] 2020-08-27 21:28:15,313 [INFO] ImportTextPane:162 - (OptionalMessage_ERROR) IP (MotorControl) : Invalid parameter (PHASE_U_CURR_ADC)
-2020-08-27 21:28:15,317 DEBUG [LineInfo_to_exitCode.log_LineInfo] 2020-08-27 21:28:15,313 [INFO] ImportTextPane:162 - (OptionalMessage_ERROR) IP (MotorControl) : Invalid parameter (PHASE_U_GPIO_PIN)
-2020-08-27 21:28:15,317 DEBUG [LineInfo_to_exitCode.log_LineInfo] 2020-08-27 21:28:15,314 [INFO] ImportTextPane:162 - (OptionalMessage_ERROR) IP (MotorControl) : Invalid parameter (PHASE_U_GPIO_PORT)
-2020-08-27 21:28:15,317 DEBUG [LineInfo_to_exitCode.log_LineInfo] 2020-08-27 21:28:15,314 [INFO] ImportTextPane:162 - (OptionalMessage_ERROR) IP (MotorControl) : Invalid parameter (PHASE_UH_GPIO_AF)
-2020-08-27 21:28:15,317 DEBUG [LineInfo_to_exitCode.log_LineInfo] 2020-08-27 21:28:15,314 [INFO] ImportTextPane:162 - (OptionalMessage_ERROR) IP (MotorControl) : Invalid parameter (PHASE_UH_GPIO_PIN)
-2020-08-27 21:28:15,317 DEBUG [LineInfo_to_exitCode.log_LineInfo] 2020-08-27 21:28:15,314 [INFO] ImportTextPane:162 - (OptionalMessage_ERROR) IP (MotorControl) : Invalid parameter (PHASE_UH_GPIO_PORT)
-2020-08-27 21:28:15,318 DEBUG [LineInfo_to_exitCode.log_LineInfo] 2020-08-27 21:28:15,314 [INFO] ImportTextPane:162 - (OptionalMessage_ERROR) IP (MotorControl) : Invalid parameter (PHASE_UH_POLARITY)
-2020-08-27 21:28:15,318 DEBUG [LineInfo_to_exitCode.log_LineInfo] 2020-08-27 21:28:15,314 [INFO] ImportTextPane:162 - (OptionalMessage_ERROR) IP (MotorControl) : Invalid parameter (PHASE_UL_GPIO_AF)
-2020-08-27 21:28:15,318 DEBUG [LineInfo_to_exitCode.log_LineInfo] 2020-08-27 21:28:15,314 [INFO] ImportTextPane:162 - (OptionalMessage_ERROR) IP (MotorControl) : Invalid parameter (PHASE_UL_GPIO_PIN)
-2020-08-27 21:28:15,318 DEBUG [LineInfo_to_exitCode.log_LineInfo] 2020-08-27 21:28:15,314 [INFO] ImportTextPane:162 - (OptionalMessage_ERROR) IP (MotorControl) : Invalid parameter (PHASE_UL_GPIO_PORT)
-2020-08-27 21:28:15,318 DEBUG [LineInfo_to_exitCode.log_LineInfo] 2020-08-27 21:28:15,314 [INFO] ImportTextPane:162 - (OptionalMessage_ERROR) IP (MotorControl) : Invalid parameter (PHASE_UL_POLARITY)
-2020-08-27 21:28:15,318 DEBUG [LineInfo_to_exitCode.log_LineInfo] 2020-08-27 21:28:15,314 [INFO] ImportTextPane:162 - (OptionalMessage_ERROR) IP (MotorControl) : Invalid parameter (PHASE_V_CURR_ADC)
-2020-08-27 21:28:15,318 DEBUG [LineInfo_to_exitCode.log_LineInfo] 2020-08-27 21:28:15,314 [INFO] ImportTextPane:162 - (OptionalMessage_ERROR) IP (MotorControl) : Invalid parameter (PHASE_V_GPIO_PIN)
-2020-08-27 21:28:15,318 DEBUG [LineInfo_to_exitCode.log_LineInfo] 2020-08-27 21:28:15,314 [INFO] ImportTextPane:162 - (OptionalMessage_ERROR) IP (MotorControl) : Invalid parameter (PHASE_V_GPIO_PORT)
-2020-08-27 21:28:15,318 DEBUG [LineInfo_to_exitCode.log_LineInfo] 2020-08-27 21:28:15,314 [INFO] ImportTextPane:162 - (OptionalMessage_ERROR) IP (MotorControl) : Invalid parameter (PHASE_VH_GPIO_AF)
-2020-08-27 21:28:15,318 DEBUG [LineInfo_to_exitCode.log_LineInfo] 2020-08-27 21:28:15,314 [INFO] ImportTextPane:162 - (OptionalMessage_ERROR) IP (MotorControl) : Invalid parameter (PHASE_VH_GPIO_PIN)
-2020-08-27 21:28:15,319 DEBUG [LineInfo_to_exitCode.log_LineInfo] 2020-08-27 21:28:15,314 [INFO] ImportTextPane:162 - (OptionalMessage_ERROR) IP (MotorControl) : Invalid parameter (PHASE_VH_GPIO_PORT)
-2020-08-27 21:28:15,319 DEBUG [LineInfo_to_exitCode.log_LineInfo] 2020-08-27 21:28:15,314 [INFO] ImportTextPane:162 - (OptionalMessage_ERROR) IP (MotorControl) : Invalid parameter (PHASE_VH_POLARITY)
-2020-08-27 21:28:15,319 DEBUG [LineInfo_to_exitCode.log_LineInfo] 2020-08-27 21:28:15,316 [INFO] ImportTextPane:162 - (OptionalMessage_ERROR) IP (MotorControl) : Invalid parameter (PHASE_VL_GPIO_AF)
-2020-08-27 21:28:15,319 DEBUG [LineInfo_to_exitCode.log_LineInfo] 2020-08-27 21:28:15,316 [INFO] ImportTextPane:162 - (OptionalMessage_ERROR) IP (MotorControl) : Invalid parameter (PHASE_VL_GPIO_PIN)
-2020-08-27 21:28:15,319 DEBUG [LineInfo_to_exitCode.log_LineInfo] 2020-08-27 21:28:15,316 [INFO] ImportTextPane:162 - (OptionalMessage_ERROR) IP (MotorControl) : Invalid parameter (PHASE_VL_GPIO_PORT)
-2020-08-27 21:28:15,319 DEBUG [LineInfo_to_exitCode.log_LineInfo] 2020-08-27 21:28:15,316 [INFO] ImportTextPane:162 - (OptionalMessage_ERROR) IP (MotorControl) : Invalid parameter (PHASE_VL_POLARITY)
-2020-08-27 21:28:15,319 DEBUG [LineInfo_to_exitCode.log_LineInfo] 2020-08-27 21:28:15,316 [INFO] ImportTextPane:162 - (OptionalMessage_ERROR) IP (MotorControl) : Invalid parameter (PHASE_W_CURR_ADC)
-2020-08-27 21:28:15,319 DEBUG [LineInfo_to_exitCode.log_LineInfo] 2020-08-27 21:28:15,316 [INFO] ImportTextPane:162 - (OptionalMessage_ERROR) IP (MotorControl) : Invalid parameter (PHASE_W_GPIO_PIN)
-2020-08-27 21:28:15,319 DEBUG [LineInfo_to_exitCode.log_LineInfo] 2020-08-27 21:28:15,316 [INFO] ImportTextPane:162 - (OptionalMessage_ERROR) IP (MotorControl) : Invalid parameter (PHASE_W_GPIO_PORT)
-2020-08-27 21:28:15,320 DEBUG [LineInfo_to_exitCode.log_LineInfo] 2020-08-27 21:28:15,316 [INFO] ImportTextPane:162 - (OptionalMessage_ERROR) IP (MotorControl) : Invalid parameter (PHASE_WH_GPIO_AF)
-2020-08-27 21:28:15,320 DEBUG [LineInfo_to_exitCode.log_LineInfo] 2020-08-27 21:28:15,316 [INFO] ImportTextPane:162 - (OptionalMessage_ERROR) IP (MotorControl) : Invalid parameter (PHASE_WH_GPIO_PIN)
-2020-08-27 21:28:15,320 DEBUG [LineInfo_to_exitCode.log_LineInfo] 2020-08-27 21:28:15,316 [INFO] ImportTextPane:162 - (OptionalMessage_ERROR) IP (MotorControl) : Invalid parameter (PHASE_WH_GPIO_PORT)
-2020-08-27 21:28:15,320 DEBUG [LineInfo_to_exitCode.log_LineInfo] 2020-08-27 21:28:15,316 [INFO] ImportTextPane:162 - (OptionalMessage_ERROR) IP (MotorControl) : Invalid parameter (PHASE_WH_POLARITY)
-2020-08-27 21:28:15,320 DEBUG [LineInfo_to_exitCode.log_LineInfo] 2020-08-27 21:28:15,316 [INFO] ImportTextPane:162 - (OptionalMessage_ERROR) IP (MotorControl) : Invalid parameter (PHASE_WL_GPIO_AF)
-2020-08-27 21:28:15,320 DEBUG [LineInfo_to_exitCode.log_LineInfo] 2020-08-27 21:28:15,316 [INFO] ImportTextPane:162 - (OptionalMessage_ERROR) IP (MotorControl) : Invalid parameter (PHASE_WL_GPIO_PIN)
-2020-08-27 21:28:15,320 DEBUG [LineInfo_to_exitCode.log_LineInfo] 2020-08-27 21:28:15,317 [INFO] ImportTextPane:162 - (OptionalMessage_ERROR) IP (MotorControl) : Invalid parameter (PHASE_WL_GPIO_PORT)
-2020-08-27 21:28:15,320 DEBUG [LineInfo_to_exitCode.log_LineInfo] 2020-08-27 21:28:15,317 [INFO] ImportTextPane:162 - (OptionalMessage_ERROR) IP (MotorControl) : Invalid parameter (PHASE_WL_POLARITY)
-2020-08-27 21:28:15,320 DEBUG [LineInfo_to_exitCode.log_LineInfo] 2020-08-27 21:28:15,317 [INFO] ImportTextPane:162 - (OptionalMessage_ERROR) IP (MotorControl) : Invalid parameter (PWM_TIMER_REMAPPING)
-2020-08-27 21:28:15,320 DEBUG [LineInfo_to_exitCode.log_LineInfo] 2020-08-27 21:28:15,317 [INFO] ImportTextPane:162 - (OptionalMessage_ERROR) IP (MotorControl) : Invalid parameter (R_BRAKE_GPIO_PIN)
-2020-08-27 21:28:15,321 DEBUG [LineInfo_to_exitCode.log_LineInfo] 2020-08-27 21:28:15,317 [INFO] ImportTextPane:162 - (OptionalMessage_ERROR) IP (MotorControl) : Invalid parameter (R_BRAKE_GPIO_PORT)
-2020-08-27 21:28:15,321 DEBUG [LineInfo_to_exitCode.log_LineInfo] 2020-08-27 21:28:15,317 [INFO] ImportTextPane:162 - (OptionalMessage_ERROR) IP (MotorControl) : Invalid parameter (SPD_DIFFERENTIAL_TERM_ENABLING)
-2020-08-27 21:28:15,321 DEBUG [LineInfo_to_exitCode.log_LineInfo] 2020-08-27 21:28:15,317 [INFO] ImportTextPane:162 - (OptionalMessage_ERROR) IP (MotorControl) : Invalid parameter (START_STOP_POLARITY)
-2020-08-27 21:28:15,321 DEBUG [LineInfo_to_exitCode.log_LineInfo] 2020-08-27 21:28:15,317 [INFO] ImportTextPane:162 - (OptionalMessage_ERROR) IP (MotorControl) : Invalid parameter (START_STOP_POLARITY_EDGE)
-2020-08-27 21:28:15,321 DEBUG [LineInfo_to_exitCode.log_LineInfo] 2020-08-27 21:28:15,318 [INFO] ImportTextPane:162 - (OptionalMessage_ERROR) IP (MotorControl) : Invalid parameter (STM32F303xB)
-2020-08-27 21:28:15,321 DEBUG [LineInfo_to_exitCode.log_LineInfo] 2020-08-27 21:28:15,318 [INFO] ImportTextPane:162 - (OptionalMessage_ERROR) IP (MotorControl) : Invalid parameter (TEMP_FDBK_GPIO_PIN)
-2020-08-27 21:28:15,321 DEBUG [LineInfo_to_exitCode.log_LineInfo] 2020-08-27 21:28:15,318 [INFO] ImportTextPane:162 - (OptionalMessage_ERROR) IP (MotorControl) : Invalid parameter (TEMP_FDBK_GPIO_PORT)
-2020-08-27 21:28:15,321 DEBUG [LineInfo_to_exitCode.log_LineInfo] 2020-08-27 21:28:15,318 [INFO] ImportTextPane:162 - (OptionalMessage_ERROR) IP (MotorControl) : Invalid parameter (TFDIFFERENTIAL_TERM_ENABLING)
-2020-08-27 21:28:15,321 DEBUG [LineInfo_to_exitCode.log_LineInfo] 2020-08-27 21:28:15,318 [INFO] ImportTextPane:162 - (OptionalMessage_ERROR) IP (MotorControl) : Invalid parameter (USART_REMAPPING)
-2020-08-27 21:28:15,321 DEBUG [LineInfo_to_exitCode.log_LineInfo] 2020-08-27 21:28:15,318 [INFO] ImportTextPane:162 - (OptionalMessage_ERROR) IP (MotorControl) : Invalid parameter (USART_RX_GPIO_PIN)
-2020-08-27 21:28:15,322 DEBUG [LineInfo_to_exitCode.log_LineInfo] 2020-08-27 21:28:15,318 [INFO] ImportTextPane:162 - (OptionalMessage_ERROR) IP (MotorControl) : Invalid parameter (USART_RX_GPIO_PORT)
-2020-08-27 21:28:15,322 DEBUG [LineInfo_to_exitCode.log_LineInfo] 2020-08-27 21:28:15,318 [INFO] ImportTextPane:162 - (OptionalMessage_ERROR) IP (MotorControl) : Invalid parameter (USART_SPEED)
-2020-08-27 21:28:15,322 DEBUG [LineInfo_to_exitCode.log_LineInfo] 2020-08-27 21:28:15,318 [INFO] ImportTextPane:162 - (OptionalMessage_ERROR) IP (MotorControl) : Invalid parameter (USART_TX_GPIO_PIN)
-2020-08-27 21:28:15,322 DEBUG [LineInfo_to_exitCode.log_LineInfo] 2020-08-27 21:28:15,318 [INFO] ImportTextPane:162 - (OptionalMessage_ERROR) IP (MotorControl) : Invalid parameter (USART_TX_GPIO_PORT)
-2020-08-27 21:28:15,322 DEBUG [LineInfo_to_exitCode.log_LineInfo] 2020-08-27 21:28:15,319 [INFO] ImportTextPane:162 - (OptionalMessage_ERROR) IP (MotorControl) : Invalid parameter (USE_3OPAMPS)
-2020-08-27 21:28:15,322 DEBUG [LineInfo_to_exitCode.log_LineInfo] 2020-08-27 21:28:15,319 [INFO] ImportTextPane:162 - (OptionalMessage_ERROR) IP (MotorControl) : Invalid parameter (VBUS_GPIO_PIN)
-2020-08-27 21:28:15,322 DEBUG [LineInfo_to_exitCode.log_LineInfo] 2020-08-27 21:28:15,319 [INFO] ImportTextPane:162 - (OptionalMessage_ERROR) IP (MotorControl) : Invalid parameter (VBUS_GPIO_PORT)
-2020-08-27 21:28:15,322 DEBUG [LineInfo_to_exitCode.log_LineInfo] 2020-08-27 21:28:15,319 [INFO] ImportTextPane:162 - (OptionalMessage_ERROR) IP (MotorControl) : Invalid parameter (WB_to_Mx_template_version)
-2020-08-27 21:28:15,322 DEBUG [LineInfo_to_exitCode.log_LineInfo] 2020-08-27 21:28:15,319 [INFO] ImportTextPane:162 - (OptionalMessage_ERROR) IP (MotorControl) : Invalid parameter (WB_to_Mx_version)
-2020-08-27 21:28:15,322 DEBUG [LineInfo_to_exitCode.log_LineInfo] 2020-08-27 21:28:15,320 [INFO] ImportTextPane:162 - (OptionalMessage_ERROR) IP (RCC) : Invalid parameter (FamilyName)
-2020-08-27 21:28:15,323 DEBUG [LineInfo_to_exitCode.log_LineInfo] 2020-08-27 21:28:15,321 [INFO] ImportTextPane:162 - (OptionalMessage_ERROR) IP (RCC) : Invalid parameter (TIM2Freq_Value)
-2020-08-27 21:28:15,323 DEBUG [LineInfo_to_exitCode.log_LineInfo] 2020-08-27 21:28:15,321 [INFO] ImportTextPane:162 - (OptionalMessage_ERROR) IP (RCC) : Parameter (USBFreq_Value) has invalid value (72000000)
-2020-08-27 21:28:15,393 DEBUG [LineInfo_to_exitCode.log_LineInfo] 2020-08-27 21:28:15,393 [INFO] ThirdPartyDb:261 - Close Third Party DataBase File (C:/Users/esamp/.stm32cubemx/plugins/thirdparty/db/thirdparties_db.xml)
-2020-08-27 21:28:15,398 DEBUG [LineInfo_to_exitCode.log_LineInfo] 2020-08-27 21:28:15,397 [INFO] ThirdPartyDb:295 - Open Third Party DataBase File (C:/Users/esamp/.stm32cubemx/plugins/thirdparty/db/thirdparties_db.xml) : 0 ms. number of Sw pack : 13
-2020-08-27 21:28:15,398 DEBUG [LineInfo_to_exitCode.log_LineInfo] 2020-08-27 21:28:15,398 [INFO] ThirdPartyDb:261 - Close Third Party DataBase File (C:/Users/esamp/.stm32cubemx/plugins/thirdparty/db/thirdparties_db.xml)
-2020-08-27 21:28:15,401 DEBUG [LineInfo_to_exitCode.log_LineInfo] 2020-08-27 21:28:15,401 [INFO] ThirdPartyDb:295 - Open Third Party DataBase File (C:/Users/esamp/.stm32cubemx/plugins/thirdparty/db/thirdparties_db.xml) : 0 ms. number of Sw pack : 13
-2020-08-27 21:28:15,401 DEBUG [LineInfo_to_exitCode.log_LineInfo] 2020-08-27 21:28:15,401 [INFO] ThirdPartyDb:261 - Close Third Party DataBase File (C:/Users/esamp/.stm32cubemx/plugins/thirdparty/db/thirdparties_db.xml)
-2020-08-27 21:28:15,405 DEBUG [LineInfo_to_exitCode.log_LineInfo] 2020-08-27 21:28:15,405 [INFO] ThirdPartyDb:295 - Open Third Party DataBase File (C:/Users/esamp/.stm32cubemx/plugins/thirdparty/db/thirdparties_db.xml) : 0 ms. number of Sw pack : 13
-2020-08-27 21:28:15,405 DEBUG [LineInfo_to_exitCode.log_LineInfo] 2020-08-27 21:28:15,405 [INFO] ThirdPartyDb:261 - Close Third Party DataBase File (C:/Users/esamp/.stm32cubemx/plugins/thirdparty/db/thirdparties_db.xml)
-2020-08-27 21:28:15,408 DEBUG [LineInfo_to_exitCode.log_LineInfo] 2020-08-27 21:28:15,408 [INFO] ThirdPartyDb:295 - Open Third Party DataBase File (C:/Users/esamp/.stm32cubemx/plugins/thirdparty/db/thirdparties_db.xml) : 0 ms. number of Sw pack : 13
-2020-08-27 21:28:15,409 DEBUG [LineInfo_to_exitCode.log_LineInfo] 2020-08-27 21:28:15,408 [INFO] ThirdPartyDb:261 - Close Third Party DataBase File (C:/Users/esamp/.stm32cubemx/plugins/thirdparty/db/thirdparties_db.xml)
-2020-08-27 21:28:15,411 DEBUG [LineInfo_to_exitCode.log_LineInfo] 2020-08-27 21:28:15,411 [INFO] ThirdPartyDb:295 - Open Third Party DataBase File (C:/Users/esamp/.stm32cubemx/plugins/thirdparty/db/thirdparties_db.xml) : 0 ms. number of Sw pack : 13
-2020-08-27 21:28:15,412 DEBUG [LineInfo_to_exitCode.log_LineInfo] 2020-08-27 21:28:15,411 [INFO] ThirdPartyDb:261 - Close Third Party DataBase File (C:/Users/esamp/.stm32cubemx/plugins/thirdparty/db/thirdparties_db.xml)
-2020-08-27 21:28:15,414 DEBUG [LineInfo_to_exitCode.log_LineInfo] 2020-08-27 21:28:15,414 [INFO] ThirdPartyDb:295 - Open Third Party DataBase File (C:/Users/esamp/.stm32cubemx/plugins/thirdparty/db/thirdparties_db.xml) : 0 ms. number of Sw pack : 13
-2020-08-27 21:28:15,414 DEBUG [LineInfo_to_exitCode.log_LineInfo] 2020-08-27 21:28:15,414 [INFO] ThirdPartyDb:261 - Close Third Party DataBase File (C:/Users/esamp/.stm32cubemx/plugins/thirdparty/db/thirdparties_db.xml)
-2020-08-27 21:28:15,428 DEBUG [LineInfo_to_exitCode.log_LineInfo] 2020-08-27 21:28:15,428 [INFO] ThirdPartyDb:295 - Open Third Party DataBase File (C:/Users/esamp/.stm32cubemx/plugins/thirdparty/db/thirdparties_db.xml) : 1 ms. number of Sw pack : 13
-2020-08-27 21:28:15,428 DEBUG [LineInfo_to_exitCode.log_LineInfo] 2020-08-27 21:28:15,428 [INFO] ThirdPartyDb:261 - Close Third Party DataBase File (C:/Users/esamp/.stm32cubemx/plugins/thirdparty/db/thirdparties_db.xml)
-2020-08-27 21:28:15,431 DEBUG [LineInfo_to_exitCode.log_LineInfo] 2020-08-27 21:28:15,431 [INFO] ThirdPartyDb:295 - Open Third Party DataBase File (C:/Users/esamp/.stm32cubemx/plugins/thirdparty/db/thirdparties_db.xml) : 0 ms. number of Sw pack : 13
-2020-08-27 21:28:15,431 DEBUG [LineInfo_to_exitCode.log_LineInfo] 2020-08-27 21:28:15,431 [INFO] ThirdPartyDb:261 - Close Third Party DataBase File (C:/Users/esamp/.stm32cubemx/plugins/thirdparty/db/thirdparties_db.xml)
-2020-08-27 21:28:15,434 DEBUG [LineInfo_to_exitCode.log_LineInfo] 2020-08-27 21:28:15,434 [INFO] ThirdPartyDb:295 - Open Third Party DataBase File (C:/Users/esamp/.stm32cubemx/plugins/thirdparty/db/thirdparties_db.xml) : 0 ms. number of Sw pack : 13
-2020-08-27 21:28:15,434 DEBUG [LineInfo_to_exitCode.log_LineInfo] 2020-08-27 21:28:15,434 [INFO] ThirdPartyDb:261 - Close Third Party DataBase File (C:/Users/esamp/.stm32cubemx/plugins/thirdparty/db/thirdparties_db.xml)
-2020-08-27 21:28:15,436 DEBUG [LineInfo_to_exitCode.log_LineInfo] 2020-08-27 21:28:15,436 [INFO] ThirdPartyDb:295 - Open Third Party DataBase File (C:/Users/esamp/.stm32cubemx/plugins/thirdparty/db/thirdparties_db.xml) : 0 ms. number of Sw pack : 13
-2020-08-27 21:28:15,436 DEBUG [LineInfo_to_exitCode.log_LineInfo] 2020-08-27 21:28:15,436 [INFO] ThirdPartyDb:261 - Close Third Party DataBase File (C:/Users/esamp/.stm32cubemx/plugins/thirdparty/db/thirdparties_db.xml)
-2020-08-27 21:28:15,439 DEBUG [LineInfo_to_exitCode.log_LineInfo] 2020-08-27 21:28:15,439 [INFO] ThirdPartyDb:295 - Open Third Party DataBase File (C:/Users/esamp/.stm32cubemx/plugins/thirdparty/db/thirdparties_db.xml) : 1 ms. number of Sw pack : 13
-2020-08-27 21:28:15,439 DEBUG [LineInfo_to_exitCode.log_LineInfo] 2020-08-27 21:28:15,439 [INFO] ThirdPartyDb:261 - Close Third Party DataBase File (C:/Users/esamp/.stm32cubemx/plugins/thirdparty/db/thirdparties_db.xml)
-2020-08-27 21:28:15,441 DEBUG [LineInfo_to_exitCode.log_LineInfo] 2020-08-27 21:28:15,441 [INFO] ThirdPartyDb:295 - Open Third Party DataBase File (C:/Users/esamp/.stm32cubemx/plugins/thirdparty/db/thirdparties_db.xml) : 1 ms. number of Sw pack : 13
-2020-08-27 21:28:15,441 DEBUG [LineInfo_to_exitCode.log_LineInfo] 2020-08-27 21:28:15,441 [INFO] ThirdPartyDb:261 - Close Third Party DataBase File (C:/Users/esamp/.stm32cubemx/plugins/thirdparty/db/thirdparties_db.xml)
-2020-08-27 21:28:15,442 DEBUG [LineInfo_to_exitCode.log_LineInfo] 2020-08-27 21:28:15,442 [INFO] IntegrityCheckThread:98 - End integrity checks thread
-2020-08-27 21:28:15,482 DEBUG [LineInfo_to_exitCode.log_LineInfo] 2020-08-27 21:28:15,481 [INFO] UtilMem:74 - End LoadConfig() Used Memory: 195175536 Bytes (1539833856)
-2020-08-27 21:28:15,482 DEBUG [LineInfo_to_exitCode.log_LineInfo] 2020-08-27 21:28:15,482 [INFO] DbMcusXml:110 - Load MCU database from C:\Program Files\STMicroelectronics\STM32Cube\STM32CubeMX\\db\/mcu/families.xml
-2020-08-27 21:28:15,789 DEBUG [LineInfo_to_exitCode.log_LineInfo] 2020-08-27 21:28:15,789 [INFO] DbMcusJson:90 - JSON generation date=Mon Jul 27 05:58:30 PDT 2020 (1595854710)
-2020-08-27 21:28:16,093 DEBUG [LineInfo_to_exitCode.log_LineInfo] 2020-08-27 21:28:16,092 [INFO] DbMcus:171 - Found 1670 MCUs (1625 are supported by CubeMX, 1625 are visible in CubeMX)
-2020-08-27 21:28:16,093 DEBUG [LineInfo_to_exitCode.log_LineInfo] 2020-08-27 21:28:16,093 [INFO] ApiDb:158 - Load user favorites file C:\Users\esamp/.stm32cubemx/favorites.mcus.txt: 0 item(s)
-2020-08-27 21:28:16,093 DEBUG [LineInfo_to_exitCode.log_LineInfo] 2020-08-27 21:28:16,093 [INFO] ApiDb:163 - User favorites MCUs=[]
-2020-08-27 21:28:16,093 DEBUG [LineInfo_to_exitCode.log_LineInfo] 2020-08-27 21:28:16,093 [INFO] DbMcus:183 - Set 0 / 0 favorites MCUs
-2020-08-27 21:28:16,095 DEBUG [LineInfo_to_exitCode.log_LineInfo] 2020-08-27 21:28:16,095 [INFO] ThirdPartyDb:295 - Open Third Party DataBase File (C:/Users/esamp/.stm32cubemx/plugins/thirdparty/db/thirdparties_db.xml) : 0 ms. number of Sw pack : 13
-2020-08-27 21:28:16,106 DEBUG [LineInfo_to_exitCode.log_LineInfo] 2020-08-27 21:28:16,106 [INFO] ThirdParty:899 - CMSIS Pack Vendor :STMicroelectronics USB_HOST 2.0.0
-2020-08-27 21:28:16,106 DEBUG [LineInfo_to_exitCode.log_LineInfo] 2020-08-27 21:28:16,106 [INFO] ThirdParty:899 - CMSIS Pack Vendor :STMicroelectronics FreeRTOS 0.0.1
-2020-08-27 21:28:16,106 DEBUG [LineInfo_to_exitCode.log_LineInfo] 2020-08-27 21:28:16,106 [INFO] ThirdParty:899 - CMSIS Pack Vendor :STMicroelectronics USB_DEVICE 1.0.0
-2020-08-27 21:28:16,106 DEBUG [LineInfo_to_exitCode.log_LineInfo] 2020-08-27 21:28:16,106 [INFO] ThirdParty:899 - CMSIS Pack Vendor :STMicroelectronics USB_DEVICE 3.0.0
-2020-08-27 21:28:16,107 DEBUG [LineInfo_to_exitCode.log_LineInfo] 2020-08-27 21:28:16,106 [INFO] ThirdParty:899 - CMSIS Pack Vendor :STMicroelectronics MBEDTLS 2.16.2
-2020-08-27 21:28:16,107 DEBUG [LineInfo_to_exitCode.log_LineInfo] 2020-08-27 21:28:16,106 [INFO] ThirdParty:899 - CMSIS Pack Vendor :STMicroelectronics lwIP 2.0.3
-2020-08-27 21:28:16,107 DEBUG [LineInfo_to_exitCode.log_LineInfo] 2020-08-27 21:28:16,106 [INFO] ThirdParty:899 - CMSIS Pack Vendor :STMicroelectronics lwIP 2.1.2
-2020-08-27 21:28:16,107 DEBUG [LineInfo_to_exitCode.log_LineInfo] 2020-08-27 21:28:16,106 [INFO] ThirdParty:899 - CMSIS Pack Vendor :STMicroelectronics MBEDTLS 2.14.1
-2020-08-27 21:28:16,107 DEBUG [LineInfo_to_exitCode.log_LineInfo] 2020-08-27 21:28:16,106 [INFO] ThirdParty:899 - CMSIS Pack Vendor :STMicroelectronics USB_HOST 1.0.0
-2020-08-27 21:28:16,107 DEBUG [LineInfo_to_exitCode.log_LineInfo] 2020-08-27 21:28:16,106 [INFO] ThirdParty:899 - CMSIS Pack Vendor :STMicroelectronics PDM2PCM 3.1.0
-2020-08-27 21:28:16,107 DEBUG [LineInfo_to_exitCode.log_LineInfo] 2020-08-27 21:28:16,106 [INFO] ThirdParty:899 - CMSIS Pack Vendor :STMicroelectronics PDM2PCM 3.2.0
-2020-08-27 21:28:16,107 DEBUG [LineInfo_to_exitCode.log_LineInfo] 2020-08-27 21:28:16,106 [INFO] ThirdParty:899 - CMSIS Pack Vendor :STMicroelectronics USB_DEVICE 2.0.0
-2020-08-27 21:28:16,107 DEBUG [LineInfo_to_exitCode.log_LineInfo] 2020-08-27 21:28:16,106 [INFO] ThirdParty:899 - CMSIS Pack Vendor :STMicroelectronics PDM2PCM 3.3.0
-2020-08-27 21:28:16,259 DEBUG [LineInfo_to_exitCode.log_LineInfo] 2020-08-27 21:28:16,259 [INFO] PinOutPanel:1420 - setPackage(No Configuration,No Configuration)
-2020-08-27 21:28:16,260 DEBUG [LineInfo_to_exitCode.log_LineInfo] 2020-08-27 21:28:16,260 [INFO] PinOutPanel:1420 - setPackage(STM32F303CBTx,LQFP48)
-2020-08-27 21:28:16,478 DEBUG [LineInfo_to_exitCode.log_LineInfo] 2020-08-27 21:28:16,478 [INFO] UtilMem:74 - Before build in PCC Used Memory: 843447408 Bytes (1539833856)
-2020-08-27 21:28:16,652 DEBUG [LineInfo_to_exitCode.log_LineInfo] 2020-08-27 21:28:16,652 [INFO] SharedServices:71 - Folder for power plug-in: C:/Users/esamp/.stm32cubemx/plugins/power
-2020-08-27 21:28:16,675 DEBUG [LineInfo_to_exitCode.log_LineInfo] 2020-08-27 21:28:16,675 [INFO] SharedServices:71 - Folder for power plug-in: C:/Users/esamp/.stm32cubemx/plugins/power
-2020-08-27 21:28:16,699 DEBUG [LineInfo_to_exitCode.log_LineInfo] 2020-08-27 21:28:16,698 [INFO] SharedServices:71 - Folder for power plug-in: C:/Users/esamp/.stm32cubemx/plugins/power
-2020-08-27 21:28:16,701 DEBUG [LineInfo_to_exitCode.log_LineInfo] 2020-08-27 21:28:16,701 [INFO] SharedServices:71 - Folder for power plug-in: C:/Users/esamp/.stm32cubemx/plugins/power
-2020-08-27 21:28:16,782 DEBUG [LineInfo_to_exitCode.log_LineInfo] 2020-08-27 21:28:16,782 [INFO] UtilMem:74 - After build in PCC Used Memory: 900219552 Bytes (1539833856)
-2020-08-27 21:28:16,797 DEBUG [LineInfo_to_exitCode.log_LineInfo] 2020-08-27 21:28:16,796 [INFO] IPUIPlugin:65 - create IPUIPlugin
-2020-08-27 21:28:16,797 DEBUG [LineInfo_to_exitCode.log_LineInfo] 2020-08-27 21:28:16,797 [INFO] IPUIPlugin:65 - create IPUIPlugin
-2020-08-27 21:28:16,797 DEBUG [LineInfo_to_exitCode.log_LineInfo] 2020-08-27 21:28:16,797 [INFO] IPUIPlugin:65 - create IPUIPlugin
-2020-08-27 21:28:16,797 DEBUG [LineInfo_to_exitCode.log_LineInfo] 2020-08-27 21:28:16,797 [INFO] IPUIPlugin:65 - create IPUIPlugin
-2020-08-27 21:28:16,797 DEBUG [LineInfo_to_exitCode.log_LineInfo] 2020-08-27 21:28:16,797 [INFO] IPUIPlugin:65 - create IPUIPlugin
-2020-08-27 21:28:16,797 DEBUG [LineInfo_to_exitCode.log_LineInfo] 2020-08-27 21:28:16,797 [INFO] IPUIPlugin:65 - create IPUIPlugin
-2020-08-27 21:28:16,797 DEBUG [LineInfo_to_exitCode.log_LineInfo] 2020-08-27 21:28:16,797 [INFO] IPUIPlugin:65 - create IPUIPlugin
-2020-08-27 21:28:16,797 DEBUG [LineInfo_to_exitCode.log_LineInfo] 2020-08-27 21:28:16,797 [INFO] IPUIPlugin:65 - create IPUIPlugin
-2020-08-27 21:28:16,797 DEBUG [LineInfo_to_exitCode.log_LineInfo] 2020-08-27 21:28:16,797 [INFO] IPUIPlugin:65 - create IPUIPlugin
-2020-08-27 21:28:16,797 DEBUG [LineInfo_to_exitCode.log_LineInfo] 2020-08-27 21:28:16,797 [INFO] IPUIPlugin:65 - create IPUIPlugin
-2020-08-27 21:28:16,797 DEBUG [LineInfo_to_exitCode.log_LineInfo] 2020-08-27 21:28:16,797 [INFO] IPUIPlugin:65 - create IPUIPlugin
-2020-08-27 21:28:16,797 DEBUG [LineInfo_to_exitCode.log_LineInfo] 2020-08-27 21:28:16,797 [INFO] IPUIPlugin:65 - create IPUIPlugin
-2020-08-27 21:28:16,798 DEBUG [LineInfo_to_exitCode.log_LineInfo] 2020-08-27 21:28:16,797 [INFO] IPUIPlugin:65 - create IPUIPlugin
-2020-08-27 21:28:16,798 DEBUG [LineInfo_to_exitCode.log_LineInfo] 2020-08-27 21:28:16,797 [INFO] IPUIPlugin:65 - create IPUIPlugin
-2020-08-27 21:28:16,798 DEBUG [LineInfo_to_exitCode.log_LineInfo] 2020-08-27 21:28:16,797 [INFO] IPUIPlugin:65 - create IPUIPlugin
-2020-08-27 21:28:16,798 DEBUG [LineInfo_to_exitCode.log_LineInfo] 2020-08-27 21:28:16,797 [INFO] IPUIPlugin:65 - create IPUIPlugin
-2020-08-27 21:28:16,798 DEBUG [LineInfo_to_exitCode.log_LineInfo] 2020-08-27 21:28:16,797 [INFO] IPUIPlugin:65 - create IPUIPlugin
-2020-08-27 21:28:16,798 DEBUG [LineInfo_to_exitCode.log_LineInfo] 2020-08-27 21:28:16,797 [INFO] IPUIPlugin:65 - create IPUIPlugin
-2020-08-27 21:28:16,798 DEBUG [LineInfo_to_exitCode.log_LineInfo] 2020-08-27 21:28:16,798 [INFO] IPUIPlugin:65 - create IPUIPlugin
-2020-08-27 21:28:16,798 DEBUG [LineInfo_to_exitCode.log_LineInfo] 2020-08-27 21:28:16,798 [INFO] IPUIPlugin:65 - create IPUIPlugin
-2020-08-27 21:28:16,802 DEBUG [LineInfo_to_exitCode.log_LineInfo] 2020-08-27 21:28:16,798 [INFO] IPUIPlugin:65 - create IPUIPlugin
-2020-08-27 21:28:16,802 DEBUG [LineInfo_to_exitCode.log_LineInfo] 2020-08-27 21:28:16,798 [INFO] IPUIPlugin:65 - create IPUIPlugin
-2020-08-27 21:28:16,802 DEBUG [LineInfo_to_exitCode.log_LineInfo] 2020-08-27 21:28:16,798 [INFO] IPUIPlugin:65 - create IPUIPlugin
-2020-08-27 21:28:16,802 DEBUG [LineInfo_to_exitCode.log_LineInfo] 2020-08-27 21:28:16,798 [INFO] IPUIPlugin:65 - create IPUIPlugin
-2020-08-27 21:28:16,802 DEBUG [LineInfo_to_exitCode.log_LineInfo] 2020-08-27 21:28:16,798 [INFO] IPUIPlugin:65 - create IPUIPlugin
-2020-08-27 21:28:16,802 DEBUG [LineInfo_to_exitCode.log_LineInfo] 2020-08-27 21:28:16,798 [INFO] IPUIPlugin:65 - create IPUIPlugin
-2020-08-27 21:28:16,802 DEBUG [LineInfo_to_exitCode.log_LineInfo] 2020-08-27 21:28:16,798 [INFO] IPUIPlugin:65 - create IPUIPlugin
-2020-08-27 21:28:16,802 DEBUG [LineInfo_to_exitCode.log_LineInfo] 2020-08-27 21:28:16,798 [INFO] IPUIPlugin:65 - create IPUIPlugin
-2020-08-27 21:28:16,802 DEBUG [LineInfo_to_exitCode.log_LineInfo] 2020-08-27 21:28:16,799 [INFO] IPUIPlugin:65 - create IPUIPlugin
-2020-08-27 21:28:16,803 DEBUG [LineInfo_to_exitCode.log_LineInfo] 2020-08-27 21:28:16,799 [INFO] IPUIPlugin:65 - create IPUIPlugin
-2020-08-27 21:28:16,803 DEBUG [LineInfo_to_exitCode.log_LineInfo] 2020-08-27 21:28:16,799 [INFO] IPUIPlugin:65 - create IPUIPlugin
-2020-08-27 21:28:16,803 DEBUG [LineInfo_to_exitCode.log_LineInfo] 2020-08-27 21:28:16,799 [INFO] IPUIPlugin:65 - create IPUIPlugin
-2020-08-27 21:28:16,803 DEBUG [LineInfo_to_exitCode.log_LineInfo] 2020-08-27 21:28:16,799 [INFO] IPUIPlugin:65 - create IPUIPlugin
-2020-08-27 21:28:16,803 DEBUG [LineInfo_to_exitCode.log_LineInfo] 2020-08-27 21:28:16,799 [INFO] IPUIPlugin:65 - create IPUIPlugin
-2020-08-27 21:28:16,803 DEBUG [LineInfo_to_exitCode.log_LineInfo] 2020-08-27 21:28:16,799 [INFO] IPUIPlugin:65 - create IPUIPlugin
-2020-08-27 21:28:16,803 DEBUG [LineInfo_to_exitCode.log_LineInfo] 2020-08-27 21:28:16,800 [INFO] IPUIPlugin:65 - create IPUIPlugin
-2020-08-27 21:28:16,803 DEBUG [LineInfo_to_exitCode.log_LineInfo] 2020-08-27 21:28:16,800 [INFO] IPUIPlugin:65 - create IPUIPlugin
-2020-08-27 21:28:16,803 DEBUG [LineInfo_to_exitCode.log_LineInfo] 2020-08-27 21:28:16,800 [INFO] IPUIPlugin:65 - create IPUIPlugin
-2020-08-27 21:28:16,803 DEBUG [LineInfo_to_exitCode.log_LineInfo] 2020-08-27 21:28:16,800 [INFO] IPUIPlugin:65 - create IPUIPlugin
-2020-08-27 21:28:16,804 DEBUG [LineInfo_to_exitCode.log_LineInfo] 2020-08-27 21:28:16,800 [INFO] IPUIPlugin:65 - create IPUIPlugin
-2020-08-27 21:28:16,804 DEBUG [LineInfo_to_exitCode.log_LineInfo] 2020-08-27 21:28:16,800 [INFO] IPUIPlugin:65 - create IPUIPlugin
-2020-08-27 21:28:16,804 DEBUG [LineInfo_to_exitCode.log_LineInfo] 2020-08-27 21:28:16,800 [INFO] IPUIPlugin:65 - create IPUIPlugin
-2020-08-27 21:28:16,804 DEBUG [LineInfo_to_exitCode.log_LineInfo] 2020-08-27 21:28:16,800 [INFO] IPUIPlugin:65 - create IPUIPlugin
-2020-08-27 21:28:16,804 DEBUG [LineInfo_to_exitCode.log_LineInfo] 2020-08-27 21:28:16,801 [INFO] IPUIPlugin:65 - create IPUIPlugin
-2020-08-27 21:28:16,804 DEBUG [LineInfo_to_exitCode.log_LineInfo] 2020-08-27 21:28:16,801 [INFO] IPUIPlugin:65 - create IPUIPlugin
-2020-08-27 21:28:16,804 DEBUG [LineInfo_to_exitCode.log_LineInfo] 2020-08-27 21:28:16,801 [INFO] IPUIPlugin:65 - create IPUIPlugin
-2020-08-27 21:28:16,804 DEBUG [LineInfo_to_exitCode.log_LineInfo] 2020-08-27 21:28:16,801 [INFO] IPUIPlugin:65 - create IPUIPlugin
-2020-08-27 21:28:16,804 DEBUG [LineInfo_to_exitCode.log_LineInfo] 2020-08-27 21:28:16,801 [INFO] IPUIPlugin:65 - create IPUIPlugin
-2020-08-27 21:28:16,804 DEBUG [LineInfo_to_exitCode.log_LineInfo] 2020-08-27 21:28:16,801 [INFO] IPUIPlugin:65 - create IPUIPlugin
-2020-08-27 21:28:16,805 DEBUG [LineInfo_to_exitCode.log_LineInfo] 2020-08-27 21:28:16,801 [INFO] IPUIPlugin:65 - create IPUIPlugin
-2020-08-27 21:28:16,805 DEBUG [LineInfo_to_exitCode.log_LineInfo] 2020-08-27 21:28:16,801 [INFO] IPUIPlugin:65 - create IPUIPlugin
-2020-08-27 21:28:16,805 DEBUG [LineInfo_to_exitCode.log_LineInfo] 2020-08-27 21:28:16,801 [INFO] IPUIPlugin:65 - create IPUIPlugin
-2020-08-27 21:28:16,805 DEBUG [LineInfo_to_exitCode.log_LineInfo] 2020-08-27 21:28:16,801 [INFO] IPUIPlugin:65 - create IPUIPlugin
-2020-08-27 21:28:16,805 DEBUG [LineInfo_to_exitCode.log_LineInfo] 2020-08-27 21:28:16,801 [INFO] IPUIPlugin:65 - create IPUIPlugin
-2020-08-27 21:28:16,821 DEBUG [LineInfo_to_exitCode.log_LineInfo] 2020-08-27 21:28:16,820 [INFO] Can:56 - Can Add PropertyChangeListener com.st.microxplorer.plugins.ip.can.Can@57902c26
-2020-08-27 21:28:16,994 DEBUG [LineInfo_to_exitCode.log_LineInfo] 2020-08-27 21:28:16,994 [INFO] OpenFileManager:294 - Restore cursor
-2020-08-27 21:28:17,417 DEBUG [LineInfo_to_exitCode.log_LineInfo] 2020-08-27 21:28:17,417 [INFO] UtilMem:74 - End SaveConfig() Used Memory: 1396297040 Bytes (1539833856)
-2020-08-27 21:28:17,750 DEBUG [LineInfo_to_exitCode.log_LineInfo] 2020-08-27 21:28:17,750 [INFO] BlockDiagram:2671 - set Specific Code input for plugin: SPI
-2020-08-27 21:28:17,750 DEBUG [LineInfo_to_exitCode.log_LineInfo] 2020-08-27 21:28:17,750 [INFO] BlockDiagram:2671 - set Specific Code input for plugin: MotorControl
-2020-08-27 21:28:17,750 DEBUG [LineInfo_to_exitCode.log_LineInfo] 2020-08-27 21:28:17,750 [INFO] BlockDiagram:2671 - set Specific Code input for plugin: TIM1_8F3
-2020-08-27 21:28:17,750 DEBUG [LineInfo_to_exitCode.log_LineInfo] 2020-08-27 21:28:17,750 [INFO] BlockDiagram:2671 - set Specific Code input for plugin: TIM1_8F3
-2020-08-27 21:28:17,750 DEBUG [LineInfo_to_exitCode.log_LineInfo] 2020-08-27 21:28:17,750 [INFO] BlockDiagram:2671 - set Specific Code input for plugin: SYS
-2020-08-27 21:28:17,750 DEBUG [LineInfo_to_exitCode.log_LineInfo] 2020-08-27 21:28:17,750 [INFO] BlockDiagram:2671 - set Specific Code input for plugin: ADC
-2020-08-27 21:28:17,750 DEBUG [LineInfo_to_exitCode.log_LineInfo] 2020-08-27 21:28:17,750 [INFO] BlockDiagram:2671 - set Specific Code input for plugin: ADC
-2020-08-27 21:28:17,750 DEBUG [LineInfo_to_exitCode.log_LineInfo] 2020-08-27 21:28:17,750 [INFO] BlockDiagram:2671 - set Specific Code input for plugin: CAN
-2020-08-27 21:28:17,750 DEBUG [LineInfo_to_exitCode.log_LineInfo] 2020-08-27 21:28:17,750 [INFO] BlockDiagram:2671 - set Specific Code input for plugin: RCC
-2020-08-27 21:28:17,751 DEBUG [LineInfo_to_exitCode.log_LineInfo] 2020-08-27 21:28:17,750 [INFO] BlockDiagram:2671 - set Specific Code input for plugin: NVIC
-2020-08-27 21:28:17,751 DEBUG [LineInfo_to_exitCode.log_LineInfo] 2020-08-27 21:28:17,750 [INFO] BlockDiagram:2671 - set Specific Code input for plugin: COMP
-2020-08-27 21:28:17,751 DEBUG [LineInfo_to_exitCode.log_LineInfo] 2020-08-27 21:28:17,750 [INFO] BlockDiagram:2671 - set Specific Code input for plugin: USART
-2020-08-27 21:28:17,751 DEBUG [LineInfo_to_exitCode.log_LineInfo] 2020-08-27 21:28:17,750 [INFO] BlockDiagram:2671 - set Specific Code input for plugin: COMP
-2020-08-27 21:28:17,751 DEBUG [LineInfo_to_exitCode.log_LineInfo] 2020-08-27 21:28:17,750 [INFO] BlockDiagram:2671 - set Specific Code input for plugin: COMP
-2020-08-27 21:28:17,751 DEBUG [LineInfo_to_exitCode.log_LineInfo] 2020-08-27 21:28:17,750 [INFO] BlockDiagram:2671 - set Specific Code input for plugin: DAC
-2020-08-27 21:28:17,751 DEBUG [LineInfo_to_exitCode.log_LineInfo] 2020-08-27 21:28:17,751 [INFO] BlockDiagram:2671 - set Specific Code input for plugin: GPIO
-2020-08-27 21:28:17,752 DEBUG [LineInfo_to_exitCode.log_LineInfo] 2020-08-27 21:28:17,752 [INFO] CodeGenerator:603 - code generatio: config db path: C:\Program Files\STMicroelectronics\STM32Cube\STM32CubeMX\\db\
-2020-08-27 21:28:17,927 DEBUG [LineInfo_to_exitCode.log_LineInfo] 2020-08-27 21:28:17,927 [INFO] CodeEngine:188 - oldGeneratedFile, C:\Users\esamp\Documents\SinESC\Wing Edition\SinESC_Wing_1.0A\SinESC_Wing_1.0A\MXTmpFiles\license.tmp_save
-2020-08-27 21:28:18,074 DEBUG [LineInfo_to_exitCode.log_LineInfo] 2020-08-27 21:28:18,073 [INFO] CodeEngine:206 - Generated code: C:\Users\esamp\Documents\SinESC\Wing Edition\SinESC_Wing_1.0A\SinESC_Wing_1.0A\MXTmpFiles\license.tmp
-2020-08-27 21:28:18,151 DEBUG [LineInfo_to_exitCode.log_LineInfo] 2020-08-27 21:28:18,151 [INFO] CodeEngine:188 - oldGeneratedFile, C:\Users\esamp\Documents\SinESC\Wing Edition\SinESC_Wing_1.0A\SinESC_Wing_1.0A\MXTmpFiles\gpio.tmp_save
-2020-08-27 21:28:18,213 DEBUG [LineInfo_to_exitCode.log_LineInfo] 2020-08-27 21:28:18,212 [INFO] CodeEngine:206 - Generated code: C:\Users\esamp\Documents\SinESC\Wing Edition\SinESC_Wing_1.0A\SinESC_Wing_1.0A\MXTmpFiles\gpio.tmp
-2020-08-27 21:28:18,755 DEBUG [LineInfo_to_exitCode.log_LineInfo] 2020-08-27 21:28:18,755 [INFO] ApiDbMcu:451 - Load IP Config File for MotorControl
-2020-08-27 21:28:18,776 DEBUG [LineInfo_to_exitCode.log_LineInfo] 2020-08-27 21:28:18,776 [INFO] Middleware:1103 - No code input for Bsp Dependency
-2020-08-27 21:28:18,800 DEBUG [LineInfo_to_exitCode.log_LineInfo] 2020-08-27 21:28:18,800 [INFO] CodeEngine:188 - oldGeneratedFile, C:\Users\esamp\Documents\SinESC\Wing Edition\SinESC_Wing_1.0A\SinESC_Wing_1.0A\Src\motorcontrol.c_save
-2020-08-27 21:28:18,842 INFO  [LineInfo_to_exitCode.log_LineInfo] Generated code: C:\Users\esamp\Documents\SinESC\Wing Edition\SinESC_Wing_1.0A\SinESC_Wing_1.0A\Src\motorcontrol.c
-2020-08-27 21:28:18,846 DEBUG [LineInfo_to_exitCode.log_LineInfo] 2020-08-27 21:28:18,846 [INFO] CodeEngine:188 - oldGeneratedFile, C:\Users\esamp\Documents\SinESC\Wing Edition\SinESC_Wing_1.0A\SinESC_Wing_1.0A\Inc\motorcontrol.h_save
-2020-08-27 21:28:18,888 INFO  [LineInfo_to_exitCode.log_LineInfo] Generated code: C:\Users\esamp\Documents\SinESC\Wing Edition\SinESC_Wing_1.0A\SinESC_Wing_1.0A\Inc\motorcontrol.h
-2020-08-27 21:28:18,895 DEBUG [LineInfo_to_exitCode.log_LineInfo] 2020-08-27 21:28:18,895 [INFO] CodeEngine:188 - oldGeneratedFile, C:\Users\esamp\Documents\SinESC\Wing Edition\SinESC_Wing_1.0A\SinESC_Wing_1.0A\Inc\drive_parameters.h_save
-2020-08-27 21:28:18,944 INFO  [LineInfo_to_exitCode.log_LineInfo] Generated code: C:\Users\esamp\Documents\SinESC\Wing Edition\SinESC_Wing_1.0A\SinESC_Wing_1.0A\Inc\drive_parameters.h
-2020-08-27 21:28:18,948 DEBUG [LineInfo_to_exitCode.log_LineInfo] 2020-08-27 21:28:18,948 [INFO] CodeEngine:188 - oldGeneratedFile, C:\Users\esamp\Documents\SinESC\Wing Edition\SinESC_Wing_1.0A\SinESC_Wing_1.0A\Inc\mc_tasks.h_save
-2020-08-27 21:28:18,986 INFO  [LineInfo_to_exitCode.log_LineInfo] Generated code: C:\Users\esamp\Documents\SinESC\Wing Edition\SinESC_Wing_1.0A\SinESC_Wing_1.0A\Inc\mc_tasks.h
-2020-08-27 21:28:18,991 DEBUG [LineInfo_to_exitCode.log_LineInfo] 2020-08-27 21:28:18,990 [INFO] CodeEngine:188 - oldGeneratedFile, C:\Users\esamp\Documents\SinESC\Wing Edition\SinESC_Wing_1.0A\SinESC_Wing_1.0A\Src\mc_api.c_save
-2020-08-27 21:28:19,036 INFO  [LineInfo_to_exitCode.log_LineInfo] Generated code: C:\Users\esamp\Documents\SinESC\Wing Edition\SinESC_Wing_1.0A\SinESC_Wing_1.0A\Src\mc_api.c
-2020-08-27 21:28:19,041 DEBUG [LineInfo_to_exitCode.log_LineInfo] 2020-08-27 21:28:19,041 [INFO] CodeEngine:188 - oldGeneratedFile, C:\Users\esamp\Documents\SinESC\Wing Edition\SinESC_Wing_1.0A\SinESC_Wing_1.0A\Src\motor_control_protocol.c_save
-2020-08-27 21:28:19,081 INFO  [LineInfo_to_exitCode.log_LineInfo] Generated code: C:\Users\esamp\Documents\SinESC\Wing Edition\SinESC_Wing_1.0A\SinESC_Wing_1.0A\Src\motor_control_protocol.c
-2020-08-27 21:28:19,085 DEBUG [LineInfo_to_exitCode.log_LineInfo] 2020-08-27 21:28:19,085 [INFO] CodeEngine:188 - oldGeneratedFile, C:\Users\esamp\Documents\SinESC\Wing Edition\SinESC_Wing_1.0A\SinESC_Wing_1.0A\Inc\motor_control_protocol.h_save
-2020-08-27 21:28:19,123 INFO  [LineInfo_to_exitCode.log_LineInfo] Generated code: C:\Users\esamp\Documents\SinESC\Wing Edition\SinESC_Wing_1.0A\SinESC_Wing_1.0A\Inc\motor_control_protocol.h
-2020-08-27 21:28:19,127 DEBUG [LineInfo_to_exitCode.log_LineInfo] 2020-08-27 21:28:19,127 [INFO] CodeEngine:188 - oldGeneratedFile, C:\Users\esamp\Documents\SinESC\Wing Edition\SinESC_Wing_1.0A\SinESC_Wing_1.0A\Inc\mc_api.h_save
-2020-08-27 21:28:19,165 INFO  [LineInfo_to_exitCode.log_LineInfo] Generated code: C:\Users\esamp\Documents\SinESC\Wing Edition\SinESC_Wing_1.0A\SinESC_Wing_1.0A\Inc\mc_api.h
-2020-08-27 21:28:19,170 DEBUG [LineInfo_to_exitCode.log_LineInfo] 2020-08-27 21:28:19,170 [INFO] CodeEngine:188 - oldGeneratedFile, C:\Users\esamp\Documents\SinESC\Wing Edition\SinESC_Wing_1.0A\SinESC_Wing_1.0A\Src\mc_config.c_save
-2020-08-27 21:28:19,229 INFO  [LineInfo_to_exitCode.log_LineInfo] Generated code: C:\Users\esamp\Documents\SinESC\Wing Edition\SinESC_Wing_1.0A\SinESC_Wing_1.0A\Src\mc_config.c
-2020-08-27 21:28:19,234 DEBUG [LineInfo_to_exitCode.log_LineInfo] 2020-08-27 21:28:19,234 [INFO] CodeEngine:188 - oldGeneratedFile, C:\Users\esamp\Documents\SinESC\Wing Edition\SinESC_Wing_1.0A\SinESC_Wing_1.0A\Inc\mc_config.h_save
-2020-08-27 21:28:19,282 INFO  [LineInfo_to_exitCode.log_LineInfo] Generated code: C:\Users\esamp\Documents\SinESC\Wing Edition\SinESC_Wing_1.0A\SinESC_Wing_1.0A\Inc\mc_config.h
-2020-08-27 21:28:19,286 DEBUG [LineInfo_to_exitCode.log_LineInfo] 2020-08-27 21:28:19,286 [INFO] CodeEngine:188 - oldGeneratedFile, C:\Users\esamp\Documents\SinESC\Wing Edition\SinESC_Wing_1.0A\SinESC_Wing_1.0A\Inc\mc_stm_types.h_save
-2020-08-27 21:28:19,322 INFO  [LineInfo_to_exitCode.log_LineInfo] Generated code: C:\Users\esamp\Documents\SinESC\Wing Edition\SinESC_Wing_1.0A\SinESC_Wing_1.0A\Inc\mc_stm_types.h
-2020-08-27 21:28:19,328 DEBUG [LineInfo_to_exitCode.log_LineInfo] 2020-08-27 21:28:19,328 [INFO] CodeEngine:188 - oldGeneratedFile, C:\Users\esamp\Documents\SinESC\Wing Edition\SinESC_Wing_1.0A\SinESC_Wing_1.0A\Src\mc_tasks.c_save
-2020-08-27 21:28:19,430 INFO  [LineInfo_to_exitCode.log_LineInfo] Generated code: C:\Users\esamp\Documents\SinESC\Wing Edition\SinESC_Wing_1.0A\SinESC_Wing_1.0A\Src\mc_tasks.c
-2020-08-27 21:28:19,434 DEBUG [LineInfo_to_exitCode.log_LineInfo] 2020-08-27 21:28:19,434 [INFO] CodeEngine:188 - oldGeneratedFile, C:\Users\esamp\Documents\SinESC\Wing Edition\SinESC_Wing_1.0A\SinESC_Wing_1.0A\Src\regular_conversion_manager.c_save
-2020-08-27 21:28:19,471 INFO  [LineInfo_to_exitCode.log_LineInfo] Generated code: C:\Users\esamp\Documents\SinESC\Wing Edition\SinESC_Wing_1.0A\SinESC_Wing_1.0A\Src\regular_conversion_manager.c
-2020-08-27 21:28:19,475 DEBUG [LineInfo_to_exitCode.log_LineInfo] 2020-08-27 21:28:19,475 [INFO] CodeEngine:188 - oldGeneratedFile, C:\Users\esamp\Documents\SinESC\Wing Edition\SinESC_Wing_1.0A\SinESC_Wing_1.0A\Inc\regular_conversion_manager.h_save
-2020-08-27 21:28:19,506 INFO  [LineInfo_to_exitCode.log_LineInfo] Generated code: C:\Users\esamp\Documents\SinESC\Wing Edition\SinESC_Wing_1.0A\SinESC_Wing_1.0A\Inc\regular_conversion_manager.h
-2020-08-27 21:28:19,510 DEBUG [LineInfo_to_exitCode.log_LineInfo] 2020-08-27 21:28:19,510 [INFO] CodeEngine:188 - oldGeneratedFile, C:\Users\esamp\Documents\SinESC\Wing Edition\SinESC_Wing_1.0A\SinESC_Wing_1.0A\Src\mc_math.c_save
-2020-08-27 21:28:19,547 INFO  [LineInfo_to_exitCode.log_LineInfo] Generated code: C:\Users\esamp\Documents\SinESC\Wing Edition\SinESC_Wing_1.0A\SinESC_Wing_1.0A\Src\mc_math.c
-2020-08-27 21:28:19,551 DEBUG [LineInfo_to_exitCode.log_LineInfo] 2020-08-27 21:28:19,550 [INFO] CodeEngine:188 - oldGeneratedFile, C:\Users\esamp\Documents\SinESC\Wing Edition\SinESC_Wing_1.0A\SinESC_Wing_1.0A\Inc\mc_math.h_save
-2020-08-27 21:28:19,583 INFO  [LineInfo_to_exitCode.log_LineInfo] Generated code: C:\Users\esamp\Documents\SinESC\Wing Edition\SinESC_Wing_1.0A\SinESC_Wing_1.0A\Inc\mc_math.h
-2020-08-27 21:28:19,587 DEBUG [LineInfo_to_exitCode.log_LineInfo] 2020-08-27 21:28:19,587 [INFO] CodeEngine:188 - oldGeneratedFile, C:\Users\esamp\Documents\SinESC\Wing Edition\SinESC_Wing_1.0A\SinESC_Wing_1.0A\Src\mc_interface.c_save
-2020-08-27 21:28:19,628 INFO  [LineInfo_to_exitCode.log_LineInfo] Generated code: C:\Users\esamp\Documents\SinESC\Wing Edition\SinESC_Wing_1.0A\SinESC_Wing_1.0A\Src\mc_interface.c
-2020-08-27 21:28:19,632 DEBUG [LineInfo_to_exitCode.log_LineInfo] 2020-08-27 21:28:19,632 [INFO] CodeEngine:188 - oldGeneratedFile, C:\Users\esamp\Documents\SinESC\Wing Edition\SinESC_Wing_1.0A\SinESC_Wing_1.0A\Inc\mc_interface.h_save
-2020-08-27 21:28:19,663 INFO  [LineInfo_to_exitCode.log_LineInfo] Generated code: C:\Users\esamp\Documents\SinESC\Wing Edition\SinESC_Wing_1.0A\SinESC_Wing_1.0A\Inc\mc_interface.h
-2020-08-27 21:28:19,667 DEBUG [LineInfo_to_exitCode.log_LineInfo] 2020-08-27 21:28:19,667 [INFO] CodeEngine:188 - oldGeneratedFile, C:\Users\esamp\Documents\SinESC\Wing Edition\SinESC_Wing_1.0A\SinESC_Wing_1.0A\Inc\parameters_conversion.h_save
-2020-08-27 21:28:19,711 INFO  [LineInfo_to_exitCode.log_LineInfo] Generated code: C:\Users\esamp\Documents\SinESC\Wing Edition\SinESC_Wing_1.0A\SinESC_Wing_1.0A\Inc\parameters_conversion.h
-2020-08-27 21:28:19,714 DEBUG [LineInfo_to_exitCode.log_LineInfo] 2020-08-27 21:28:19,714 [INFO] CodeEngine:188 - oldGeneratedFile, C:\Users\esamp\Documents\SinESC\Wing Edition\SinESC_Wing_1.0A\SinESC_Wing_1.0A\Inc\parameters_conversion_f30x.h_save
-2020-08-27 21:28:19,754 INFO  [LineInfo_to_exitCode.log_LineInfo] Generated code: C:\Users\esamp\Documents\SinESC\Wing Edition\SinESC_Wing_1.0A\SinESC_Wing_1.0A\Inc\parameters_conversion_f30x.h
-2020-08-27 21:28:19,758 DEBUG [LineInfo_to_exitCode.log_LineInfo] 2020-08-27 21:28:19,757 [INFO] CodeEngine:188 - oldGeneratedFile, C:\Users\esamp\Documents\SinESC\Wing Edition\SinESC_Wing_1.0A\SinESC_Wing_1.0A\Inc\pmsm_motor_parameters.h_save
-2020-08-27 21:28:19,789 INFO  [LineInfo_to_exitCode.log_LineInfo] Generated code: C:\Users\esamp\Documents\SinESC\Wing Edition\SinESC_Wing_1.0A\SinESC_Wing_1.0A\Inc\pmsm_motor_parameters.h
-2020-08-27 21:28:19,793 DEBUG [LineInfo_to_exitCode.log_LineInfo] 2020-08-27 21:28:19,793 [INFO] CodeEngine:188 - oldGeneratedFile, C:\Users\esamp\Documents\SinESC\Wing Edition\SinESC_Wing_1.0A\SinESC_Wing_1.0A\Inc\power_stage_parameters.h_save
-2020-08-27 21:28:19,826 INFO  [LineInfo_to_exitCode.log_LineInfo] Generated code: C:\Users\esamp\Documents\SinESC\Wing Edition\SinESC_Wing_1.0A\SinESC_Wing_1.0A\Inc\power_stage_parameters.h
-2020-08-27 21:28:19,830 DEBUG [LineInfo_to_exitCode.log_LineInfo] 2020-08-27 21:28:19,830 [INFO] CodeEngine:188 - oldGeneratedFile, C:\Users\esamp\Documents\SinESC\Wing Edition\SinESC_Wing_1.0A\SinESC_Wing_1.0A\Src\stm32f30x_mc_it.c_save
-2020-08-27 21:28:19,875 INFO  [LineInfo_to_exitCode.log_LineInfo] Generated code: C:\Users\esamp\Documents\SinESC\Wing Edition\SinESC_Wing_1.0A\SinESC_Wing_1.0A\Src\stm32f30x_mc_it.c
-2020-08-27 21:28:19,878 DEBUG [LineInfo_to_exitCode.log_LineInfo] 2020-08-27 21:28:19,878 [INFO] CodeEngine:188 - oldGeneratedFile, C:\Users\esamp\Documents\SinESC\Wing Edition\SinESC_Wing_1.0A\SinESC_Wing_1.0A\Inc\mc_parameters.h_save
-2020-08-27 21:28:19,913 INFO  [LineInfo_to_exitCode.log_LineInfo] Generated code: C:\Users\esamp\Documents\SinESC\Wing Edition\SinESC_Wing_1.0A\SinESC_Wing_1.0A\Inc\mc_parameters.h
-2020-08-27 21:28:19,919 DEBUG [LineInfo_to_exitCode.log_LineInfo] 2020-08-27 21:28:19,918 [INFO] CodeEngine:188 - oldGeneratedFile, C:\Users\esamp\Documents\SinESC\Wing Edition\SinESC_Wing_1.0A\SinESC_Wing_1.0A\Src\mc_parameters.c_save
-2020-08-27 21:28:19,982 INFO  [LineInfo_to_exitCode.log_LineInfo] Generated code: C:\Users\esamp\Documents\SinESC\Wing Edition\SinESC_Wing_1.0A\SinESC_Wing_1.0A\Src\mc_parameters.c
-2020-08-27 21:28:19,986 DEBUG [LineInfo_to_exitCode.log_LineInfo] 2020-08-27 21:28:19,986 [INFO] CodeEngine:188 - oldGeneratedFile, C:\Users\esamp\Documents\SinESC\Wing Edition\SinESC_Wing_1.0A\SinESC_Wing_1.0A\Src\ui_task.c_save
-2020-08-27 21:28:20,021 INFO  [LineInfo_to_exitCode.log_LineInfo] Generated code: C:\Users\esamp\Documents\SinESC\Wing Edition\SinESC_Wing_1.0A\SinESC_Wing_1.0A\Src\ui_task.c
-2020-08-27 21:28:20,024 DEBUG [LineInfo_to_exitCode.log_LineInfo] 2020-08-27 21:28:20,024 [INFO] CodeEngine:188 - oldGeneratedFile, C:\Users\esamp\Documents\SinESC\Wing Edition\SinESC_Wing_1.0A\SinESC_Wing_1.0A\Inc\ui_task.h_save
-2020-08-27 21:28:20,056 INFO  [LineInfo_to_exitCode.log_LineInfo] Generated code: C:\Users\esamp\Documents\SinESC\Wing Edition\SinESC_Wing_1.0A\SinESC_Wing_1.0A\Inc\ui_task.h
-2020-08-27 21:28:20,061 DEBUG [LineInfo_to_exitCode.log_LineInfo] 2020-08-27 21:28:20,061 [INFO] CodeEngine:188 - oldGeneratedFile, C:\Users\esamp\Documents\SinESC\Wing Edition\SinESC_Wing_1.0A\SinESC_Wing_1.0A\Src\user_interface.c_save
-2020-08-27 21:28:20,109 INFO  [LineInfo_to_exitCode.log_LineInfo] Generated code: C:\Users\esamp\Documents\SinESC\Wing Edition\SinESC_Wing_1.0A\SinESC_Wing_1.0A\Src\user_interface.c
-2020-08-27 21:28:20,113 DEBUG [LineInfo_to_exitCode.log_LineInfo] 2020-08-27 21:28:20,113 [INFO] CodeEngine:188 - oldGeneratedFile, C:\Users\esamp\Documents\SinESC\Wing Edition\SinESC_Wing_1.0A\SinESC_Wing_1.0A\Inc\user_interface.h_save
-2020-08-27 21:28:20,150 INFO  [LineInfo_to_exitCode.log_LineInfo] Generated code: C:\Users\esamp\Documents\SinESC\Wing Edition\SinESC_Wing_1.0A\SinESC_Wing_1.0A\Inc\user_interface.h
-2020-08-27 21:28:20,157 DEBUG [LineInfo_to_exitCode.log_LineInfo] 2020-08-27 21:28:20,157 [INFO] CodeEngine:188 - oldGeneratedFile, C:\Users\esamp\Documents\SinESC\Wing Edition\SinESC_Wing_1.0A\SinESC_Wing_1.0A\Src\stm32f3xx_it.c_save
-2020-08-27 21:28:20,204 INFO  [LineInfo_to_exitCode.log_LineInfo] Generated code: C:\Users\esamp\Documents\SinESC\Wing Edition\SinESC_Wing_1.0A\SinESC_Wing_1.0A\Src\stm32f3xx_it.c
-2020-08-27 21:28:20,209 DEBUG [LineInfo_to_exitCode.log_LineInfo] 2020-08-27 21:28:20,208 [INFO] CodeEngine:188 - oldGeneratedFile, C:\Users\esamp\Documents\SinESC\Wing Edition\SinESC_Wing_1.0A\SinESC_Wing_1.0A\Inc\stm32f3xx_it.h_save
-2020-08-27 21:28:20,246 INFO  [LineInfo_to_exitCode.log_LineInfo] Generated code: C:\Users\esamp\Documents\SinESC\Wing Edition\SinESC_Wing_1.0A\SinESC_Wing_1.0A\Inc\stm32f3xx_it.h
-2020-08-27 21:28:20,252 DEBUG [LineInfo_to_exitCode.log_LineInfo] 2020-08-27 21:28:20,252 [INFO] CodeEngine:188 - oldGeneratedFile, C:\Users\esamp\Documents\SinESC\Wing Edition\SinESC_Wing_1.0A\SinESC_Wing_1.0A\Src\stm32f3xx_hal_msp.c_save
-2020-08-27 21:28:20,350 INFO  [LineInfo_to_exitCode.log_LineInfo] Generated code: C:\Users\esamp\Documents\SinESC\Wing Edition\SinESC_Wing_1.0A\SinESC_Wing_1.0A\Src\stm32f3xx_hal_msp.c
-2020-08-27 21:28:20,364 DEBUG [LineInfo_to_exitCode.log_LineInfo] 2020-08-27 21:28:20,364 [INFO] CodeEngine:188 - oldGeneratedFile, C:\Users\esamp\Documents\SinESC\Wing Edition\SinESC_Wing_1.0A\SinESC_Wing_1.0A\MXTmpFiles\system.tmp_save
-2020-08-27 21:28:20,394 DEBUG [LineInfo_to_exitCode.log_LineInfo] 2020-08-27 21:28:20,394 [INFO] CodeEngine:206 - Generated code: C:\Users\esamp\Documents\SinESC\Wing Edition\SinESC_Wing_1.0A\SinESC_Wing_1.0A\MXTmpFiles\system.tmp
-2020-08-27 21:28:20,398 DEBUG [LineInfo_to_exitCode.log_LineInfo] 2020-08-27 21:28:20,398 [INFO] CodeEngine:188 - oldGeneratedFile, C:\Users\esamp\Documents\SinESC\Wing Edition\SinESC_Wing_1.0A\SinESC_Wing_1.0A\Inc\stm32f3xx_hal_conf.h_save
-2020-08-27 21:28:20,435 INFO  [LineInfo_to_exitCode.log_LineInfo] Generated code: C:\Users\esamp\Documents\SinESC\Wing Edition\SinESC_Wing_1.0A\SinESC_Wing_1.0A\Inc\stm32f3xx_hal_conf.h
-2020-08-27 21:28:20,452 DEBUG [LineInfo_to_exitCode.log_LineInfo] 2020-08-27 21:28:20,452 [INFO] CodeEngine:188 - oldGeneratedFile, C:\Users\esamp\Documents\SinESC\Wing Edition\SinESC_Wing_1.0A\SinESC_Wing_1.0A\Inc\main.h_save
-2020-08-27 21:28:20,490 INFO  [LineInfo_to_exitCode.log_LineInfo] Generated code: C:\Users\esamp\Documents\SinESC\Wing Edition\SinESC_Wing_1.0A\SinESC_Wing_1.0A\Inc\main.h
-2020-08-27 21:28:20,494 DEBUG [LineInfo_to_exitCode.log_LineInfo] 2020-08-27 21:28:20,494 [INFO] CodeEngine:188 - oldGeneratedFile, C:\Users\esamp\Documents\SinESC\Wing Edition\SinESC_Wing_1.0A\SinESC_Wing_1.0A\Src\main.c_save
-2020-08-27 21:28:20,589 INFO  [LineInfo_to_exitCode.log_LineInfo] Generated code: C:\Users\esamp\Documents\SinESC\Wing Edition\SinESC_Wing_1.0A\SinESC_Wing_1.0A\Src\main.c
-2020-08-27 21:28:20,833 DEBUG [LineInfo_to_exitCode.log_LineInfo] 2020-08-27 21:28:20,833 [INFO] ProjectBuilder:2002 - Time for Copy HAL[0] : 34mS.
-2020-08-27 21:28:20,837 DEBUG [LineInfo_to_exitCode.log_LineInfo] 2020-08-27 21:28:20,837 [INFO] ProjectBuilder:2727 - Project Generator version: 3.7.1
-2020-08-27 21:28:20,953 DEBUG [LineInfo_to_exitCode.log_LineInfo] 2020-08-27 21:28:20,953 [INFO] ConfigFileManager:1066 - The Die is : DIE422
-2020-08-27 21:28:24,376 DEBUG [LineInfo_to_exitCode.log_LineInfo] 2020-08-27 21:28:24,376 [INFO] ConfigFileManager:1883 - mx.scratch is deleted!
-2020-08-27 21:28:24,376 DEBUG [LineInfo_to_exitCode.log_LineInfo] 2020-08-27 21:28:24,376 [INFO] ProjectBuilder:2894 - Time for Generating toolchain IDE Files: 3539mS.
-2020-08-27 21:28:24,663 DEBUG [LineInfo_to_exitCode.log_LineInfo] 2020-08-27 21:28:24,663 [INFO] ProjectBuilder:1878 - Time for Copy CMSIS : 287mS.
-2020-08-27 21:28:24,946 DEBUG [LineInfo_to_exitCode.log_LineInfo] 2020-08-27 21:28:24,946 [INFO] ProjectBuilder:1878 - Time for Copy CMSIS : 281mS.
-2020-08-27 21:28:44,236 DEBUG [CubeMxCtx.EXE_version] Loaded path: 'C:\Program Files\STMicroelectronics\STM32Cube\STM32CubeMX\STM32CubeMX.exe'
-2020-08-27 21:28:44,236 DEBUG [CubeMxCtx.EXE_version] Loaded updater jar: 'C:\Program Files\STMicroelectronics\STM32Cube\STM32CubeMX\plugins\updater.jar'
-2020-08-27 21:28:45,197 INFO  [Main.lambda$run$0] Code generation completed
-2020-08-27 21:28:45,197 DEBUG [Main.lambda$run$0] System exists with return code 0
+2020-12-30 01:15:23,657 DEBUG [Main.lambda$run$0] Arguments: [-ioc, C:\Users\esamp\Documents\SinESC\Wing Edition\SinESC_Wing_1.0A\SinESC_Wing_1.0A\SinESC_Wing_1.0A.ioc, -xdm, C:\Users\esamp\Documents\SinESC\Wing Edition\SinESC_Wing_1.0A\SinESC_Wing_1.0A\SinESC_Wing_1.0A.wb_def]
+2020-12-30 01:15:23,661 DEBUG [ArgsValue.readPropertiesFile] [AppConfig] pack.source = "C:\Program Files (x86)\STMicroelectronics\MC_SDK_5.4.4\Middlewares\ST\MotorControl" 
+2020-12-30 01:15:23,662 DEBUG [ArgsValue.readPropertiesFile] [UserConfig] do not exist in "C:\Users\esamp\.st_motor_control\wb2mx.properties" 
+2020-12-30 01:15:23,662 DEBUG [ArgsValue.getConfigProperties] pack.source = "../../../../Middlewares/ST/MotorControl"
+2020-12-30 01:15:23,670 DEBUG [ArgsValue.lambda$retrieve$2] CLI_ARG[xdm]: C:\Users\esamp\Documents\SinESC\Wing Edition\SinESC_Wing_1.0A\SinESC_Wing_1.0A\SinESC_Wing_1.0A.wb_def
+2020-12-30 01:15:23,670 DEBUG [ArgsValue.lambda$retrieve$2] CLI_ARG[ioc]: C:\Users\esamp\Documents\SinESC\Wing Edition\SinESC_Wing_1.0A\SinESC_Wing_1.0A\SinESC_Wing_1.0A.ioc
+2020-12-30 01:15:23,672 DEBUG [ArgsValue.retrieve] {xdm=C:\Users\esamp\Documents\SinESC\Wing Edition\SinESC_Wing_1.0A\SinESC_Wing_1.0A\SinESC_Wing_1.0A.wb_def, updftl=templates/wb_ioc_mc-middleware.ftl, mx_timeout=-1, exp=templates/wb-defines_where_and_what.txt, ioc=C:\Users\esamp\Documents\SinESC\Wing Edition\SinESC_Wing_1.0A\SinESC_Wing_1.0A\SinESC_Wing_1.0A.ioc, pack=../../../../Middlewares/ST/MotorControl, ftl=templates/wb_ioc_template.ftl}
+2020-12-30 01:15:23,762 DEBUG [Main.run] Targeted MCU family = F3
+2020-12-30 01:15:23,800 DEBUG [Main.run] Minimum associated CubeMx to the `F3` targeted MCU family is `4.25.0-a0`
+2020-12-30 01:15:23,814 DEBUG [WindowsCubeMxFinder.lambda$findThem$2] Found 64-bit subkey HKEY_LOCAL_MACHINE\~~~\Uninstall\STM32CubeMX
+2020-12-30 01:15:23,821 DEBUG [CubeMxCtx.EXE_version] Loaded path: 'C:\Program Files\STMicroelectronics\STM32Cube\STM32CubeMX\STM32CubeMX.exe'
+2020-12-30 01:15:23,821 DEBUG [CubeMxCtx.EXE_version] Loaded updater jar: 'C:\Program Files\STMicroelectronics\STM32Cube\STM32CubeMX\plugins\updater.jar'
+2020-12-30 01:15:23,840 DEBUG [CubeMxCtx.EXE_version] Loaded path: 'C:\Program Files\STMicroelectronics\STM32Cube\STM32CubeMX\STM32CubeMX.exe'
+2020-12-30 01:15:23,840 DEBUG [CubeMxCtx.EXE_version] Loaded updater jar: 'C:\Program Files\STMicroelectronics\STM32Cube\STM32CubeMX\plugins\updater.jar'
+2020-12-30 01:15:23,857 DEBUG [CubeMxCtx.EXE_version] Loaded path: 'C:\Program Files\STMicroelectronics\STM32Cube\STM32CubeMX\STM32CubeMX.exe'
+2020-12-30 01:15:23,857 DEBUG [CubeMxCtx.EXE_version] Loaded updater jar: 'C:\Program Files\STMicroelectronics\STM32Cube\STM32CubeMX\plugins\updater.jar'
+2020-12-30 01:15:29,489 DEBUG [CubeMxCtx.EXE_version] Loaded path: 'C:\Program Files\STMicroelectronics\STM32Cube\STM32CubeMX\STM32CubeMX.exe'
+2020-12-30 01:15:29,489 DEBUG [CubeMxCtx.EXE_version] Loaded updater jar: 'C:\Program Files\STMicroelectronics\STM32Cube\STM32CubeMX\plugins\updater.jar'
+2020-12-30 01:15:29,550 DEBUG [EnvironmentChecker.checkPack] STM32CubeMX.Version: 5.6.1-RC1
+2020-12-30 01:15:29,574 DEBUG [MxUpdaterFactory.lambda$create$2] failed first attempt to instantiate MxUpdater (v_27)
+2020-12-30 01:15:30,067 DEBUG [MxUpdaterFactory.lambda$create$3] Updater instantiated
+2020-12-30 01:15:30,070 DEBUG [MxUpdater.lambda$whait_while_busy$12] MxUpdater still busy - await for 50 milliseconds before to retry
+2020-12-30 01:15:30,121 DEBUG [MxUpdater.lambda$whait_while_busy$12] MxUpdater still busy - await for 50 milliseconds before to retry
+2020-12-30 01:15:30,172 DEBUG [MxUpdater.lambda$whait_while_busy$12] MxUpdater still busy - await for 50 milliseconds before to retry
+2020-12-30 01:15:30,223 DEBUG [MxUpdater.lambda$whait_while_busy$12] MxUpdater still busy - await for 50 milliseconds before to retry
+2020-12-30 01:15:30,274 DEBUG [MxUpdater.lambda$whait_while_busy$12] MxUpdater still busy - await for 50 milliseconds before to retry
+2020-12-30 01:15:30,325 DEBUG [MxUpdater.lambda$whait_while_busy$12] MxUpdater still busy - await for 50 milliseconds before to retry
+2020-12-30 01:15:30,376 DEBUG [MxUpdater.lambda$whait_while_busy$12] MxUpdater still busy - await for 50 milliseconds before to retry
+2020-12-30 01:15:30,426 DEBUG [MxUpdater.lambda$whait_while_busy$12] MxUpdater still busy - await for 50 milliseconds before to retry
+2020-12-30 01:15:30,477 DEBUG [MxUpdater.lambda$whait_while_busy$12] MxUpdater still busy - await for 50 milliseconds before to retry
+2020-12-30 01:15:30,528 DEBUG [MxUpdater.lambda$whait_while_busy$12] MxUpdater still busy - await for 50 milliseconds before to retry
+2020-12-30 01:15:30,579 DEBUG [MxUpdater.lambda$whait_while_busy$12] MxUpdater still busy - await for 50 milliseconds before to retry
+2020-12-30 01:15:30,630 DEBUG [MxUpdater.lambda$whait_while_busy$12] MxUpdater still busy - await for 50 milliseconds before to retry
+2020-12-30 01:15:30,681 DEBUG [MxUpdater.lambda$whait_while_busy$12] MxUpdater still busy - await for 50 milliseconds before to retry
+2020-12-30 01:15:30,732 DEBUG [MxUpdater.lambda$whait_while_busy$12] MxUpdater still busy - await for 50 milliseconds before to retry
+2020-12-30 01:15:30,782 DEBUG [MxUpdater.lambda$whait_while_busy$12] MxUpdater still busy - await for 50 milliseconds before to retry
+2020-12-30 01:15:30,833 DEBUG [MxUpdater.lambda$whait_while_busy$12] MxUpdater still busy - await for 50 milliseconds before to retry
+2020-12-30 01:15:30,884 DEBUG [MxUpdater.lambda$whait_while_busy$12] MxUpdater still busy - await for 50 milliseconds before to retry
+2020-12-30 01:15:30,935 DEBUG [MxUpdater.lambda$whait_while_busy$12] MxUpdater still busy - await for 50 milliseconds before to retry
+2020-12-30 01:15:30,986 DEBUG [MxUpdater.lambda$whait_while_busy$12] MxUpdater still busy - await for 50 milliseconds before to retry
+2020-12-30 01:15:31,037 DEBUG [MxUpdater.lambda$whait_while_busy$12] MxUpdater still busy - await for 50 milliseconds before to retry
+2020-12-30 01:15:31,088 DEBUG [MxUpdater.lambda$whait_while_busy$12] MxUpdater still busy - await for 50 milliseconds before to retry
+2020-12-30 01:15:31,139 DEBUG [MxUpdater.lambda$whait_while_busy$12] MxUpdater still busy - await for 50 milliseconds before to retry
+2020-12-30 01:15:31,189 DEBUG [MxUpdater.lambda$whait_while_busy$12] MxUpdater still busy - await for 50 milliseconds before to retry
+2020-12-30 01:15:31,240 DEBUG [MxUpdater.lambda$whait_while_busy$12] MxUpdater still busy - await for 50 milliseconds before to retry
+2020-12-30 01:15:31,291 DEBUG [MxUpdater.lambda$whait_while_busy$12] MxUpdater still busy - await for 50 milliseconds before to retry
+2020-12-30 01:15:31,342 DEBUG [MxUpdater.lambda$whait_while_busy$12] MxUpdater still busy - await for 50 milliseconds before to retry
+2020-12-30 01:15:31,393 DEBUG [MxUpdater.lambda$whait_while_busy$12] MxUpdater still busy - await for 50 milliseconds before to retry
+2020-12-30 01:15:31,444 DEBUG [MxUpdater.lambda$whait_while_busy$12] MxUpdater still busy - await for 50 milliseconds before to retry
+2020-12-30 01:15:31,495 DEBUG [MxUpdater.lambda$whait_while_busy$12] MxUpdater still busy - await for 50 milliseconds before to retry
+2020-12-30 01:15:31,545 DEBUG [MxUpdater.lambda$whait_while_busy$12] MxUpdater still busy - await for 50 milliseconds before to retry
+2020-12-30 01:15:31,596 DEBUG [MxUpdater.lambda$whait_while_busy$12] MxUpdater still busy - await for 50 milliseconds before to retry
+2020-12-30 01:15:31,647 DEBUG [MxUpdater.lambda$whait_while_busy$12] MxUpdater still busy - await for 50 milliseconds before to retry
+2020-12-30 01:15:31,698 DEBUG [MxUpdater.lambda$whait_while_busy$12] MxUpdater still busy - await for 50 milliseconds before to retry
+2020-12-30 01:15:31,749 DEBUG [MxUpdater.lambda$whait_while_busy$12] MxUpdater still busy - await for 50 milliseconds before to retry
+2020-12-30 01:15:31,800 DEBUG [MxUpdater.lambda$whait_while_busy$12] MxUpdater still busy - await for 50 milliseconds before to retry
+2020-12-30 01:15:31,851 DEBUG [MxUpdater.lambda$whait_while_busy$12] MxUpdater still busy - await for 50 milliseconds before to retry
+2020-12-30 01:15:31,901 DEBUG [MxUpdater.lambda$whait_while_busy$12] MxUpdater still busy - await for 50 milliseconds before to retry
+2020-12-30 01:15:31,952 DEBUG [MxUpdater.lambda$whait_while_busy$12] MxUpdater still busy - await for 50 milliseconds before to retry
+2020-12-30 01:15:32,003 DEBUG [MxUpdater.lambda$whait_while_busy$12] MxUpdater still busy - await for 50 milliseconds before to retry
+2020-12-30 01:15:32,054 DEBUG [MxUpdater.lambda$whait_while_busy$12] MxUpdater still busy - await for 50 milliseconds before to retry
+2020-12-30 01:15:32,104 DEBUG [MxUpdater.lambda$whait_while_busy$12] MxUpdater still busy - await for 50 milliseconds before to retry
+2020-12-30 01:15:32,155 DEBUG [MxUpdater.lambda$whait_while_busy$12] MxUpdater still busy - await for 50 milliseconds before to retry
+2020-12-30 01:15:32,206 DEBUG [MxUpdater.lambda$whait_while_busy$12] MxUpdater still busy - await for 50 milliseconds before to retry
+2020-12-30 01:15:32,257 DEBUG [MxUpdater.lambda$whait_while_busy$12] MxUpdater still busy - await for 50 milliseconds before to retry
+2020-12-30 01:15:32,308 DEBUG [MxUpdater.lambda$whait_while_busy$12] MxUpdater still busy - await for 50 milliseconds before to retry
+2020-12-30 01:15:32,359 DEBUG [MxUpdater.lambda$whait_while_busy$12] MxUpdater still busy - await for 50 milliseconds before to retry
+2020-12-30 01:15:32,410 DEBUG [MxUpdater.lambda$whait_while_busy$12] MxUpdater still busy - await for 50 milliseconds before to retry
+2020-12-30 01:15:32,461 DEBUG [MxUpdater.lambda$whait_while_busy$12] MxUpdater still busy - await for 50 milliseconds before to retry
+2020-12-30 01:15:32,511 DEBUG [MxUpdater.lambda$whait_while_busy$12] MxUpdater still busy - await for 50 milliseconds before to retry
+2020-12-30 01:15:32,562 DEBUG [MxUpdater.lambda$whait_while_busy$12] MxUpdater still busy - await for 50 milliseconds before to retry
+2020-12-30 01:15:32,613 DEBUG [MxUpdater.lambda$whait_while_busy$12] MxUpdater still busy - await for 50 milliseconds before to retry
+2020-12-30 01:15:32,664 DEBUG [MxUpdater.lambda$whait_while_busy$12] MxUpdater still busy - await for 50 milliseconds before to retry
+2020-12-30 01:15:32,715 DEBUG [MxUpdater.lambda$whait_while_busy$12] MxUpdater still busy - await for 50 milliseconds before to retry
+2020-12-30 01:15:32,766 DEBUG [MxUpdater.lambda$whait_while_busy$12] MxUpdater still busy - await for 50 milliseconds before to retry
+2020-12-30 01:15:32,817 DEBUG [MxUpdater.lambda$whait_while_busy$12] MxUpdater still busy - await for 50 milliseconds before to retry
+2020-12-30 01:15:32,867 DEBUG [MxUpdater.lambda$whait_while_busy$12] MxUpdater still busy - await for 50 milliseconds before to retry
+2020-12-30 01:15:32,918 DEBUG [MxUpdater.lambda$whait_while_busy$12] MxUpdater still busy - await for 50 milliseconds before to retry
+2020-12-30 01:15:32,969 DEBUG [MxUpdater.lambda$whait_while_busy$12] MxUpdater still busy - await for 50 milliseconds before to retry
+2020-12-30 01:15:33,020 DEBUG [MxUpdater.lambda$whait_while_busy$12] MxUpdater still busy - await for 50 milliseconds before to retry
+2020-12-30 01:15:33,071 DEBUG [MxUpdater.lambda$whait_while_busy$12] MxUpdater still busy - await for 50 milliseconds before to retry
+2020-12-30 01:15:33,122 DEBUG [MxUpdater.lambda$whait_while_busy$12] MxUpdater still busy - await for 50 milliseconds before to retry
+2020-12-30 01:15:33,173 DEBUG [MxUpdater.lambda$whait_while_busy$12] MxUpdater still busy - await for 50 milliseconds before to retry
+2020-12-30 01:15:33,223 DEBUG [MxUpdater.lambda$whait_while_busy$12] MxUpdater still busy - await for 50 milliseconds before to retry
+2020-12-30 01:15:33,274 DEBUG [MxUpdater.lambda$whait_while_busy$12] MxUpdater still busy - await for 50 milliseconds before to retry
+2020-12-30 01:15:33,325 DEBUG [MxUpdater.lambda$whait_while_busy$12] MxUpdater still busy - await for 50 milliseconds before to retry
+2020-12-30 01:15:33,376 DEBUG [MxUpdater.lambda$whait_while_busy$12] MxUpdater still busy - await for 50 milliseconds before to retry
+2020-12-30 01:15:33,427 DEBUG [MxUpdater.lambda$whait_while_busy$12] MxUpdater still busy - await for 50 milliseconds before to retry
+2020-12-30 01:15:33,478 DEBUG [MxUpdater.lambda$whait_while_busy$12] MxUpdater still busy - await for 50 milliseconds before to retry
+2020-12-30 01:15:33,529 DEBUG [MxUpdater.lambda$whait_while_busy$12] MxUpdater still busy - await for 50 milliseconds before to retry
+2020-12-30 01:15:33,580 DEBUG [MxUpdater.lambda$whait_while_busy$12] MxUpdater still busy - await for 50 milliseconds before to retry
+2020-12-30 01:15:33,630 DEBUG [MxUpdater.lambda$whait_while_busy$12] MxUpdater still busy - await for 50 milliseconds before to retry
+2020-12-30 01:15:33,681 DEBUG [MxUpdater.lambda$whait_while_busy$12] MxUpdater still busy - await for 50 milliseconds before to retry
+2020-12-30 01:15:33,732 DEBUG [MxUpdater.lambda$whait_while_busy$12] MxUpdater still busy - await for 50 milliseconds before to retry
+2020-12-30 01:15:33,783 DEBUG [MxUpdater.lambda$whait_while_busy$12] MxUpdater still busy - await for 50 milliseconds before to retry
+2020-12-30 01:15:33,834 DEBUG [MxUpdater.lambda$whait_while_busy$12] MxUpdater still busy - await for 50 milliseconds before to retry
+2020-12-30 01:15:33,885 DEBUG [MxUpdater.lambda$whait_while_busy$12] MxUpdater still busy - await for 50 milliseconds before to retry
+2020-12-30 01:15:33,936 DEBUG [MxUpdater.lambda$whait_while_busy$12] MxUpdater still busy - await for 50 milliseconds before to retry
+2020-12-30 01:15:33,986 DEBUG [MxUpdater.lambda$whait_while_busy$12] MxUpdater still busy - await for 50 milliseconds before to retry
+2020-12-30 01:15:34,037 DEBUG [MxUpdater.lambda$whait_while_busy$12] MxUpdater still busy - await for 50 milliseconds before to retry
+2020-12-30 01:15:34,088 DEBUG [MxUpdater.lambda$whait_while_busy$12] MxUpdater still busy - await for 50 milliseconds before to retry
+2020-12-30 01:15:34,139 DEBUG [MxUpdater.lambda$whait_while_busy$12] MxUpdater still busy - await for 50 milliseconds before to retry
+2020-12-30 01:15:34,190 DEBUG [MxUpdater.lambda$whait_while_busy$12] MxUpdater still busy - await for 50 milliseconds before to retry
+2020-12-30 01:15:34,241 DEBUG [MxUpdater.lambda$whait_while_busy$12] MxUpdater still busy - await for 50 milliseconds before to retry
+2020-12-30 01:15:34,292 DEBUG [MxUpdater.lambda$whait_while_busy$12] MxUpdater still busy - await for 50 milliseconds before to retry
+2020-12-30 01:15:34,343 DEBUG [MxUpdater.lambda$whait_while_busy$12] MxUpdater still busy - await for 50 milliseconds before to retry
+2020-12-30 01:15:34,393 DEBUG [MxUpdater.lambda$whait_while_busy$12] MxUpdater still busy - await for 50 milliseconds before to retry
+2020-12-30 01:15:34,444 DEBUG [MxUpdater.lambda$whait_while_busy$12] MxUpdater still busy - await for 50 milliseconds before to retry
+2020-12-30 01:15:34,495 DEBUG [MxUpdater.lambda$whait_while_busy$12] MxUpdater still busy - await for 50 milliseconds before to retry
+2020-12-30 01:15:34,546 DEBUG [MxUpdater.lambda$whait_while_busy$12] MxUpdater still busy - await for 50 milliseconds before to retry
+2020-12-30 01:15:34,597 DEBUG [MxUpdater.lambda$whait_while_busy$12] MxUpdater still busy - await for 50 milliseconds before to retry
+2020-12-30 01:15:34,648 DEBUG [MxUpdater.lambda$whait_while_busy$12] MxUpdater still busy - await for 50 milliseconds before to retry
+2020-12-30 01:15:34,699 DEBUG [MxUpdater.lambda$whait_while_busy$12] MxUpdater still busy - await for 50 milliseconds before to retry
+2020-12-30 01:15:34,749 DEBUG [MxUpdater.lambda$whait_while_busy$12] MxUpdater still busy - await for 50 milliseconds before to retry
+2020-12-30 01:15:34,800 DEBUG [MxUpdater.lambda$whait_while_busy$12] MxUpdater still busy - await for 50 milliseconds before to retry
+2020-12-30 01:15:34,851 DEBUG [MxUpdater.lambda$whait_while_busy$12] MxUpdater still busy - await for 50 milliseconds before to retry
+2020-12-30 01:15:34,902 DEBUG [MxUpdater.lambda$whait_while_busy$12] MxUpdater still busy - await for 50 milliseconds before to retry
+2020-12-30 01:15:34,953 DEBUG [MxUpdater.lambda$whait_while_busy$12] MxUpdater still busy - await for 50 milliseconds before to retry
+2020-12-30 01:15:35,004 DEBUG [MxUpdater.lambda$whait_while_busy$12] MxUpdater still busy - await for 50 milliseconds before to retry
+2020-12-30 01:15:35,055 DEBUG [MxUpdater.lambda$whait_while_busy$12] MxUpdater still busy - await for 50 milliseconds before to retry
+2020-12-30 01:15:35,106 DEBUG [MxUpdater.lambda$whait_while_busy$12] MxUpdater still busy - await for 50 milliseconds before to retry
+2020-12-30 01:15:35,156 DEBUG [MxUpdater.lambda$whait_while_busy$12] MxUpdater still busy - await for 50 milliseconds before to retry
+2020-12-30 01:15:35,207 DEBUG [MxUpdater.lambda$whait_while_busy$12] MxUpdater still busy - await for 50 milliseconds before to retry
+2020-12-30 01:15:35,258 DEBUG [MxUpdater.lambda$whait_while_busy$12] MxUpdater still busy - await for 50 milliseconds before to retry
+2020-12-30 01:15:35,309 DEBUG [MxUpdater.lambda$whait_while_busy$12] MxUpdater still busy - await for 50 milliseconds before to retry
+2020-12-30 01:15:35,360 DEBUG [MxUpdater.lambda$whait_while_busy$12] MxUpdater still busy - await for 50 milliseconds before to retry
+2020-12-30 01:15:35,411 DEBUG [MxUpdater.lambda$whait_while_busy$12] MxUpdater still busy - await for 50 milliseconds before to retry
+2020-12-30 01:15:35,462 DEBUG [MxUpdater.lambda$whait_while_busy$12] MxUpdater still busy - await for 50 milliseconds before to retry
+2020-12-30 01:15:35,512 DEBUG [MxUpdater.lambda$whait_while_busy$12] MxUpdater still busy - await for 50 milliseconds before to retry
+2020-12-30 01:15:35,563 DEBUG [MxUpdater.lambda$whait_while_busy$12] MxUpdater still busy - await for 50 milliseconds before to retry
+2020-12-30 01:15:35,614 DEBUG [MxUpdater.lambda$whait_while_busy$12] MxUpdater still busy - await for 50 milliseconds before to retry
+2020-12-30 01:15:35,665 DEBUG [MxUpdater.lambda$whait_while_busy$12] MxUpdater still busy - await for 50 milliseconds before to retry
+2020-12-30 01:15:35,716 DEBUG [MxUpdater.lambda$whait_while_busy$12] MxUpdater still busy - await for 50 milliseconds before to retry
+2020-12-30 01:15:35,767 DEBUG [MxUpdater.lambda$whait_while_busy$12] MxUpdater still busy - await for 50 milliseconds before to retry
+2020-12-30 01:15:35,818 DEBUG [MxUpdater.lambda$whait_while_busy$12] MxUpdater still busy - await for 50 milliseconds before to retry
+2020-12-30 01:15:35,868 DEBUG [MxUpdater.lambda$whait_while_busy$12] MxUpdater still busy - await for 50 milliseconds before to retry
+2020-12-30 01:15:35,919 DEBUG [MxUpdater.lambda$whait_while_busy$12] MxUpdater still busy - await for 50 milliseconds before to retry
+2020-12-30 01:15:35,970 DEBUG [MxUpdater.lambda$whait_while_busy$12] MxUpdater still busy - await for 50 milliseconds before to retry
+2020-12-30 01:15:36,021 DEBUG [MxUpdater.lambda$whait_while_busy$12] MxUpdater still busy - await for 50 milliseconds before to retry
+2020-12-30 01:15:36,072 DEBUG [MxUpdater.lambda$whait_while_busy$12] MxUpdater still busy - await for 50 milliseconds before to retry
+2020-12-30 01:15:36,123 DEBUG [MxUpdater.lambda$whait_while_busy$12] MxUpdater still busy - await for 50 milliseconds before to retry
+2020-12-30 01:15:36,174 DEBUG [MxUpdater.lambda$whait_while_busy$12] MxUpdater still busy - await for 50 milliseconds before to retry
+2020-12-30 01:15:36,225 DEBUG [MxUpdater.lambda$whait_while_busy$12] MxUpdater still busy - await for 50 milliseconds before to retry
+2020-12-30 01:15:36,275 DEBUG [MxUpdater.lambda$whait_while_busy$12] MxUpdater still busy - await for 50 milliseconds before to retry
+2020-12-30 01:15:36,326 DEBUG [MxUpdater.lambda$whait_while_busy$12] MxUpdater still busy - await for 50 milliseconds before to retry
+2020-12-30 01:15:36,377 DEBUG [MxUpdater.lambda$whait_while_busy$12] MxUpdater still busy - await for 50 milliseconds before to retry
+2020-12-30 01:15:36,428 DEBUG [MxUpdater.lambda$whait_while_busy$12] MxUpdater still busy - await for 50 milliseconds before to retry
+2020-12-30 01:15:36,479 DEBUG [MxUpdater.lambda$whait_while_busy$12] MxUpdater still busy - await for 50 milliseconds before to retry
+2020-12-30 01:15:36,530 DEBUG [MxUpdater.lambda$whait_while_busy$12] MxUpdater still busy - await for 50 milliseconds before to retry
+2020-12-30 01:15:36,581 DEBUG [MxUpdater.lambda$whait_while_busy$12] MxUpdater still busy - await for 50 milliseconds before to retry
+2020-12-30 01:15:36,631 DEBUG [MxUpdater.lambda$whait_while_busy$12] MxUpdater still busy - await for 50 milliseconds before to retry
+2020-12-30 01:15:36,682 DEBUG [MxUpdater.lambda$whait_while_busy$12] MxUpdater still busy - await for 50 milliseconds before to retry
+2020-12-30 01:15:36,733 DEBUG [MxUpdater.lambda$whait_while_busy$12] MxUpdater still busy - await for 50 milliseconds before to retry
+2020-12-30 01:15:36,784 DEBUG [MxUpdater.lambda$whait_while_busy$12] MxUpdater still busy - await for 50 milliseconds before to retry
+2020-12-30 01:15:36,835 DEBUG [MxUpdater.lambda$whait_while_busy$12] MxUpdater still busy - await for 50 milliseconds before to retry
+2020-12-30 01:15:36,886 DEBUG [MxUpdater.lambda$whait_while_busy$12] MxUpdater still busy - await for 50 milliseconds before to retry
+2020-12-30 01:15:36,937 DEBUG [MxUpdater.lambda$whait_while_busy$12] MxUpdater still busy - await for 50 milliseconds before to retry
+2020-12-30 01:15:36,987 DEBUG [MxUpdater.lambda$whait_while_busy$12] MxUpdater still busy - await for 50 milliseconds before to retry
+2020-12-30 01:15:37,038 DEBUG [MxUpdater.lambda$whait_while_busy$12] MxUpdater still busy - await for 50 milliseconds before to retry
+2020-12-30 01:15:37,089 DEBUG [MxUpdater.lambda$whait_while_busy$12] MxUpdater still busy - await for 50 milliseconds before to retry
+2020-12-30 01:15:37,140 DEBUG [MxUpdater.lambda$whait_while_busy$12] MxUpdater still busy - await for 50 milliseconds before to retry
+2020-12-30 01:15:37,191 DEBUG [MxUpdater.lambda$whait_while_busy$12] MxUpdater still busy - await for 50 milliseconds before to retry
+2020-12-30 01:15:37,242 DEBUG [MxUpdater.lambda$whait_while_busy$12] MxUpdater still busy - await for 50 milliseconds before to retry
+2020-12-30 01:15:37,293 DEBUG [MxUpdater.lambda$whait_while_busy$12] MxUpdater still busy - await for 50 milliseconds before to retry
+2020-12-30 01:15:37,344 DEBUG [MxUpdater.lambda$whait_while_busy$12] MxUpdater still busy - await for 50 milliseconds before to retry
+2020-12-30 01:15:37,394 DEBUG [MxUpdater.lambda$whait_while_busy$12] MxUpdater still busy - await for 50 milliseconds before to retry
+2020-12-30 01:15:37,445 DEBUG [MxUpdater.lambda$whait_while_busy$12] MxUpdater still busy - await for 50 milliseconds before to retry
+2020-12-30 01:15:37,496 DEBUG [MxUpdater.lambda$whait_while_busy$12] MxUpdater still busy - await for 50 milliseconds before to retry
+2020-12-30 01:15:37,547 DEBUG [MxUpdater.lambda$whait_while_busy$12] MxUpdater still busy - await for 50 milliseconds before to retry
+2020-12-30 01:15:37,598 DEBUG [MxUpdater.lambda$whait_while_busy$12] MxUpdater still busy - await for 50 milliseconds before to retry
+2020-12-30 01:15:37,649 DEBUG [MxUpdater.lambda$whait_while_busy$12] MxUpdater still busy - await for 50 milliseconds before to retry
+2020-12-30 01:15:37,700 DEBUG [MxUpdater.lambda$whait_while_busy$12] MxUpdater still busy - await for 50 milliseconds before to retry
+2020-12-30 01:15:37,750 DEBUG [MxUpdater.lambda$whait_while_busy$12] MxUpdater still busy - await for 50 milliseconds before to retry
+2020-12-30 01:15:37,801 DEBUG [MxUpdater.lambda$whait_while_busy$12] MxUpdater still busy - await for 50 milliseconds before to retry
+2020-12-30 01:15:37,852 DEBUG [MxUpdater.lambda$whait_while_busy$12] MxUpdater still busy - await for 50 milliseconds before to retry
+2020-12-30 01:15:37,903 DEBUG [MxUpdater.lambda$whait_while_busy$12] MxUpdater still busy - await for 50 milliseconds before to retry
+2020-12-30 01:15:37,954 DEBUG [MxUpdater.lambda$whait_while_busy$12] MxUpdater still busy - await for 50 milliseconds before to retry
+2020-12-30 01:15:38,005 DEBUG [MxUpdater.lambda$whait_while_busy$12] MxUpdater still busy - await for 50 milliseconds before to retry
+2020-12-30 01:15:38,056 DEBUG [MxUpdater.lambda$whait_while_busy$12] MxUpdater still busy - await for 50 milliseconds before to retry
+2020-12-30 01:15:38,107 DEBUG [MxUpdater.lambda$whait_while_busy$12] MxUpdater still busy - await for 50 milliseconds before to retry
+2020-12-30 01:15:38,157 DEBUG [MxUpdater.lambda$whait_while_busy$12] MxUpdater still busy - await for 50 milliseconds before to retry
+2020-12-30 01:15:38,208 DEBUG [MxUpdater.lambda$whait_while_busy$12] MxUpdater still busy - await for 50 milliseconds before to retry
+2020-12-30 01:15:38,259 DEBUG [MxUpdater.lambda$whait_while_busy$12] MxUpdater still busy - await for 50 milliseconds before to retry
+2020-12-30 01:15:38,310 DEBUG [MxUpdater.lambda$whait_while_busy$12] MxUpdater still busy - await for 50 milliseconds before to retry
+2020-12-30 01:15:38,361 DEBUG [MxUpdater.lambda$whait_while_busy$12] MxUpdater still busy - await for 50 milliseconds before to retry
+2020-12-30 01:15:38,412 DEBUG [MxUpdater.lambda$whait_while_busy$12] MxUpdater still busy - await for 50 milliseconds before to retry
+2020-12-30 01:15:38,462 DEBUG [MxUpdater.lambda$whait_while_busy$12] MxUpdater still busy - await for 50 milliseconds before to retry
+2020-12-30 01:15:38,512 DEBUG [MxUpdater.lambda$whait_while_busy$12] MxUpdater still busy - await for 50 milliseconds before to retry
+2020-12-30 01:15:38,563 DEBUG [MxUpdater.lambda$whait_while_busy$12] MxUpdater still busy - await for 50 milliseconds before to retry
+2020-12-30 01:15:38,614 DEBUG [MxUpdater.lambda$whait_while_busy$12] MxUpdater still busy - await for 50 milliseconds before to retry
+2020-12-30 01:15:38,665 DEBUG [MxUpdater.lambda$whait_while_busy$12] MxUpdater still busy - await for 50 milliseconds before to retry
+2020-12-30 01:15:38,716 DEBUG [MxUpdater.lambda$whait_while_busy$12] MxUpdater still busy - await for 50 milliseconds before to retry
+2020-12-30 01:15:38,767 DEBUG [MxUpdater.lambda$whait_while_busy$12] MxUpdater still busy - await for 50 milliseconds before to retry
+2020-12-30 01:15:38,818 DEBUG [MxUpdater.lambda$whait_while_busy$12] MxUpdater still busy - await for 50 milliseconds before to retry
+2020-12-30 01:15:38,869 DEBUG [MxUpdater.lambda$whait_while_busy$12] MxUpdater still busy - await for 50 milliseconds before to retry
+2020-12-30 01:15:38,919 DEBUG [MxUpdater.lambda$whait_while_busy$12] MxUpdater still busy - await for 50 milliseconds before to retry
+2020-12-30 01:15:38,970 DEBUG [MxUpdater.lambda$whait_while_busy$12] MxUpdater still busy - await for 50 milliseconds before to retry
+2020-12-30 01:15:39,021 DEBUG [MxUpdater.lambda$whait_while_busy$12] MxUpdater still busy - await for 50 milliseconds before to retry
+2020-12-30 01:15:39,072 DEBUG [MxUpdater.lambda$whait_while_busy$12] MxUpdater still busy - await for 50 milliseconds before to retry
+2020-12-30 01:15:39,123 DEBUG [MxUpdater.lambda$whait_while_busy$12] MxUpdater still busy - await for 50 milliseconds before to retry
+2020-12-30 01:15:39,174 DEBUG [MxUpdater.lambda$whait_while_busy$12] MxUpdater still busy - await for 50 milliseconds before to retry
+2020-12-30 01:15:39,225 DEBUG [MxUpdater.lambda$whait_while_busy$12] MxUpdater still busy - await for 50 milliseconds before to retry
+2020-12-30 01:15:39,275 DEBUG [MxUpdater.lambda$whait_while_busy$12] MxUpdater still busy - await for 50 milliseconds before to retry
+2020-12-30 01:15:39,326 DEBUG [MxUpdater.lambda$whait_while_busy$12] MxUpdater still busy - await for 50 milliseconds before to retry
+2020-12-30 01:15:39,377 DEBUG [MxUpdater.lambda$whait_while_busy$12] MxUpdater still busy - await for 50 milliseconds before to retry
+2020-12-30 01:15:39,428 DEBUG [MxUpdater.lambda$whait_while_busy$12] MxUpdater still busy - await for 50 milliseconds before to retry
+2020-12-30 01:15:39,479 DEBUG [MxUpdater.lambda$whait_while_busy$12] MxUpdater still busy - await for 50 milliseconds before to retry
+2020-12-30 01:15:39,530 DEBUG [MxUpdater.lambda$whait_while_busy$12] MxUpdater still busy - await for 50 milliseconds before to retry
+2020-12-30 01:15:39,581 DEBUG [MxUpdater.lambda$whait_while_busy$12] MxUpdater still busy - await for 50 milliseconds before to retry
+2020-12-30 01:15:39,631 DEBUG [MxUpdater.lambda$whait_while_busy$12] MxUpdater still busy - await for 50 milliseconds before to retry
+2020-12-30 01:15:39,682 DEBUG [MxUpdater.lambda$whait_while_busy$12] MxUpdater still busy - await for 50 milliseconds before to retry
+2020-12-30 01:15:39,733 DEBUG [MxUpdater.lambda$whait_while_busy$12] MxUpdater still busy - await for 50 milliseconds before to retry
+2020-12-30 01:15:39,784 DEBUG [MxUpdater.lambda$whait_while_busy$12] MxUpdater still busy - await for 50 milliseconds before to retry
+2020-12-30 01:15:39,835 DEBUG [MxUpdater.lambda$whait_while_busy$12] MxUpdater still busy - await for 50 milliseconds before to retry
+2020-12-30 01:15:39,886 DEBUG [MxUpdater.lambda$whait_while_busy$12] MxUpdater still busy - await for 50 milliseconds before to retry
+2020-12-30 01:15:39,937 DEBUG [MxUpdater.lambda$whait_while_busy$12] MxUpdater still busy - await for 50 milliseconds before to retry
+2020-12-30 01:15:39,988 DEBUG [MxUpdater.lambda$whait_while_busy$12] MxUpdater still busy - await for 50 milliseconds before to retry
+2020-12-30 01:15:40,038 DEBUG [MxUpdater.lambda$whait_while_busy$12] MxUpdater still busy - await for 50 milliseconds before to retry
+2020-12-30 01:15:40,089 DEBUG [MxUpdater.lambda$whait_while_busy$12] MxUpdater still busy - await for 50 milliseconds before to retry
+2020-12-30 01:15:40,140 DEBUG [MxUpdater.lambda$whait_while_busy$12] MxUpdater still busy - await for 50 milliseconds before to retry
+2020-12-30 01:15:40,191 DEBUG [MxUpdater.lambda$whait_while_busy$12] MxUpdater still busy - await for 50 milliseconds before to retry
+2020-12-30 01:15:40,242 DEBUG [MxUpdater.lambda$whait_while_busy$12] MxUpdater still busy - await for 50 milliseconds before to retry
+2020-12-30 01:15:40,293 DEBUG [MxUpdater.lambda$whait_while_busy$12] MxUpdater still busy - await for 50 milliseconds before to retry
+2020-12-30 01:15:40,344 DEBUG [MxUpdater.lambda$whait_while_busy$12] MxUpdater still busy - await for 50 milliseconds before to retry
+2020-12-30 01:15:40,394 DEBUG [MxUpdater.lambda$whait_while_busy$12] MxUpdater still busy - await for 50 milliseconds before to retry
+2020-12-30 01:15:40,445 DEBUG [MxUpdater.lambda$whait_while_busy$12] MxUpdater still busy - await for 50 milliseconds before to retry
+2020-12-30 01:15:40,496 DEBUG [MxUpdater.lambda$whait_while_busy$12] MxUpdater still busy - await for 50 milliseconds before to retry
+2020-12-30 01:15:40,547 DEBUG [MxUpdater.lambda$whait_while_busy$12] MxUpdater still busy - await for 50 milliseconds before to retry
+2020-12-30 01:15:40,598 DEBUG [MxUpdater.lambda$whait_while_busy$12] MxUpdater still busy - await for 50 milliseconds before to retry
+2020-12-30 01:15:40,649 DEBUG [MxUpdater.lambda$whait_while_busy$12] MxUpdater still busy - await for 50 milliseconds before to retry
+2020-12-30 01:15:40,700 DEBUG [MxUpdater.lambda$whait_while_busy$12] MxUpdater still busy - await for 50 milliseconds before to retry
+2020-12-30 01:15:40,750 DEBUG [MxUpdater.lambda$whait_while_busy$12] MxUpdater still busy - await for 50 milliseconds before to retry
+2020-12-30 01:15:40,801 DEBUG [MxUpdater.lambda$whait_while_busy$12] MxUpdater still busy - await for 50 milliseconds before to retry
+2020-12-30 01:15:40,852 DEBUG [MxUpdater.lambda$whait_while_busy$12] MxUpdater still busy - await for 50 milliseconds before to retry
+2020-12-30 01:15:40,903 DEBUG [MxUpdater.lambda$whait_while_busy$12] MxUpdater still busy - await for 50 milliseconds before to retry
+2020-12-30 01:15:40,954 DEBUG [MxUpdater.lambda$whait_while_busy$12] MxUpdater still busy - await for 50 milliseconds before to retry
+2020-12-30 01:15:41,005 DEBUG [MxUpdater.lambda$whait_while_busy$12] MxUpdater still busy - await for 50 milliseconds before to retry
+2020-12-30 01:15:41,056 DEBUG [MxUpdater.lambda$whait_while_busy$12] MxUpdater still busy - await for 50 milliseconds before to retry
+2020-12-30 01:15:41,107 DEBUG [MxUpdater.lambda$whait_while_busy$12] MxUpdater still busy - await for 50 milliseconds before to retry
+2020-12-30 01:15:41,157 DEBUG [MxUpdater.lambda$whait_while_busy$12] MxUpdater still busy - await for 50 milliseconds before to retry
+2020-12-30 01:15:41,208 DEBUG [MxUpdater.lambda$whait_while_busy$12] MxUpdater still busy - await for 50 milliseconds before to retry
+2020-12-30 01:15:41,259 DEBUG [MxUpdater.lambda$whait_while_busy$12] MxUpdater still busy - await for 50 milliseconds before to retry
+2020-12-30 01:15:41,310 DEBUG [MxUpdater.lambda$whait_while_busy$12] MxUpdater still busy - await for 50 milliseconds before to retry
+2020-12-30 01:15:41,361 DEBUG [MxUpdater.lambda$whait_while_busy$12] MxUpdater still busy - await for 50 milliseconds before to retry
+2020-12-30 01:15:41,412 DEBUG [MxUpdater.lambda$whait_while_busy$12] MxUpdater still busy - await for 50 milliseconds before to retry
+2020-12-30 01:15:41,463 DEBUG [MxUpdater.lambda$whait_while_busy$12] MxUpdater still busy - await for 50 milliseconds before to retry
+2020-12-30 01:15:41,513 DEBUG [MxUpdater.lambda$whait_while_busy$12] MxUpdater still busy - await for 50 milliseconds before to retry
+2020-12-30 01:15:41,564 DEBUG [MxUpdater.lambda$whait_while_busy$12] MxUpdater still busy - await for 50 milliseconds before to retry
+2020-12-30 01:15:41,615 DEBUG [MxUpdater.lambda$whait_while_busy$12] MxUpdater still busy - await for 50 milliseconds before to retry
+2020-12-30 01:15:41,666 DEBUG [MxUpdater.lambda$whait_while_busy$12] MxUpdater still busy - await for 50 milliseconds before to retry
+2020-12-30 01:15:41,717 DEBUG [MxUpdater.lambda$whait_while_busy$12] MxUpdater still busy - await for 50 milliseconds before to retry
+2020-12-30 01:15:41,768 DEBUG [MxUpdater.lambda$whait_while_busy$12] MxUpdater still busy - await for 50 milliseconds before to retry
+2020-12-30 01:15:41,819 DEBUG [MxUpdater.lambda$whait_while_busy$12] MxUpdater still busy - await for 50 milliseconds before to retry
+2020-12-30 01:15:41,869 DEBUG [MxUpdater.lambda$whait_while_busy$12] MxUpdater still busy - await for 50 milliseconds before to retry
+2020-12-30 01:15:41,920 DEBUG [MxUpdater.lambda$whait_while_busy$12] MxUpdater still busy - await for 50 milliseconds before to retry
+2020-12-30 01:15:41,971 DEBUG [MxUpdater.lambda$whait_while_busy$12] MxUpdater still busy - await for 50 milliseconds before to retry
+2020-12-30 01:15:42,022 DEBUG [MxUpdater.lambda$whait_while_busy$12] MxUpdater still busy - await for 50 milliseconds before to retry
+2020-12-30 01:15:42,073 DEBUG [MxUpdater.lambda$whait_while_busy$12] MxUpdater still busy - await for 50 milliseconds before to retry
+2020-12-30 01:15:42,124 DEBUG [MxUpdater.lambda$whait_while_busy$12] MxUpdater still busy - await for 50 milliseconds before to retry
+2020-12-30 01:15:42,175 DEBUG [MxUpdater.lambda$whait_while_busy$12] MxUpdater still busy - await for 50 milliseconds before to retry
+2020-12-30 01:15:42,226 DEBUG [MxUpdater.lambda$whait_while_busy$12] MxUpdater still busy - await for 50 milliseconds before to retry
+2020-12-30 01:15:42,276 DEBUG [MxUpdater.lambda$whait_while_busy$12] MxUpdater still busy - await for 50 milliseconds before to retry
+2020-12-30 01:15:42,327 DEBUG [MxUpdater.lambda$whait_while_busy$12] MxUpdater still busy - await for 50 milliseconds before to retry
+2020-12-30 01:15:42,378 DEBUG [MxUpdater.lambda$whait_while_busy$12] MxUpdater still busy - await for 50 milliseconds before to retry
+2020-12-30 01:15:42,429 DEBUG [MxUpdater.lambda$whait_while_busy$12] MxUpdater still busy - await for 50 milliseconds before to retry
+2020-12-30 01:15:42,480 DEBUG [MxUpdater.lambda$whait_while_busy$12] MxUpdater still busy - await for 50 milliseconds before to retry
+2020-12-30 01:15:42,531 DEBUG [MxUpdater.lambda$whait_while_busy$12] MxUpdater still busy - await for 50 milliseconds before to retry
+2020-12-30 01:15:42,582 DEBUG [MxUpdater.lambda$whait_while_busy$12] MxUpdater still busy - await for 50 milliseconds before to retry
+2020-12-30 01:15:42,632 DEBUG [MxUpdater.lambda$whait_while_busy$12] MxUpdater still busy - await for 50 milliseconds before to retry
+2020-12-30 01:15:42,683 DEBUG [MxUpdater.lambda$whait_while_busy$12] MxUpdater still busy - await for 50 milliseconds before to retry
+2020-12-30 01:15:42,734 DEBUG [MxUpdater.lambda$whait_while_busy$12] MxUpdater still busy - await for 50 milliseconds before to retry
+2020-12-30 01:15:42,785 DEBUG [MxUpdater.lambda$whait_while_busy$12] MxUpdater still busy - await for 50 milliseconds before to retry
+2020-12-30 01:15:42,836 DEBUG [MxUpdater.lambda$whait_while_busy$12] MxUpdater still busy - await for 50 milliseconds before to retry
+2020-12-30 01:15:42,887 DEBUG [MxUpdater.lambda$whait_while_busy$12] MxUpdater still busy - await for 50 milliseconds before to retry
+2020-12-30 01:15:42,940 DEBUG [MxUpdater.lambda$whait_while_busy$12] MxUpdater still busy - await for 50 milliseconds before to retry
+2020-12-30 01:15:42,991 DEBUG [MxUpdater.lambda$whait_while_busy$12] MxUpdater still busy - await for 50 milliseconds before to retry
+2020-12-30 01:15:43,041 DEBUG [MxUpdater.lambda$whait_while_busy$12] MxUpdater still busy - await for 50 milliseconds before to retry
+2020-12-30 01:15:43,092 DEBUG [MxUpdater.lambda$whait_while_busy$12] MxUpdater still busy - await for 50 milliseconds before to retry
+2020-12-30 01:15:43,143 DEBUG [MxUpdater.lambda$whait_while_busy$12] MxUpdater still busy - await for 50 milliseconds before to retry
+2020-12-30 01:15:43,194 DEBUG [MxUpdater.lambda$whait_while_busy$12] MxUpdater still busy - await for 50 milliseconds before to retry
+2020-12-30 01:15:43,245 DEBUG [MxUpdater.lambda$whait_while_busy$12] MxUpdater still busy - await for 50 milliseconds before to retry
+2020-12-30 01:15:43,296 DEBUG [MxUpdater.lambda$whait_while_busy$12] MxUpdater still busy - await for 50 milliseconds before to retry
+2020-12-30 01:15:43,347 DEBUG [MxUpdater.lambda$whait_while_busy$12] MxUpdater still busy - await for 50 milliseconds before to retry
+2020-12-30 01:15:43,397 DEBUG [MxUpdater.lambda$whait_while_busy$12] MxUpdater still busy - await for 50 milliseconds before to retry
+2020-12-30 01:15:43,448 DEBUG [MxUpdater.lambda$whait_while_busy$12] MxUpdater still busy - await for 50 milliseconds before to retry
+2020-12-30 01:15:43,499 DEBUG [MxUpdater.lambda$whait_while_busy$12] MxUpdater still busy - await for 50 milliseconds before to retry
+2020-12-30 01:15:43,550 DEBUG [MxUpdater.lambda$whait_while_busy$12] MxUpdater still busy - await for 50 milliseconds before to retry
+2020-12-30 01:15:43,601 DEBUG [MxUpdater.lambda$whait_while_busy$12] MxUpdater still busy - await for 50 milliseconds before to retry
+2020-12-30 01:15:43,652 DEBUG [MxUpdater.lambda$whait_while_busy$12] MxUpdater still busy - await for 50 milliseconds before to retry
+2020-12-30 01:15:43,703 DEBUG [MxUpdater.lambda$whait_while_busy$12] MxUpdater still busy - await for 50 milliseconds before to retry
+2020-12-30 01:15:43,753 DEBUG [MxUpdater.lambda$whait_while_busy$12] MxUpdater still busy - await for 50 milliseconds before to retry
+2020-12-30 01:15:43,804 DEBUG [MxUpdater.lambda$whait_while_busy$12] MxUpdater still busy - await for 50 milliseconds before to retry
+2020-12-30 01:15:43,855 DEBUG [MxUpdater.lambda$whait_while_busy$12] MxUpdater still busy - await for 50 milliseconds before to retry
+2020-12-30 01:15:43,906 DEBUG [MxUpdater.lambda$whait_while_busy$12] MxUpdater still busy - await for 50 milliseconds before to retry
+2020-12-30 01:15:43,957 DEBUG [MxUpdater.lambda$whait_while_busy$12] MxUpdater still busy - await for 50 milliseconds before to retry
+2020-12-30 01:15:44,008 DEBUG [MxUpdater.lambda$whait_while_busy$12] MxUpdater still busy - await for 50 milliseconds before to retry
+2020-12-30 01:15:44,059 DEBUG [MxUpdater.lambda$whait_while_busy$12] MxUpdater still busy - await for 50 milliseconds before to retry
+2020-12-30 01:15:44,110 DEBUG [MxUpdater.lambda$whait_while_busy$12] MxUpdater still busy - await for 50 milliseconds before to retry
+2020-12-30 01:15:44,160 DEBUG [MxUpdater.lambda$whait_while_busy$12] MxUpdater still busy - await for 50 milliseconds before to retry
+2020-12-30 01:15:44,211 DEBUG [MxUpdater.lambda$whait_while_busy$12] MxUpdater still busy - await for 50 milliseconds before to retry
+2020-12-30 01:15:44,262 DEBUG [MxUpdater.lambda$whait_while_busy$12] MxUpdater still busy - await for 50 milliseconds before to retry
+2020-12-30 01:15:44,313 DEBUG [MxUpdater.lambda$whait_while_busy$12] MxUpdater still busy - await for 50 milliseconds before to retry
+2020-12-30 01:15:44,364 DEBUG [MxUpdater.lambda$whait_while_busy$12] MxUpdater still busy - await for 50 milliseconds before to retry
+2020-12-30 01:15:44,415 DEBUG [MxUpdater.lambda$whait_while_busy$12] MxUpdater still busy - await for 50 milliseconds before to retry
+2020-12-30 01:15:44,466 DEBUG [MxUpdater.lambda$whait_while_busy$12] MxUpdater still busy - await for 50 milliseconds before to retry
+2020-12-30 01:15:44,516 DEBUG [MxUpdater.lambda$whait_while_busy$12] MxUpdater still busy - await for 50 milliseconds before to retry
+2020-12-30 01:15:44,567 DEBUG [MxUpdater.lambda$whait_while_busy$12] MxUpdater still busy - await for 50 milliseconds before to retry
+2020-12-30 01:15:44,618 DEBUG [MxUpdater.lambda$whait_while_busy$12] MxUpdater still busy - await for 50 milliseconds before to retry
+2020-12-30 01:15:44,669 DEBUG [MxUpdater.lambda$whait_while_busy$12] MxUpdater still busy - await for 50 milliseconds before to retry
+2020-12-30 01:15:44,720 DEBUG [MxUpdater.lambda$whait_while_busy$12] MxUpdater still busy - await for 50 milliseconds before to retry
+2020-12-30 01:15:44,771 DEBUG [MxUpdater.lambda$whait_while_busy$12] MxUpdater still busy - await for 50 milliseconds before to retry
+2020-12-30 01:15:44,822 DEBUG [MxUpdater.lambda$whait_while_busy$12] MxUpdater still busy - await for 50 milliseconds before to retry
+2020-12-30 01:15:44,872 DEBUG [MxUpdater.lambda$whait_while_busy$12] MxUpdater still busy - await for 50 milliseconds before to retry
+2020-12-30 01:15:44,923 DEBUG [MxUpdater.lambda$whait_while_busy$12] MxUpdater still busy - await for 50 milliseconds before to retry
+2020-12-30 01:15:44,974 DEBUG [MxUpdater.lambda$whait_while_busy$12] MxUpdater still busy - await for 50 milliseconds before to retry
+2020-12-30 01:15:45,025 DEBUG [MxUpdater.lambda$whait_while_busy$12] MxUpdater still busy - await for 50 milliseconds before to retry
+2020-12-30 01:15:45,076 DEBUG [MxUpdater.lambda$whait_while_busy$12] MxUpdater still busy - await for 50 milliseconds before to retry
+2020-12-30 01:15:45,127 DEBUG [MxUpdater.lambda$whait_while_busy$12] MxUpdater still busy - await for 50 milliseconds before to retry
+2020-12-30 01:15:45,178 DEBUG [MxUpdater.lambda$whait_while_busy$12] MxUpdater still busy - await for 50 milliseconds before to retry
+2020-12-30 01:15:45,229 DEBUG [MxUpdater.lambda$whait_while_busy$12] MxUpdater still busy - await for 50 milliseconds before to retry
+2020-12-30 01:15:45,279 DEBUG [MxUpdater.lambda$whait_while_busy$12] MxUpdater still busy - await for 50 milliseconds before to retry
+2020-12-30 01:15:45,330 DEBUG [MxUpdater.lambda$whait_while_busy$12] MxUpdater still busy - await for 50 milliseconds before to retry
+2020-12-30 01:15:45,381 DEBUG [MxUpdater.lambda$whait_while_busy$12] MxUpdater still busy - await for 50 milliseconds before to retry
+2020-12-30 01:15:45,432 DEBUG [MxUpdater.lambda$whait_while_busy$12] MxUpdater still busy - await for 50 milliseconds before to retry
+2020-12-30 01:15:45,483 DEBUG [MxUpdater.lambda$whait_while_busy$12] MxUpdater still busy - await for 50 milliseconds before to retry
+2020-12-30 01:15:45,534 DEBUG [MxUpdater.lambda$whait_while_busy$12] MxUpdater still busy - await for 50 milliseconds before to retry
+2020-12-30 01:15:45,585 DEBUG [MxUpdater.lambda$whait_while_busy$12] MxUpdater still busy - await for 50 milliseconds before to retry
+2020-12-30 01:15:45,635 DEBUG [MxUpdater.lambda$whait_while_busy$12] MxUpdater still busy - await for 50 milliseconds before to retry
+2020-12-30 01:15:45,686 DEBUG [MxUpdater.lambda$whait_while_busy$12] MxUpdater still busy - await for 50 milliseconds before to retry
+2020-12-30 01:15:45,737 DEBUG [MxUpdater.lambda$whait_while_busy$12] MxUpdater still busy - await for 50 milliseconds before to retry
+2020-12-30 01:15:45,788 DEBUG [MxUpdater.lambda$whait_while_busy$12] MxUpdater still busy - await for 50 milliseconds before to retry
+2020-12-30 01:15:45,839 DEBUG [MxUpdater.lambda$whait_while_busy$12] MxUpdater still busy - await for 50 milliseconds before to retry
+2020-12-30 01:15:45,890 DEBUG [MxUpdater.lambda$whait_while_busy$12] MxUpdater still busy - await for 50 milliseconds before to retry
+2020-12-30 01:15:45,941 DEBUG [MxUpdater.lambda$whait_while_busy$12] MxUpdater still busy - await for 50 milliseconds before to retry
+2020-12-30 01:15:45,992 DEBUG [MxUpdater.lambda$whait_while_busy$12] MxUpdater still busy - await for 50 milliseconds before to retry
+2020-12-30 01:15:46,042 DEBUG [MxUpdater.lambda$whait_while_busy$12] MxUpdater still busy - await for 50 milliseconds before to retry
+2020-12-30 01:15:46,093 DEBUG [MxUpdater.lambda$whait_while_busy$12] MxUpdater still busy - await for 50 milliseconds before to retry
+2020-12-30 01:15:46,144 DEBUG [MxUpdater.lambda$whait_while_busy$12] MxUpdater still busy - await for 50 milliseconds before to retry
+2020-12-30 01:15:46,195 DEBUG [MxUpdater.lambda$whait_while_busy$12] MxUpdater still busy - await for 50 milliseconds before to retry
+2020-12-30 01:15:46,246 DEBUG [MxUpdater.lambda$whait_while_busy$12] MxUpdater still busy - await for 50 milliseconds before to retry
+2020-12-30 01:15:46,297 DEBUG [MxUpdater.lambda$whait_while_busy$12] MxUpdater still busy - await for 50 milliseconds before to retry
+2020-12-30 01:15:46,348 DEBUG [MxUpdater.lambda$whait_while_busy$12] MxUpdater still busy - await for 50 milliseconds before to retry
+2020-12-30 01:15:46,398 DEBUG [MxUpdater.lambda$whait_while_busy$12] MxUpdater still busy - await for 50 milliseconds before to retry
+2020-12-30 01:15:46,449 DEBUG [MxUpdater.lambda$whait_while_busy$12] MxUpdater still busy - await for 50 milliseconds before to retry
+2020-12-30 01:15:46,500 DEBUG [MxUpdater.lambda$whait_while_busy$12] MxUpdater still busy - await for 50 milliseconds before to retry
+2020-12-30 01:15:46,551 DEBUG [MxUpdater.lambda$whait_while_busy$12] MxUpdater still busy - await for 50 milliseconds before to retry
+2020-12-30 01:15:46,602 DEBUG [MxUpdater.lambda$whait_while_busy$12] MxUpdater still busy - await for 50 milliseconds before to retry
+2020-12-30 01:15:46,653 DEBUG [MxUpdater.lambda$whait_while_busy$12] MxUpdater still busy - await for 50 milliseconds before to retry
+2020-12-30 01:15:46,704 DEBUG [MxUpdater.lambda$whait_while_busy$12] MxUpdater still busy - await for 50 milliseconds before to retry
+2020-12-30 01:15:46,754 DEBUG [MxUpdater.lambda$whait_while_busy$12] MxUpdater still busy - await for 50 milliseconds before to retry
+2020-12-30 01:15:46,805 DEBUG [MxUpdater.lambda$whait_while_busy$12] MxUpdater still busy - await for 50 milliseconds before to retry
+2020-12-30 01:15:46,856 DEBUG [MxUpdater.lambda$whait_while_busy$12] MxUpdater still busy - await for 50 milliseconds before to retry
+2020-12-30 01:15:46,907 DEBUG [MxUpdater.lambda$whait_while_busy$12] MxUpdater still busy - await for 50 milliseconds before to retry
+2020-12-30 01:15:46,958 DEBUG [MxUpdater.lambda$whait_while_busy$12] MxUpdater still busy - await for 50 milliseconds before to retry
+2020-12-30 01:15:47,009 DEBUG [MxUpdater.lambda$whait_while_busy$12] MxUpdater still busy - await for 50 milliseconds before to retry
+2020-12-30 01:15:47,060 DEBUG [MxUpdater.lambda$whait_while_busy$12] MxUpdater still busy - await for 50 milliseconds before to retry
+2020-12-30 01:15:47,111 DEBUG [MxUpdater.lambda$whait_while_busy$12] MxUpdater still busy - await for 50 milliseconds before to retry
+2020-12-30 01:15:47,161 DEBUG [MxUpdater.lambda$whait_while_busy$12] MxUpdater still busy - await for 50 milliseconds before to retry
+2020-12-30 01:15:47,212 DEBUG [MxUpdater.lambda$whait_while_busy$12] MxUpdater still busy - await for 50 milliseconds before to retry
+2020-12-30 01:15:47,263 DEBUG [MxUpdater.lambda$whait_while_busy$12] MxUpdater still busy - await for 50 milliseconds before to retry
+2020-12-30 01:15:47,314 DEBUG [MxUpdater.lambda$whait_while_busy$12] MxUpdater still busy - await for 50 milliseconds before to retry
+2020-12-30 01:15:47,365 DEBUG [MxUpdater.lambda$whait_while_busy$12] MxUpdater still busy - await for 50 milliseconds before to retry
+2020-12-30 01:15:47,416 DEBUG [MxUpdater.lambda$whait_while_busy$12] MxUpdater still busy - await for 50 milliseconds before to retry
+2020-12-30 01:15:47,467 DEBUG [MxUpdater.lambda$whait_while_busy$12] MxUpdater still busy - await for 50 milliseconds before to retry
+2020-12-30 01:15:47,517 DEBUG [MxUpdater.lambda$whait_while_busy$12] MxUpdater still busy - await for 50 milliseconds before to retry
+2020-12-30 01:15:47,568 DEBUG [MxUpdater.lambda$whait_while_busy$12] MxUpdater still busy - await for 50 milliseconds before to retry
+2020-12-30 01:15:47,619 DEBUG [MxUpdater.lambda$whait_while_busy$12] MxUpdater still busy - await for 50 milliseconds before to retry
+2020-12-30 01:15:47,670 DEBUG [MxUpdater.lambda$whait_while_busy$12] MxUpdater still busy - await for 50 milliseconds before to retry
+2020-12-30 01:15:47,721 DEBUG [MxUpdater.lambda$whait_while_busy$12] MxUpdater still busy - await for 50 milliseconds before to retry
+2020-12-30 01:15:47,772 DEBUG [MxUpdater.lambda$whait_while_busy$12] MxUpdater still busy - await for 50 milliseconds before to retry
+2020-12-30 01:15:47,823 DEBUG [MxUpdater.lambda$whait_while_busy$12] MxUpdater still busy - await for 50 milliseconds before to retry
+2020-12-30 01:15:47,873 DEBUG [MxUpdater.lambda$whait_while_busy$12] MxUpdater still busy - await for 50 milliseconds before to retry
+2020-12-30 01:15:47,924 DEBUG [MxUpdater.lambda$whait_while_busy$12] MxUpdater still busy - await for 50 milliseconds before to retry
+2020-12-30 01:15:47,975 DEBUG [MxUpdater.lambda$whait_while_busy$12] MxUpdater still busy - await for 50 milliseconds before to retry
+2020-12-30 01:15:48,026 DEBUG [MxUpdater.lambda$whait_while_busy$12] MxUpdater still busy - await for 50 milliseconds before to retry
+2020-12-30 01:15:48,077 DEBUG [MxUpdater.lambda$whait_while_busy$12] MxUpdater still busy - await for 50 milliseconds before to retry
+2020-12-30 01:15:48,128 DEBUG [MxUpdater.lambda$whait_while_busy$12] MxUpdater still busy - await for 50 milliseconds before to retry
+2020-12-30 01:15:48,179 DEBUG [MxUpdater.lambda$whait_while_busy$12] MxUpdater still busy - await for 50 milliseconds before to retry
+2020-12-30 01:15:48,230 DEBUG [MxUpdater.lambda$whait_while_busy$12] MxUpdater still busy - await for 50 milliseconds before to retry
+2020-12-30 01:15:48,280 DEBUG [MxUpdater.lambda$whait_while_busy$12] MxUpdater still busy - await for 50 milliseconds before to retry
+2020-12-30 01:15:48,331 DEBUG [MxUpdater.lambda$whait_while_busy$12] MxUpdater still busy - await for 50 milliseconds before to retry
+2020-12-30 01:15:48,382 DEBUG [MxUpdater.lambda$whait_while_busy$12] MxUpdater still busy - await for 50 milliseconds before to retry
+2020-12-30 01:15:48,433 DEBUG [MxUpdater.lambda$whait_while_busy$12] MxUpdater still busy - await for 50 milliseconds before to retry
+2020-12-30 01:15:48,484 DEBUG [MxUpdater.lambda$whait_while_busy$12] MxUpdater still busy - await for 50 milliseconds before to retry
+2020-12-30 01:15:48,535 DEBUG [MxUpdater.lambda$whait_while_busy$12] MxUpdater still busy - await for 50 milliseconds before to retry
+2020-12-30 01:15:48,586 DEBUG [MxUpdater.lambda$whait_while_busy$12] MxUpdater still busy - await for 50 milliseconds before to retry
+2020-12-30 01:15:48,636 DEBUG [MxUpdater.lambda$whait_while_busy$12] MxUpdater still busy - await for 50 milliseconds before to retry
+2020-12-30 01:15:48,687 DEBUG [MxUpdater.lambda$whait_while_busy$12] MxUpdater still busy - await for 50 milliseconds before to retry
+2020-12-30 01:15:48,738 DEBUG [MxUpdater.lambda$whait_while_busy$12] MxUpdater still busy - await for 50 milliseconds before to retry
+2020-12-30 01:15:48,789 DEBUG [MxUpdater.lambda$whait_while_busy$12] MxUpdater still busy - await for 50 milliseconds before to retry
+2020-12-30 01:15:48,840 DEBUG [MxUpdater.lambda$whait_while_busy$12] MxUpdater still busy - await for 50 milliseconds before to retry
+2020-12-30 01:15:48,891 DEBUG [MxUpdater.lambda$whait_while_busy$12] MxUpdater still busy - await for 50 milliseconds before to retry
+2020-12-30 01:15:48,942 DEBUG [MxUpdater.lambda$whait_while_busy$12] MxUpdater still busy - await for 50 milliseconds before to retry
+2020-12-30 01:15:48,992 DEBUG [MxUpdater.lambda$whait_while_busy$12] MxUpdater still busy - await for 50 milliseconds before to retry
+2020-12-30 01:15:49,043 DEBUG [MxUpdater.lambda$whait_while_busy$12] MxUpdater still busy - await for 50 milliseconds before to retry
+2020-12-30 01:15:49,094 DEBUG [MxUpdater.lambda$whait_while_busy$12] MxUpdater still busy - await for 50 milliseconds before to retry
+2020-12-30 01:15:49,145 DEBUG [MxUpdater.lambda$whait_while_busy$12] MxUpdater still busy - await for 50 milliseconds before to retry
+2020-12-30 01:15:49,196 DEBUG [MxUpdater.lambda$whait_while_busy$12] MxUpdater still busy - await for 50 milliseconds before to retry
+2020-12-30 01:15:49,247 DEBUG [MxUpdater.lambda$whait_while_busy$12] MxUpdater still busy - await for 50 milliseconds before to retry
+2020-12-30 01:15:49,298 DEBUG [MxUpdater.lambda$whait_while_busy$12] MxUpdater still busy - await for 50 milliseconds before to retry
+2020-12-30 01:15:49,349 DEBUG [MxUpdater.lambda$whait_while_busy$12] MxUpdater still busy - await for 50 milliseconds before to retry
+2020-12-30 01:15:49,399 DEBUG [MxUpdater.lambda$whait_while_busy$12] MxUpdater still busy - await for 50 milliseconds before to retry
+2020-12-30 01:15:49,450 DEBUG [MxUpdater.lambda$whait_while_busy$12] MxUpdater still busy - await for 50 milliseconds before to retry
+2020-12-30 01:15:49,501 DEBUG [MxUpdater.lambda$whait_while_busy$12] MxUpdater still busy - await for 50 milliseconds before to retry
+2020-12-30 01:15:49,552 DEBUG [MxUpdater.lambda$whait_while_busy$12] MxUpdater still busy - await for 50 milliseconds before to retry
+2020-12-30 01:15:49,603 DEBUG [MxUpdater.lambda$whait_while_busy$12] MxUpdater still busy - await for 50 milliseconds before to retry
+2020-12-30 01:15:49,654 DEBUG [MxUpdater.lambda$whait_while_busy$12] MxUpdater still busy - await for 50 milliseconds before to retry
+2020-12-30 01:15:49,705 DEBUG [MxUpdater.lambda$whait_while_busy$12] MxUpdater still busy - await for 50 milliseconds before to retry
+2020-12-30 01:15:49,755 DEBUG [MxUpdater.lambda$whait_while_busy$12] MxUpdater still busy - await for 50 milliseconds before to retry
+2020-12-30 01:15:49,806 DEBUG [MxUpdater.lambda$whait_while_busy$12] MxUpdater still busy - await for 50 milliseconds before to retry
+2020-12-30 01:15:49,857 DEBUG [MxUpdater.lambda$whait_while_busy$12] MxUpdater still busy - await for 50 milliseconds before to retry
+2020-12-30 01:15:49,908 DEBUG [MxUpdater.lambda$whait_while_busy$12] MxUpdater still busy - await for 50 milliseconds before to retry
+2020-12-30 01:15:49,959 DEBUG [MxUpdater.lambda$whait_while_busy$12] MxUpdater still busy - await for 50 milliseconds before to retry
+2020-12-30 01:15:50,010 DEBUG [MxUpdater.lambda$whait_while_busy$12] MxUpdater still busy - await for 50 milliseconds before to retry
+2020-12-30 01:15:50,061 DEBUG [MxUpdater.lambda$whait_while_busy$12] MxUpdater still busy - await for 50 milliseconds before to retry
+2020-12-30 01:15:50,111 DEBUG [MxUpdater.lambda$whait_while_busy$12] MxUpdater still busy - await for 50 milliseconds before to retry
+2020-12-30 01:15:50,162 DEBUG [MxUpdater.lambda$whait_while_busy$12] MxUpdater still busy - await for 50 milliseconds before to retry
+2020-12-30 01:15:50,213 DEBUG [MxUpdater.lambda$whait_while_busy$12] MxUpdater still busy - await for 50 milliseconds before to retry
+2020-12-30 01:15:50,264 DEBUG [MxUpdater.lambda$whait_while_busy$12] MxUpdater still busy - await for 50 milliseconds before to retry
+2020-12-30 01:15:50,315 DEBUG [MxUpdater.lambda$whait_while_busy$12] MxUpdater still busy - await for 50 milliseconds before to retry
+2020-12-30 01:15:50,365 DEBUG [MxUpdater.lambda$whait_while_busy$12] MxUpdater still busy - await for 50 milliseconds before to retry
+2020-12-30 01:15:50,416 DEBUG [MxUpdater.lambda$whait_while_busy$12] MxUpdater still busy - await for 50 milliseconds before to retry
+2020-12-30 01:15:50,467 DEBUG [MxUpdater.lambda$whait_while_busy$12] MxUpdater still busy - await for 50 milliseconds before to retry
+2020-12-30 01:15:50,518 DEBUG [MxUpdater.lambda$whait_while_busy$12] MxUpdater still busy - await for 50 milliseconds before to retry
+2020-12-30 01:15:50,569 DEBUG [MxUpdater.lambda$whait_while_busy$12] MxUpdater still busy - await for 50 milliseconds before to retry
+2020-12-30 01:15:50,620 DEBUG [MxUpdater.lambda$whait_while_busy$12] MxUpdater still busy - await for 50 milliseconds before to retry
+2020-12-30 01:15:50,671 DEBUG [MxUpdater.lambda$whait_while_busy$12] MxUpdater still busy - await for 50 milliseconds before to retry
+2020-12-30 01:15:50,721 DEBUG [MxUpdater.lambda$whait_while_busy$12] MxUpdater still busy - await for 50 milliseconds before to retry
+2020-12-30 01:15:50,772 DEBUG [MxUpdater.lambda$whait_while_busy$12] MxUpdater still busy - await for 50 milliseconds before to retry
+2020-12-30 01:15:50,794 DEBUG [MxUpdater.lambda$wait_bk_initialization$10] sleep interrupted
+2020-12-30 01:15:50,795 ERROR [LineInfo_to_exitCode.manage_MCPackNotFound] MotorControl reference pack not found: "../../../../Middlewares/ST/MotorControl"
+2020-12-30 01:15:50,816 WARN  [Main.lambda$run$0] Aborted by the user
+2020-12-30 01:15:50,816 DEBUG [Main.lambda$run$0] System exists with return code 4
