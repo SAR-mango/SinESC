@@ -19,7 +19,7 @@ The real-life dimensions of the PCBs pictured below are 15x30mm.
 - **Maximum 40A continuous, 50A burst current draw (5 seconds)**
   - With the greatly-increased efficiency of SinESC, peak motor currents will be *significantly* lower than before (at a given throttle/thrust level). This does NOT mean your motors run weaker. They are just more efficient!
   - Over-current protection takes advantage of comparators embedded in the microcontroller and triggers immediately at 55A.
-  \*Several of the above specifications are currently only theoretical; they have not been confirmed with measurements. This page will be updated immediately when any specification changes or is confirmed.
+\*Several of the above specifications are currently only theoretical; they have not been confirmed with measurements. This page will be updated immediately when any specification changes or is confirmed.
 # Sinusoidal Control: Benefits & a Brief Description
 Brushless DC motors work best when their phase voltage waveforms are sinusoid-shaped. Try it yourself—connect a BLDC motor to an oscilloscope and spin the rotor with your fingers. You will see a sine wave. 
 
