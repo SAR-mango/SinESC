@@ -8,17 +8,18 @@ There are two versions of SinESC. Wing Edition, for fixed-wing aircraft, and Mul
 The real-life dimensions of the PCBs pictured below are 15x30mm.
 ![Multi Edition v2.3C Top](https://raw.githubusercontent.com/SAR-mango/SinESC/master/Multi%20Edition/SinESC-Multi/Exported%20Files/3D%20Render%20Front.jpg)
 ![Multi Edition v2.3C Bottom](https://raw.githubusercontent.com/SAR-mango/SinESC/master/Multi%20Edition/SinESC-Multi/Exported%20Files/3D%20Render%20Back.jpg)
-# Features & Specifications
+# Features & Specifications*
 - **> 97% efficiency (up to 40% longer flight)**
 - **Smoother flight**
 - Quieter operation
 - Bus voltage monitoring for power measurement and under-voltage protection
 - 60kHz PWM frequency—with sinusoidal control, PWM frequency hardly affects torque and smoothness. 30kHz and above feel the same. Consequently, 60kHz was selected as it offered maximum efficiency.
 - Broken-out and labeled debug pins for hackers
-- **Maximum 6S Li-po battery (25.2V)**
-- **Maximum 40A continuous, 50A burst current draw (5 seconds).**
+- **3-6S Li-po batteries supported (minimum 10V, maximum 28V supply voltage)**
+- **Maximum 40A continuous, 50A burst current draw (5 seconds)**
   - With the greatly-increased efficiency of SinESC, peak motor currents will be *significantly* lower than before (at a given throttle/thrust level). This does NOT mean your motors run weaker. They are just more efficient!
   - Over-current protection takes advantage of comparators embedded in the microcontroller and triggers immediately at 55A.
+  \*Several of the above specifications are currently only theoretical; they have not been confirmed with measurements. This page will be updated immediately when any specification changes or is confirmed.
 # Sinusoidal Control: Benefits & a Brief Description
 Brushless DC motors work best when their phase voltage waveforms are sinusoid-shaped. Try it yourself—connect a BLDC motor to an oscilloscope and spin the rotor with your fingers. You will see a sine wave. 
 
@@ -54,7 +55,7 @@ SinESC is designed specifically for efficiency and robustness:
   - TDK ceramic capacitors
   - Panasonic metal film resistors (all 1% tolerance including shunts)
 # Versions
-Regular Semantic Versioning is used for all software components of the project. As for PCB designs, Semantic Versioning has been modified. Versions only reflect the PCB design since schematic changes directly influence the PCB. They are written like so:
+Regular Semantic Versioning is used for all software components of the project. As for PCB designs, Semantic Versioning has been modified. After Multi v2.3C, versions only reflect the PCB design since schematic changes directly influence the PCB. They are written like so:
 
 vX.YZ where X and Y are numbers and Z is a letter. "v" is sometimes omitted.
 - If a minor change is made that does NOT require a new stencil OR an updated BOM, Z is incremented.
