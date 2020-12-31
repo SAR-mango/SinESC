@@ -1,4 +1,3 @@
-![SinESC Logo](https://raw.githubusercontent.com/SAR-mango/SinESC/master/Logo/Logo.png)
 # Overview
 SinESC (pronounced "sign ESC," namesake being the sine wave) is an electronic speed controller (ESC) that supports full sinusoidal control of tri-phase brushless DC motors. Targeted towards RC drone and wing pilots.
 
