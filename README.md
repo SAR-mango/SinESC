@@ -1,10 +1,10 @@
 # Overview
-SinESC (pronounced "sign ESC," namesake being the sine wave) is an electronic speed controller (ESC) that supports full sinusoidal control of tri-phase brushless DC motors. Targeted towards RC drone and wing pilots.
+SinESC (pronounced "sign ESC," namesake being the sine wave) is an electronic speed controller (ESC) that supports full sinusoidal control of tri-phase brushless DC motors used by RC drone and wing pilots.
 
 There are two versions of SinESC. Wing Edition, for fixed-wing aircraft, and Multi Edition, for multirotors:
 - Wing Edition supports CAN and standard PWM control signals. CAN is intended for Pixhawk users, and standard PWM is for direct connection to an RC receiver.
 - Multi Edition communicates with a flight controller though SinWire, a custom 1-wire protocol that enables configuration, firmware updates, and speed control all through one wire. SinWire support will be added to Betaflight soon. It aims to match or exceed the update rate of DSHOT600.
-*The current version of Multi Edition, v2.3C, is being prototyped right now. The PCBs will be manufactured and assembled by PCBWay, located in Shenzhen, China. Upon their arrival here in San Diego, the software will be finalized and multiple efficiency and reliability tests will be conducted.
+\*The current version of Multi Edition, v2.3C, is being prototyped right now. The PCBs will be manufactured and assembled by PCBWay, located in Shenzhen, China. Upon their arrival here in San Diego, the software will be finalized and multiple efficiency and reliability tests will be conducted.
 
 The real-life dimensions of the PCBs pictured below are 15x30mm.
 ![Multi Edition v2.3C Top](https://raw.githubusercontent.com/SAR-mango/SinESC/master/Multi%20Edition/SinESC-Multi/Exported%20Files/3D%20Render%20Front.jpg)
@@ -20,7 +20,6 @@ The real-life dimensions of the PCBs pictured below are 15x30mm.
 - **Maximum 40A continuous, 50A burst current draw (5 seconds)**
   - With the greatly-increased efficiency of SinESC, peak motor currents will be *significantly* lower than before (at a given throttle/thrust level). This does NOT mean your motors run weaker. They are just more efficient.
   - Over-current protection takes advantage of comparators embedded in the microcontroller and triggers immediately at 55A.
-
 \*Several of the above specifications are currently only theoretical; they have not been confirmed with measurements. This page will be updated immediately when any specification changes or is confirmed.
 # Sinusoidal Control: Benefits & a Brief Description
 Brushless DC motors work best when their phase voltage waveforms are sinusoid-shaped. Try it yourself—connect a BLDC motor to an oscilloscope and spin the rotor with your fingers. You will see a sine wave. 
@@ -43,7 +42,7 @@ The 15x30mm SinESC Multi Edition PCB uses 0201-sized components when possible fo
 Multi Edition is designed in KiCAD and adheres to OSHPark design rules. All additional libraries are within the project files. Wing Edition was designed in EasyEDA and will soon be ported to KiCAD (a major redesign is required). It currently adheres to the inferior JLCPCB design rules.
 
 SinESC is designed specifically for efficiency and robustness:
-- ST Microelectronics STM32F303CBT7 microcontroller
+- ST Microelectronics STM32F303C(Bx/Cx) microcontroller
 - Maxim Integrated MAX4239 precision op-amps for current-sensing. Incredibly low input offset voltage of 0.1µV. Gain = 30V/V; offset tuned to use the full ADC resolution.
 - Low-resistance current shunts (1mΩ) for reduced power loss
 - Switching regulator provides logic-level voltage supply for control electronics (efficiency > 80%)
