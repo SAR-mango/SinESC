@@ -81,9 +81,11 @@ UART_HandleTypeDef huart1;
 uint8_t SPIRxBuf [5];
 
 /* Driver configuration */
-uint8_t GCONF_Write [4] = {0x00, 0x00, 0x00, 0x40}; // {0x00, 0x00, 0x00, 0x40};
-uint8_t SHORT_CONF_Write [4] = {0x60, 0x01, 0x05, 0x0A}; // {0x12, 0x01, 0x05, 0x0A}
-uint8_t DRV_CONF_Write [4] = {0x00, 0x0E, 0x00, 0x00}; // {0x00, 0x0E, 0x00, 0x00}
+/* First entry is MSB, last entry is LSB in SPI, when writing order is 0 to 3
+ * Bit order is MSb___LSb */
+uint8_t GCONF_Write [4] = {0x00, 0x00, 0x00, 0x40}; // {0x00, 0x00, 0x00, 0x40}; latest: {0x00, 0x00, 0x00, 0x82}
+uint8_t SHORT_CONF_Write [4] = {0x12, 0x01, 0x05, 0x0A}; // {0x60, 0x01, 0x05, 0x0A}
+uint8_t DRV_CONF_Write [4] = {0x00, 0x0c, 0x00, 0x00}; // {0x00, 0x0E, 0x00, 0x00}
 uint8_t GSTAT_Write [4] = {0xFF, 0xFF, 0xFF, 0xFF};
 
 /* USER CODE END PV */
@@ -167,6 +169,12 @@ int main(void)
 
   /* Reset the driver */
   resetDriver ();
+  //SPIwrite (TMC6100_GSTAT, GSTAT_Write);
+  SPIread (TMC6100_IOIN, SPIRxBuf);
+  SPIread (TMC6100_GSTAT, SPIRxBuf);
+  SPIread (TMC6100_GCONF, SPIRxBuf);
+  SPIread (TMC6100_SHORT_CONF, SPIRxBuf);
+  SPIread (TMC6100_DRV_CONF, SPIRxBuf);
   /* Write driver configuration to its registers through SPI */
   configureDriver ();
 
@@ -179,6 +187,9 @@ int main(void)
 
   /* Infinite loop */
   /* USER CODE BEGIN WHILE */
+ /* MC_ProgramSpeedRampMotor1(150, 3000);
+
+  MC_StartMotor1(); */
 
   while (1)
   {
@@ -190,7 +201,8 @@ int main(void)
     esc_pwm_control(&ESC_M1); 
 
     /* Driver fault handling */
-    if (HAL_GPIO_ReadPin(GPIOB, GPIO_PIN_12)) {
+    // if (HAL_GPIO_ReadPin(GPIOB, GPIO_PIN_12)) {
+    	if (0) {
     	/* Turn on fault LED */
     	HAL_GPIO_WritePin(GPIOB, GPIO_PIN_2, GPIO_PIN_SET);
     	/* DEBUG: read all input pins */
@@ -203,8 +215,8 @@ int main(void)
         SPIread (TMC6100_GSTAT, SPIRxBuf);
         /* Write driver configuration to its registers through SPI */
         //configureDriver ();
-    }
-    else {
+/*    }
+    else { */
     	/* Turn off fault LED */
     	HAL_GPIO_WritePin(GPIOB, GPIO_PIN_2, GPIO_PIN_RESET);
     }
@@ -876,7 +888,10 @@ static void MX_GPIO_Init(void)
   __HAL_RCC_GPIOB_CLK_ENABLE();
 
   /*Configure GPIO pin Output Level */
-  HAL_GPIO_WritePin(GPIOB, STAT_LED_Pin|DRV_EN_Pin, GPIO_PIN_RESET);
+  HAL_GPIO_WritePin(STAT_LED_GPIO_Port, STAT_LED_Pin, GPIO_PIN_RESET);
+
+  /*Configure GPIO pin Output Level */
+  HAL_GPIO_WritePin(DRV_EN_GPIO_Port, DRV_EN_Pin, GPIO_PIN_SET);
 
   /*Configure GPIO pin Output Level */
   HAL_GPIO_WritePin(SPI1_NSS_SOFT_GPIO_Port, SPI1_NSS_SOFT_Pin, GPIO_PIN_RESET);
@@ -891,7 +906,7 @@ static void MX_GPIO_Init(void)
   /*Configure GPIO pin : DRV_EN_Pin */
   GPIO_InitStruct.Pin = DRV_EN_Pin;
   GPIO_InitStruct.Mode = GPIO_MODE_OUTPUT_PP;
-  GPIO_InitStruct.Pull = GPIO_NOPULL;
+  GPIO_InitStruct.Pull = GPIO_PULLUP;
   GPIO_InitStruct.Speed = GPIO_SPEED_FREQ_LOW;
   HAL_GPIO_Init(DRV_EN_GPIO_Port, &GPIO_InitStruct);
 

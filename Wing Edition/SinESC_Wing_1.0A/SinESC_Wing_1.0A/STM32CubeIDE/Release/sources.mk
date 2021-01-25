@@ -21,7 +21,4 @@ OBJCOPY_BIN :=
 SUBDIRS := \
 Application/Startup \
 Application/User \
-Drivers/CMSIS \
-Drivers/STM32F3xx_HAL_Driver \
-Middlewares/MotorControl \
 
