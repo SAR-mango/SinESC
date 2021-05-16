@@ -1,11 +1,17 @@
 # Overview
+\*NOTE: I have been very busy with school, the SAT, and APs recently. However, I will dedicate all my time to this project once APs are over in early June. I have some big changes planned. Hopefully this thing will be working well by the end of August. I'll try to solidify the software side of things by then as well.
+
+Here is a list of the changes I will be making:
+- HDI PCB
+- New gate driver from TI
+- General simplification of design/reduced part count/smaller boards (by using integrated op-amps for current sensing)
+- G4 MCUs
+--------------------------------------------------------------------------------------------------------------------------------------------------------------------
 SinESC (pronounced "sign ESC," namesake being the sine wave) is an electronic speed controller (ESC) that supports full sinusoidal control of tri-phase brushless DC motors used by RC drone and wing pilots.
 
 There are two versions of SinESC. Wing Edition, for fixed-wing aircraft, and Multi Edition, for multirotors:
 - Wing Edition supports CAN and standard PWM control signals. CAN is intended for Pixhawk users, and standard PWM is for direct connection to an RC receiver.
 - Multi Edition communicates with a flight controller though SinWire, a custom 1-wire protocol that enables configuration, firmware updates, and speed control all through one wire. SinWire support will be added to Betaflight soon. It aims to match or exceed the update rate of DSHOT600.
-
-\*The current version of Multi Edition, v2.3C, is being prototyped right now. The PCBs will be manufactured and assembled by PCBWay, located in Shenzhen, China. Upon their arrival here in San Diego, the software will be finalized and multiple efficiency and reliability tests will be conducted.
 
 The real-life dimensions of the PCBs pictured below are 15x30mm.
 ![Multi Edition v2.3C Top](https://raw.githubusercontent.com/SAR-mango/SinESC/master/Multi%20Edition/SinESC-Multi/Exported%20Files/3D%20Render%20Front.jpg)
