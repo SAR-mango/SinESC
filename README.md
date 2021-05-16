@@ -1,12 +1,12 @@
-# Overview
-\*UPDATE: I have been very busy with school, the SAT, and APs recently. However, I will dedicate all my time to this project once APs are over in early June. I have some big changes planned. Hopefully this thing will be working well by the end of August. I'll try to solidify the software side of things by then as well.
+# UPDATE
+I have been very busy with school, the SAT, and APs recently. However, I will dedicate all my time to this project once APs are over in early June. I have some big changes planned. Hopefully this thing will be working well by the end of August. I'll try to solidify the software side of things by then as well.
 
 Here is a brief list of the changes I will be making:
 - Switch to HDI PCB (this has numerous benefits which I will write about later)
 - Switch to a gate driver from TI (TMC6100 is *extremely* unreliable)
 - Switch to STM32G431 MCU (better performance for same cost, also available in a QFN package unlike the STM32F303CBT7)
 - General simplification of design/reduced part count/smaller boards (switching to integrated op-amps for current sensing)
---------------------------------------------------------------------------------------------------------------------------------------------------------------------
+# Overview
 SinESC (pronounced "sign ESC," namesake being the sine wave) is an electronic speed controller (ESC) that supports full sinusoidal control of tri-phase brushless DC motors used by RC drone and wing pilots.
 
 There are two versions of SinESC. Wing Edition, for fixed-wing aircraft, and Multi Edition, for multirotors:
@@ -16,7 +16,7 @@ There are two versions of SinESC. Wing Edition, for fixed-wing aircraft, and Mul
 The real-life dimensions of the PCBs pictured below are 15x30mm.
 ![Multi Edition v2.3C Top](https://raw.githubusercontent.com/SAR-mango/SinESC/master/Multi%20Edition/SinESC-Multi/Exported%20Files/3D%20Render%20Front.jpg)
 ![Multi Edition v2.3C Bottom](https://raw.githubusercontent.com/SAR-mango/SinESC/master/Multi%20Edition/SinESC-Multi/Exported%20Files/3D%20Render%20Back.jpg)
---------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
 # Features & Specifications*
 - **> 97% efficiency (up to 40% longer flight)**
 - **Smoother flight**
@@ -30,7 +30,7 @@ The real-life dimensions of the PCBs pictured below are 15x30mm.
   - Over-current protection takes advantage of comparators embedded in the microcontroller and triggers immediately at 55A.
 
 \*Several of the above specifications are currently only theoretical; they have not been confirmed with measurements. This page will be updated immediately when any specification changes or is confirmed.
---------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
 # Sinusoidal Control: Benefits & a Brief Description
 Brushless DC motors work best when their phase voltage waveforms are sinusoid-shaped. Try it yourself—connect a BLDC motor to an oscilloscope and spin the rotor with your fingers. You will see a sine wave. 
 
@@ -44,7 +44,7 @@ There are a few ways to find the position of the rotor:
 - The first, most obvious method is to put a hall-effect (or similar) sensor on the motor to determine exactly where the rotor is. This sensor simply feeds data to the ESC. However, this is impractical for drones and wings due to durability, size, and weight concerns.
 - The second way is to calculate the position of the rotor based on the currents flowing through each phase. Technically, measuring just the total motor current is sufficient, but this leads to poor position estimation and thus reduced performance. Alternatively, each half-bridge can connect to ground through a series current shunt and the voltage drop across each shunt can be amplified and read by an ADC in a microcontroller. This allows for the current through each phase to be known, resulting in far superior performance. Though more complicated, this is the current-sensing topology that SinESC employs.
 - Finally, inline current-sensing is also possible. This technique involves placing shunts in series with only two of the three motor phases, since the third phase current can be calculated with Kirchoff's Current Law. However, this requires complicated, expensive amplifiers as high common-mode rejection ratio is critical. Some gate driver ICs integrate these amplifiers, but their gain and offset cannot be tuned to take full advantage of the ADC resolution. At high currents, ADC resolution is very valuable and should not be wasted. Thus, the second method was selected.
---------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
 # Hardware Achievements
 The four-layer PCB layout of SinESC is the main accomplishment of this project:
 
@@ -66,7 +66,7 @@ SinESC is designed specifically for efficiency and robustness:
 - High-quality passive components
   - TDK ceramic capacitors
   - Panasonic metal film resistors (all 1% tolerance including shunts)
---------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
 # Versions
 Regular Semantic Versioning is used for all software components of the project. As for PCB designs, Semantic Versioning has been modified. After Multi v2.3C, versions only reflect the PCB design since schematic changes directly influence the PCB. They are written like so:
 
