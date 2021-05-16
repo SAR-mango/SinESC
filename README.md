@@ -5,6 +5,7 @@ Here is a brief list of the changes I will be making:
 - Switch to HDI PCB (this has numerous benefits which I will write about later)
 - Switch to a gate driver from TI (TMC6100 is *extremely* unreliable)
 - Switch to STM32G431 MCU (better performance for same cost, also available in a QFN package unlike the STM32F303CBT7)
+- Switch to modern 3.3x3.3mm MOSFETs with low gate charge, same 40V Vds, similar Rdson, and high avalanche energy rating (much-reduced size, simpler routing)
 - General simplification of design/reduced part count/smaller boards (switching to integrated op-amps for current sensing)
 # Overview
 SinESC (pronounced "sign ESC," namesake being the sine wave) is an electronic speed controller (ESC) that supports full sinusoidal control of tri-phase brushless DC motors used by RC drone and wing pilots.
