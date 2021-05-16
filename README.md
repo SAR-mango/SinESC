@@ -1,12 +1,13 @@
-# UPDATE
+# \*Update
 I have been very busy with school, the SAT, and APs recently. However, I will dedicate all my time to this project once APs are over in early June. I have some big changes planned. Hopefully this thing will be working well by the end of August. I'll try to solidify the software side of things by then as well.
 
 Here is a brief list of the changes I will be making:
 - Switch to HDI PCB (this has numerous benefits which I will write about later)
 - Switch to a gate driver from TI (TMC6100 is *extremely* unreliable)
 - Switch to STM32G431 MCU (better performance for same cost, also available in a QFN package unlike the STM32F303CBT7)
-- Switch to modern 3.3x3.3mm MOSFETs with low gate charge, same 40V Vds, similar Rdson, and high avalanche energy rating (much-reduced size, simpler routing)
-- General simplification of design/reduced part count/smaller boards (switching to integrated op-amps for current sensing)
+- Switch to modern 3.3x3.3mm MOSFETs with low gate charge, same 40V Vds, similar Rdson, and high avalanche energy rating (smaller boards, simpler routing)
+- Switch to integrated op-amps for current sensing (general simplification of design, reduced part count, smaller boards)
+
 # Overview
 SinESC (pronounced "sign ESC," namesake being the sine wave) is an electronic speed controller (ESC) that supports full sinusoidal control of tri-phase brushless DC motors used by RC drone and wing pilots.
 
@@ -38,6 +39,7 @@ Brushless DC motors work best when their phase voltage waveforms are sinusoid-sh
 Regular BLHELI_32 ESCs use a simple "six-point" motor control method in which the phases are energized to bring the rotor to one of six points on a circle. This method is easy to implement as the rotor position at each point will result in a zero-crossing in the back-EMF from the non-energized phase(s), which is easy to detect. This means that the phase voltage waveforms are trapezoid-shaped rather than sinusoid-shaped. This is not ideal as the fields are not *always* aligned with the rotor to maximize torque. This causes the rotor to effectively "jolt in a circle" rather than spin continuously, resulting in lower efficiency and rougher flight. Furthermore, the sharp edges of the trapezoidal signal also introduce high-frequency noise which contributes to the above disadvantages as well. This also makes the motors run louder and hotter.
 
 Sinusoidal control minimizes torque ripple, maximizing efficiency. The magnetic fields are precisely aligned to exert maximum torque on the rotor at *any* given position and power. Minimized torque ripple leads to smoother flight. Greater efficiency (SinESC achieves > 97% efficiency; trapezoidal ESCs typically achieve around 70%) allows for longer flight times and lower peak currents, which can increase battery longevity as well.
+
 # Current-Sense Topology
 Not just any ESC can perform sinusoidal control, and not all sinusoidal ESCs are created equal. Sinusoidal control requires that the ESC know the exact position of the rotor in order to properly align the magnetic field. Perfect alignment results in a perfect sine wave.
 
