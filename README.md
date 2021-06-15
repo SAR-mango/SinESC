@@ -1,5 +1,5 @@
 # \*Update
-I have been very busy with school, the SAT, and APs recently. However, I will dedicate all my time to this project once APs are over in early June. I have some big changes planned. Hopefully this thing will be working well by the end of August. I'll try to solidify the software side of things by then as well.
+I have been very busy with school recently, but I will dedicate all my time to this project starting mid June. I have some big changes planned. Hopefully this thing will be working well by the end of August. I'll try to solidify the software side of things by then as well.
 
 Here is a brief list of the changes I will be making:
 - Switch to HDI PCB (this has numerous benefits which I will write about later)
