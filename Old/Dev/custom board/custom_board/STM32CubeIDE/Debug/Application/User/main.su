@@ -1,0 +1,7 @@
+main.c:172:6:SystemClock_Config	152	static,ignoring_inline_asm
+main.c:530:6:SPIread	32	static
+main.c:541:6:SPIwrite	40	static
+main.c:553:6:configureDriver	48	static
+main.c:559:6:resetDriver	8	static
+main.c:105:5:main	144	static,ignoring_inline_asm
+main.c:570:6:Error_Handler	0	static,ignoring_inline_asm

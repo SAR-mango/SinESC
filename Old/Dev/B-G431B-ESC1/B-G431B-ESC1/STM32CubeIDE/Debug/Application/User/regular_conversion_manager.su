@@ -1,0 +1,10 @@
+regular_conversion_manager.c:200:9:RCM_RegisterRegConv	12	static
+regular_conversion_manager.c:167:9:RCM_RegisterRegConv_WithCB	16	static
+regular_conversion_manager.c:281:10:RCM_ExecRegularConv	16	static
+regular_conversion_manager.c:387:6:RCM_RequestUserConv	0	static
+regular_conversion_manager.c:408:10:RCM_GetUserConv	0	static
+regular_conversion_manager.c:426:6:RCM_ExecUserConv	16	static
+regular_conversion_manager.c:457:21:RCM_GetUserConvState	0	static
+regular_conversion_manager.c:479:6:RCM_PauseRegularConv	8	static
+regular_conversion_manager.c:523:6:RCM_ExecNextConv	16	static
+regular_conversion_manager.c:565:6:RCM_ReadOngoingConv	12	static
