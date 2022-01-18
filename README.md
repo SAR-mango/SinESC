@@ -1,34 +1,30 @@
-# \*Update
-I have been very busy with school recently, but I will dedicate all my time to this project starting mid June. I have some big changes planned. Hopefully this thing will be working well by the end of August. I'll try to solidify the software side of things by then as well.
+# Current State of the Project (January 2022)
+I haven't been able to build any prototypes for the past year due to the ongoing chip shortage, but here is a list of changes I had planned to make:
 
-Here is a brief list of the changes I will be making:
-- Switch to HDI PCB (this has numerous benefits which I will write about later)
-- Switch to a gate driver from TI (TMC6100 is *extremely* unreliable)
-- Switch to STM32G431 MCU (better performance for same cost, also available in a QFN package unlike the STM32F303CBT7)
-- Switch to modern 3.3x3.3mm MOSFETs with low gate charge, same 40V Vds, similar Rdson, and high avalanche energy rating (smaller boards, simpler routing)
-- Switch to integrated op-amps for current sensing (general simplification of design, reduced part count, smaller boards)
+- Switch to HDI PCB
+- Switch to discrete half-bridge gate drivers
+- Switch to a variant of the STM32G4 MCU
+- Switch to modern 3.3x3.3mm MOSFETs with low gate charge, same 40V Vds, similar Rdson, and high avalanche energy rating
+- Switch to integrated op-amps for current sensing
+
+These changes mostly improve simplicity and robustness, and will make it easier to develop a 4-in-1 version of SinESC after the single version is fully complete. I haven't made these changes yet because I am waiting to see what parts are available once the appropriate STM32 microcontrollers are in stock. As of now, SinESC successfully spins motors with > 90% efficiency, but there are reliability concerns with the TMC6100 gate driver. Also, some software work is required to add DSHOT support. Finally, a more long-term goal is to develop a self-tuning application integrated with Betaflight that can be run to optimize SinESC for a specific motor.
 
 # Overview
-SinESC (pronounced "sign ESC," namesake being the sine wave) is an electronic speed controller (ESC) that supports full sinusoidal control of tri-phase brushless DC motors used by RC drone and wing pilots.
-
-There are two versions of SinESC. Wing Edition, for fixed-wing aircraft, and Multi Edition, for multirotors:
-- Wing Edition supports CAN and standard PWM control signals. CAN is intended for Pixhawk users, and standard PWM is for direct connection to an RC receiver.
-- Multi Edition communicates with a flight controller though SinWire, a custom 1-wire protocol that enables configuration, firmware updates, and speed control all through one wire. SinWire support will be added to Betaflight soon. It aims to match or exceed the update rate of DSHOT600.
+SinESC (pronounced "sign ESC," namesake being the sine wave) is an electronic speed controller (ESC) that supports full sinusoidal control of three-phase brushless DC motors used by RC drone pilots.
 
 The real-life dimensions of the PCBs pictured below are 15x30mm.
 ![Multi Edition v2.3C Top](https://raw.githubusercontent.com/SAR-mango/SinESC/master/Multi%20Edition/SinESC-Multi/Exported%20Files/3D%20Render%20Front.jpg)
 ![Multi Edition v2.3C Bottom](https://raw.githubusercontent.com/SAR-mango/SinESC/master/Multi%20Edition/SinESC-Multi/Exported%20Files/3D%20Render%20Back.jpg)
 
 # Features & Specifications*
-- **> 97% efficiency (up to 40% longer flight)**
-- **Smoother flight**
-- Quieter operation
+- 90% efficiency (up to 40% longer flight)
+- Smooth flight
+- Quiet operation
 - Bus voltage monitoring for power measurement and under-voltage protection
-- 60kHz PWM frequency—with sinusoidal control, PWM frequency hardly affects torque and smoothness. 30kHz and above feel the same. Consequently, 60kHz was selected as it offered maximum efficiency.
 - Broken-out and labeled debug pins for hackers
-- **3-6S Li-po batteries supported (minimum 10V, maximum 28V supply voltage)**
-- **Maximum 40A continuous, 50A burst current draw (5 seconds)**
-  - With the greatly-increased efficiency of SinESC, peak motor currents will be *significantly* lower than before (at a given throttle/thrust level). This does NOT mean your motors run weaker. They are just more efficient.
+- 3–6S Li-po battery support
+- Maximum 30A continuous, 40A burst current draw
+  - With the greatly-increased efficiency of SinESC, peak motor currents will be significantly lower than before (at a given throttle/thrust level). This does NOT mean your motors produce less power—they are just more efficient.
   - Over-current protection takes advantage of comparators embedded in the microcontroller and triggers immediately at 55A.
 
 \*Several of the above specifications are currently only theoretical; they have not been confirmed with measurements. This page will be updated immediately when any specification changes or is confirmed.
@@ -38,7 +34,7 @@ Brushless DC motors work best when their phase voltage waveforms are sinusoid-sh
 
 Regular BLHELI_32 ESCs use a simple "six-point" motor control method in which the phases are energized to bring the rotor to one of six points on a circle. This method is easy to implement as the rotor position at each point will result in a zero-crossing in the back-EMF from the non-energized phase(s), which is easy to detect. This means that the phase voltage waveforms are trapezoid-shaped rather than sinusoid-shaped. This is not ideal as the fields are not *always* aligned with the rotor to maximize torque. This causes the rotor to effectively "jolt in a circle" rather than spin continuously, resulting in lower efficiency and rougher flight. Furthermore, the sharp edges of the trapezoidal signal also introduce high-frequency noise which contributes to the above disadvantages as well. This also makes the motors run louder and hotter.
 
-Sinusoidal control minimizes torque ripple, maximizing efficiency. The magnetic fields are precisely aligned to exert maximum torque on the rotor at *any* given position and power. Minimized torque ripple leads to smoother flight. Greater efficiency (SinESC achieves > 97% efficiency; trapezoidal ESCs typically achieve around 70%) allows for longer flight times and lower peak currents, which can increase battery longevity as well.
+Sinusoidal control minimizes torque ripple, maximizing efficiency. The magnetic fields are precisely aligned to exert maximum torque on the rotor at *any* given position and power. Minimized torque ripple leads to smoother flight. Greater efficiency (SinESC achieves > 90% efficiency; trapezoidal ESCs typically achieve around 70%) allows for longer flight times and lower peak currents, which can increase battery longevity as well.
 
 # Current-Sense Topology
 Not just any ESC can perform sinusoidal control, and not all sinusoidal ESCs are created equal. Sinusoidal control requires that the ESC know the exact position of the rotor in order to properly align the magnetic field. Perfect alignment results in a perfect sine wave.
@@ -49,11 +45,7 @@ There are a few ways to find the position of the rotor:
 - Finally, inline current-sensing is also possible. This technique involves placing shunts in series with only two of the three motor phases, since the third phase current can be calculated with Kirchoff's Current Law. However, this requires complicated, expensive amplifiers as high common-mode rejection ratio is critical. Some gate driver ICs integrate these amplifiers, but their gain and offset cannot be tuned to take full advantage of the ADC resolution. At high currents, ADC resolution is very valuable and should not be wasted. Thus, the second method was selected.
 
 # Hardware Achievements
-The four-layer PCB layout of SinESC is the main accomplishment of this project:
-
-The 15x30mm SinESC Multi Edition PCB uses 0201-sized components when possible for reduced parasitic influences and reduced size. Maximum component density is approximately 50 components/cm². The microcontroller, gate driver, and current-sense amplifiers (all the control electronics) are implemented on the top layer, leaving the bottom layer for the power electronics. This provides room for wide traces. At an increased size of 17.5x35mm, SinESC Wing Edition adds CAN support with a robust transceiver.
-
-Multi Edition is designed in KiCAD and adheres to OSHPark design rules. All additional libraries are within the project files. Wing Edition was designed in EasyEDA and will soon be ported to KiCAD (a major redesign is required). It currently adheres to the inferior JLCPCB design rules.
+The 15 × 30mm SinESC Multi Edition PCB uses 0201-sized components when possible for reduced parasitic influences and reduced size. Maximum component density is approximately 50 components/cm². The microcontroller, gate driver, and current-sense amplifiers (all the control electronics) are implemented on the top layer, leaving the bottom layer for the power electronics. This provides room for wide traces. Multi Edition is designed in KiCAD and adheres to OSHPark design rules. All additional libraries are within the project files.
 
 SinESC is designed specifically for efficiency and robustness:
 - ST Microelectronics STM32F303C(Bx/Cx) microcontroller
@@ -69,6 +61,8 @@ SinESC is designed specifically for efficiency and robustness:
 - High-quality passive components
   - TDK ceramic capacitors
   - Panasonic metal film resistors (all 1% tolerance including shunts)
+
+\*Many of these specifications will change; see the top of this page
 
 # Versions
 Regular Semantic Versioning is used for all software components of the project. As for PCB designs, Semantic Versioning has been modified. After Multi v2.3C, versions only reflect the PCB design since schematic changes directly influence the PCB. They are written like so:
