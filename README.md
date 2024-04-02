@@ -1,4 +1,4 @@
-# Current State of the Project (January 2022)
+# Current State of the Project
 I haven't been able to build any prototypes for the past year due to the ongoing chip shortage, but here is a list of changes I had planned to make:
 
 - Switch to HDI PCB
