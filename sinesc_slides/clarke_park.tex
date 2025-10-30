@@ -1,0 +1,126 @@
+\begin{tikzpicture}[scale=0.525, every node/.style={transform shape}, >=Latex]
+	% --- knobs ---
+	\def\R{2}        % circle radius (cm)
+	\def\W{3.2}      % waveform width
+	\def\A{0.45}     % waveform amplitude
+	\def\wfpadT{2} % padding above top circles
+	\def\wfpadB{2} % padding below bottom circles
+	
+	% --- styles ---
+	\tikzset{
+		circ/.style = {draw, circle, minimum size=2*\R cm},
+		axis/.style = {-Latex},
+		vec/.style  = {-Latex},
+		lbl/.style  = {font=\small}
+	}
+	
+	% --- layout anchors ---
+	\coordinate (T1) at (0,5.5);
+	\coordinate (T2) at (6.6,5.5);
+	\coordinate (T3) at (13.2,5.5);
+	\coordinate (B1) at (0,0);
+	\coordinate (B2) at (6.6,0);
+	\coordinate (B3) at (13.2,0);
+	
+	% ================== TOP ROW — VOLTAGE ==================
+	\node[circ] (C_T1) at (T1) {};
+	\draw[axis] (C_T1.center) -- ++(0,\R) node[lbl,above] {$U_D$};
+	\draw[axis] (C_T1.center) -- ++(\R,0) node[lbl,right] {$U_Q$};
+	\node[align=center, lbl, above=10pt of C_T1] {Rotational steady-state \\ output currents};
+	
+	\node[circ] (C_T2) at (T2) {};
+	\draw[axis] (C_T2.center) -- ++(0,\R) node[lbl,above] {$U_\beta$};
+	\draw[axis] (C_T2.center) -- ++(\R,0) node[lbl,right] {$U_\alpha$};
+	\node[align=center, lbl, above=10pt of C_T2] {Orthogonal output currents};
+	
+	\node[circ] (C_T3) at (T3) {};
+	\foreach \ang/\name/\pos in {90/U_V/above, -30/U_U/right, -150/U_W/left}{
+		\draw[vec] (C_T3.center) -- ++(\ang:\R);
+		\node[lbl,\pos] at ($(C_T3.center)+(\ang:\R)$) {$\name$};
+	}
+	\node[align=center, lbl, above=10pt of C_T3] {Three-phase output waveform};
+	
+	% arrows across the top row
+	\draw[-Latex] ($(C_T1.east)+(0.6,0)$) -- node[above=6pt,lbl]{iPARK}    ($(C_T2.west)+(-0.6,0)$);
+	\draw[-Latex] ($(C_T2.east)+(0.6,0)$) -- node[above=6pt,lbl]{iCLARKE} ($(C_T3.west)+(-0.6,0)$);
+	\draw[-Latex] ($(C_T3.east)+(0.6,0)$) -- node[above=6pt,lbl]{SVPWM} ($(C_T3.east)+(0.6,0)+(C_T3.west)+(-0.6,0)-(C_T2.east)-(0.6,0)$);
+	
+	% ================== BOTTOM ROW — CURRENT ==================
+	\node[circ] (C_B1) at (B1) {};
+	\draw[axis] (C_B1.center) -- ++(0,\R) node[lbl,above] {$I_D$};
+	\draw[axis] (C_B1.center) -- ++(\R,0) node[lbl,right] {$I_Q$};
+	\node[align=center, lbl, below=6pt of C_B1] {Rotational steady-state \\ direct and quadrature currents};
+	
+	\node[circ] (C_B2) at (B2) {};
+	\draw[axis] (C_B2.center) -- ++(0,\R) node[lbl,above] {$I_\beta$};
+	\draw[axis] (C_B2.center) -- ++(\R,0) node[lbl,right] {$I_\alpha$};
+	\node[align=center, lbl, below=6pt of C_B2] {Two orthogonal currents};
+	
+	\node[circ] (C_B3) at (B3) {};
+	\foreach \ang/\name/\pos in {90/I_V/above, -30/I_U/right, -150/I_W/left}{
+		\draw[vec] (C_B3.center) -- ++(\ang:\R);
+		\node[lbl,\pos] at ($(C_B3.center)+(\ang:\R)$) {$\name$};
+	}
+	\node[align=center, lbl, below=6pt of C_B3] {Three linearly dependent currents};
+	
+	% arrows across the bottom row
+	\draw[-Latex] ($(C_B3.west)+(-0.6,0)$) -- node[above=6pt,lbl]{CLARKE} ($(C_B2.east)+(0.6,0)$);
+	\draw[-Latex] ($(C_B2.west)+(-0.6,0)$) -- node[above=6pt,lbl]{PARK}  ($(C_B1.east)+(0.6,0)$);
+	\draw[-Latex] ($(C_B1.east)!0.5!(C_B2.west)-(0,1.2)$) node[below=6pt,lbl]{Rotor position $\theta$} -- ($(C_B1.east)!0.5!(C_B2.west)$);
+	
+	% PID controllers arrow (downward)
+	\draw[Latex-]
+	($(C_T1.south)+(0,-0.1)$) -- node[lbl,left=3pt,align=center]{PID controller\\$I_{D}=0$\\$I_{Q}\propto\text{torque setpoint}$}
+	($(C_B1.north)+(0,0.4)$);
+	
+	% ================== WAVEFORMS ==================
+	% ---- TOP: above circles ----
+	\begin{scope}[shift={($(C_T1.center)+(0,\R+\wfpadT)$)}]
+		\draw [Red] ({-0.5*\W},0) -- ({0.5*\W},0)
+		node[Red,lbl,anchor=west] {$U_Q$};
+		\draw [blue] ({-0.5*\W},-\A) -- ({0.5*\W},-\A)
+		node[blue,lbl,anchor=west] {$U_D$};
+	\end{scope}
+	
+	\begin{scope}[shift={($(C_T2.center)+(0,\R+\wfpadT)$)}]
+		\draw[Red,samples=120,domain=0:360,variable=\t,smooth]
+		plot ({-0.5*\W + \W*\t/360},{ \A*sin(\t)}) node[Red,lbl,anchor=west] at ({0.5*\W},{0}) {$U_\alpha$};
+		\draw[blue,samples=120,domain=0:360,variable=\t,smooth]
+		plot ({-0.5*\W + \W*\t/360},{ \A*sin(\t-90)}) node[blue,lbl,anchor=west] at ({0.5*\W},{-\A}) {$U_\beta$};
+	\end{scope}
+	
+	\begin{scope}[shift={($(C_T3.center)+(0,\R+\wfpadT)$)}]
+		\draw[Red,samples=120,domain=0:360,variable=\t,smooth]
+		plot ({-0.5*\W + \W*\t/360},{ \A*sin(\t)}) node[Red,lbl,anchor=west] at ({0.5*\W},{0}) {$U_U$};
+		\draw[Green,samples=120,domain=0:360,variable=\t,smooth]
+		plot ({-0.5*\W + \W*\t/360},{ \A*sin(\t-120)}) node[Green,lbl,anchor=west] at ({0.5*\W},{-\A}) {$U_V$};
+		\draw[blue,samples=120,domain=0:360,variable=\t,smooth]
+		plot ({-0.5*\W + \W*\t/360},{ \A*sin(\t+120)}) node[blue,lbl,anchor=west] at ({0.5*\W},{\A}) {$U_W$};
+	\end{scope}
+	
+	% ---- BOTTOM: below circles ----
+	\begin{scope}[shift={($(C_B1.center)+(0,-\R-\wfpadB)$)}]
+		\draw [Red] ({-0.5*\W},0) -- ({0.5*\W},0)
+		node[Red,lbl,anchor=west] {$I_Q$};
+		\draw [blue] ({-0.5*\W},-\A) -- ({0.5*\W},-\A)
+		node[Blue,lbl,anchor=west] {$I_D$};
+	\end{scope}
+	
+	\begin{scope}[shift={($(C_B2.center)+(0,-\R-\wfpadB)$)}]
+		\draw[Red,samples=120,domain=0:360,variable=\t,smooth]
+		plot ({-0.5*\W + \W*\t/360},{ \A*sin(\t)}) node[Red,lbl,anchor=west] at ({0.5*\W},{0}) {$I_\alpha$};
+		\draw[blue,samples=120,domain=0:360,variable=\t,smooth]
+		plot ({-0.5*\W + \W*\t/360},{ \A*sin(\t-90)});
+		\node[blue,lbl,anchor=west] at ({0.5*\W},{-\A}) {$I_\beta$};
+	\end{scope}
+	
+	\begin{scope}[shift={($(C_B3.center)+(0,-\R-\wfpadB)$)}]
+		\draw[Red,samples=120,domain=0:360,variable=\t,smooth]
+		plot ({-0.5*\W + \W*\t/360},{ \A*sin(\t)}) node[Red,lbl,anchor=west] at ({0.5*\W},{0}) {$I_U$};
+		\draw[Green,samples=120,domain=0:360,variable=\t,smooth]
+		plot ({-0.5*\W + \W*\t/360},{ \A*sin(\t-120)}) node[Green,lbl,anchor=west] at ({0.5*\W},{-\A}) {$I_V$};
+		\draw[blue,samples=120,domain=0:360,variable=\t,smooth]
+		plot ({-0.5*\W + \W*\t/360},{ \A*sin(\t+120)});
+		\node[blue,lbl,anchor=west] at ({0.5*\W},{\A}) {$I_W$};
+	\end{scope}
+\end{tikzpicture}

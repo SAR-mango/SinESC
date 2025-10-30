@@ -1,0 +1,48 @@
+\begin{tikzpicture}[scale=0.5, >=Latex]
+	\def\R{3}        % circle radius
+	\def\arrlen{2} % SHORTER tangent arrow length
+	\def\n{18}       % number of evenly spaced lines (must be even)
+	\def\rot{30}     % rotate phase axes CCW
+	
+	% Circle
+	\draw[thick] (0,0) circle (\R);
+	
+	% --- Rotated phase axes (no labels) ---
+	\foreach \ang in {90+\rot, 210+\rot, 330+\rot}{
+		\draw (0,0) -- ({\R*cos(\ang)},{\R*sin(\ang)});
+		\draw (0,0) -- ({-\R*cos(\ang)},{-\R*sin(\ang)});
+	}
+	
+	% --- Fixed reference lines at 90°, 210°, 330° labeled U, V, W ---
+	\foreach \ang/\name/\pos/\clr in {90/U/above/Red, 210/V/below left/Green, 330/W/below right/blue}{
+		\draw[very thick,\clr] (0,0) -- ({\R*cos(\ang)},{\R*sin(\ang)});
+		\node[\pos] at ({1.15*\R*cos(\ang)},{1.15*\R*sin(\ang)}) {\textcolor{\clr}{\name}};
+	}
+	
+	% --- 18 evenly spaced diameters with tangent arrows at each ---
+	% Use the same +30° base so orientation stays consistent with prior figure
+	\pgfmathtruncatemacro{\nm}{\n-1}
+	\foreach \k in {0,...,\nm}{
+		\pgfmathsetmacro{\ang}{30+\rot + 360/\n*\k}
+		\pgfmathsetmacro{\angOpp}{\ang+180}
+		
+		% Endpoints for this diameter
+		\pgfmathsetmacro{\px}{\R*cos(\ang)}
+		\pgfmathsetmacro{\py}{\R*sin(\ang)}
+		\pgfmathsetmacro{\qx}{\R*cos(\angOpp)}
+		\pgfmathsetmacro{\qy}{\R*sin(\angOpp)}
+		
+		% The diameter (no labels)
+		\draw (\px,\py) -- (\qx,\qy);
+		
+		% Tangent direction at angle ang: (-sin ang, cos ang)
+		\pgfmathsetmacro{\tx}{-sin(\ang)}
+		\pgfmathsetmacro{\ty}{ cos(\ang)}
+		
+		% Shorter tangential torque vector at the +ang endpoint
+		\draw[->] (\px,\py) -- ({\px+\arrlen*\tx},{\py+\arrlen*\ty});
+	}
+	
+	% CCW rotation arc outside the circle
+	\draw[->,thick] ({\R+1.2},0) arc[start angle=0,end angle=60,radius=\R+1.2];
+\end{tikzpicture}

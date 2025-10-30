@@ -1,7 +1,0 @@
-stm32g4xx_mc_it.c:81:6:ADC1_2_IRQHandler	0	static
-stm32g4xx_mc_it.c:113:6:TIM1_UP_TIM16_IRQHandler	0	static
-stm32g4xx_mc_it.c:127:6:TIM1_BRK_TIM15_IRQHandler	8	static
-stm32g4xx_mc_it.c:156:6:USART2_IRQHandler	8	static
-stm32g4xx_mc_it.c:206:6:HardFault_Handler	16	static
-stm32g4xx_mc_it.c:255:6:SysTick_Handler	8	static
-stm32g4xx_mc_it.c:283:6:EXTI15_10_IRQHandler	0	static

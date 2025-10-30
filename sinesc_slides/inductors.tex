@@ -1,0 +1,14 @@
+\begin{circuitikz}
+	\coordinate (C) at (0,0);
+	\coordinate (M) at (90:2);
+	\coordinate (N) at (-30:2);
+	\coordinate (P) at (210:2);
+	% Inductors with filled center node and open end nodes
+	\draw [L,o-*] (M) to (C);
+	\draw (C) to[L,-o] (N);
+	\draw [L,o-] (P) to (C);
+	% Labels
+	\node[above]       at (M) {U};
+	\node[below right] at (N) {W};
+	\node[below left]  at (P) {V};
+\end{circuitikz}

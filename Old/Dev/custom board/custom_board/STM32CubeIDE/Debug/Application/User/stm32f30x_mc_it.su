@@ -1,6 +1,0 @@
-stm32f30x_mc_it.c:77:6:ADC1_2_IRQHandler	0	static
-stm32f30x_mc_it.c:102:6:TIM1_UP_TIM16_IRQHandler	0	static
-stm32f30x_mc_it.c:116:6:TIM1_BRK_TIM15_IRQHandler	8	static
-stm32f30x_mc_it.c:146:6:USART1_IRQHandler	8	static
-stm32f30x_mc_it.c:199:6:HardFault_Handler	16	static
-stm32f30x_mc_it.c:247:6:SysTick_Handler	8	static

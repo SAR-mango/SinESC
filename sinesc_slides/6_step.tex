@@ -1,0 +1,51 @@
+\begin{tikzpicture}[scale=0.5, >=Latex]
+	\def\R{3}        % circle radius
+	\def\arrlen{2.0} % tangent arrow length
+	\def\n{6}        % number of tangent arrows (must be even)
+	\def\rot{30}     % rotate phase axes CCW
+	
+	% Circle
+	\draw[thick] (0,0) circle (\R);
+	
+	% --- Rotated phase axes (no color), label ends with x ---
+	\foreach \ang/\labela/\labelb in {90+\rot/2/5, 210+\rot/4/1, 330+\rot/6/3}{
+		\draw (0,0) -- ({\R*cos(\ang)},{\R*sin(\ang)});
+		\draw (0,0) -- ({-\R*cos(\ang)},{-\R*sin(\ang)});
+		\node at ({1.2*\R*cos(\ang)},{1.2*\R*sin(\ang)}) {$\labela$};
+		\node at ({-1.2*\R*cos(\ang)},{-1.2*\R*sin(\ang)}) {$\labelb$};
+	}
+	
+	% --- Fixed reference lines at 90°, 210°, 330° labeled U, V, W ---
+	\foreach \ang/\name/\pos/\clr in {90/U/above/Red, 210/V/below left/Green, 330/W/below right/blue}{
+		\draw[very thick,\clr] (0,0) -- ({\R*cos(\ang)},{\R*sin(\ang)});
+		\node[\pos] at ({1.15*\R*cos(\ang)},{1.15*\R*sin(\ang)}) {\textcolor{\clr}{\name}};
+	}
+	
+	% --- Tangent arrows (keep +30° base; rotate by \rot) ---
+	% tangent at angle θ is (-sin θ, cos θ)
+	\pgfmathtruncatemacro{\nm}{\n-1}
+	\foreach \k in {0,...,\nm}{
+		\pgfmathsetmacro{\ang}{30+\rot + 360/\n*\k}
+		\pgfmathsetmacro{\px}{\R*cos(\ang)}
+		\pgfmathsetmacro{\py}{\R*sin(\ang)}
+		\pgfmathsetmacro{\tx}{-sin(\ang)}
+		\pgfmathsetmacro{\ty}{ cos(\ang)}
+		\draw[->] (\px,\py) -- ({\px+\arrlen*\tx},{\py+\arrlen*\ty});
+	}
+	
+	% --- Diameters through opposite tangent points (same +30° base) ---
+	\pgfmathtruncatemacro{\nhalf}{\n/2}
+	\pgfmathtruncatemacro{\nhalfmone}{\nhalf-1}
+	\foreach \k in {0,...,\nhalfmone}{
+		\pgfmathsetmacro{\ang}{30+\rot + 360/\n*\k}
+		\pgfmathsetmacro{\angOpp}{\ang+180}
+		\pgfmathsetmacro{\px}{\R*cos(\ang)}
+		\pgfmathsetmacro{\py}{\R*sin(\ang)}
+		\pgfmathsetmacro{\qx}{\R*cos(\angOpp)}
+		\pgfmathsetmacro{\qy}{\R*sin(\angOpp)}
+		\draw[Latex-Latex] (\px,\py) -- (\qx,\qy);
+	}
+	
+	% CCW rotation arc outside the circle
+	\draw[->,thick] ({\R+1.2},0) arc[start angle=0,end angle=60,radius=\R+1.2];
+\end{tikzpicture}

@@ -1,0 +1,275 @@
+\input{setup}
+\input{commands}
+\title{FOC Motor Controller for Drones}
+\author{Erk Sampat}
+\date{October 3, 2025}
+\begin{document}
+\begin{frame}
+	\begin{center}
+		\includegraphics[height=0.75in]{logo}
+	\end{center}
+	\vskip-0.5in
+	\titlepage
+\end{frame}
+\begin{frame}\frametitle{Outline}
+	\begin{enumerate}
+		\item Project Introduction
+		\item Theory
+		\item Design Walkthrough
+	\end{enumerate}
+\end{frame}
+\begin{frame}\frametitle{Project Introduction -- The Problem}
+	\begin{itemize}
+		\item Typical FPV drone flight time: 5--7 minutes
+		\item Off-the-shelf brushless motor controller efficiency $\approx 70\%$
+		\item Can we achieve closer to $100\%$?
+		\item Yes! With a better control scheme.
+		\item Motor controller (``ESC'') is accessible for improvement
+	\end{itemize}
+	\begin{center}
+		\includegraphics[width=0.6\textwidth]{drone}
+	\end{center}
+\end{frame}
+\begin{frame}\frametitle{Project Introduction -- System Overview}
+	\only<1-2>{
+		\begin{center}
+			\input{system_diagram}
+		\end{center}
+	}
+	\only<3>{
+		\begin{center}
+			\includegraphics[height=0.45\textheight]{esc_mounted}
+			\includegraphics[height=0.45\textheight]{motor}
+		\end{center}
+	}
+\end{frame}
+\begin{frame}\frametitle{Project Introduction -- Scope}
+	\begin{itemize}
+		\item Designed/fabricated/tested custom hardware to run sensorless FOC
+		\item Hardware initially designed in 2020
+		\item Future plan: fully custom firmware
+	\end{itemize}
+	\begin{center}
+		\only<1>{\includegraphics[width=\textwidth]{esc_front}}
+		\only<2>{\includegraphics[width=\textwidth]{esc_back}}
+	\end{center}
+\end{frame}
+\begin{frame}\frametitle{Project Introduction -- Primary Specifications}
+	\begin{itemize}
+		\item $\V{in}$: \qv{12}--\qv{25.2} (4S--6S Li-po battery)
+		\item $\I{in}$: \qa{45} continuous, \qa{55} burst (5 seconds)
+		\item DSHOT communication protocol support
+		\item Size: comparable to off-the-shelf ESC (\qmm{15}$\times$\qmm{30})
+		\item Out-of-box compatibility with broad range of motors
+		\item High reliability: robustness against\ldots
+		\begin{itemize}
+			\item Voltage spikes
+			\item Rapid throttle (speed command) changes
+			\item Physical shock
+		\end{itemize}
+	\end{itemize}
+\end{frame}
+\begin{frame}\frametitle{Theory -- Brushless Motors}
+	\begin{minipage}{0.5\textwidth}
+		\begin{itemize}
+			\item Rotor: permanent magnets
+			\item Stator: coil windings
+			\item Electronically commutated
+			\item PMSM: sinusoidal BEMF
+			\item BLDC: trapezoidal BEMF\ldots \\
+			but often looks sinusoidal due to LC filtering by windings
+		\end{itemize}
+	\end{minipage}%
+	\begin{minipage}{0.5\textwidth}
+		\includegraphics[width=\textwidth]{brushless_motors}
+		{\scriptsize ablic.com}
+		\begin{center}
+			\input{inductors}
+		\end{center}
+	\end{minipage}
+\end{frame}
+\begin{frame}\frametitle{Theory -- 6-Step Drive}
+	\begin{minipage}{0.6\textwidth}
+		Operation:
+		\begin{itemize}
+			\item 6 energized states
+			\item Switch upon zero-crossing
+			\item PWM controls torque
+		\end{itemize}
+		Benefits:
+		\begin{itemize}
+			\item Simple
+			\item Low switching loss
+			\item Zero-crossings measured on floating phase
+		\end{itemize}
+		Drawbacks:
+		\begin{itemize}
+			\item Torque ripple
+			\item High-frequency harmonics
+			\item Field not always orthogonal to rotor\ldots inefficient
+		\end{itemize}
+	\end{minipage}%
+	\begin{minipage}{0.4\textwidth}
+		\begin{center}
+			\input{table}
+			\input{6_step}
+		\end{center}
+	\end{minipage}
+\end{frame}
+\begin{frame}\frametitle{Theory -- Field-Oriented Control}
+	\begin{minipage}{0.6\textwidth}
+		Operation:
+		\begin{itemize}
+			\item $\infty$ energized ``states''
+			\item Space-vector modulation
+			\item PWM controls torque AND field orientation
+		\end{itemize}
+		Benefits:
+		\begin{itemize}
+			\item Low torque ripple
+			\item Reduced harmonics
+			\item Field always orthogonal to rotor\ldots highly efficient
+		\end{itemize}
+		Drawbacks:
+		\begin{itemize}
+			\item Complex
+			\item Higher switching loss
+			\item Difficult to measure BEMF
+			\item Requires precise position sensing
+		\end{itemize}
+	\end{minipage}%
+	\begin{minipage}{0.4\textwidth}
+		\begin{center}
+			\input{table}
+			\input{foc}
+		\end{center}
+	\end{minipage}
+\end{frame}
+\begin{frame}\frametitle{Theory -- Clarke-Park Transforms}
+	\begin{center}
+		\input{clarke_park}
+	\end{center}
+\end{frame}
+\begin{frame}\frametitle{Theory -- Sensorless Position Estimation}
+	Key point: $\text{knowing BEMF and phase currents}=\text{knowing rotor position}$
+	\begin{enumerate}
+		\item Measure phase voltage during short non-energized intervals
+		\begin{itemize}
+			\item High speed required for large BEMF\ldots
+			\item but non-energized intervals shorten as speed increases
+		\end{itemize}
+		\item Estimate BEMF using measured currents and motor parameters $L$ and $R$ per phase
+		\item Calculate electrical angle of rotor, differentiate w.r.t. time to obtain speed
+		\begin{itemize}
+			\item Helps to know rotor inertia
+		\end{itemize}
+	\end{enumerate}
+	More advanced techniques: high-frequency injection, PLL, etc.
+\end{frame}
+\begin{frame}\frametitle{Design Walkthrough -- Schematic}
+	\includegraphics[width=\textwidth]{schematic}
+\end{frame}
+\begin{frame}\frametitle{Design Walkthrough -- Key Component Characteristics}
+	\begin{minipage}[t]{0.5\textwidth}
+		Microcontroller
+		\begin{itemize}
+			\item ST part -- FOC library
+			\item Ample analog peripherals
+			\item 32 bit, medium performance
+		\end{itemize}
+	\end{minipage}%
+	\begin{minipage}[t]{0.5\textwidth}
+		Current-sense amplifiers
+		\begin{itemize}
+			\item Low noise
+			\item Sufficient bandwidth
+			\item Temperature stability
+		\end{itemize}
+	\end{minipage}
+	\vskip 1em
+	\begin{minipage}[t]{0.5\textwidth}
+		FET driver
+		\begin{itemize}
+			\item Simplicity
+			\item Robustness against transients
+			\item Sufficient drive current
+			\item High-side N support
+		\end{itemize}
+	\end{minipage}%
+	\begin{minipage}[t]{0.5\textwidth}
+		MOSFETs
+		\begin{itemize}
+			\item $\R{ds,on}$ low enough
+			\item $Q_{\text{g}}$ as low as possible
+			\item Sufficient $\V{ds}$
+			\item N-channel
+		\end{itemize}
+	\end{minipage}
+\end{frame}
+\begin{frame}\frametitle{Design Walkthrough -- Component Choices}
+	\begin{minipage}[t]{0.5\textwidth}
+		Microcontroller: STM32F3xx
+		\begin{itemize}
+			\item Multiple ADCs
+			\item Comparators for OCP
+			\item ST FOC library
+			\item Cortex-M3
+		\end{itemize}
+	\end{minipage}%
+	\begin{minipage}[t]{0.5\textwidth}
+		Current-sense amplifiers: MAX4239
+		\begin{itemize}
+			\item Somewhat poor choice
+			\item \quv{0.1} input offset voltage unnecessary
+			\item Too expensive
+		\end{itemize}
+	\end{minipage}
+	\vskip 1em
+	\begin{minipage}[t]{0.5\textwidth}
+		FET driver: TMC6100
+		\begin{itemize}
+			\item Expensive and complicated
+			\item Charge pump for 100\% duty cycle operation
+			\item Controlled through SPI
+		\end{itemize}
+	\end{minipage}%
+	\begin{minipage}[t]{0.5\textwidth}
+		MOSFETS: BSC010N04LSI
+		\begin{itemize}
+			\item $\V{ds}=\qv{40}$
+			\item $R_{\text{ds,on}}=\qmr{1.05}$: too low
+			\item $Q_{\text{g}}=\qnc{87}$: too high
+			\item Ideally, find middle ground by considering product $R_{\text{ds,on}}Q_{\text{g}}$
+		\end{itemize}
+	\end{minipage}
+\end{frame}
+\begin{frame}\frametitle{Design Walkthrough -- Challenges}
+	\begin{minipage}{0.6\textwidth}
+		\begin{itemize}
+			\item SPI configuration
+			\item Inappropriate current specification
+			\item \qv{3.3} rail issue
+			\item Gate driver charge pump filter
+			\item Form factor; difficulty with testing
+			\item ADC resolution for current sensing
+		\end{itemize}
+	\end{minipage}%
+	\begin{minipage}{0.4\textwidth}
+		\includegraphics[width=\textwidth]{form_factor}
+	\end{minipage}
+	\begin{center}
+		\includegraphics[width=0.45\textwidth]{spi1}
+		\includegraphics[width=0.45\textwidth]{spi2}
+	\end{center}
+\end{frame}
+\begin{frame}\frametitle{Design Walkthrough -- Assembly}
+	\begin{itemize}
+		\item Initially: stencil, pick \& place, and reflow manually
+		\item Later: assembled at PCBWay
+	\end{itemize}
+	\begin{center}
+		\includegraphics[width=0.45\textwidth]{stencil}
+		\includegraphics[width=0.45\textwidth]{stencil_microscope}
+	\end{center}
+\end{frame}
+\end{document}

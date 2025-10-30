@@ -1,0 +1,23 @@
+\begin{tikzpicture}[scale=0.9,transform shape]
+	% Paths, nodes and wires:
+	\node[shape=rectangle, draw, line width=0.5pt, minimum width=5.982cm, minimum height=4.982cm] at (35, -4){};
+	\node[shape=rectangle, draw, line width=0.5pt, minimum width=2.232cm, minimum height=0.982cm] at (35, -0.75){} node[anchor=center, align=center, text width=1.862cm, inner sep=5.5pt] at (35, -0.75){Battery};
+	\node[shape=rectangle, draw, line width=0.5pt, minimum width=2.232cm, minimum height=0.982cm] at (30.625, -4){} node[anchor=center, align=center, text width=1.862cm, inner sep=5.5pt] at (30.625, -4){RC Receiver};
+	\node[shape=rectangle, draw, line width=0.5pt, dash pattern={on 2pt off 1pt}, minimum width=2.482cm, minimum height=0.982cm] at (35, -5.5){} node[anchor=center, align=center, text width=2.112cm, inner sep=5.5pt] at (35, -5.5){IMU};
+	\node[shape=rectangle, draw, line width=0.5pt, dash pattern={on 2pt off 1pt}, minimum width=2.482cm, minimum height=0.982cm] at (35, -4){} node[anchor=center, align=center, text width=2.112cm, inner sep=5.5pt] at (35, -4){MCU};
+	\node[shape=rectangle, draw, line width=0.5pt, dash pattern={on 2pt off 1pt}, minimum width=2.482cm, minimum height=0.982cm] at (35, -2.5){} node[anchor=center, align=center, text width=2.112cm, inner sep=5.5pt] at (35, -2.5){Power Distribution};
+	\path[draw=Red, line width=0.8pt, -latex] (35, -1.25) -- (35, -2);
+	\draw[-latex] (31.75, -4) -- (33.75, -4);
+	\draw[-latex] (35, -5) -- (35, -4.5);
+	\path[draw=Red, line width=0.8pt, -latex] (36.75, -2.5) -- (36.75, -5.5) -- (36.25, -5.5);
+	\node[shape=rectangle, minimum width=3.215cm, minimum height=0.965cm] at (33.375, -1.75){} node[anchor=center, align=center, text width=2.827cm, inner sep=6pt] at (33.375, -1.75){Flight Controller};
+	\only<1>{\node[shape=rectangle, draw, line width=0.5pt, minimum width=2.215cm, minimum height=0.965cm] at (39.375, -4){} node[anchor=center, align=center, text width=1.827cm, inner sep=6pt] at (39.375, -4){4x ESC};}
+	\only<2>{\node[shape=rectangle, draw=blue, line width=1pt, minimum width=2.215cm, minimum height=0.965cm] at (39.375, -4){} node[anchor=center, align=center, text width=1.827cm, inner sep=6pt] at (39.375, -4){4x ESC};}
+	\node[shape=rectangle, draw, line width=0.5pt, minimum width=2.232cm, minimum height=0.982cm] at (39.375, -5.5){} node[anchor=center, align=center, text width=1.862cm, inner sep=5.5pt] at (39.375, -5.5){4x Motor};
+	\path[draw=Red, line width=0.8pt, -latex] (36.75, -4.25) -- (36.25, -4.25);
+	\draw[-latex] (35, -3) -- (35, -3.5);
+	\path[draw=Red, line width=0.8pt, latex-] (30.625, -3.5) |- (30.75, -2.5) -- (33.75, -2.5);
+	\path[draw=Red, line width=0.8pt, -latex] (36.25, -2.5) -| (39.375, -3.5);
+	\draw[-latex] (36.25, -4) -- (38.25, -4);
+	\path[draw=Red, line width=0.8pt, -latex] (39.375, -4.5) -- (39.375, -5);
+\end{tikzpicture}

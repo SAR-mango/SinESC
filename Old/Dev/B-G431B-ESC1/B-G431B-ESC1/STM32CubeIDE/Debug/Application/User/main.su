@@ -1,3 +1,0 @@
-main.c:155:6:SystemClock_Config	176	static,ignoring_inline_asm
-main.c:96:5:main	192	static,ignoring_inline_asm
-main.c:871:6:Error_Handler	0	static,ignoring_inline_asm
