@@ -1,19 +1,14 @@
 # Current State of the Project
-This project will be revived when I graduate from UCSB. The following changes are planned:
+I graduated from UCSB in June 2026, and SinESC has been revived!
 
-- Switch to HDI PCB
-- Switch to discrete half-bridge gate drivers
-- Switch to a variant of the STM32G4 MCU (or whatever seems most appropriate)
-- Switch to modern MOSFETs with low gate charge, unchanged 40V Vds, similar Rdson, and high avalanche energy rating
-- Simplify current sensing topology
-- Implement my own FOC algorithm
+After studying electrical engineering for four years, I have realized that the true problem to solve – and the key to SinESC's success – is developing a sensorless FOC algorithm that operates reliably, without manual tuning, across a wide range of motors.
 
-These changes mostly improve simplicity and robustness, and will make it easier to develop a 4-in-1 version of SinESC after the single version is fully complete. Currently, SinESC successfully spins motors with 90% efficiency, but there are reliability concerns with the TMC6100 gate driver. Also, some software work is required to add DSHOT support. Finally, a more long-term goal is to develop a self-tuning application integrated with Betaflight that can be run to optimize SinESC for a specific motor.
+Accordingly, I have shifted away from ST's motor control library in favor of my own software, developed from scratch. For now, I am using evaluation boards to perform testing. Building robust, high-performance hardware is a secondary focus, since this has already been done by others. Nevertheless, I plan to eventually revamp the hardware.
 
 # Overview
-SinESC (pronounced "sign ESC," namesake being the sine wave) is an electronic speed controller (ESC) that supports full sinusoidal control of three-phase brushless DC motors used by RC drone pilots. For a brief visual overview of the project and the underlying theory, see [these slides](https://github.com/SAR-mango/SinESC/blob/master/sinesc_slides/sinesc_slides.pdf) – adapted from a presentation I gave at SpaceX for an onsite interview.
+SinESC (pronounced "sign ESC," namesake being the sine wave) is an electronic speed controller (ESC) that supports sensorless field-oriented control of three-phase brushless DC motors used by RC drone pilots. For a brief overview of the project and the underlying theory, see [these slides](https://github.com/SAR-mango/SinESC/blob/master/sinesc_slides/sinesc_slides.pdf) – adapted from a presentation I gave at SpaceX for an onsite interview.
 
-The real-life dimensions of the PCBs pictured below are 15x30mm.
+The dimensions of the PCBs pictured below are 15x30mm.
 ![Multi Edition v2.3C Top](https://raw.githubusercontent.com/SAR-mango/SinESC/master/Multi%20Edition/SinESC-Multi/Exported%20Files/3D%20Render%20Front.jpg)
 ![Multi Edition v2.3C Bottom](https://raw.githubusercontent.com/SAR-mango/SinESC/master/Multi%20Edition/SinESC-Multi/Exported%20Files/3D%20Render%20Back.jpg)
 
@@ -22,11 +17,9 @@ The real-life dimensions of the PCBs pictured below are 15x30mm.
 - Smooth flight
 - Quiet operation
 - Bus voltage monitoring for power measurement and under-voltage protection
-- Broken-out and labeled debug pins for hackers
+- Broken-out and labeled debug pins
 - 3–6S Li-po battery support
 - Maximum 30A continuous, 40A burst current draw
-  - With the greatly-increased efficiency of SinESC, peak motor currents will be significantly lower than before (at a given throttle/thrust level). This does NOT mean your motors produce less power—they are just more efficient.
-  - Over-current protection takes advantage of comparators embedded in the microcontroller and triggers immediately at 55A.
 
 \*Several of the above specifications are currently only theoretical; they have not been confirmed with measurements. This page will be updated immediately when any specification changes or is confirmed.
 
